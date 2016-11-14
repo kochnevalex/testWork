@@ -1,6 +1,7 @@
 'use strict';
 
 const gulp = require('gulp');
+const postcss = require('gulp-postcss');
 const sass = require('gulp-sass');
 const debug = require('gulp-debug');
 const sourcemaps = require('gulp-sourcemaps');
@@ -11,28 +12,30 @@ const bs = require('browser-sync').create();
 const csscomb = require('gulp-csscomb');
 const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
-const spritesmith = require("gulp.spritesmith");
+const spritesmith = require("gulp-spritesmith");
 const gulpif = require("gulp-if");
+const flexibility = require('postcss-flexibility');
 
 gulp.task('serve', function () {
 
   bs.init({
-    proxy: "http://localhost:63342/themes/rom/html/",
+    proxy: "http://localhost:63342/assets/basetheme-design/",
     port: 63342,
     ui: {
       port: 63342
     }
   });
 
-  gulp.watch("../css/*.css").on('change', bs.reload);
+  gulp.watch("css/*.css").on('change', bs.reload);
   gulp.watch("*.html").on('change', bs.reload);
 });
 
 gulp.task('sass', function (callback) {
-  return gulp.src('../css/sass/*.sass')
+  return gulp.src('css/sass/*.sass')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
     .pipe(debug({title: 'sass:'}))
+    .pipe(postcss([flexibility]))
     .pipe(autoprefixer({
       browsers: [
         'Chrome >= 35',
@@ -54,7 +57,7 @@ gulp.task('sass', function (callback) {
     }))
     .pipe(debug({title: 'maps:'}))
     .pipe(csscomb())
-    .pipe(gulp.dest('../css'));
+    .pipe(gulp.dest('css'));
   callback();
 });
 
@@ -70,47 +73,27 @@ gulp.task('templates', function (callback) {
 });
 
 gulp.task('imagemin', () =>
-  gulp.src('../images/nonoptimised/*')
+  gulp.src('images/nonoptimised/*')
     .pipe(imagemin())
-    .pipe(gulp.dest('../images'))
+    .pipe(gulp.dest('images'))
 );
 
-gulp.task('sprites', function () {
-  var spriteData = gulp.src('../images/sprite/*.png').pipe(spritesmith({
-    imgName: 'sprite.png',
-    imgPath: '../images/sprite.png',
-    cssName: 'sprite.scss',
-    padding: 4
-  }));
-  return (
-    spriteData.pipe(gulpif('*.png', gulp.dest('../images/nonoptimised/'))),
-      spriteData.pipe(gulpif('*.scss', gulp.dest('../css/sass/helpers/')))
-
-  )
-
-});
-
-
-gulp.task('sprites', function () {
-  var spriteData = gulp.src('../images/sprite/*.png').pipe(spritesmith({
-    imgName: 'sprite.png',
-    imgPath: '../images/sprite.png',
-    cssName: 'sprite.scss',
-    padding: 4
-  }));
-  return (
-      spriteData.pipe(gulpif('*.png', gulp.dest('../images/nonoptimised/'))),
-          spriteData.pipe(gulpif('*.scss', gulp.dest('../css/sass/helpers/')))
-
-  )
-});
-
+gulp.task('sprites', () =>
+  gulp.src('images/sprite/*.png')
+    .pipe(spritesmith({
+      imgName: 'sprite.png',
+      styleName: 'sprite.css',
+      imgPath: 'images/sprite.png'
+    }))
+    .pipe(gulpif('*.png', gulp.dest('images/nonoptimised/')))
+    .pipe(gulpif('*.css', gulp.dest('css/')))
+);
 
 gulp.task('watch', function () {
-  gulp.watch('../css/sass/**/*.*', ['sass']);
+  gulp.watch('css/sass/**/*.*', ['sass']);
   gulp.watch('jade/**/*.*', ['templates']);
-  gulp.watch('../images/nonoptimised/*.*', ['imagemin']);
-  gulp.watch('../images/sprite/*.*', ['sprites']);
+  gulp.watch('images/nonoptimised/*.*', ['imagemin']);
+  gulp.watch('images/sprite/*.*', ['sprites']);
 });
 
 gulp.task('default', ['templates', 'sass', 'imagemin', 'sprites', 'serve', 'watch']);
