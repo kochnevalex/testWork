@@ -23,11 +23,6 @@ config.core.php
 /core/packages/*
 !/core/packages/core.transport.zip
 !/core/packages/basetheme-*.zip
-/assets/basetheme-design/min/*
-/assets/components/gallery/cache/*
-/assets/components/phpthumbof/cache/*
-/assets/uploads/*
-/assets/images/*
 node_modules
 
 !.gitignore
