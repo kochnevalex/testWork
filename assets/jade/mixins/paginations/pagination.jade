@@ -1,0 +1,53 @@
+//- Mixins for pagination
+
+mixin pagination
+    .b-pagination
+        ul.b-pagination__list
+            li.btn__prev: a(href="#") #[span предыдущая]
+            li.visible-lg: a(href="#") 1
+            li.b-pagination__dots.visible-lg ...
+            li: a(href="#") 7
+            li: a(href="#") 8
+            li.current: a(class="") 9
+            li: a(href="#") 10
+            li: a(href="#") 11
+            li.b-pagination__dots.visible-lg ...
+            li.visible-lg: a(href="#") 15
+            li.btn__next: a(href="#") #[span следующая]
+
+mixin paginationInner
+    .b-pagination.b-comments__pag
+        ul.b-pagination__list.b-comments__pag-list
+            li.btn__prev: a(href="#") #[span предыдущая]
+            li.visible-lg: a(href="#") 1
+            li.b-pagination__dots.visible-lg ...
+            li: a(href="#") 7
+            li: a(href="#") 8
+            li.current: a(class="") 9
+            li: a(href="#") 10
+            li.hidden-lg: a(href="#") 11
+            li.btn__next: a(href="#") #[span следующая]
+
+mixin paginationBoxed(modifier)
+    if (modifier != false)
+        div(class="boxed-pagination #{modifier}")
+            ul
+                li.btn__prev.disabled: a(href="#") #[span Назад]
+                li.current: a(class="") #[span 1]
+                li.boxed__visible-lg: a(href="#") #[span 2]
+                li.boxed__visible-lg: a(href="#") #[span 3]
+                li ...
+                li: a(href="#") #[span 15]
+                li.btn__next: a(href="#") #[span Вперед]
+    else
+        .boxed-pagination
+            ul
+                li.btn__prev.disabled: a(href="#") #[span Назад]
+                li.current: a(class="") #[span 1]
+                li.boxed__visible-lg: a(href="#") #[span 2]
+                li.boxed__visible-lg: a(href="#") #[span 3]
+                li ...
+                li: a(href="#") #[span 15]
+                li.btn__next: a(href="#") #[span Вперед]
+
+

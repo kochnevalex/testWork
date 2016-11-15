@@ -1,0 +1,117 @@
+//- Mixins for all pages menu aside
+
+mixin menuAside(idBtn, classInner)
+  p(id="#{idBtn}").s3-h.menu-aside__ttl Каталог
+  ul(class="#{classInner}")#navMenu.menu-aside__list.dl-menu
+    li
+      a(href="category.html") Таврия, Славута
+      i.fa.fa-caret-right
+      .menu-aside__dropdown.dl-submenu
+        .row
+          ul.col-sm-12.col-md-6
+            -var a = 'Тюнинг и акссесуары', b = 'Ходовая', c = 'Двигатель', d = 'Сцепление и коробка', e = 'Электрооборудование';
+            -var i = 'Кузовные детали', f = 'Салон, замки, зеркала, стёкла', g = 'Тормоза';
+            each nameDrop in [a, b, c, d, e, i, f, g]
+              li: a(href="#") #{nameDrop}
+          ul.col-sm-12.col-md-6
+            - var a1 = 'Тормоза', b = 'Рулевое управление', c = 'Охлаждение и печка', d = 'Топливная и система впуска', e = 'Система выхлопа', i = 'Прочее';
+            each nameDropSc in [a, b, c, d, e, i]
+              li: a(href="#") #{nameDropSc}
+
+    li
+      a(href="#") Ланос, Сенс
+      i.fa.fa-caret-right
+      .menu-aside__dropdown.dl-submenu
+        .row
+          ul.col-sm-12.col-md-6
+            -var a = 'Тюнинг и акссесуары', b = 'Ходовая', c = 'Двигатель', d = 'Сцепление и коробка', e = 'Электрооборудование';
+            -var i = 'Кузовные детали', f = 'Салон, замки, зеркала, стёкла', g = 'Тормоза';
+            each nameDrop in [a, b, c, d, e, i, f, g]
+              li: a(href="#") #{nameDrop}
+          ul.col-sm-12.col-md-6
+            - var a1 = 'Тормоза', b = 'Рулевое управление', c = 'Охлаждение и печка', d = 'Топливная и система впуска', e = 'Система выхлопа', i = 'Прочее';
+            each nameDropSc in [a, b, c, d, e, i]
+              li: a(href="#") #{nameDropSc}
+    li
+      a(href="#") Авео
+      i.fa.fa-caret-right
+      .menu-aside__dropdown.dl-submenu
+        .row
+          ul.col-sm-12.col-md-6
+            -var a = 'Тюнинг и акссесуары', b = 'Ходовая', c = 'Двигатель', d = 'Сцепление и коробка', e = 'Электрооборудование';
+            -var i = 'Кузовные детали', f = 'Салон, замки, зеркала, стёкла', g = 'Тормоза';
+            each nameDrop in [a, b, c, d, e, i, f, g]
+              li: a(href="#") #{nameDrop}
+          ul.col-sm-12.col-md-6
+            - var a1 = 'Тормоза', b = 'Рулевое управление', c = 'Охлаждение и печка', d = 'Топливная и система впуска', e = 'Система выхлопа', i = 'Прочее';
+            each nameDropSc in [a, b, c, d, e, i]
+              li: a(href="#") #{nameDropSc}
+    li
+      a(href="#") Лачетти
+      i.fa.fa-caret-right
+      .menu-aside__dropdown.dl-submenu
+        .row
+          ul.col-sm-12.col-md-6
+            -var a = 'Тюнинг и акссесуары', b = 'Ходовая', c = 'Двигатель', d = 'Сцепление и коробка', e = 'Электрооборудование';
+            -var i = 'Кузовные детали', f = 'Салон, замки, зеркала, стёкла', g = 'Тормоза';
+            each nameDrop in [a, b, c, d, e, i, f, g]
+              li: a(href="#") #{nameDrop}
+          ul.col-sm-12.col-md-6
+            - var a1 = 'Тормоза', b = 'Рулевое управление', c = 'Охлаждение и печка', d = 'Топливная и система впуска', e = 'Система выхлопа', i = 'Прочее';
+            each nameDropSc in [a, b, c, d, e, i]
+              li: a(href="#") #{nameDropSc}
+    li
+      a(href="#") Форза
+      i.fa.fa-caret-right
+      .menu-aside__dropdown.dl-submenu
+        .row
+          ul.col-sm-12.col-md-6
+            -var a = 'Тюнинг и акссесуары', b = 'Ходовая', c = 'Двигатель', d = 'Сцепление и коробка', e = 'Электрооборудование';
+            -var i = 'Кузовные детали', f = 'Салон, замки, зеркала, стёкла', g = 'Тормоза';
+            each nameDrop in [a, b, c, d, e, i, f, g]
+              li: a(href="#") #{nameDrop}
+          ul.col-sm-12.col-md-6
+            - var a1 = 'Тормоза', b = 'Рулевое управление', c = 'Охлаждение и печка', d = 'Топливная и система впуска', e = 'Система выхлопа', i = 'Прочее';
+            each nameDropSc in [a, b, c, d, e, i]
+              li: a(href="#") #{nameDropSc}
+    li
+      a(href="#") Масла и автохимия
+      i.fa.fa-caret-right
+      .menu-aside__dropdown.dl-submenu
+        .row
+          ul.col-sm-12.col-md-6
+            -var a = 'Тюнинг и акссесуары', b = 'Ходовая', c = 'Двигатель', d = 'Сцепление и коробка', e = 'Электрооборудование';
+            -var i = 'Кузовные детали', f = 'Салон, замки, зеркала, стёкла', g = 'Тормоза';
+            each nameDrop in [a, b, c, d, e, i, f, g]
+              li: a(href="#") #{nameDrop}
+          ul.col-sm-12.col-md-6
+            - var a1 = 'Тормоза', b = 'Рулевое управление', c = 'Охлаждение и печка', d = 'Топливная и система впуска', e = 'Система выхлопа', i = 'Прочее';
+            each nameDropSc in [a, b, c, d, e, i]
+              li: a(href="#") #{nameDropSc}
+
+
+mixin menuAsideInner(idList)
+  ul(id="#{idList}").menu-aside__list.menu-aside__list--sc
+    li
+      a(href="category.html") Тюнинг и акссесуары
+
+    li
+      a(href="category.html") Ходовая
+
+    li
+      a(href="category.html") Двигатель
+
+    li
+      a(href="category.html") Сцепление и коробка
+
+    li
+      a(href="category.html") Электрооборудование
+
+    li
+      a(href="category.html") Кузовные детали
+
+    li
+      a(href="category.html") Салон, замки, зеркала, стёкла
+
+    li
+      a(href="category.html") Тормоза
