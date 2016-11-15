@@ -1,16 +1,11 @@
 doctype html
-html(lang='ru').main-page
+html(lang='ru')
   include ../components/head/head
-    block title
-      title Grid 360 base structure
 
   body
-    #page.wrap
-      .header-contaner
-        include ../parts/header
-
-      include ../parts/main-page-parts/main-page-main-content
-
-      include ../parts/footer
+    include ../components/header/header
+    include ../components/footer/footer
     include ../components/scripts/scripts
+
+
 
