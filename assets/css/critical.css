@@ -1496,11 +1496,25 @@
     margin-right: -100%;
 }
 
+.b-brands__items
+{
+    text-align: center;
+}
+
 .brand-item
 {
     display: inline-block;
 
-    margin-right: 20px;
+    width: 155px;
+    margin: 0 20px 15px 0;
+
+    text-align: center;
+    vertical-align: middle;
+}
+
+.brand-item img
+{
+    max-width: 100%;
 }
 
 /*# sourceMappingURL=critical.css.map */
