@@ -62,7 +62,7 @@ gulp.task('sass', function (callback) {
 });
 
 gulp.task('templates', function (callback) {
-  gulp.src('jade/pages/*.jade')
+  gulp.src('jade/*.jade')
     .pipe(plumber())
     .pipe(jade({
       pretty: true
