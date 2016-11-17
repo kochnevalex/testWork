@@ -1342,23 +1342,25 @@
 .btn
 {
     font-family: 'OpenSansBold', sans-serif;
-    line-height: 18px;
+    font-size: 18px;
+    line-height: 39px;
 
     width: auto;
     height: 40px;
-    margin-top: 20px;
     padding: 0 20px;
 
     cursor: pointer;
     -webkit-transition: .3s;
          -o-transition: .3s;
-            transition: .3s; 
+            transition: .3s;
     vertical-align: middle;
 
     color: #fff;
     border: none;
     border-radius: 4px;
     background: #fa3972;
+    -webkit-box-shadow: 0 2px 0 0 #d33161;
+            box-shadow: 0 2px 0 0 #d33161;
 }
 .btn:hover
 {
@@ -1367,12 +1369,7 @@
 
 .subscribe-wrap
 {
-    width: 100%; 
-    margin-bottom: 40px;
-}
-
-.subscribe
-{
+    width: 360px;
     padding: 20px;
 
     background-color: #fff;
@@ -1380,9 +1377,11 @@
 
 .subscribe__ttl
 {
-    font-family: 'BloggerSansItalic', sans-serif; 
+    font-family: 'OpenSans', sans-serif;
     font-size: 24px;
-    line-height: 20px;
+    font-weight: normal; 
+
+    margin: 0;
 }
 
 .subscribe__sub-ttl
@@ -1392,22 +1391,34 @@
 
     display: block;
 
-    margin: 10px auto 0;
+    margin: 0 auto 15px;
 }
 
-.subscribe__input
+.form-group
+{
+    margin-bottom: 20px;
+    padding-bottom: 5px;
+}
+
+.form-control
 {
     font-family: 'OpenSans', sans-serif;
     font-size: 14px;
-    line-height: 60px;
 
     width: 100%;
-    height: 60px;
+    height: 35px;
+    padding-bottom: 5px;
 
     color: #000;
     border: none;
     border-bottom: 2px solid #000;
     outline: none;
+}
+
+.form-group--line
+{
+    border: none;
+    border-bottom: 2px solid #000;
 }
 
 .subscribe input::-webkit-input-placeholder
@@ -1434,6 +1445,17 @@
     color: #000;
 }
 
+.form-group label.error
+{
+    font-size: 12px;
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #f00;
+}
+
 @media screen and (min-width: 768px)
 {
     .subscribe-wrap
@@ -1454,6 +1476,40 @@
         -ms-flex-order: 5;
                 order: 5;
     }
+}
+
+/****************** */
+/* Style Select2 */
+/****************** */
+.form-group .select2
+{
+    width: inherit !important;
+}
+
+.subscribe .select2-container .select2-selection--single .select2-selection__rendered
+{
+    padding-left: 0;
+}
+
+.subscribe .select2-container--default .select2-selection--single
+{
+    border: none;
+    outline: none;
+}
+
+.subscribe .select2-container .select2-selection--single
+{
+    height: 35px;
+}
+
+.subscribe .select2-container--default .select2-selection--single .select2-selection__rendered
+{
+    line-height: 35px;
+}
+
+.subscribe .select2-container--default .select2-selection--single .select2-selection__arrow
+{
+    height: 35px;
 }
 
 .b-brands__ttl
