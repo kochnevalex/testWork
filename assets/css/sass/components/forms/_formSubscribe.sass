@@ -65,25 +65,81 @@
     width: 35%
     order: 5
 
-/******************
-/* Style Select2
-/******************
+.dropdown
+  position: relative
+  display: inline-block
 
-.form-group .select2
-  width: inherit!important
+.dropdown__state
+  height: 25px
+  cursor: pointer
 
-.subscribe .select2-container .select2-selection--single .select2-selection__rendered
-  padding-left: 0
+.dropdown__state::before
+  content: ''
+  display: block
+  position: absolute
+  top: -8px
+  right: -21px
+  width: 15px
+  height: 15px
+  bottom: 0
+  margin: auto
+  background: transparent url(../images/select-arrow.svg) center no-repeat
 
-.subscribe .select2-container--default .select2-selection--single
-  border: none
-  outline: none
+.dropdown__list
+  display: none
+  position: absolute
+  left: 0
+  overflow: auto
+  min-width: 260px
+  background-color: $white-color
+  border: 1px solid #eaedec
+  border-radius: 3px
+  box-shadow: 0px 4px 15px 0px rgba(0,0,0,0.1)
 
-.subscribe .select2-container .select2-selection--single
-  height: 35px
+.dropdown__list.active
+  display: block
 
-.subscribe .select2-container--default .select2-selection--single .select2-selection__rendered
-  line-height: 35px
+.dropdown__item
+  padding: 10px 15px
+  font-size: 14px
+  border-bottom: 1px solid #eaedec
 
-.subscribe .select2-container--default .select2-selection--single .select2-selection__arrow
-  height: 35px
+.dropdown__item:last-child
+  border-bottom: none
+
+.dropdown__item input
+  position: absolute
+  z-index: 1
+  top: 0
+  right: 0
+  width: 20px
+  height: 20px
+
+.dropdown__item input[type=checkbox]
+  display: none
+
+.dropdown__item label
+  display: block
+  position: relative
+  cursor: pointer
+
+.dropdown__item label:before
+  content: " "
+  position: absolute
+  top: -3px
+  right: 0
+  width: 24px
+  height: 21px
+  background: #fff
+  border: 1px solid #d7dcda
+  border-radius: 2px
+  box-shadow: 0px 1px 0px 0px #d7dcda
+
+.dropdown__item input[type=checkbox]:checked + label:before
+  top: -2px
+  background: #eaedec url(../images/checked.svg) 50% 32% no-repeat
+  border: 1px solid #eaedec
+  box-shadow: 0px -2px 0 0 #d7dcda
+
+
+

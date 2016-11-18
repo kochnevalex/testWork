@@ -1,0 +1,24 @@
+.content-title
+  font-size: 24px
+  overflow: hidden
+
+.content-title--center
+  text-align: center
+
+.content-title
+  &::before, &::after
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    box-sizing: border-box
+    width: 100%
+    height: 1px
+    background: #eaedec
+    border: solid #FFF
+    border-width: 0 15px
+
+.content-title::before
+  margin-left: -100%
+
+.content-title::after
+  margin-right: -100%

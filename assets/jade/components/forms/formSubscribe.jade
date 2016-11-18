@@ -4,10 +4,18 @@
     p.subscribe__sub-ttl на рассылку новинок, акций и скидок
   form#subscribe.subscribe(action='#', method='POST')
     .form-group.form-group--line
-      select.subscribe__cat.form-control
-        option(value="Все разделы", selected="selected") Все разделы
-        option(value="Все разделы") Тест
-        option(value="Все разделы") Тест
+      .dropdown
+        .dropdown__state Все категории
+        .dropdown__list
+          .dropdown__item
+            input#cat-1(type="checkbox", name="test[]")
+            label(for="cat-1") Пункт категории 1
+          .dropdown__item
+            input#cat-2(type="checkbox", name="test[]")
+            label(for="cat-2") Пункт категории 2
+          .dropdown__item
+            input#cat-3(type="checkbox", name="test[]")
+            label(for="cat-3") Пункт категории 3
     .form-group
       input.subscribe__input.form-control(type='email', name='email', placeholder='Ваш e-mail*:', required)
     button.btn(type='submit', name='subscribe') Подписаться
