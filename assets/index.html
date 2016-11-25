@@ -44,24 +44,7 @@
   <body>
     <header id="header"></header>
     <!--include parts/brands/brands-->
-    <div class="b-product">
-      <h2 class="content-title content-title--center">Новые товары</h2>
-      <article class="b-product__article">
-        <div class="b-product__img"><img src="./uploads-demo/productBlock/1.jpg"></div>
-        <div class="b-product__ttl"><a href="#" class="b-product__ttl-link">Kris Line Fashion Edith brassiere комплект</a></div>
-        <div class="b-product__cat"><a href="#" class="b-product__cat-link">Аксессуары</a></div>
-        <div class="b-product__price">
-          <div class="b-product__cash">4 560 Р</div>
-          <div class="b-product__buy">Добавить в корзину</div>
-        </div>
-        <div class="b-product__rating">
-          <div class="b-product__stars">
-            <div class="recall__mark"><span class="active"></span><span class="active"></span><span class="active"></span><span></span><span></span></div>
-          </div>
-          <div class="b-product__comments"><a href="#" class="b-product__comments-link">78 отзывов</a></div>
-        </div>
-      </article>
-    </div>
+    <!--include parts/productBlock/productBlock-->
     <footer id="footer">
       <div class="subscribe-wrap">
         <div class="subscribe__header">
@@ -70,23 +53,24 @@
         </div>
         <form id="subscribe" action="#" method="POST" class="subscribe">
           <div class="form-group form-group--line">
-            <div class="dropdown">
-              <div class="dropdown__state">Все категории</div>
-              <div class="dropdown__list">
-                <div class="dropdown__item">
-                  <input id="cat-1" type="checkbox" name="test[]">
-                  <label for="cat-1">Пункт категории 1</label>
-                </div>
-                <div class="dropdown__item">
-                  <input id="cat-2" type="checkbox" name="test[]">
-                  <label for="cat-2">Пункт категории 2</label>
-                </div>
-                <div class="dropdown__item">
-                  <input id="cat-3" type="checkbox" name="test[]">
-                  <label for="cat-3">Пункт категории 3</label>
-                </div>
-              </div>
-            </div>
+            <!--.dropdown-->
+            <!--  .dropdown__state Все категории-->
+            <!--  .dropdown__list-->
+            <!--    .dropdown__item-->
+            <!--      input#cat-1(type="checkbox", name="test[]")-->
+            <!--      label(for="cat-1") Пункт категории 1-->
+            <!--    .dropdown__item-->
+            <!--      input#cat-2(type="checkbox", name="test[]")-->
+            <!--      label(for="cat-2") Пункт категории 2-->
+            <!--    .dropdown__item-->
+            <!--      input#cat-3(type="checkbox", name="test[]")-->
+            <!--      label(for="cat-3") Пункт категории 3-->
+            <select class="subscribe__cat">
+              <option>Все категории</option>
+              <option>Раздел 1</option>
+              <option>Раздел 2</option>
+              <option>Раздел 3</option>
+            </select>
           </div>
           <div class="form-group">
             <input type="email" name="email" placeholder="Ваш e-mail*:" required class="subscribe__input form-control">
