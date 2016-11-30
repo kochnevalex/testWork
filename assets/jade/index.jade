@@ -3,9 +3,12 @@ html(lang='ru')
   include components/head/head
 
   body
-    include components/header/header
-    //include parts/brands/brands
-    //include parts/productBlock/productBlock
+    .wrap
+      include components/header/header
+        .container
+          include parts/brands/brands
+        .container
+          include parts/productBlock/productBlock
     include components/footer/footer
     include components/scripts/scripts
 

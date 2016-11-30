@@ -42,41 +42,99 @@
     <link rel="stylesheet" href="css/critical.css">
   </head>
   <body>
-    <header id="header"></header>
-    <!--include parts/brands/brands-->
-    <!--include parts/productBlock/productBlock-->
-    <footer id="footer">
-      <div class="subscribe-wrap">
-        <div class="subscribe__header">
-          <h2 class="subscribe__ttl">Подписывайтесь</h2>
-          <p class="subscribe__sub-ttl">на рассылку новинок, акций и скидок</p>
+    <div class="wrap">
+      <header id="header"></header>
+      <div class="container">
+        <div class="b-brands">
+          <h2 class="content-title content-title--center">Бренды</h2>
+          <div class="b-brands__items">
+            <div class="brand-item"><img src="./uploads-demo/brands/1.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/2.png" alt=""></div>
+            <div class="brand-item"><img src="http://placehold.it/350x150" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/4.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/1.png" alt=""></div>
+            <div class="brand-item"><img src="http://placehold.it/80x70" alt=""></div>
+            <div class="brand-item"><img src="http://placehold.it/80x70" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/3.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/4.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/1.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/1.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/2.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/3.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/4.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/1.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/2.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/3.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/4.png" alt=""></div>
+          </div>
         </div>
-        <form id="subscribe" action="#" method="POST" class="subscribe">
-          <div class="form-group form-group--line">
-            <!--.dropdown-->
-            <!--  .dropdown__state Все категории-->
-            <!--  .dropdown__list-->
-            <!--    .dropdown__item-->
-            <!--      input#cat-1(type="checkbox", name="test[]")-->
-            <!--      label(for="cat-1") Пункт категории 1-->
-            <!--    .dropdown__item-->
-            <!--      input#cat-2(type="checkbox", name="test[]")-->
-            <!--      label(for="cat-2") Пункт категории 2-->
-            <!--    .dropdown__item-->
-            <!--      input#cat-3(type="checkbox", name="test[]")-->
-            <!--      label(for="cat-3") Пункт категории 3-->
-            <select class="subscribe__cat">
-              <option>Все категории</option>
-              <option>Раздел 1</option>
-              <option>Раздел 2</option>
-              <option>Раздел 3</option>
-            </select>
+      </div>
+      <div class="container">
+        <div class="b-product">
+          <h2 class="content-title content-title--center">Новые товары</h2>
+          <article class="b-product__article">
+            <div class="b-product__img"><img src="./uploads-demo/productBlock/1.jpg"></div>
+            <div class="b-product__ttl"><a href="#" class="b-product__ttl-link">Kris Line Fashion Edith brassiere комплект</a></div>
+            <div class="b-product__cat"><a href="#" class="b-product__cat-link">Аксессуары</a></div>
+            <div class="b-product__price">
+              <div class="b-product__cash">4 560 Р</div>
+              <div class="b-product__buy">Добавить в корзину</div>
+            </div>
+            <div class="b-product__rating">
+              <div class="b-product__stars">
+                <div class="recall__mark"><span class="active"></span><span class="active"></span><span class="active"></span><span></span><span></span></div>
+              </div>
+              <div class="b-product__comments"><a href="#" class="b-product__comments-link">78 отзывов</a></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-6"></div>
+          <div class="col-xs-12 col-md-6">
+            <div class="subscribe-wrap">
+              <div class="subscribe__header">
+                <h2 class="subscribe__ttl">Подписывайтесь</h2>
+                <p class="subscribe__sub-ttl">на рассылку новинок, акций и скидок</p>
+              </div>
+              <form id="subscribe" action="#" method="POST" class="subscribe">
+                <div class="form-group form-group--line">
+                  <!--.dropdown-->
+                  <!--  .dropdown__state Все категории-->
+                  <!--  .dropdown__list-->
+                  <!--    .dropdown__item-->
+                  <!--      input#cat-1(type="checkbox", name="test[]")-->
+                  <!--      label(for="cat-1") Пункт категории 1-->
+                  <!--    .dropdown__item-->
+                  <!--      input#cat-2(type="checkbox", name="test[]")-->
+                  <!--      label(for="cat-2") Пункт категории 2-->
+                  <!--    .dropdown__item-->
+                  <!--      input#cat-3(type="checkbox", name="test[]")-->
+                  <!--      label(for="cat-3") Пункт категории 3-->
+                  <select class="subscribe__cat">
+                    <option>Все категории</option>
+                    <option>Раздел 1</option>
+                    <option>Раздел 2</option>
+                    <option>Раздел 3</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" placeholder="Ваш e-mail*:" required class="subscribe__input form-control">
+                </div>
+                <button type="submit" name="subscribe" class="btn">Подписаться</button>
+              </form>
+            </div>
           </div>
-          <div class="form-group">
-            <input type="email" name="email" placeholder="Ваш e-mail*:" required class="subscribe__input form-control">
+        </div>
+        <div class="row">
+          <div class="cpr">
+            <div class="cpr__dt">© 2012 - 2016 «Этажерка» Интернет-магазин элитной мебели и декора</div>
+            <div class="cpr__link">Адаптивные сайты от MakeBeCool</div>
           </div>
-          <button type="submit" name="subscribe" class="btn">Подписаться</button>
-        </form>
+        </div>
       </div>
     </footer>
     <link rel="stylesheet" href="css/global.css">
