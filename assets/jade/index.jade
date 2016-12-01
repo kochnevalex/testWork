@@ -1,14 +1,13 @@
+- var pageTitle = "Главная";
+
 doctype html
 html(lang='ru')
   include components/head/head
-
   body
     .wrap
       include components/header/header
-        .container
-          include parts/brands/brands
-        .container
-          include parts/productBlock/productBlock
+      include parts/brands/brands
+      include parts/productBlock/productBlock
     include components/footer/footer
     include components/scripts/scripts
 

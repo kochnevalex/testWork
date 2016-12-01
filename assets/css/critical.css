@@ -2230,20 +2230,22 @@ body .select2-container--open .select2-dropdown--below
     width: auto !important;
 }
 
-.content-title
+.heading
 {
     font-size: 24px;
 
-    overflow: hidden;
+    overflow: hidden; 
+
+    margin: 40px 0 20px;
 }
 
-.content-title--center
+.heading--center
 {
     text-align: center;
 }
 
-.content-title::before,
-.content-title::after
+.heading::before,
+.heading::after
 {
     display: inline-block;
 
@@ -2260,12 +2262,12 @@ body .select2-container--open .select2-dropdown--below
     background: #eaedec;
 }
 
-.content-title::before
+.heading::before
 {
     margin-left: -100%;
 }
 
-.content-title::after
+.heading::after
 {
     margin-right: -100%;
 }
