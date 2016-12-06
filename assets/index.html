@@ -166,7 +166,6 @@
     <footer id="footer">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-md-6"></div>
           <div class="col-xs-12 col-md-6">
             <div class="subscribe-wrap">
               <div class="subscribe__header">
@@ -175,18 +174,39 @@
               </div>
               <form id="subscribe" action="#" method="POST" class="subscribe">
                 <div class="form-group form-group--line">
-                  <!--.dropdown-->
-                  <!--  .dropdown__state Все категории-->
-                  <!--  .dropdown__list-->
-                  <!--    .dropdown__item-->
-                  <!--      input#cat-1(type="checkbox", name="test[]")-->
-                  <!--      label(for="cat-1") Пункт категории 1-->
-                  <!--    .dropdown__item-->
-                  <!--      input#cat-2(type="checkbox", name="test[]")-->
-                  <!--      label(for="cat-2") Пункт категории 2-->
-                  <!--    .dropdown__item-->
-                  <!--      input#cat-3(type="checkbox", name="test[]")-->
-                  <!--      label(for="cat-3") Пункт категории 3-->
+                  <div class="dropdown">
+                    <div class="dropdown__state">Все категории</div>
+                    <div class="dropdown__list">
+                      <div class="dropdown__item">
+                        <input id="cat-1" type="checkbox" name="test[]">
+                        <label for="cat-1">Пункт категории 1</label>
+                      </div>
+                      <div class="dropdown__item">
+                        <input id="cat-2" type="checkbox" name="test[]">
+                        <label for="cat-2">Пункт категории 2</label>
+                      </div>
+                      <div class="dropdown__item">
+                        <input id="cat-3" type="checkbox" name="test[]">
+                        <label for="cat-3">Пункт категории 3</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" placeholder="Ваш e-mail*:" required class="subscribe__input form-control">
+                </div>
+                <button type="submit" name="subscribe" class="btn">Подписаться</button>
+              </form>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="subscribe-wrap">
+              <div class="subscribe__header">
+                <h2 class="subscribe__ttl">Подписывайтесь</h2>
+                <p class="subscribe__sub-ttl">на рассылку новинок, акций и скидок</p>
+              </div>
+              <form id="subscribe" action="#" method="POST" class="subscribe">
+                <div class="form-group form-group--line">
                   <select class="subscribe__cat">
                     <option>Все категории</option>
                     <option>Раздел 1</option>
