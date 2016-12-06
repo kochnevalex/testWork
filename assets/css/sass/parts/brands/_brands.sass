@@ -1,12 +1,50 @@
 .b-brands__items
   text-align: center
 
-.brand-item
+.b-brands__items .brand-item
   display: inline-block
+  position: relative
   margin-bottom: 15px
   width: 150px
+  height: 65px
   text-align: center
   vertical-align: middle
 
-.brand-item img
-  max-width: 100%
+  &:focus
+    outline: none
+
+.b-brands__items--slider .brand-item
+  margin-bottom: 0
+
+.b-brands__items .brand-item img
+  display: inline
+  position: absolute
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  margin: auto
+  max-width: 90%
+  max-height: 90%
+
+.b-brands__items.b-brands__items--grayscale .brand-item img
+  filter: grayscale(100%)
+  transition: filter $transition-out
+
+  &:hover
+    filter: grayscale(0)
+    transition: filter $transition-in
+
+.b-brands__items .slick-prev
+  left: 10px
+  z-index: 1
+
+  &::before
+    color: $black-color
+
+.b-brands__items .slick-next
+  right: 10px
+  z-index: 1
+
+  &::before
+    color: $black-color

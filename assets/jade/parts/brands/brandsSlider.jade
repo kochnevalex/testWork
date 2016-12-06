@@ -1,10 +1,9 @@
 .container
   .b-brands
-    h2.heading.heading--center Бренды
-    .b-brands__items.b-brands__items--grayscale
+    h2.heading.heading--center Бренды слайдер
+    #brandsSlider.b-brands__items.b-brands__items--slider
       .brand-item
-        a(href="")
-          img(src="./uploads-demo/brands/brand1.png" alt="")
+        img(src="./uploads-demo/brands/brand1.png" alt="")
       .brand-item
         img(src="./uploads-demo/brands/brand2.png" alt="")
       .brand-item
@@ -40,3 +39,38 @@
       .brand-item
         img(src="./uploads-demo/brands/brand3.png" alt="")
 
+  script.
+    $('#brandsSlider').slick({
+      slidesToShow: 6,
+      slidesToScroll: 2,
+      responsive: [
+        {
+          breakpoint: 992,
+          settings: {
+            slidesToShow: 5,
+            slidesToScroll: 2
+          }
+        },
+        {
+          breakpoint: 768,
+          settings: {
+            slidesToShow: 4,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 576,
+          settings: {
+            slidesToShow: 3,
+            slidesToScroll: 1
+          }
+        },
+        {
+          breakpoint: 480,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1
+          }
+        }
+      ]
+    });
