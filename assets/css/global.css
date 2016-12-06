@@ -3123,4 +3123,11 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
             transform: perspective(2500px) rotateX(0);
 }
 
+.rater
+{
+    font-size: 26px; 
+
+    margin: 30px auto;
+}
+
 /*# sourceMappingURL=global.css.map */
