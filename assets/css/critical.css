@@ -2055,6 +2055,8 @@ body
 {
     position: relative;
 
+    height: 50px;
+
     background-color: #f2f2f2;
 }
 
@@ -2063,7 +2065,7 @@ body
   */
 .header__top-nav
 {
-    height: 50px;
+    float: left;
 }
 
 .header__top-btn
@@ -2122,6 +2124,16 @@ body
 .header__top-nav.active .header__top-menu
 {
     display: block;
+}
+
+.header__top-info
+{
+    float: right;
+}
+
+.header__top-info ul
+{
+    line-height: 50px;
 }
 
 @media (min-width: 992px)
