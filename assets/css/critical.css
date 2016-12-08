@@ -555,6 +555,9 @@ template
 /**
  * Colors #colors
  */
+/**
+ * Form colors
+ */
 @-webkit-keyframes showOpacity
 {
     0%
@@ -2105,7 +2108,11 @@ body
     font-size: 14px;
     line-height: 28px;
 
-    cursor: pointer; 
+    cursor: pointer;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none; 
 
     color: #000;
 }
@@ -2307,7 +2314,7 @@ body
 
     margin-top: 5px;
 
-    color: #f00;
+    color: #e5352c;
 }
 
 .select2-container--default .subscribe-select2.select2-selection--single
