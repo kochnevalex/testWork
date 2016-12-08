@@ -43,12 +43,11 @@
     <link rel="stylesheet" href="css/global.css">
     <script src="./js/jquery-3.1.1.min.js"></script>
     <script src="./js/jquery/plugins/validation/jquery.validate.min.js"></script>
-    <script src="./js/jquery/plugins/select2.min.js"></script>
+    <script src="./js/jquery/plugins/select2/select2.full.js"></script>
     <script src="./js/jquery/plugins/slick/slick.min.js"></script>
     <script src="./js/app/formValidate.js"></script>
     <script src="./js/jquery/plugins/rater/rater.min.js"></script>
     <script src="./js/aos.js"></script>
-    <script src="./js/test.js"></script>
   </head>
   <body>
     <div class="wrap">
@@ -163,7 +162,7 @@
       </div>
       <div class="rater"></div>
     </div>
-    <footer id="footer">
+    <footer id="footer" class="footer">
       <div class="container">
         <div class="row">
           <div class="col-xs-12 col-md-6">
@@ -198,6 +197,12 @@
                 <button type="submit" name="subscribe" class="btn">Подписаться</button>
               </form>
             </div>
+            <script>
+              $('.dropdown__state').click(function () {
+                $(this).toggleClass("active");
+                $('.dropdown__list').toggleClass("active");
+              });
+            </script>
           </div>
           <div class="col-xs-12 col-md-6">
             <div class="subscribe-wrap">
@@ -220,13 +225,20 @@
                 <button type="submit" name="subscribe" class="btn">Подписаться</button>
               </form>
             </div>
+            <script>
+              $('.subscribe__cat').select2({
+                minimumResultsForSearch: Infinity,
+                containerCssClass: "subscribe-select2",
+                dropdownCssClass: "subscribe-select2-dropdown"
+              });
+            </script>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12">
             <div class="cpr">
               <div class="cpr__dt">© 2012 - 2016 «Этажерка» Интернет-магазин элитной мебели и декора</div>
-              <div class="cpr__link">Адаптивные сайты от MakeBeCool</div>
+              <div class="cpr__link">Адаптивные сайты от <a href="https://makebecool.com/">MakeBeCool</a></div>
             </div>
           </div>
         </div>

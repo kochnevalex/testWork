@@ -1,0 +1,82 @@
+//****** Dropdown **************/
+
+.dropdown
+  position: relative
+  display: inline-block
+
+.dropdown__state
+  font-size: 14px
+  line-height: 28px
+  color: #000
+  cursor: pointer
+
+.dropdown__state::before
+  content: ''
+  display: block
+  position: absolute
+  top: 0
+  right: -21px
+  bottom: 0
+  width: 15px
+  height: 15px
+  margin: auto
+  background: transparent url('../images/select-arrow.svg') center no-repeat
+
+.dropdown__state.active::before
+  transform: rotate(180deg)
+
+
+.dropdown__list
+  display: none
+  position: absolute
+  left: 0
+  overflow: auto
+  min-width: 260px
+  background-color: #fff
+  border: 1px solid #eaedec
+  border-radius: 3px
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1)
+
+.dropdown__list.active
+  display: block
+
+.dropdown__item
+  padding: 10px 15px
+  font-size: 14px
+  border-bottom: 1px solid #eaedec
+
+.dropdown__item:last-child
+  border-bottom: none
+
+.dropdown__item input
+  position: absolute
+  z-index: 1
+  top: 0
+  right: 0
+  width: 20px
+  height: 20px
+
+.dropdown__item input[type=checkbox]
+  display: none
+
+.dropdown__item label
+  display: block
+  position: relative
+  cursor: pointer
+
+.dropdown__item label:before
+  content: " "
+  position: absolute
+  top: -3px
+  right: 0
+  width: 24px
+  height: 21px
+  border: 1px solid #d7dcda
+  border-radius: 2px
+  box-shadow: 0 1px 0 0 #d7dcda
+
+.dropdown__item input[type=checkbox]:checked + label:before
+  top: -2px
+  background: #eaedec url(../images/checked.svg) 50% 32% no-repeat
+  border: 1px solid #eaedec
+  box-shadow: 0px -2px 0 0 #d7dcda
