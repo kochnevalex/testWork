@@ -1,0 +1,23 @@
+.header__top-bar
+  .container
+    nav#headerTopNav.header__top-nav
+      button#headerTopBtn.header__top-btn(type="button")
+        span
+        span
+        span
+      span.header__top-ttl Меню
+      ul#headerTopMenu.header__top-menu
+        li
+          a(href="#") Контакты
+        li
+          a(href="#") Способы доставки
+        li
+          a(href="#") Оплата
+        li
+          a(href="#") О нас
+
+script.
+  $('#headerTopBtn').on('click', function (e) {
+    e.preventDefault();
+    $('#headerTopNav').toggleClass('active');
+  });

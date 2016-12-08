@@ -51,8 +51,26 @@
   </head>
   <body>
     <div class="wrap">
-      <header id="header">
-        <div class="container"></div>
+      <header id="header" class="header">
+        <div class="header__top-bar">
+          <div class="container">
+            <nav id="headerTopNav" class="header__top-nav">
+              <button id="headerTopBtn" type="button" class="header__top-btn"><span></span><span></span><span></span></button><span class="header__top-ttl">Меню</span>
+              <ul id="headerTopMenu" class="header__top-menu">
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Способы доставки</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">О нас</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        <script>
+          $('#headerTopBtn').on('click', function (e) {
+            e.preventDefault();
+            $('#headerTopNav').toggleClass('active');
+          });
+        </script>
       </header>
       <div class="container">
         <div class="b-brands">
