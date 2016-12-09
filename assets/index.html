@@ -4,19 +4,19 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <title>Главная</title>
+    <title>Main | grid360</title>
     <meta name="description" content="">
     <link rel="shortcut icon" href="images/iconsite/favicon.ico">
     <link rel="dns-prefetch" href="http://www.google-analytics.com">
     <link rel="author" href="humans.txt">
     <meta name="twitter:site" content="">
     <meta name="twitter:creator" content="makebecool">
-    <meta name="twitter:title" content="Главная">
+    <meta name="twitter:title" content="Main | grid360">
     <meta name="twitter:description" content="">
     <meta name="twitter:image:src" content="">
     <meta property="og:url" content="">
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Главная">
+    <meta property="og:title" content="Main | grid360">
     <meta property="og:image" content="">
     <meta property="og:description" content="">
     <meta property="og:site_name" content="">
@@ -25,7 +25,7 @@
     <meta name="format-detection" content="telephone=no">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
     <meta name="apple-mobile-web-app-title" content="">
-    <meta name="application-name" content="Главная">
+    <meta name="application-name" content="Main | grid360">
     <meta name="msapplication-TileColor" content="">
     <meta name="msapplication-square70x70logo" content="images/iconsite/msapplication-square70x70logo.png">
     <meta name="msapplication-square150x150logo" content="images/iconsite/msapplication-square150x150logo.png">
@@ -40,44 +40,50 @@
     <meta name="it-rating" content="it-rat-c2fb848de4ce4a9d8631b1558f63157d">
     <link rel="stylesheet" href="css/base64-fonts.css">
     <link rel="stylesheet" href="css/critical.css">
-    <link rel="stylesheet" href="css/global.css">
-    <script src="./js/jquery-3.1.1.min.js"></script>
-    <script src="./js/jquery/plugins/validation/jquery.validate.min.js"></script>
-    <script src="./js/jquery/plugins/select2/select2.full.js"></script>
-    <script src="./js/jquery/plugins/slick/slick.min.js"></script>
-    <script src="./js/app/formValidate.js"></script>
-    <script src="./js/jquery/plugins/rater/rater.min.js"></script>
-    <script src="./js/aos.js"></script>
   </head>
+  <link rel="stylesheet" href="css/global.css">
+  <script src="./js/jquery-3.1.1.min.js"></script>
+  <script src="./js/jquery/plugins/validation/jquery.validate.min.js"></script>
+  <script src="./js/jquery/plugins/select2/select2.full.js"></script>
+  <script src="./js/jquery/plugins/slick/slick.min.js"></script>
+  <script src="./js/app/formValidate.js"></script>
+  <script src="./js/jquery/plugins/rater/rater.min.js"></script>
+  <script src="./js/aos.js"></script>
   <body>
     <div class="wrap">
-<<<<<<< HEAD
-      <link rel="stylesheet" href="css/global.css">
-      <script src="./js/jquery-3.1.1.min.js"></script>
-      <script src="./js/jquery/plugins/validation/jquery.validate.min.js"></script>
-      <script src="./js/jquery/plugins/select2.min.js"></script>
-      <script src="./js/app/formValidate.js"></script>
-      <script src="./js/jquery/plugins/rater/rater.min.js"></script>
-      <script src="./js/aos.js"></script>
-      <script src="./js/test.js"></script>
-      <header id="header">
-        <div class="container"></div>
-=======
       <header id="header" class="header">
+        <div id="headerBanner" class="header__banner">
+          <div class="container">top banner
+            <button id="headerBannerCloseBtn" type="button" class="header__banner-close"></button>
+          </div>
+        </div>
+        <script>
+          $('#headerBannerCloseBtn').on('click', function (e) {
+            e.preventDefault();
+            if (!$('#headerBanner').hasClass('hide')) {
+              $('#headerBanner').slideUp(function () {
+                $('#headerBanner').addClass('hide');
+              });
+            }
+          });
+        </script>
         <div class="header__top-bar">
           <div class="container">
             <nav id="headerTopNav" class="header__top-nav">
               <button id="headerTopBtn" type="button" class="header__top-btn"><span></span><span></span><span></span></button><span class="header__top-ttl">Меню</span>
-              <ul id="headerTopMenu" class="header__top-menu">
-                <li><a href="#">Контакты</a></li>
-                <li><a href="#">Способы доставки</a></li>
-                <li><a href="#">Оплата</a></li>
-                <li><a href="#">О нас</a></li>
-              </ul>
+              <div id="headerTopMenu" class="header__top-menu">
+                <ul class="header__top-menu-list">
+                  <li><a href="#">Контакты</a></li>
+                  <li><a href="#">Способы доставки</a></li>
+                  <li><a href="#">Оплата</a></li>
+                  <li><a href="#">О нас</a></li>
+                </ul>
+              </div>
             </nav>
             <div class="header__top-info">
-              <ul>
+              <ul class="header__top-info-list">
                 <li><a href="tel:+7495540-50-86">+7 (495) 540-50-86</a></li>
+                <li><a href="#">Войти</a></li>
               </ul>
             </div>
           </div>
@@ -88,7 +94,9 @@
             $('#headerTopNav').toggleClass('active');
           });
         </script>
->>>>>>> 6bbdb0bfbe5ffa70703f843c239a97667b140733
+        <div class="header_main">
+          <div class="container"></div>
+        </div>
       </header>
       <div class="container">
         <div class="b-brands">
@@ -202,46 +210,18 @@
           update_input_field_name: $("#input2")
         });
       </script>
-      <div class="container rating">
+      <div class="container">
         <div class="rater-wrap">
           <h4>Rater</h4>
           <div class="rater"></div>
         </div>
-        <div class="rater-wrap-center">
-          <h4>Rater  - с дополнительным полем input для вывода значения</h4>
-          <div class="rater center"></div>
-          <input id="input2" type="text">
-        </div>
-        <div class="rater-wrap center">
-          <h4>Rater - возможность изменить символ на кастомный, метод readonly</h4>
-          <div class="rater-heart"></div>
-        </div>
-        <div class="rater-wrap center">
-          <h4>Rater - возможность менять цвет заливки и активного элемента</h4>
-          <div class="rater-big color"></div>
-        </div>
       </div>
       <script>
         $('.rater').rate({
-            max_value: 6,
-            step_size: 0.5,
-            initial_value: 3.5,
-            update_input_field_name: $("#input2")
-        });
-        
-        $('.rater-heart').rate({
-            max_value: 5,
-            step_size: 0.5,
-            readonly: true,
-            initial_value: 3.5,
-            selected_symbol_type: 'hearts'
-        });
-        
-        
-        $('.rater-big').rate({
-            max_value: 6,
-            step_size: 0.5,
-            initial_value: 3.5
+          max_value: 6,
+          step_size: 0.5,
+          initial_value: 3.5,
+          update_input_field_name: $("#input2")
         });
       </script>
     </div>

@@ -39,20 +39,34 @@
   top: 100%
   right: 0
   left: 0
-  padding: 20px 15px
   background-color: #f2f2f2
-
-.header__top-menu li a
-  color: $active-color
 
 .header__top-nav.active .header__top-menu
   display: block
 
+.header__top-menu-list
+  @include make-container()
+  @include make-container-max-widths()
+  margin-bottom: 30px
+
+.header__top-menu-list li
+  font-size: 12px
+
+.header__top-menu-list li a
+  color: $active-color
+
 .header__top-info
   float: right
 
-.header__top-info ul
+.header__top-info-list
   line-height: 50px
+
+.header__top-info-list li
+  float: left
+  margin-right: 10px
+
+  &:last-child
+    margin-right: 0
 
 @media (min-width: $screen-lg)
 
@@ -65,7 +79,11 @@
     position: static
     padding: 0
 
-  .header__top-menu li
+  .header__top-menu-list
+    margin: 0
+    padding: 0
+
+  .header__top-menu-list li
     display: block
     float: left
     margin-right: 10px
