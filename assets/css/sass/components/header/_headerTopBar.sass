@@ -1,0 +1,75 @@
+.header__top-bar
+  height: 50px
+  position: relative
+  background-color: #f2f2f2
+
+/**---------------------------------------------
+  * header__top-nav
+  */
+
+.header__top-nav
+  float: left
+
+.header__top-btn
+  display: block
+  width: 40px
+  height: 38px
+  float: left
+  margin-top: 5px
+  margin-right: 15px
+  border: none
+  background-color: transparent
+
+.header__top-btn span
+  display: block
+  background-color: $black-color
+  height: 3px
+  margin-bottom: 3px
+
+  &:last-child
+    margin-bottom: 0
+
+.header__top-ttl
+  font-size: 16px
+  line-height: 50px
+
+.header__top-menu
+  display: none
+  position: absolute
+  top: 100%
+  right: 0
+  left: 0
+  padding: 20px 15px
+  background-color: #f2f2f2
+
+.header__top-menu li a
+  color: $active-color
+
+.header__top-nav.active .header__top-menu
+  display: block
+
+.header__top-info
+  float: right
+
+.header__top-info ul
+  line-height: 50px
+
+@media (min-width: $screen-lg)
+
+  .header__top-ttl,
+  .header__top-btn
+    display: none
+
+  .header__top-menu
+    display: block
+    position: static
+    padding: 0
+
+  .header__top-menu li
+    display: block
+    float: left
+    margin-right: 10px
+    line-height: 50px
+
+    &:last-child
+      margin-right: 0

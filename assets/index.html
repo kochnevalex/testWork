@@ -40,9 +40,18 @@
     <meta name="it-rating" content="it-rat-c2fb848de4ce4a9d8631b1558f63157d">
     <link rel="stylesheet" href="css/base64-fonts.css">
     <link rel="stylesheet" href="css/critical.css">
+    <link rel="stylesheet" href="css/global.css">
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/jquery/plugins/validation/jquery.validate.min.js"></script>
+    <script src="./js/jquery/plugins/select2/select2.full.js"></script>
+    <script src="./js/jquery/plugins/slick/slick.min.js"></script>
+    <script src="./js/app/formValidate.js"></script>
+    <script src="./js/jquery/plugins/rater/rater.min.js"></script>
+    <script src="./js/aos.js"></script>
   </head>
   <body>
     <div class="wrap">
+<<<<<<< HEAD
       <link rel="stylesheet" href="css/global.css">
       <script src="./js/jquery-3.1.1.min.js"></script>
       <script src="./js/jquery/plugins/validation/jquery.validate.min.js"></script>
@@ -53,31 +62,119 @@
       <script src="./js/test.js"></script>
       <header id="header">
         <div class="container"></div>
+=======
+      <header id="header" class="header">
+        <div class="header__top-bar">
+          <div class="container">
+            <nav id="headerTopNav" class="header__top-nav">
+              <button id="headerTopBtn" type="button" class="header__top-btn"><span></span><span></span><span></span></button><span class="header__top-ttl">Меню</span>
+              <ul id="headerTopMenu" class="header__top-menu">
+                <li><a href="#">Контакты</a></li>
+                <li><a href="#">Способы доставки</a></li>
+                <li><a href="#">Оплата</a></li>
+                <li><a href="#">О нас</a></li>
+              </ul>
+            </nav>
+            <div class="header__top-info">
+              <ul>
+                <li><a href="tel:+7495540-50-86">+7 (495) 540-50-86</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <script>
+          $('#headerTopBtn').on('click', function (e) {
+            e.preventDefault();
+            $('#headerTopNav').toggleClass('active');
+          });
+        </script>
+>>>>>>> 6bbdb0bfbe5ffa70703f843c239a97667b140733
       </header>
       <div class="container">
         <div class="b-brands">
           <h2 class="heading heading--center">Бренды</h2>
-          <div class="b-brands__items">
-            <div class="brand-item"><img src="./uploads-demo/brands/1.png" alt=""></div>
-            <div class="brand-item"><img src="./uploads-demo/brands/2.png" alt=""></div>
+          <div class="b-brands__items b-brands__items--grayscale">
+            <div class="brand-item"><a href=""><img src="./uploads-demo/brands/brand1.png" alt=""></a></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand2.png" alt=""></div>
             <div class="brand-item"><img src="http://placehold.it/350x150" alt=""></div>
-            <div class="brand-item"><img src="./uploads-demo/brands/4.png" alt=""></div>
-            <div class="brand-item"><img src="./uploads-demo/brands/1.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand3.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand4.png" alt=""></div>
             <div class="brand-item"><img src="http://placehold.it/80x70" alt=""></div>
             <div class="brand-item"><img src="http://placehold.it/80x70" alt=""></div>
-            <div class="brand-item"><img src="./uploads-demo/brands/3.png" alt=""></div>
-            <div class="brand-item"><img src="./uploads-demo/brands/4.png" alt=""></div>
-            <div class="brand-item"><img src="./uploads-demo/brands/1.png" alt=""></div>
-            <div class="brand-item"><img src="./uploads-demo/brands/1.png" alt=""></div>
-            <div class="brand-item"><img src="./uploads-demo/brands/2.png" alt=""></div>
-            <div class="brand-item"><img src="./uploads-demo/brands/3.png" alt=""></div>
-            <div class="brand-item"><img src="./uploads-demo/brands/4.png" alt=""></div>
-            <div class="brand-item"><img src="./uploads-demo/brands/1.png" alt=""></div>
-            <div class="brand-item"><img src="./uploads-demo/brands/2.png" alt=""></div>
-            <div class="brand-item"><img src="./uploads-demo/brands/3.png" alt=""></div>
-            <div class="brand-item"><img src="./uploads-demo/brands/4.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand5.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand6.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand1.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand2.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand3.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand4.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand5.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand6.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand1.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand2.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand3.png" alt=""></div>
           </div>
         </div>
+      </div>
+      <div class="container">
+        <div class="b-brands">
+          <h2 class="heading heading--center">Бренды слайдер</h2>
+          <div id="brandsSlider" class="b-brands__items b-brands__items--slider">
+            <div class="brand-item"><img src="./uploads-demo/brands/brand1.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand2.png" alt=""></div>
+            <div class="brand-item"><img src="http://placehold.it/350x150" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand3.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand4.png" alt=""></div>
+            <div class="brand-item"><img src="http://placehold.it/80x70" alt=""></div>
+            <div class="brand-item"><img src="http://placehold.it/80x70" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand5.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand6.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand1.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand2.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand3.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand4.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand5.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand6.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand1.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand2.png" alt=""></div>
+            <div class="brand-item"><img src="./uploads-demo/brands/brand3.png" alt=""></div>
+          </div>
+        </div>
+        <script>
+          $('#brandsSlider').slick({
+            slidesToShow: 6,
+            slidesToScroll: 2,
+            responsive: [
+              {
+                breakpoint: 992,
+                settings: {
+                  slidesToShow: 5,
+                  slidesToScroll: 2
+                }
+              },
+              {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 4,
+                  slidesToScroll: 1
+                }
+              },
+              {
+                breakpoint: 576,
+                settings: {
+                  slidesToShow: 3,
+                  slidesToScroll: 1
+                }
+              },
+              {
+                breakpoint: 480,
+                settings: {
+                  slidesToShow: 1,
+                  slidesToScroll: 1
+                }
+              }
+            ]
+          });
+        </script>
       </div>
       <div class="container">
         <div class="b-product">
@@ -148,10 +245,9 @@
         });
       </script>
     </div>
-    <footer id="footer">
+    <footer id="footer" class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-md-6"></div>
           <div class="col-xs-12 col-md-6">
             <div class="subscribe-wrap">
               <div class="subscribe__header">
@@ -160,18 +256,45 @@
               </div>
               <form id="subscribe" action="#" method="POST" class="subscribe">
                 <div class="form-group form-group--line">
-                  <!--.dropdown-->
-                  <!--  .dropdown__state Все категории-->
-                  <!--  .dropdown__list-->
-                  <!--    .dropdown__item-->
-                  <!--      input#cat-1(type="checkbox", name="test[]")-->
-                  <!--      label(for="cat-1") Пункт категории 1-->
-                  <!--    .dropdown__item-->
-                  <!--      input#cat-2(type="checkbox", name="test[]")-->
-                  <!--      label(for="cat-2") Пункт категории 2-->
-                  <!--    .dropdown__item-->
-                  <!--      input#cat-3(type="checkbox", name="test[]")-->
-                  <!--      label(for="cat-3") Пункт категории 3-->
+                  <div class="dropdown">
+                    <div class="dropdown__state">Все категории</div>
+                    <div class="dropdown__list">
+                      <div class="dropdown__item">
+                        <input id="cat-1" type="checkbox" name="test[]">
+                        <label for="cat-1">Пункт категории 1</label>
+                      </div>
+                      <div class="dropdown__item">
+                        <input id="cat-2" type="checkbox" name="test[]">
+                        <label for="cat-2">Пункт категории 2</label>
+                      </div>
+                      <div class="dropdown__item">
+                        <input id="cat-3" type="checkbox" name="test[]">
+                        <label for="cat-3">Пункт категории 3</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" placeholder="Ваш e-mail*:" required class="subscribe__input form-control">
+                </div>
+                <button type="submit" name="subscribe" class="btn">Подписаться</button>
+              </form>
+            </div>
+            <script>
+              $('.dropdown__state').click(function () {
+                $(this).toggleClass("active");
+                $('.dropdown__list').toggleClass("active");
+              });
+            </script>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="subscribe-wrap">
+              <div class="subscribe__header">
+                <h2 class="subscribe__ttl">Подписывайтесь</h2>
+                <p class="subscribe__sub-ttl">на рассылку новинок, акций и скидок</p>
+              </div>
+              <form id="subscribe" action="#" method="POST" class="subscribe">
+                <div class="form-group form-group--line">
                   <select class="subscribe__cat">
                     <option>Все категории</option>
                     <option>Раздел 1</option>
@@ -185,13 +308,20 @@
                 <button type="submit" name="subscribe" class="btn">Подписаться</button>
               </form>
             </div>
+            <script>
+              $('.subscribe__cat').select2({
+                minimumResultsForSearch: Infinity,
+                containerCssClass: "subscribe-select2",
+                dropdownCssClass: "subscribe-select2-dropdown"
+              });
+            </script>
           </div>
         </div>
         <div class="row">
           <div class="col-xs-12">
             <div class="cpr">
               <div class="cpr__dt">© 2012 - 2016 «Этажерка» Интернет-магазин элитной мебели и декора</div>
-              <div class="cpr__link">Адаптивные сайты от MakeBeCool</div>
+              <div class="cpr__link">Адаптивные сайты от <a href="https://makebecool.com/">MakeBeCool</a></div>
             </div>
           </div>
         </div>

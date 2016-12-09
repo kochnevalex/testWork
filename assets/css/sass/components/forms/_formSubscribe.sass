@@ -1,4 +1,5 @@
-.subscribe-wrap
+.subscribe__header
+  margin-bottom: 15px
 
 .subscribe__ttl
   margin: 0
@@ -8,7 +9,7 @@
 
 .subscribe__sub-ttl
   display: block
-  margin: 0 auto 15px
+  margin: 0
   font-size: 14px
   font-family: $base-font-bold
 
@@ -50,102 +51,22 @@
   display: block
   margin-top: 5px
   font-size: 12px
-  color: #ff0000
+  color: $error-form-color
 
-@media screen and (min-width: $screen-md)
-  .subscribe-wrap
 
-@media screen and (min-width: $screen-lg)
+/**---------------------------------------------
+  * Subscribe select
+  */
 
-  .subscribe-wrap
-    padding-left: 60px
-
-    order: 5
-
-.dropdown
-  position: relative
-  display: inline-block
-
-.dropdown__state
-  height: 25px
-  cursor: pointer
-
-.dropdown__state::before
-  content: ''
-  display: block
-  position: absolute
-  top: -8px
-  right: -21px
-  width: 15px
-  height: 15px
-  bottom: 0
-  margin: auto
-  background: transparent url('../images/select-arrow.svg') center no-repeat
-
-.dropdown__list
-  display: none
-  position: absolute
-  left: 0
-  overflow: auto
-  min-width: 260px
-  background-color: $white-color
-  border: 1px solid #eaedec
-  border-radius: 3px
-  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1)
-
-.dropdown__list.active
-  display: block
-
-.dropdown__item
-  padding: 10px 15px
-  font-size: 14px
-  border-bottom: 1px solid #eaedec
-
-.dropdown__item:last-child
-  border-bottom: none
-
-.dropdown__item input
-  position: absolute
-  z-index: 1
-  top: 0
-  right: 0
-  width: 20px
-  height: 20px
-
-.dropdown__item input[type=checkbox]
-  display: none
-
-.dropdown__item label
-  display: block
-  position: relative
-  cursor: pointer
-
-.dropdown__item label:before
-  content: " "
-  position: absolute
-  top: -3px
-  right: 0
-  width: 24px
-  height: 21px
-  background: #fff
-  border: 1px solid #d7dcda
-  border-radius: 2px
-  box-shadow: 0px 1px 0px 0px #d7dcda
-
-.dropdown__item input[type=checkbox]:checked + label:before
-  top: -2px
-  background: #eaedec url(../images/checked.svg) 50% 32% no-repeat
-  border: 1px solid #eaedec
-  box-shadow: 0px -2px 0 0 #d7dcda
-
-.subscribe .select2-container--default .select2-selection--single
+.select2-container--default .subscribe-select2.select2-selection--single
+  background-color: transparent
   border: none
   outline: none
 
-.subscribe .select2-container .select2-selection--single .select2-selection__rendered
+.select2-container--default .subscribe-select2.select2-selection--single .select2-selection__rendered
   padding-left: 0
 
-.subscribe .select2-container--default .select2-selection--single .select2-selection__arrow b
+.select2-container--default .subscribe-select2.select2-selection--single .select2-selection__arrow b
   width: 15px
   height: 15px
   bottom: 0
@@ -154,37 +75,39 @@
   background: transparent url('../images/select-arrow.svg') center no-repeat
   border: 0
 
-body .select2-container--default .select2-results__option--highlighted[aria-selected]
+.select2-container--default.select2-container--open .subscribe-select2.select2-selection--single .select2-selection__arrow b
+  transform: rotate(180deg)
+
+.select2-container--default .subscribe-select2-dropdown .select2-results__option--highlighted[aria-selected],
+.select2-container--default .subscribe-select2-dropdown .select2-results__option[aria-selected=true]
   background-color: #eaedec
   color: #000
 
-body .select2-container--default .select2-results__option[aria-selected=true]
-  background-color: #eaedec
-  color: #000
-
-body .select2-results__option
-  padding: 15px 20px
+.subscribe-select2-dropdown .select2-results .select2-results__option
+  padding: 10px 15px
   font-size: 14px
   border-bottom: 1px solid #eaedec
 
-body .select2-container--default .select2-results > .select2-results__options
-  margin: 5px 0
-
-
-body .select2-results__option:last-child
+.subscribe-select2-dropdown .select2-results .select2-results__option:last-child
   border-bottom: none
 
-body .select2-container--open .select2-dropdown--below
+.subscribe-select2-dropdown .select2-results  .select2-results__options
+  margin: 5px 0
+
+.subscribe-select2-dropdown .select2-results .select2-results__option:last-child
+  border-bottom: none
+
+.select2-container--open .subscribe-select2-dropdown.select2-dropdown--below,
+.select2-container--open .subscribe-select2-dropdown.select2-dropdown--above
   position: absolute
   left: 0
   margin-top: 5px
   overflow: auto
   min-width: 260px
-  background-color: $white-color
+  font-size: 14px
   border: 1px solid #eaedec
   border-radius: 3px
-  box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.1)
+  box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.1)
 
-.select2-container
-  width: auto !important
+
 
