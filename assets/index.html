@@ -56,17 +56,17 @@
           <div class="container">top banner
             <button id="headerBannerCloseBtn" type="button" class="header__banner-close"></button>
           </div>
+          <script>
+            $('#headerBannerCloseBtn').on('click', function (e) {
+              e.preventDefault();
+              if (!$('#headerBanner').hasClass('hide')) {
+                $('#headerBanner').slideUp(function () {
+                  $('#headerBanner').addClass('hide');
+                });
+              }
+            });
+          </script>
         </div>
-        <script>
-          $('#headerBannerCloseBtn').on('click', function (e) {
-            e.preventDefault();
-            if (!$('#headerBanner').hasClass('hide')) {
-              $('#headerBanner').slideUp(function () {
-                $('#headerBanner').addClass('hide');
-              });
-            }
-          });
-        </script>
         <div class="header__top-bar">
           <div class="container">
             <nav id="headerTopNav" class="header__top-nav">
@@ -87,15 +87,51 @@
               </ul>
             </div>
           </div>
+          <script>
+            $('#headerTopBtn').on('click', function (e) {
+              e.preventDefault();
+              $('#headerTopNav').toggleClass('active');
+            });
+          </script>
         </div>
-        <script>
-          $('#headerTopBtn').on('click', function (e) {
-            e.preventDefault();
-            $('#headerTopNav').toggleClass('active');
-          });
-        </script>
         <div class="header_main">
-          <div class="container"></div>
+          <div class="container">
+            <div class="header-logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
+            <div id="headerSearch" class="header__search">
+              <button id="headerSearchOpen" type="button" class="header__search-open-btn">&#128269;</button>
+              <button id="headerSearchClose" type="button" class="header__search-close-btn hide">&#10006;</button>
+              <form id="headerSearchForm" method="get" action="" class="header__search-form">
+                <input type="hidden" name="controller" value="search"><span role="status" aria-live="polite"></span>
+                <input type="text" name="s" value="" placeholder="Поиск" autocomplete="off">
+                <button type="submit" class="header__search-form-search">&#128269;</button>
+              </form>
+              <script>
+                $('#headerSearchOpen').on('click', function (e) {
+                  e.preventDefault();
+                  $('#headerSearchForm').addClass('active');
+                  $('#headerSearchOpen').addClass('hide');
+                  $('#headerSearchClose').removeClass('hide');
+                });
+                
+                $('#headerSearchClose').on('click', function (e) {
+                  e.preventDefault();
+                  $('#headerSearchForm').removeClass('active');
+                  $('#headerSearchOpen').removeClass('hide');
+                  $('#headerSearchClose').addClass('hide');
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+        <div id="headerMenu" class="header_menu">
+          <div class="container">
+            <div class="header_menu-ttl">Каталог</div>
+            <div class="header_menu-cat">
+              <ul class="header_menu-cal-list">
+                <li><a href="#">Пункт</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </header>
       <div class="container">

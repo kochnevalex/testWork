@@ -2014,6 +2014,7 @@ button
 
     cursor: pointer; 
 
+    border: none;
     background-color: transparent;
 }
 button:hover,
@@ -2275,6 +2276,67 @@ body
     content: '\00D7';
 }
 
+.header__search
+{
+    position: relative;
+
+    overflow: hidden;
+}
+
+.header__search-open-btn,
+.header__search-close-btn
+{
+    font-size: 22px;
+}
+
+.header__search-open-btn.hide,
+.header__search-close-btn.hide
+{
+    display: none;
+}
+
+.header__search-form
+{
+    display: none;
+}
+
+.header__search-form.active
+{
+    display: block;
+}
+
+.header__search-form-search
+{
+    font-size: 22px;
+}
+
+.header-logo a
+{
+    display: block;
+    float: left; 
+
+    width: 200px;
+    height: 50px;
+}
+
+.header_menu
+{
+    background-color: #f9f9f9;
+}
+
+.header_menu-cat
+{
+    display: none;
+}
+
+.footer
+{
+    padding-top: 40px;
+    padding-bottom: 50px;
+
+    background-color: #f2f2f2;
+}
+
 .cpr
 {
     font-size: 12px; 
@@ -2303,14 +2365,6 @@ body
 
         text-align: right;
     }
-}
-
-.footer
-{
-    padding-top: 40px;
-    padding-bottom: 50px;
-
-    background-color: #f2f2f2;
 }
 
 .btn

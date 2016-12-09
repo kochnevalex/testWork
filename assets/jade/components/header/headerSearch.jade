@@ -1,0 +1,24 @@
+#headerSearch.header__search
+  button#headerSearchOpen.header__search-open-btn(type="button") &#128269;
+  button#headerSearchClose.header__search-close-btn.hide(type="button") &#10006;
+  form#headerSearchForm.header__search-form(method='get', action='')
+    input(type='hidden', name='controller', value='search')
+    span(role='status', aria-live='polite')
+    input(type='text', name='s', value='', placeholder='Поиск', autocomplete='off')
+    button.header__search-form-search(type='submit') &#128269;
+
+
+  script.
+    $('#headerSearchOpen').on('click', function (e) {
+      e.preventDefault();
+      $('#headerSearchForm').addClass('active');
+      $('#headerSearchOpen').addClass('hide');
+      $('#headerSearchClose').removeClass('hide');
+    });
+
+    $('#headerSearchClose').on('click', function (e) {
+      e.preventDefault();
+      $('#headerSearchForm').removeClass('active');
+      $('#headerSearchOpen').removeClass('hide');
+      $('#headerSearchClose').addClass('hide');
+    });
