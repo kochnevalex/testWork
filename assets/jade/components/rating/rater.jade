@@ -1,0 +1,42 @@
+.container.rating
+
+    .rater-wrap
+        h4 Rater
+        .rater
+
+    .rater-wrap-center
+        h4 Rater  - с дополнительным полем input для вывода значения
+        .rater.center
+        input#input2(type="text")
+
+    .rater-wrap.center
+        h4 Rater - возможность изменить символ на кастомный, метод readonly
+        .rater-heart
+
+    .rater-wrap.center
+        h4 Rater - возможность менять цвет заливки и активного элемента
+        .rater-big.color
+
+script.
+    $('.rater').rate({
+        max_value: 6,
+        step_size: 0.5,
+        initial_value: 3.5,
+        update_input_field_name: $("#input2")
+    });
+
+    $('.rater-heart').rate({
+        max_value: 5,
+        step_size: 0.5,
+        readonly: true,
+        initial_value: 3.5,
+        selected_symbol_type: 'hearts'
+    });
+
+
+    $('.rater-big').rate({
+        max_value: 6,
+        step_size: 0.5,
+        initial_value: 3.5
+    });
+

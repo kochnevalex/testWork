@@ -3125,9 +3125,50 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
 
 .rater
 {
-    font-size: 26px; 
+    font-size: 36px;
+}
 
+.rater-wrap-center
+{
+    text-align: center;
+}
+
+.rater.center
+{
     margin: 30px auto;
+}
+
+.rater-big
+{
+    font-size: 72px;
+}
+
+.rater-heart
+{
+    font-size: 40px;
+
+    color: #f00;
+}
+
+.rater-big .rate-hover-layer
+{
+    color: #e5352c;
+}
+
+.rater-big .rate-select-layer
+{
+    color: #6c1287;
+}
+
+.rating h4
+{
+    font-size: 16px;
+
+    padding-top: 20px;
+
+    text-align: center;
+
+    border-top: 2px solid #ddd;
 }
 
 /*# sourceMappingURL=global.css.map */
