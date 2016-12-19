@@ -439,6 +439,10 @@
       margin: 0; /* 2 */
     }
 
+    input:focus {
+      outline: none;
+    }
+
     /**
      * Show the overflow in IE.
      */

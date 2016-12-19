@@ -1,11 +1,11 @@
-#headerSearch.header__search
-  button#headerSearchOpen.header__search-open-btn(type="button") &#128269;
-  button#headerSearchClose.header__search-close-btn.hide(type="button") &#10006;
-  form#headerSearchForm.header__search-form(method='get', action='')
+#headerSearch.search-w
+  button#headerSearchOpen.search-w__open-btn(type="button") &#128269;
+  button#headerSearchClose.search-w__close-btn.hide(type="button") &#10006;
+  form#headerSearchForm.search-w__form(method='get', action='')
     input(type='hidden', name='controller', value='search')
     span(role='status', aria-live='polite')
-    input(type='text', name='s', value='', placeholder='Поиск', autocomplete='off')
-    button.header__search-form-search(type='submit') &#128269;
+    input.search-w__form-input(type='text', name='s', value='', placeholder='Поиск', autocomplete='off')
+    button.search-w__form-search(type='submit') &#128269;
 
 
   script.

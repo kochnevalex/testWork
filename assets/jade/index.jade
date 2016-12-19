@@ -1,4 +1,5 @@
 - var pageTitle = "Main | grid360";
+include parts/goods/goodsMixins
 
 doctype html
 html(lang='ru')
@@ -7,10 +8,9 @@ html(lang='ru')
   body
     .wrap
       include components/header/header
+      include parts/goods/goodsBlock
       include parts/brands/brands
       include parts/brands/brandsSlider
-      include parts/productBlock/productBlock
-      include components/rating/rater
     include components/footer/footer
 
 

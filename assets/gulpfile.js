@@ -90,8 +90,8 @@ gulp.task('sprites', () =>
 );
 
 gulp.task('watch', function () {
-  gulp.watch('css/sass/**/*.*', ['sass']);
-  gulp.watch('jade/**/*.*', ['templates']);
+  gulp.watch('css/sass/**/**/*.*', ['sass']);
+  gulp.watch('jade/**/**/*.*', ['templates']);
   gulp.watch('images/nonoptimised/*.*', ['imagemin']);
   gulp.watch('images/sprite/*.*', ['sprites']);
 });

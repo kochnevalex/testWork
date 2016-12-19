@@ -1,7 +1,6 @@
-.b-product
-
 .b-product__article
-  width: 225px
+  width: 100%
+  margin-bottom: 40px
   text-align: center
 
 .b-product__img
@@ -9,6 +8,7 @@
 
 .b-product__img img
   max-width: 100%
+  width: 100%
 
 .b-product__ttl, .b-product__cat, .b-product__price
   margin-bottom: 10px
@@ -43,13 +43,20 @@
 .b-product__comments-link
   font-size: 10px
 
-//.recall__mark
-//  margin-bottom: 30px
-//
-//.recall__mark span
-//  display: inline-block
-//  margin: 0 2px
-//  @include sprite($star)
-//
-//.recall__mark span.active
-//  @include sprite($star-active)
+
+
+@media (min-width: $screen-xm)
+
+  .b-product__article
+    width: calc(50% - 25px)
+
+
+@media (min-width: $screen-md)
+
+  .b-product__article
+    width: calc(33.3333% - 25px)
+
+@media (min-width: $screen-lg)
+
+  .b-product__article
+    width: calc(25% - 25px)

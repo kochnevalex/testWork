@@ -1,22 +1,54 @@
 
-.header__search
+.search-w
   position: relative
-  overflow: hidden
+  float: left
+  margin-right: 15px
 
-.header__search-open-btn,
-.header__search-close-btn
+.search-w__open-btn,
+.search-w__close-btn
   font-size: 22px
 
-.header__search-open-btn.hide,
-.header__search-close-btn.hide
+.search-w__open-btn.hide,
+.search-w__close-btn.hide
   display: none
 
-.header__search-form
-  display: none
+.search-w__close-btn
+  position: relative
+  z-index: 3
 
-.header__search-form.active
+.search-w__form
+  display: none
+  position: absolute
+  top: 0
+  right: 0
+
+.search-w__form.active
   display: block
 
-.header__search-form-search
+.search-w__form-search
   font-size: 22px
 
+.search-w__form .search-w__form-search
+  position: absolute
+  top: 2px
+  right: 35px
+
+.search-w__form-input
+  height: 30px
+  margin-right: 25px
+  border: 1px solid #000
+  background-color: #fff
+  padding: 0
+
+@media (min-width: $screen-lg)
+
+  .search-w__open-btn,
+  .search-w__close-btn
+    display: none
+
+  .search-w__form
+    display: block
+    position: static
+
+  .search-w__form .search-w__form-search
+    right: 0

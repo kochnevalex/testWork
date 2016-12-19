@@ -96,14 +96,14 @@
         </div>
         <div class="header_main">
           <div class="container">
-            <div class="header-logo"><a href="#"><img src="images/logo.png" alt=""></a></div>
-            <div id="headerSearch" class="header__search">
-              <button id="headerSearchOpen" type="button" class="header__search-open-btn">&#128269;</button>
-              <button id="headerSearchClose" type="button" class="header__search-close-btn hide">&#10006;</button>
-              <form id="headerSearchForm" method="get" action="" class="header__search-form">
+            <div class="header-logo"><a href="#"><img src="images/logo.png" alt="" class="header-logo__img"></a></div>
+            <div id="headerSearch" class="search-w">
+              <button id="headerSearchOpen" type="button" class="search-w__open-btn">&#128269;</button>
+              <button id="headerSearchClose" type="button" class="search-w__close-btn hide">&#10006;</button>
+              <form id="headerSearchForm" method="get" action="" class="search-w__form">
                 <input type="hidden" name="controller" value="search"><span role="status" aria-live="polite"></span>
-                <input type="text" name="s" value="" placeholder="Поиск" autocomplete="off">
-                <button type="submit" class="header__search-form-search">&#128269;</button>
+                <input type="text" name="s" value="" placeholder="Поиск" autocomplete="off" class="search-w__form-input">
+                <button type="submit" class="search-w__form-search">&#128269;</button>
               </form>
               <script>
                 $('#headerSearchOpen').on('click', function (e) {
@@ -121,6 +121,7 @@
                 });
               </script>
             </div>
+            <div class="basket-w"><a href="" class="basket-w__link"><img src="images/basket.png" alt=""></a></div>
           </div>
         </div>
         <div id="headerMenu" class="header_menu">
@@ -134,6 +135,71 @@
           </div>
         </div>
       </header>
+      <div class="container">
+        <h2 class="heading heading--center">Новые товары</h2>
+        <div class="goodsList">
+          <article class="b-product__article">
+            <div class="b-product__img"><img src="./uploads-demo/goods/1.jpg"/></div>
+            <div class="b-product__ttl"><a href="#" class="b-product__ttl-link">Kris Line Fashion Edith brassiere комплект</a></div>
+            <div class="b-product__cat"><a href="#" class="b-product__cat-link">Аксессуары</a></div>
+            <div class="b-product__price">
+              <div class="b-product__cash">4 560 Р</div>
+              <div class="b-product__buy">Добавить в корзину</div>
+            </div>
+            <div class="b-product__rating">
+              <div data-rate-value="3.5" class="b-product__stars"></div>
+              <div class="b-product__comments"><a href="#" class="b-product__comments-link">78 отзывов</a></div>
+            </div>
+          </article>
+          <article class="b-product__article">
+            <div class="b-product__img"><img src="./uploads-demo/goods/1.jpg"/></div>
+            <div class="b-product__ttl"><a href="#" class="b-product__ttl-link">Kris Line Fashion Edith brassiere комплект</a></div>
+            <div class="b-product__cat"><a href="#" class="b-product__cat-link">Аксессуары</a></div>
+            <div class="b-product__price">
+              <div class="b-product__cash">4 560 Р</div>
+              <div class="b-product__buy">Добавить в корзину</div>
+            </div>
+            <div class="b-product__rating">
+              <div data-rate-value="5" class="b-product__stars"></div>
+              <div class="b-product__comments"><a href="#" class="b-product__comments-link">78 отзывов</a></div>
+            </div>
+          </article>
+          <article class="b-product__article">
+            <div class="b-product__img"><img src="./uploads-demo/goods/1.jpg"/></div>
+            <div class="b-product__ttl"><a href="#" class="b-product__ttl-link">Kris Line Fashion Edith brassiere комплект</a></div>
+            <div class="b-product__cat"><a href="#" class="b-product__cat-link">Аксессуары</a></div>
+            <div class="b-product__price">
+              <div class="b-product__cash">4 560 Р</div>
+              <div class="b-product__buy">Добавить в корзину</div>
+            </div>
+            <div class="b-product__rating">
+              <div data-rate-value="2.5" class="b-product__stars"></div>
+              <div class="b-product__comments"><a href="#" class="b-product__comments-link">78 отзывов</a></div>
+            </div>
+          </article>
+          <article class="b-product__article">
+            <div class="b-product__img"><img src="./uploads-demo/goods/1.jpg"/></div>
+            <div class="b-product__ttl"><a href="#" class="b-product__ttl-link">Kris Line Fashion Edith brassiere комплект</a></div>
+            <div class="b-product__cat"><a href="#" class="b-product__cat-link">Аксессуары</a></div>
+            <div class="b-product__price">
+              <div class="b-product__cash">4 560 Р</div>
+              <div class="b-product__buy">Добавить в корзину</div>
+            </div>
+            <div class="b-product__rating">
+              <div data-rate-value="1.5" class="b-product__stars"></div>
+              <div class="b-product__comments"><a href="#" class="b-product__comments-link">78 отзывов</a></div>
+            </div>
+          </article>
+        </div>
+        <script>
+          $('.b-product__stars').rate({
+            max_value: 5,
+            step_size: 0.5,
+            initial_value: 3.5,
+            readonly: true
+          });
+        </script>
+      </div>
       <div class="container">
         <div class="b-brands">
           <h2 class="heading heading--center">Бренды</h2>
@@ -220,46 +286,6 @@
           });
         </script>
       </div>
-      <div class="container">
-        <div class="b-product">
-          <h2 class="heading heading--center">Новые товары</h2>
-          <article class="b-product__article">
-            <div class="b-product__img"><img src="./uploads-demo/productBlock/1.jpg"></div>
-            <div class="b-product__ttl"><a href="#" class="b-product__ttl-link">Kris Line Fashion Edith brassiere комплект</a></div>
-            <div class="b-product__cat"><a href="#" class="b-product__cat-link">Аксессуары</a></div>
-            <div class="b-product__price">
-              <div class="b-product__cash">4 560 Р</div>
-              <div class="b-product__buy">Добавить в корзину</div>
-            </div>
-            <div class="b-product__rating">
-              <div class="b-product__stars"></div>
-              <div class="b-product__comments"><a href="#" class="b-product__comments-link">78 отзывов</a></div>
-            </div>
-          </article>
-        </div>
-      </div>
-      <script>
-        $('.b-product__stars').rate({
-          max_value: 5,
-          step_size: 0.5,
-          initial_value: 3.5,
-          update_input_field_name: $("#input2")
-        });
-      </script>
-      <div class="container">
-        <div class="rater-wrap">
-          <h4>Rater</h4>
-          <div class="rater"></div>
-        </div>
-      </div>
-      <script>
-        $('.rater').rate({
-          max_value: 6,
-          step_size: 0.5,
-          initial_value: 3.5,
-          update_input_field_name: $("#input2")
-        });
-      </script>
     </div>
     <footer id="footer" class="footer">
       <div class="container">
