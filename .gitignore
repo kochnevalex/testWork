@@ -24,6 +24,7 @@ config.core.php
 !/core/packages/core.transport.zip
 !/core/packages/basetheme-*.zip
 node_modules
+*/node_modules
 
 !.gitignore
 !/setup/includes/config.core.php

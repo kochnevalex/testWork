@@ -1,0 +1,12 @@
+mixin oneReview( imgSrc, authorName, aboutAuthor, review)
+        article.b-review__article
+            .b-review__descr
+                p #{review}
+
+            .b-review__author
+                .b-review__author-image
+                    img(src="#{imgSrc}" alt="review")
+
+                dl.b-review__author-info
+                    dt.b-review__author-name #{authorName}
+                    dd.b-review__author-about #{aboutAuthor}
