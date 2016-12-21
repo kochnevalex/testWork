@@ -1,13 +1,13 @@
 mixin oneReview( imgSrc, authorName, aboutAuthor, review)
-    .b-review.b-review--sticky-footer
-        .b-review__descr
-            p #{review}
+  .b-review.b-review--sticky-footer
+    .b-review__descr
+      p #{review}
 
-        footer.b-review__footer
-            .b-review__author
-                .b-review__author-image
-                    img(src="#{imgSrc}" alt="review")
+    footer.b-review__footer
+      .b-review__author
+        .b-review__author-image
+          img(src="#{imgSrc}" alt="review")
 
-                dl.b-review__author-info
-                    dt.b-review__author-name #{authorName}
-                    dd.b-review__author-about #{aboutAuthor}
+        dl.b-review__author-info
+          dt.b-review__author-name #{authorName}
+          dd.b-review__author-about #{aboutAuthor}
