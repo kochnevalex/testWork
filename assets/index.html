@@ -364,6 +364,47 @@
           });
         </script>
       </div>
+      <div class="container">
+        <h2 class="heading">Форма Send</h2>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="send-form">
+              <form data-form="contact" action="#" method="POST" class="form">
+                <div class="form-group">
+                  <input type="text" name="name" placeholder="Имя:" required="required" autocomplete="off" class="form-control">
+                </div>
+                <div class="form-group">
+                  <input type="email" name="email" placeholder="Ваш email:" required="required" autocomplete="off" class="form-control">
+                </div>
+                <div class="form-group">
+                  <textarea name="message" placeholder="Сообщение:" required="required" class="form-control"></textarea>
+                </div>
+                <button type="submit" class="btn-form">Отправить</button>
+              </form>
+              <div id="commentSuccessMessage" class="fmessage fsuccess">
+                <button class="btn-close"></button>
+                <div class="fmessage__ttl">, спасибо!</div>
+                <div class="fmessage__desc">Ваше сообщение успешно отправленно</div>
+              </div>
+              <div id="commentErrorMessage" class="fmessage ferror">
+                <button class="btn-close"></button>
+                <div class="fmessage__ttl">Возникла ошибка</div>
+                <div class="fmessage__desc">Сообщение не получилось отправить</div><span class="fmessage__link link">Попробовать еще раз</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <h3>Загловок</h3>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+              mollit anim id est laborum
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
     <footer id="footer" class="footer">
       <div class="container">

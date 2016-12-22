@@ -2734,7 +2734,7 @@ body
     color: #fff;
     border: none;
     border-radius: 4px;
-    background: #fa3972;
+    background: #e5352c;
     -webkit-box-shadow: 0 2px 0 0 #d33161;
             box-shadow: 0 2px 0 0 #d33161;
 }
@@ -2878,6 +2878,82 @@ body
             box-shadow: 0 -2px 0 0 #d7dcda;
 }
 
+.form-group
+{
+    margin-bottom: 20px;
+}
+
+.form-control
+{
+    font-family: 'OpenSans', sans-serif;
+    font-size: 14px;
+
+    width: 100%;
+    height: 35px;
+    padding: 0 10px;
+
+    color: #000;
+    border: 1px solid #000;
+    outline: none;
+}
+
+textarea.form-control
+{
+    min-height: 100px;
+    padding: 10px;
+
+    resize: vertical;
+}
+
+.form-control::-webkit-input-placeholder
+{
+    font-family: 'OpenSans', sans-serif;
+    font-size: 14px;
+
+    color: #000;
+}
+
+.form-control:-moz-placeholder
+{
+    font-family: 'OpenSans', sans-serif;
+    font-size: 14px;
+
+    color: #000;
+}
+
+.form-control::-moz-placeholder
+{
+    font-family: 'OpenSans', sans-serif;
+    font-size: 14px;
+
+    color: #000;
+}
+
+.form-control:-ms-input-placeholder
+{
+    font-family: 'OpenSans', sans-serif;
+    font-size: 14px;
+
+    color: #000;
+}
+
+.form-group--line
+{
+    border: none;
+    border-bottom: 1px solid #000;
+}
+
+.form-group label.error
+{
+    font-size: 12px;
+
+    display: block;
+
+    margin-top: 5px;
+
+    color: #e5352c;
+}
+
 .subscribe__header
 {
     margin-bottom: 15px;
@@ -2900,68 +2976,6 @@ body
     display: block;
 
     margin: 0;
-}
-
-.form-group
-{
-    margin-bottom: 20px;
-    padding-bottom: 5px;
-}
-
-.form-control
-{
-    font-family: 'OpenSans', sans-serif;
-    font-size: 14px;
-
-    width: 100%;
-    height: 35px;
-    padding-bottom: 5px;
-
-    color: #000;
-    border: none;
-    border-bottom: 2px solid #000;
-    outline: none;
-}
-
-.form-group--line
-{
-    border: none;
-    border-bottom: 2px solid #000;
-}
-
-.subscribe input::-webkit-input-placeholder
-{
-    font-family: 'OpenSans', sans-serif;
-    font-size: 14px;
-
-    color: #000;
-}
-
-.subscribe input:-ms-input-placeholder
-{
-    font-family: 'OpenSans', sans-serif;
-    font-size: 14px;
-
-    color: #000;
-}
-
-.subscribe input::-moz-placeholder
-{
-    font-family: 'OpenSans', sans-serif;
-    font-size: 14px;
-
-    color: #000;
-}
-
-.form-group label.error
-{
-    font-size: 12px;
-
-    display: block;
-
-    margin-top: 5px;
-
-    color: #e5352c;
 }
 
 /**---------------------------------------------
@@ -3453,7 +3467,7 @@ body
 
     margin-bottom: 7px; 
 
-    color: #fa3972;
+    color: #e5352c;
 }
 
 .b-review__author-about
