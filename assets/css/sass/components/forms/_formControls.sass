@@ -1,5 +1,15 @@
 .form-group
+	position: relative
 	margin-bottom: 20px
+
+.form-group.required
+	&::after
+		content: '*'
+		position: absolute
+		top: 5px
+		right: 10px
+		font-size: 18px
+		color: $active-color
 
 .form-control
 	width: 100%
@@ -15,6 +25,7 @@
 
 	&:focus
 		border-color: $active-color
+
 
 textarea.form-control
 	min-height: 100px

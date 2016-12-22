@@ -2926,7 +2926,22 @@ body
 
 .form-group
 {
+    position: relative;
+
     margin-bottom: 20px;
+}
+
+.form-group.required::after
+{
+    font-size: 18px;
+
+    position: absolute;
+    top: 5px;
+    right: 10px;
+
+    content: '*';
+
+    color: #2185d0;
 }
 
 .form-control
