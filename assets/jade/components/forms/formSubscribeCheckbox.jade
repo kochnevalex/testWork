@@ -17,11 +17,11 @@
             input#cat-3(type="checkbox", name="test[]")
             label(for="cat-3") Пункт категории 3
     .form-group
-      input.subscribe__input.form-control(type='email', name='email', placeholder='Ваш e-mail*:', required)
+      input.subscribe__input.form-control(type='email', name='email', placeholder='Ваш e-mail:', required)
     button.btn(type='submit', name='subscribe') Подписаться
 
-script.
-  $('.dropdown__state').click(function () {
-    $(this).toggleClass("active");
-    $('.dropdown__list').toggleClass("active");
-  });
+  script.
+    $('.dropdown__state').click(function () {
+      $(this).toggleClass("active");
+      $('.dropdown__list').toggleClass("active");
+    });

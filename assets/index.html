@@ -379,17 +379,17 @@
                 <div class="form-group">
                   <textarea name="message" placeholder="Сообщение:" required="required" class="form-control"></textarea>
                 </div>
-                <button type="submit" class="btn-form">Отправить</button>
+                <button type="submit" class="btn">Отправить</button>
               </form>
               <div class="fmessage fsuccess">
                 <button class="btn-close"></button>
-                <div class="fmessage__ttl">, спасибо!</div>
+                <div class="fmessage__ttl">Спасибо!</div>
                 <div class="fmessage__desc">Ваше сообщение успешно отправленно</div>
               </div>
               <div class="fmessage ferror">
                 <button class="btn-close"></button>
                 <div class="fmessage__ttl">Возникла ошибка</div>
-                <div class="fmessage__desc">Сообщение не получилось отправить</div><span class="fmessage__link link">Попробовать еще раз</span>
+                <div class="fmessage__desc">Сообщение не получилось отправить</div><span class="fmessage__link">Попробовать еще раз</span>
               </div>
             </div>
           </div>
@@ -436,17 +436,17 @@
                   </div>
                 </div>
                 <div class="form-group">
-                  <input type="email" name="email" placeholder="Ваш e-mail*:" required class="subscribe__input form-control">
+                  <input type="email" name="email" placeholder="Ваш e-mail:" required class="subscribe__input form-control">
                 </div>
                 <button type="submit" name="subscribe" class="btn">Подписаться</button>
               </form>
+              <script>
+                $('.dropdown__state').click(function () {
+                  $(this).toggleClass("active");
+                  $('.dropdown__list').toggleClass("active");
+                });
+              </script>
             </div>
-            <script>
-              $('.dropdown__state').click(function () {
-                $(this).toggleClass("active");
-                $('.dropdown__list').toggleClass("active");
-              });
-            </script>
           </div>
           <div class="col-xs-12 col-md-6">
             <div class="subscribe-wrap">
@@ -464,7 +464,7 @@
                   </select>
                 </div>
                 <div class="form-group">
-                  <input type="email" name="email" placeholder="Ваш e-mail*:" required class="subscribe__input form-control">
+                  <input type="email" name="email" placeholder="Ваш e-mail:" required class="subscribe__input form-control">
                 </div>
                 <button type="submit" name="subscribe" class="btn">Подписаться</button>
               </form>
