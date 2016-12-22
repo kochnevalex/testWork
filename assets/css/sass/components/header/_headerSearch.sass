@@ -36,9 +36,13 @@
 .search-w__form-input
   height: 30px
   margin-right: 25px
-  border: 1px solid #000
+  border: 1px solid $color-light-grey
   background-color: #fff
-  padding: 0
+  padding: 0 10px
+
+.search-w__form-input
+	@include placeholder()
+		color: $black-color
 
 @media (min-width: $screen-lg)
 

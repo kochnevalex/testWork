@@ -2291,6 +2291,11 @@ button:focus
     outline: none;
 }
 
+a
+{
+    color: #2185d0;
+}
+
 html,
 body
 {
@@ -2474,6 +2479,15 @@ body
     margin-right: 0;
 }
 
+.header__top-info-list li a
+{
+    font-size: 14px;
+
+    text-decoration: none; 
+
+    color: #fff;
+}
+
 @media (min-width: 1280px)
 {
     .header__top-ttl,
@@ -2513,7 +2527,7 @@ body
 {
     line-height: 50px; 
 
-    background-color: #fdfb82;
+    background-color: #2185d0;
 }
 
 .header__banner.hide
@@ -2610,10 +2624,30 @@ body
 {
     height: 30px;
     margin-right: 25px;
-    padding: 0; 
+    padding: 0 10px; 
 
-    border: 1px solid #000;
+    border: 1px solid rgba(34, 36, 38, .15);
     background-color: #fff;
+}
+
+.search-w__form-input::-webkit-input-placeholder
+{
+    color: #000;
+}
+
+.search-w__form-input:-moz-placeholder
+{
+    color: #000;
+}
+
+.search-w__form-input::-moz-placeholder
+{
+    color: #000;
+}
+
+.search-w__form-input:-ms-input-placeholder
+{
+    color: #000;
 }
 
 @media (min-width: 1280px)
@@ -2633,6 +2667,11 @@ body
     {
         right: 0;
     }
+}
+
+.header_main
+{
+    clear: both;
 }
 
 .header_main > .container
@@ -2676,14 +2715,17 @@ body
     max-height: 100%;
 }
 
-.header_menu
-{
-    background-color: #f9f9f9;
-}
-
 .header_menu-cat
 {
     display: none;
+}
+
+@media (min-width: 1280px)
+{
+    .header_menu-ttl
+    {
+        display: none;
+    }
 }
 
 .footer
@@ -2734,10 +2776,7 @@ body
     padding: 0 20px;
 
     cursor: pointer;
-    -webkit-transition: .3s;
-         -o-transition: .3s;
-            transition: .3s; 
-    vertical-align: middle;
+    vertical-align: middle; 
 
     color: #fff;
     border: none;
@@ -2900,8 +2939,14 @@ body
     padding: 0 10px;
 
     color: #000;
-    border: 1px solid #000;
-    outline: none;
+    border: 1px solid rgba(34, 36, 38, .15);
+    border-radius: 4px;
+    outline: none; 
+    background-color: #fff;
+}
+.form-control:focus
+{
+    border-color: #2185d0;
 }
 
 textarea.form-control
@@ -2914,40 +2959,28 @@ textarea.form-control
 
 .form-control::-webkit-input-placeholder
 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-
     color: #000;
 }
 
 .form-control:-moz-placeholder
 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-
     color: #000;
 }
 
 .form-control::-moz-placeholder
 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-
     color: #000;
 }
 
 .form-control:-ms-input-placeholder
 {
-    font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-
     color: #000;
 }
 
 .form-group--line
 {
     border: none;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid rgba(34, 36, 38, .15);
 }
 
 .form-group label.error
@@ -3258,23 +3291,11 @@ textarea.form-control
 
 .b-brands__items.b-brands__items--grayscale .brand-item img
 {
-    -webkit-transition: -webkit-filter .3s cubic-bezier(.25, .46, .45, .94);
-         -o-transition:         filter .3s cubic-bezier(.25, .46, .45, .94);
-            transition: -webkit-filter .3s cubic-bezier(.25, .46, .45, .94);
-            transition:         filter .3s cubic-bezier(.25, .46, .45, .94);
-            transition:         filter .3s cubic-bezier(.25, .46, .45, .94), -webkit-filter .3s cubic-bezier(.25, .46, .45, .94); 
-
     -webkit-filter: grayscale(100%);
             filter: grayscale(100%);
 }
 .b-brands__items.b-brands__items--grayscale .brand-item img:hover
 {
-    -webkit-transition: -webkit-filter .3s cubic-bezier(.215, .61, .355, 1);
-         -o-transition:         filter .3s cubic-bezier(.215, .61, .355, 1);
-            transition: -webkit-filter .3s cubic-bezier(.215, .61, .355, 1);
-            transition:         filter .3s cubic-bezier(.215, .61, .355, 1);
-            transition:         filter .3s cubic-bezier(.215, .61, .355, 1), -webkit-filter .3s cubic-bezier(.215, .61, .355, 1); 
-
     -webkit-filter: grayscale(0);
             filter: grayscale(0);
 }
@@ -3551,7 +3572,7 @@ textarea.form-control
     max-width: 100%;
 
     border-radius: 50%;
-    background-color: #ddd;
+    background-color: rgba(34, 36, 38, .15);
 }
 
 .b-review__author-info
@@ -3584,7 +3605,7 @@ textarea.form-control
 
     margin: 0;
 
-    color: #ddd;
+    color: rgba(34, 36, 38, .15);
 }
 
 @media (min-width: 768px)
