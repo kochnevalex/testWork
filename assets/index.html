@@ -46,9 +46,11 @@
   <script src="./js/jquery/plugins/validation/jquery.validate.min.js"></script>
   <script src="./js/jquery/plugins/select2/select2.full.js"></script>
   <script src="./js/jquery/plugins/slick/slick.min.js"></script>
-  <script src="./js/app/formValidate.js"></script>
   <script src="./js/jquery/plugins/rater/rater.min.js"></script>
   <script src="./js/aos.js"></script>
+  <script src="./js/app/lib/site.js"></script>
+  <script src="./js/app/lib/siteMode.js"></script>
+  <script src="./js/app/mode/themeMode.js"></script>
   <body>
     <div class="wrap">
       <header id="header" class="header">
@@ -96,7 +98,7 @@
         </div>
         <div class="header_main">
           <div class="container">
-            <div class="header-logo"><a href="#"><img src="images/logo.png" alt="" class="header-logo__img"></a></div>
+            <div class="header-logo"><a href="#"><img src="http://placehold.it/100x50" alt="" class="header-logo__img"></a></div>
             <div id="headerSearch" class="search-w">
               <button id="headerSearchOpen" type="button" class="search-w__open-btn">&#128269;</button>
               <button id="headerSearchClose" type="button" class="search-w__close-btn hide">&#10006;</button>
@@ -468,14 +470,14 @@
                 </div>
                 <button type="submit" name="subscribe" class="btn">Подписаться</button>
               </form>
+              <script>
+                $('.subscribe__cat').select2({
+                  minimumResultsForSearch: Infinity,
+                  containerCssClass: "subscribe-select2",
+                  dropdownCssClass: "subscribe-select2-dropdown"
+                });
+              </script>
             </div>
-            <script>
-              $('.subscribe__cat').select2({
-                minimumResultsForSearch: Infinity,
-                containerCssClass: "subscribe-select2",
-                dropdownCssClass: "subscribe-select2-dropdown"
-              });
-            </script>
           </div>
         </div>
         <div class="row">
