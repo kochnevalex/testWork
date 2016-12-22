@@ -5,11 +5,4 @@ $(document).ready(function () {
     $('.subscribe__cat').select2({
       minimumResultsForSearch: Infinity
     });
-
-
-
-
-
 });
-
-
