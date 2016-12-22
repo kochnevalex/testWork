@@ -1,0 +1,21 @@
+link(rel="stylesheet", href="css/global.css")
+script(src="./js/app/lib/site.js")
+script(src="./js/app/lib/siteMode.js")
+script(src="./js/app/mode/themeMode.js")
+script(src="./js/app/modules/formValidate.js")
+script(src="./js/app/modules/formAjax.js")
+script.
+  var global = {
+    siteUrl: '',
+    baseUrl: '/',
+    assetsUrl: '/assets/',
+    cultureKey: 'ru',
+    validationMessages: {
+      name: 'Будьте добры, введите ваше имя.',
+      phone: 'Вы забыли оставить ваш номер телефона.',
+      email: 'Адрес электронной почты имеет формат site@mail.com.',
+      emailRequired: 'Адрес электронной почты имеет формат site@mail.com.',
+      text: 'Здесь должно быть ваше сообщение.'
+    }
+  }
+  appMakeBeCool.gateway.init();

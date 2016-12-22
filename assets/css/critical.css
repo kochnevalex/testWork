@@ -2944,6 +2944,11 @@ body
     color: #2185d0;
 }
 
+.form-group.required.error::after
+{
+    color: #b03060;
+}
+
 .form-control
 {
     font-family: 'Open Sans', sans-serif;
@@ -2960,6 +2965,15 @@ body
     background-color: #fff;
 }
 .form-control:focus
+{
+    border-color: #2185d0;
+}
+
+.form-control.error
+{
+    border-color: #b03060;
+}
+.form-control.error:focus
 {
     border-color: #2185d0;
 }
@@ -3006,7 +3020,7 @@ textarea.form-control
 
     margin-top: 5px;
 
-    color: #2185d0;
+    color: #b03060;
 }
 
 .subscribe__header
