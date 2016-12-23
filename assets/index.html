@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="css/critical.css">
   </head>
   <script src="./js/jquery-3.1.1.min.js"></script>
+  <script src="./js/jquery/plugins/animations/animations.js"></script>
   <script src="./js/jquery/plugins/validation/jquery.validate.min.js"></script>
   <script src="./js/jquery/plugins/form/jquery.form.js"></script>
   <script src="./js/jquery/plugins/select2/select2.full.js"></script>
@@ -196,7 +197,7 @@
             max_value: 5,
             step_size: 0.5,
             initial_value: 3.5,
-            readonly: true
+            readonly: false
           });
         </script>
       </div>
@@ -401,9 +402,29 @@
               ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
               fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
               mollit anim id est laborum
+              
+              
+              
             </p>
           </div>
         </div>
+        <section class="animations-demo">
+          <h2 class="heading heading--center">Js + Css анимации</h2>
+          <h3>js__underline-effect</h3>
+          <p class="animations-demo__descriptions">Добавте класс .js__underline-effect к ссылке или любому inline-блoчному элементу(подчеркивает только одноу строку)</p>
+          <ul class="animations-demo__list">
+            <li><a href="#" class="js__underline-effect">наведи на меня</a></li>
+            <li><a href="#" class="js__underline-effect">и на меня наведи</a></li>
+          </ul>
+          <h3>js__ripple-button</h3>
+          <p class="animations-demo__descriptions">Добавте класс js__ripple-button к кнопке</p>
+          <button class="btn js__ripple-button">Нажми меня нежно</button>
+          <button class="btn js__ripple-button">Нажми меня нежно</button>
+        </section>
+        <script>
+          $('.js__ripple-button').rippleEffect();
+          $('.js__underline-effect').underlineEffect();
+        </script>
       </div>
     </div>
     <footer id="footer" class="footer">
@@ -494,6 +515,7 @@
     <script src="./js/app/mode/themeMode.js"></script>
     <script src="./js/app/modules/formValidate.js"></script>
     <script src="./js/app/modules/formAjax.js"></script>
+    <script src="./js/jquery/plugins/animations/animations.js"></script>
     <script>
       var global = {
         siteUrl: '',

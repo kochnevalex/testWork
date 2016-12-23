@@ -3162,4 +3162,170 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
     color: #2185d0;
 }
 
+.js__ripple-effect
+{
+    position: relative;
+
+    overflow: visible;
+}
+
+.ripple
+{
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    -webkit-animation: ripple-animation 1s;
+         -o-animation: ripple-animation 1s;
+            animation: ripple-animation 1s; 
+
+    border-radius: 50%;
+    background-color: #fff;
+}
+
+.js__ripple-button
+{
+    position: relative;
+
+    overflow: hidden;
+}
+
+@-webkit-keyframes ripple-animation
+{
+    from
+    {
+        -webkit-transform: scale(1);
+                transform: scale(1);
+
+        opacity: .4;
+    }
+    to
+    {
+        -webkit-transform: scale(20);
+                transform: scale(20);
+
+        opacity: 0;
+    }
+}
+
+@-o-keyframes ripple-animation
+{
+    from
+    {
+        -o-transform: scale(1);
+           transform: scale(1);
+
+        opacity: .4;
+    }
+    to
+    {
+        -o-transform: scale(20);
+           transform: scale(20);
+
+        opacity: 0;
+    }
+}
+
+@keyframes ripple-animation
+{
+    from
+    {
+        -webkit-transform: scale(1);
+             -o-transform: scale(1);
+                transform: scale(1);
+
+        opacity: .4;
+    }
+    to
+    {
+        -webkit-transform: scale(20);
+             -o-transform: scale(20);
+                transform: scale(20);
+
+        opacity: 0;
+    }
+}
+
+.js__underline-effect
+{
+    position: relative;
+
+    overflow: visible;
+}
+
+.splash
+{
+    position: absolute;
+    bottom: -4px;
+
+    display: block;
+
+    width: auto;
+    height: 2px;
+
+    -webkit-transition: .2s ease-out;
+         -o-transition: .2s ease-out;
+            transition: .2s ease-out;
+
+    opacity: .3;
+    background: #2185d0;
+
+    will-change: left, right;
+}
+
+.splash.animate
+{
+    right: 0 !important; 
+    left: 0 !important;
+
+    opacity: 1;
+}
+
+.cases-link .splash,
+.cases-list .splash
+{
+    z-index: 10;
+
+    overflow: visible;
+
+    height: 1px;
+
+    background-color: blue;
+}
+
+.animations-demo
+{
+    padding: 40px 0;
+}
+.animations-demo h3
+{
+    font-family: 'Open Sans italic', sans-serif;
+
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    color: #616161;
+}
+
+.animations-demo__descriptions
+{
+    margin: 10px 0;
+}
+
+.animations-demo__list
+{
+    padding: 10px 0;
+}
+.animations-demo__list li
+{
+    display: inline-block;
+}
+.animations-demo__list li a
+{
+    text-decoration: none;
+
+    border: none;
+}
+
 /*# sourceMappingURL=global.css.map */

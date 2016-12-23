@@ -1,0 +1,19 @@
+section.animations-demo
+  h2.heading.heading--center Js + Css анимации
+  h3 js__underline-effect
+  p.animations-demo__descriptions Добавте класс .js__underline-effect к ссылке или любому inline-блoчному элементу(подчеркивает только одноу строку)
+
+  ul.animations-demo__list
+
+    li: a.js__underline-effect(href="#") наведи на меня
+    li: a.js__underline-effect(href="#") и на меня наведи
+
+  h3 js__ripple-button
+  p.animations-demo__descriptions Добавте класс js__ripple-button к кнопке
+
+  button.btn.js__ripple-button Нажми меня нежно
+  button.btn.js__ripple-button Нажми меня нежно
+
+script.
+  $('.js__ripple-button').rippleEffect();
+  $('.js__underline-effect').underlineEffect();
