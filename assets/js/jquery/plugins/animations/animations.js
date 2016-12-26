@@ -2,12 +2,12 @@
 
   $.fn.rippleEffect = function (settings) {
     var settingsDefault = {
-      duration:800,
-      delay:200
+      duration: 800,
+      delay: 200
     };
     var settingsCustom = settings;
 
-    $.extend(settingsDefault, settingsCustom);
+    $.extend(true, settingsDefault, settingsCustom);
 
     $(this).each(function () {
       var button = $(this);
