@@ -1,19 +1,20 @@
 (function ($) {
 
-  $.fn.rippleEffect = function (settings) {
-    var settingsDefault = {
+  $.fn.rippleEffect = function (settingsCustom) {
+    var settings = {
       duration: 800,
       delay: 200,
-      color: '#fff'
+      color: '#fff',
+      animationDuration: 1
     };
-    var settingsCustom = settings;
 
-    $.extend(true, settingsDefault, settingsCustom);
+    var settingsNew = settingsCustom;
+
+    $.extend(true, settings, settingsNew);
 
     $(this).each(function () {
-      var button = $(this);
+      var button = $(this),Delay = false;
 
-      var Delay = false;
       button.click(function (Event) {
         if (Delay == false) {
           Delay = true;
@@ -28,16 +29,17 @@
           splash.appendTo($This).css({
             'top': Spot.Ypos - (splash.height() / 2),
             'left': Spot.Xpos - (splash.width() / 2),
-            'background-color': settingsDefault.color
+            'background-color': settings.color,
+            'animation-duration': (settings.animationDuration + 's')
           });
 
           setTimeout(function () {
             splash.remove();
-          }, settingsDefault.duration);
+          }, settings.duration);
 
           setTimeout(function () {
             Delay = false;
-          }, settingsDefault.delay);
+          }, settings.delay);
         }
       });
     });

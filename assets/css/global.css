@@ -3176,9 +3176,9 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
     width: 10px;
     height: 10px;
 
-    -webkit-animation: ripple-animation 1s;
-         -o-animation: ripple-animation 1s;
-            animation: ripple-animation 1s; 
+    -webkit-animation: ripple-animation;
+         -o-animation: ripple-animation;
+            animation: ripple-animation; 
 
     border-radius: 50%;
 }
