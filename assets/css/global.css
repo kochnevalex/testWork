@@ -3181,7 +3181,6 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
             animation: ripple-animation 1s; 
 
     border-radius: 50%;
-    background-color: #fff;
 }
 
 .js__ripple-button

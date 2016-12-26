@@ -3,7 +3,8 @@
   $.fn.rippleEffect = function (settings) {
     var settingsDefault = {
       duration: 800,
-      delay: 200
+      delay: 200,
+      color: '#fff'
     };
     var settingsCustom = settings;
 
@@ -16,7 +17,6 @@
       button.click(function (Event) {
         if (Delay == false) {
           Delay = true;
-
           var $This = $(this);
 
           var Spot = {
@@ -27,7 +27,8 @@
           var splash = $('<span class="ripple">');
           splash.appendTo($This).css({
             'top': Spot.Ypos - (splash.height() / 2),
-            'left': Spot.Xpos - (splash.width() / 2)
+            'left': Spot.Xpos - (splash.width() / 2),
+            'background-color': settingsDefault.color
           });
 
           setTimeout(function () {
