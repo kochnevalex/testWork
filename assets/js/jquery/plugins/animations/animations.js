@@ -1,6 +1,14 @@
 (function ($) {
 
-  $.fn.rippleEffect = function () {
+  $.fn.rippleEffect = function (settings) {
+    var settingsDefault = {
+      duration:800,
+      delay:200
+    };
+    var settingsCustom = settings;
+
+    $.extend(settingsDefault, settingsCustom);
+
     $(this).each(function () {
       var button = $(this);
 
@@ -24,12 +32,12 @@
 
           setTimeout(function () {
             splash.remove();
-          }, 1000);
+          }, settingsDefault.duration);
 
           setTimeout(function () {
             Delay = false;
-          }, 200);
-        } 
+          }, settingsDefault.delay);
+        }
       });
     });
   };
