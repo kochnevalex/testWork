@@ -2539,6 +2539,11 @@ body
             box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .1);
 }
 
+.subscribe-wrap.center
+{
+    text-align: center;
+}
+
 .heading
 {
     font-size: 24px;
