@@ -1,5 +1,5 @@
 (function ($) {
-  
+
   $.fn.rippleEffect = function () {
     $(this).each(function () {
       var button = $(this);
@@ -29,13 +29,14 @@
           setTimeout(function () {
             Delay = false;
           }, 200);
-        }
+        } 
       });
     });
   };
   $.fn.underlineEffect = function () {
+    var This = $(this);
 
-    $(document).on('mouseover', '.js__underline-effect', function (Event) {
+    $(this).on('mouseover', This, function (Event) {
       var splash = $('<span class="splash">');
 
       if (!$('.splash', this).length) {
@@ -52,7 +53,7 @@
       }, 20);
     });
 
-    $(document).on('mouseleave', '.js__underline-effect', function (Event) {
+    $(this).on('mouseleave', This, function (Event) {
       var splash = $('.splash', this);
       splash.css({
         'left': Event.pageX - $(Event.currentTarget).offset().left,
