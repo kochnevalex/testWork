@@ -3,9 +3,9 @@
   $.fn.rippleEffect = function (settingsCustom) {
     var settings = {
       duration: 800,
-      delay: 200,
+      delay: 150,
       color: '#fff',
-      animationDuration: 1
+      animationDuration: 1000
     };
 
     var settingsNew = settingsCustom;
@@ -30,7 +30,7 @@
             'top': Spot.Ypos - (splash.height() / 2),
             'left': Spot.Xpos - (splash.width() / 2),
             'background-color': settings.color,
-            'animation-duration': (settings.animationDuration + 's')
+            'animation-duration': (settings.animationDuration + 'ms')
           });
 
           setTimeout(function () {
@@ -44,8 +44,18 @@
       });
     });
   };
-  $.fn.underlineEffect = function () {
+  $.fn.underlineEffect = function (settingsCustom) {
     var This = $(this);
+    var settings = {
+      thick: 2,
+      bottomOffset: -4,
+      color: '#2185D0'
+    };
+
+    var settingsNew = settingsCustom;
+
+    $.extend(true, settings, settingsNew);
+
 
     $(this).on('mouseover', This, function (Event) {
       var splash = $('<span class="splash">');
@@ -56,7 +66,10 @@
 
       splash.css({
         'left': Event.pageX - $(Event.currentTarget).offset().left,
-        'right': $(Event.currentTarget).offset().left + $(Event.currentTarget).outerWidth() - Event.pageX
+        'right': $(Event.currentTarget).offset().left + $(Event.currentTarget).outerWidth() - Event.pageX,
+        'background-color': settings.color,
+        'bottom': settings.bottomOffset,
+        'height': settings.thick
       });
 
       setTimeout(function () {
