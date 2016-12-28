@@ -13,7 +13,12 @@ section.animations-demo
 
   button.btn.js__ripple-button Нажми меня нежно
   button.btn.js__ripple-button Нажми меня нежно
+  p
+    a.js__tool-tip(href="#") Всплывающая подсказка
+      span.tooltip Im yours tooltip
 
 script.
   $('.js__ripple-button').rippleEffect({duration: 1000, delay: 200, color: '#fff', animationDuration: 1000});
   $('.js__underline-effect').underlineEffect({bottomOffset: -4, thick: 2, color: '#2185D0'});
+  $('.js__tool-tip').toolTip({offsetXpercentage: 50, offsetYpercentage: 200});
+

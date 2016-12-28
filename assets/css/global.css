@@ -3293,6 +3293,24 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
     background-color: blue;
 }
 
+.js__tool-tip
+{
+    position: relative;
+}
+
+.tooltip
+{
+    position: absolute;
+
+    display: none;
+
+    width: auto;
+
+    color: red;
+    border-radius: 4px; 
+    background: black;
+}
+
 .animations-demo
 {
     padding: 40px 0;

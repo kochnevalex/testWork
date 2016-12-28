@@ -13,7 +13,7 @@
     $.extend(true, settings, settingsNew);
 
     $(this).each(function () {
-      var button = $(this),Delay = false;
+      var button = $(this), Delay = false;
 
       button.click(function (Event) {
         if (Delay == false) {
@@ -91,5 +91,79 @@
     });
   };
 
+
+  $.fn.toolTip = function (settingsCustom) {
+    var This = $(this);
+    var splash = This.find('.tooltip');
+    var settings = {
+      offsetXpercentage: 50,
+      offsetYpercentage: 200
+
+    };
+
+    var settingsNew = settingsCustom;
+
+    $.extend(true, settings, settingsNew);
+
+    $(this).on('mousemove', This, function (Event) {
+      splash.show();
+      var posX = Event.pageX;//Положение курсора по x относительно экрана
+      var posY = Event.pageY;//Положение курсора по y относительно экрана
+      var curTarget = $(Event.currentTarget);
+      var parentWidth = curTarget.outerWidth();
+      var childWidth = splash.outerWidth();
+      var childHeight = splash.outerHeight();
+
+      var parentX = curTarget.offset().left;
+      var offset = childWidth/ (100/settings.offsetXpercentage);
+      var offsetTop = childHeight/(100/settings.offsetYpercentage);
+
+
+      var parentXWithWidth = parentX + parentWidth;
+
+      console.log(parentX);
+      console.log(posX - offset);
+      //если этот отступ меньше
+
+
+      if ((posX - offset) <= parentX) {
+        //прилипание к левой границе
+        splash.css({
+          'left': '0',
+          'right': 'auto',
+          'top': -(curTarget.offset().top + curTarget.outerHeight() - posY) + offsetTop
+        });
+
+      } else if (posX >= (parentXWithWidth - (childWidth - offset))) {
+
+        //прилипание к правой границе
+        splash.css({
+          'left': 'auto',
+          'right': '0',
+          'top': -(curTarget.offset().top + curTarget.outerHeight() - posY) + offsetTop
+        });
+
+      }else{
+        splash.css({
+          'left': posX - curTarget.offset().left - offset,
+          'right': 'auto',
+          'top': -(curTarget.offset().top + curTarget.outerHeight() - posY) + offsetTop
+
+        });
+      }
+
+
+    });
+
+    $(this).on('mouseleave', This, function () {
+
+
+      splash.hide();
+
+    });
+
+  };
+
 })(jQuery);
+
 
