@@ -1,0 +1,31 @@
+.form-wrap
+	position: relative
+
+.form.hide
+	display: none
+	opacity: 0
+
+.form.show
+	display: block
+	opacity: 1
+	animation: showSome 1s ease forwards
+
+.fmessage
+	display: none
+
+	&.active
+		display: block
+		opacity: 1
+		animation: showSome 1s ease forwards
+
+@keyframes showSome
+	0%
+		opacity: 0
+		display: none
+
+	99%
+		display: block
+
+	100%
+		display: block
+		opacity: 1

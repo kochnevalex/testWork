@@ -1,0 +1,58 @@
+
+.search-w
+  position: relative
+  float: left
+  margin-right: 15px
+
+.search-w__open-btn,
+.search-w__close-btn
+  font-size: 22px
+
+.search-w__open-btn.hide,
+.search-w__close-btn.hide
+  display: none
+
+.search-w__close-btn
+  position: relative
+  z-index: 3
+
+.search-w__form
+  display: none
+  position: absolute
+  top: 0
+  right: 0
+
+.search-w__form.active
+  display: block
+
+.search-w__form-search
+  font-size: 22px
+
+.search-w__form .search-w__form-search
+  position: absolute
+  top: 2px
+  right: 35px
+
+.search-w__form-input
+  height: 30px
+  margin-right: 25px
+  border: 1px solid $color-light-grey
+  background-color: #fff
+  padding: 0 10px
+
+.search-w__form-input
+	@include placeholder()
+		color: $black-color
+
+@media (min-width: $screen-lg)
+
+  .search-w__open-btn,
+  .search-w__close-btn
+    display: none
+
+  .search-w__form
+    display: block
+    position: static
+
+  .search-w__form .search-w__form-search
+    right: 0

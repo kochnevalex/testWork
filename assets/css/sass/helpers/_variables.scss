@@ -2,10 +2,14 @@
 //
 
 $img-src: '../images/';
+$slick-loader-path: $img-src;
 $font-src: '../fonts/';
 
 $transition-link-2: all 0.2s ease-out;
 $transition-link-4: all 0.4s ease-out;
+
+$transition-in: .3s cubic-bezier(0.215, 0.61, 0.355, 1);
+$transition-out: .3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 
 $transition-easing: cubic-bezier(0.215, 0.61, 0.355, 1);
 
@@ -66,13 +70,15 @@ $border-width: 1px !default;
 // adapting to different screen sizes, for use in media queries.
 
 $screen-xs: 0;
-$screen-sm: 544px;
-$screen-md: 768px;
-$screen-lg: 992px;
-$screen-xl: 1280px;
+$screen-xm: 544px;
+$screen-sm: 768px;
+$screen-md: 992px;
+$screen-lg: 1280px;
+$screen-xl: 1640px;
 
 $grid-breakpoints: (
         xs: $screen-xs,
+        xm: $screen-xm,
         sm: $screen-sm,
         md: $screen-md,
         lg: $screen-lg,
@@ -85,10 +91,11 @@ $grid-breakpoints: (
 // Define the maximum width of `.container` for different screen sizes.
 
 $container-max-widths: (
-        sm: 576px,
-        md: 720px,
-        lg: 940px,
-        xl: 1140px
+        xm: 576px,
+        sm: 720px,
+        md: 940px,
+        lg: 1140px,
+        xl: 1500px
 ) !default;
 @include _assert-ascending($container-max-widths, "$container-max-widths");
 

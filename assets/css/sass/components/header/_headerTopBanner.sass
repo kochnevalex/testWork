@@ -1,0 +1,28 @@
+.header__banner
+  background-color: $active-color
+  line-height: 50px
+
+.header__banner.hide
+  display: none
+
+.header__banner .container
+  position: relative
+
+.header__banner-close
+  position: absolute
+  top: 0
+  right: $grid-gutter-width/2
+  bottom: 0
+  width: 20px
+  height: 20px
+  margin: auto
+  border-radius: 50%
+  border: 1px solid #000
+  text-align: center
+  cursor: pointer
+
+  &::before
+    content: '\00D7'
+    display: block
+    font-size: 20px
+    line-height: 1

@@ -1,18 +1,36 @@
 body
+	font-family: $base-font
   font-size: $base-font-size
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+dl,
+dt,
+dd,
+p
+	margin: 0
+	padding: 0
 
 ul,
 ol
-  margin: 0
-  padding: 0
   list-style: none
-
 
 button
   padding: 0
+  background-color: transparent
+  border: none
   cursor: pointer
 
   &:hover,
   &:focus
     outline: none
+
+a
+	color: $active-color
+

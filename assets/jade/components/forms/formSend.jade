@@ -1,0 +1,18 @@
+.send-form.form-wrap
+  form.form(data-form='contact', action='#', method='POST')
+    .form-group.required
+      input.form-control(type='text', name='name', placeholder='Имя:', required='required', autocomplete='off')
+    .form-group.required
+      input.form-control(type='email', name='email', placeholder='Ваш email:', required='required', autocomplete='off')
+    .form-group
+      textarea.form-control(name='message', placeholder='Сообщение:', required='required')
+    button.btn(type='submit') Отправить
+  .fmessage.fsuccess
+    button.btn-close
+    .fmessage__ttl Спасибо!
+    .fmessage__desc Ваше сообщение успешно отправленно
+  .fmessage.ferror
+    button.btn-close
+    .fmessage__ttl Возникла ошибка
+    .fmessage__desc Сообщение не получилось отправить
+    span.fmessage__link Попробовать еще раз

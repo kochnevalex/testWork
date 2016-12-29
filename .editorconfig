@@ -1,0 +1,40 @@
+# Корневой файл EditorConfig
+root = true
+
+# Для всех файлов используем unix-совместимые переносы строк
+[*]
+end_of_line = lf
+insert_final_newline = true
+
+# Javascript
+[*.js]
+indent_style = space
+indent_size = 2
+charset = utf-8
+trim_trailing_whitespace = true
+
+# HTML
+[*.html]
+indent_style = tab
+indent_size = 2
+charset = utf-8
+trim_trailing_whitespace = true
+
+# Jade
+[*.jade]
+indent_style = space
+indent_size = 2
+charset = utf-8
+trim_trailing_whitespace = true
+
+# Sass & Scss
+[{*.sass, *.scss}]
+indent_style = tab
+indent_size = 2
+charset = utf-8
+trim_trailing_whitespace = true
+
+# Только для файлов package.json
+[{package.json,.travis.yml}]
+indent_style = space
+indent_size = 2

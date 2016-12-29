@@ -6,21 +6,24 @@
         span
         span
       span.header__top-ttl Меню
-      ul#headerTopMenu.header__top-menu
-        li
-          a(href="#") Контакты
-        li
-          a(href="#") Способы доставки
-        li
-          a(href="#") Оплата
-        li
-          a(href="#") О нас
+      #headerTopMenu.header__top-menu
+        ul.header__top-menu-list
+          li
+            a(href="#") Контакты
+          li
+            a(href="#") Способы доставки
+          li
+            a(href="#") Оплата
+          li
+            a(href="#") О нас
     .header__top-info
-      ul
+      ul.header__top-info-list
         li
           a(href="tel:+7495540-50-86") +7 (495) 540-50-86
-script.
-  $('#headerTopBtn').on('click', function (e) {
-    e.preventDefault();
-    $('#headerTopNav').toggleClass('active');
-  });
+        li
+          a(href="#") Войти
+  script.
+    $('#headerTopBtn').on('click', function (e) {
+      e.preventDefault();
+      $('#headerTopNav').toggleClass('active');
+    });

@@ -1,0 +1,24 @@
+.container
+  h2.heading.heading--center Новые товары
+  .goodsList
+    +goodsTile("http://placehold.it/250x310", "Kris Line Fashion Edith brassiere комплект",
+    "Аксессуары", "4 560 Р", "3.5")
+    +goodsTile("http://placehold.it/250x310", "Kris Line Fashion Edith brassiere комплект",
+    "Аксессуары", "4 560 Р", "5")
+    +goodsTile("http://placehold.it/250x310", "Kris Line Fashion Edith brassiere комплект",
+    "Аксессуары", "4 560 Р", "2.5")
+    +goodsTile("http://placehold.it/250x310", "Kris Line Fashion Edith brassiere комплект",
+    "Аксессуары", "4 560 Р", "1.5")
+
+  script.
+    $('.b-product__stars').rate({
+      max_value: 5,
+      step_size: 0.5,
+      initial_value: 3.5,
+      readonly: false
+    });
+
+
+
+
+

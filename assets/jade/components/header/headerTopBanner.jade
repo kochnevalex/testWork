@@ -1,0 +1,13 @@
+#headerBanner.header__banner
+  .container Top banner
+    button#headerBannerCloseBtn.header__banner-close(type="button")
+
+  script.
+    $('#headerBannerCloseBtn').on('click', function (e) {
+      e.preventDefault();
+      if (!$('#headerBanner').hasClass('hide')) {
+        $('#headerBanner').slideUp(function () {
+          $('#headerBanner').addClass('hide');
+        });
+      }
+    });
