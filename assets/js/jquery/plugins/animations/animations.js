@@ -94,10 +94,11 @@
 
   $.fn.toolTip = function (settingsCustom) {
     var This = $(this);
-    var splash = This.find('.tooltip');
+    var toolTip = This.find('.tooltip');
     var settings = {
       offsetXpercentage: 50,
-      offsetYpercentage: 200
+      offsetYpercentage: 100,
+      maxWidth: null
 
     };
 
@@ -105,52 +106,72 @@
 
     $.extend(true, settings, settingsNew);
 
+    var childWidth = toolTip.outerWidth();
+
     $(this).on('mousemove', This, function (Event) {
-      splash.show();
+      toolTip.show();
       var posX = Event.pageX;//Положение курсора по x относительно экрана
       var posY = Event.pageY;//Положение курсора по y относительно экрана
       var curTarget = $(Event.currentTarget);
       var parentWidth = curTarget.outerWidth();
-      var childWidth = splash.outerWidth();
-      var childHeight = splash.outerHeight();
+      var parentHeight = curTarget.outerHeight();
+
+      var childHeight = toolTip.outerHeight();
+      var childCurWidth = toolTip.outerWidth();
 
       var parentX = curTarget.offset().left;
       var offset = childWidth/ (100/settings.offsetXpercentage);
-      var offsetTop = childHeight/(100/settings.offsetYpercentage);
-
+      var offsetTop = childHeight + childHeight/(100/settings.offsetYpercentage);
+      var windowWidth = $(window).width();
 
       var parentXWithWidth = parentX + parentWidth;
+      if(settings.maxWidth != null){
+        toolTip.css({
+          'width': '100%',
+          'max-width': settings.maxWidth
+        });
+      }else{
+        toolTip.css({
+          'width': 'auto'
+        });
+      }
 
-      console.log(parentX);
-      console.log(posX - offset);
-      //если этот отступ меньше
 
 
-      if ((posX - offset) <= parentX) {
+
+
+      if ((posX - offset) <= 0) {
         //прилипание к левой границе
-        splash.css({
-          'left': '0',
+        var stopLeft = (-parentX);
+        toolTip.css({
+          'left': stopLeft,
           'right': 'auto',
-          'top': -(curTarget.offset().top + curTarget.outerHeight() - posY) + offsetTop
+          'top': -(curTarget.offset().top + parentHeight - posY) + offsetTop
         });
 
-      } else if (posX >= (parentXWithWidth - (childWidth - offset))) {
+      } else if (posX >= windowWidth  - (childCurWidth - offset)) {
+
 
         //прилипание к правой границе
-        splash.css({
+        var stopRight = parentXWithWidth - windowWidth;
+        toolTip.css({
           'left': 'auto',
-          'right': '0',
-          'top': -(curTarget.offset().top + curTarget.outerHeight() - posY) + offsetTop
+          'right': stopRight,
+          'top': -(curTarget.offset().top + parentHeight - posY) + offsetTop
+
         });
+        console.log(childCurWidth );
 
       }else{
-        splash.css({
+        toolTip.css({
           'left': posX - curTarget.offset().left - offset,
           'right': 'auto',
-          'top': -(curTarget.offset().top + curTarget.outerHeight() - posY) + offsetTop
+          'top': -(curTarget.offset().top + parentHeight - posY) + offsetTop
 
         });
       }
+
+
 
 
     });
@@ -158,7 +179,7 @@
     $(this).on('mouseleave', This, function () {
 
 
-      splash.hide();
+      toolTip.hide();
 
     });
 
