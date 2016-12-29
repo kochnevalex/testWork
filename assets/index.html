@@ -420,10 +420,19 @@
           <p class="animations-demo__descriptions">Добавте класс js__ripple-button к кнопке</p>
           <button class="btn js__ripple-button">Нажми меня нежно</button>
           <button class="btn js__ripple-button">Нажми меня нежно</button>
+          <h3>js__tool-tip Всплывающая подсказка</h3>
+          <ul class="animations-demo__descr-list">
+            <li>Ширина всплывающей подсказки (.tooltip) может быть установлена в пикселах, или процентах от ширины блока js__tool-tip:</li>
+            <li>adaptiveWidth: '200%', либо adaptiveWidth: '200px', можно не указывать - adaptiveWidth: '200%', тогда ширина подсказки равна ширине её содержимого, максимальная ширина равна ширине блока-родителя (js__tool-tip)</li>
+            <li>Максимальная ширина подсказки всегда равна ширине экрана</li>
+          </ul>
+          <p><span class="animations-demo__tooltip animations-demo__tooltip--inline js__tool-tip">Всплывающая подсказка к инлайн-блоку<span class="tooltip">Im yours tooltip</span></span><span class="animations-demo__tooltip animations-demo__tooltip--inline js__tool-tip">Всплывающая подсказка к инлайн-блоку<span class="tooltip">Im yours second tooltip</span></span><span class="animations-demo__tooltip js__tool-tip-full-width">Всплывающая подсказка (шириной 50%) к блоку<span class="tooltip">Im yours 50%width tooltip</span></span></p>
         </section>
         <script>
           $('.js__ripple-button').rippleEffect({duration: 1000, delay: 200, color: '#fff', animationDuration: 1000});
           $('.js__underline-effect').underlineEffect({bottomOffset: -4, thick: 2, color: '#2185D0'});
+          $('.js__tool-tip').toolTip({offsetXpercentage: 50, offsetYpx: 0});
+          $('.js__tool-tip-full-width').toolTip({offsetXpercentage: 50, offsetYpx: 0, adaptiveWidth: '50%'});
         </script>
       </div>
     </div>

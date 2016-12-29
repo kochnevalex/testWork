@@ -48,17 +48,21 @@
 	right: 0 !important
 
 //js-tooltip
+.js__tool-tip-full-width
+	position: relative
+
+
 .js__tool-tip
 	//requiered styles
 	position: relative
- 
-	//decorative styles
-	padding: 20px 0
+
+
+//decorative styles
+
 
 .tooltip
 	//requiered styles
 	position: absolute
-	width: auto
 	display: none
 	will-change: left, top
 	z-index: 1
@@ -71,42 +75,61 @@
 	font-size: 15px
 
 //Стили только для демо-блока для анимации, к работе самих анимаций отношения не имеет: можно удалить
-.animations-demo
-	padding: 40px 0
-	h3
-		margin-top: 40px
-		margin-bottom: 20px
-		font-family: $base-font-italic
-		color: $grey-color
-
-.animations-demo__descriptions
-	margin: 10px 0
-
 %animations-demo__list
 	padding: 10px 0
+	
 	li
 		a
 			text-decoration: none
 			border: none
 
-.animations-demo__list-item--inline
-	display: inline-block
+.animations-demo
+	padding: 40px 0
 
-.animations-demo__list
-	@extend %animations-demo__list
+	//.animations-demo__descriptions
+	&__descriptions
+		margin: 10px 0
 
-.animations-demo__descr-list
-	@extend %animations-demo__list
-	li
-		margin-top: 10px
-
-.animations-demo__list-item-inline
-	li
+	//.animations-demo__list-item--inline
+	&__list-item--inline
 		display: inline-block
 
-.animations-demo__tooltip
-	color: $active-color
-	font-size: 20px
-	margin-top: 40px
+	//.animations-demo__list
+	&__list
+		@extend %animations-demo__list
+
+	//.animations-demo__descr-list
+	&__descr-list
+		@extend %animations-demo__list
+		padding-bottom: 20px
+
+		li
+			margin-top: 10px
+
+	//.animations-demo__list-item-inline
+	&__list-item-inline
+		li
+			display: inline-block
+
+	//.animations-demo__tooltip
+	&__tooltip
+		display: block
+		color: $active-color
+		font-size: 20px
+		margin-top: 20px
+
+		//.animations-demo__tooltip--inline
+		&--inline
+			display: inline-block
+			margin-right: 15px
 
 
+
+
+
+	//.animations-demo h3
+	h3
+		margin-top: 40px
+		margin-bottom: 20px
+		font-family: $base-font-italic
+		color: $grey-color

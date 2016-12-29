@@ -3281,11 +3281,14 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
     opacity: 1;
 }
 
+.js__tool-tip-full-width
+{
+    position: relative;
+}
+
 .js__tool-tip
 {
     position: relative;
-
-    padding: 20px 0;
 }
 
 .tooltip
@@ -3297,7 +3300,6 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
 
     display: none;
 
-    width: auto;
     padding: 20px;
 
     color: red;
@@ -3305,25 +3307,6 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
     background: black;
 
     will-change: left, top;
-}
-
-.animations-demo
-{
-    padding: 40px 0;
-}
-.animations-demo h3
-{
-    font-family: 'Open Sans italic', sans-serif;
-
-    margin-top: 40px;
-    margin-bottom: 20px;
-
-    color: #616161;
-}
-
-.animations-demo__descriptions
-{
-    margin: 10px 0;
 }
 
 .animations-demo__list,
@@ -3339,28 +3322,54 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
     border: none;
 }
 
+.animations-demo
+{
+    padding: 40px 0;
+}
+.animations-demo__descriptions
+{
+    margin: 10px 0;
+}
 .animations-demo__list-item--inline
 {
     display: inline-block;
 }
-
+.animations-demo__descr-list
+{
+    padding-bottom: 20px;
+}
 .animations-demo__descr-list li
 {
     margin-top: 10px;
 }
-
 .animations-demo__list-item-inline li
 {
     display: inline-block;
 }
-
 .animations-demo__tooltip
 {
     font-size: 20px;
 
-    margin-top: 40px; 
+    display: block;
+
+    margin-top: 20px; 
 
     color: #2185d0;
+}
+.animations-demo__tooltip--inline
+{
+    display: inline-block;
+
+    margin-right: 15px;
+}
+.animations-demo h3
+{
+    font-family: 'Open Sans italic', sans-serif;
+
+    margin-top: 40px;
+    margin-bottom: 20px;
+
+    color: #616161;
 }
 
 /*# sourceMappingURL=global.css.map */
