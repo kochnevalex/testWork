@@ -3293,7 +3293,7 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
 
 .tooltip
 {
-    font-size: 15px; 
+    font-size: 15px;
 
     position: absolute;
     z-index: 1;
@@ -3303,8 +3303,9 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
     padding: 20px;
 
     color: red;
+    border: 1px solid rgba(34, 36, 38, .15); 
     border-radius: 4px;
-    background: black;
+    background: #f2f2f2;
 
     will-change: left, top;
 }
@@ -3313,6 +3314,11 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
 .animations-demo__descr-list
 {
     padding: 10px 0;
+}
+.animations-demo__list li,
+.animations-demo__descr-list li
+{
+    line-height: 25px;
 }
 .animations-demo__list li a,
 .animations-demo__descr-list li a
@@ -3337,10 +3343,23 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
 .animations-demo__descr-list
 {
     padding-bottom: 20px;
+
+    counter-reset: list;
 }
 .animations-demo__descr-list li
 {
+    position: relative;
+
     margin-top: 10px;
+    padding-left: 20px;
+}
+.animations-demo__descr-list li::before
+{
+    position: absolute;
+    left: 0; 
+
+    content: counter(list) '.';
+    counter-increment: list;
 }
 .animations-demo__list-item-inline li
 {
@@ -3366,7 +3385,7 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
 {
     font-family: 'Open Sans italic', sans-serif;
 
-    margin-top: 40px;
+    margin-top: 80px;
     margin-bottom: 20px;
 
     color: #616161;
