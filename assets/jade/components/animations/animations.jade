@@ -5,20 +5,28 @@ section.animations-demo
 
   ul.animations-demo__list
 
-    li: a.js__underline-effect(href="#") наведи на меня
-    li: a.js__underline-effect(href="#") и на меня наведи
+    li.animations-demo__list-item--inline: a.js__underline-effect(href="#") наведи на меня
+    li.animations-demo__list-item--inline: a.js__underline-effect(href="#") и на меня наведи
 
   h3 js__ripple-button
   p.animations-demo__descriptions Добавте класс js__ripple-button к кнопке
 
   button.btn.js__ripple-button Нажми меня нежно
   button.btn.js__ripple-button Нажми меня нежно
+  h3 js__tool-tip Всплывающая подсказка
+
+  ul.animations-demo__descr-list
+    li Ширина всплывающей подсказки (.tooltip) может быть установлена в пикселах, или процентах от ширины блока js__tool-tip:
+    li adaptiveWidth: '200%', либо adaptiveWidth: '200px'
+    li По умолчанию ширина подсказки равна ширине её содержимого, изначально не может быть более ширины блока js__tool-tip.
+    li Максимальная ширина подсказки всегда не больше ширины экрана
+
   p
-    span.js__tool-tip(href="#") Всплывающая подсказка
+    span.animations-demo__tooltip.js__tool-tip Всплывающая подсказка
       span.tooltip Im yours tooltip
 
 script.
   $('.js__ripple-button').rippleEffect({duration: 1000, delay: 200, color: '#fff', animationDuration: 1000});
   $('.js__underline-effect').underlineEffect({bottomOffset: -4, thick: 2, color: '#2185D0'});
-  $('.js__tool-tip').toolTip({offsetXpercentage: 50, offsetYpercentage: -30});
+  $('.js__tool-tip').toolTip({offsetXpercentage: 50, offsetYpx: 0, adaptiveWidth: 200});
 

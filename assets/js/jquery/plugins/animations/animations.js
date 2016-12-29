@@ -95,10 +95,11 @@
   $.fn.toolTip = function (settingsCustom) {
     var This = $(this);
     var toolTip = This.find('.tooltip');
+    var childWidth = toolTip.outerWidth();
     var settings = {
-      offsetXpercentage: 50,
-      offsetYpercentage: 100,
-      maxWidth: null
+      offsetXpercentage: 0,
+      offsetYpx: 100,
+      adaptiveWidth: false
 
     };
 
@@ -106,36 +107,38 @@
 
     $.extend(true, settings, settingsNew);
 
-    var childWidth = toolTip.outerWidth();
 
-    $(this).on('mousemove', This, function (Event) {
+    if(settings.adaptiveWidth){
+      toolTip.css({
+        'width': settings.adaptiveWidth
+      });
+    }else{
+      toolTip.css({
+        'min-width': childWidth,
+        'width': childWidth
+      });
+
+
+    }
+    $(toolTip).on('mouseover', function (Event) {
+
+    });
+
+    $(this).on('mousemove', function (Event) {
       toolTip.show();
       var posX = Event.pageX;//Положение курсора по x относительно экрана
       var posY = Event.pageY;//Положение курсора по y относительно экрана
       var curTarget = $(Event.currentTarget);
       var parentWidth = curTarget.outerWidth();
-      var parentHeight = curTarget.outerHeight();
-
       var childHeight = toolTip.outerHeight();
       var childCurWidth = toolTip.outerWidth();
 
       var parentX = curTarget.offset().left;
-      var offset = childWidth/ (100/settings.offsetXpercentage);
-      var offsetTop = childHeight + childHeight/(100/settings.offsetYpercentage);
+      var offset = childCurWidth/ (100/settings.offsetXpercentage);
+      var offsetTop = - (settings.offsetYpx + childHeight/2);
       var windowWidth = $(window).width();
 
       var parentXWithWidth = parentX + parentWidth;
-      if(settings.maxWidth != null){
-        toolTip.css({
-          'width': '100%',
-          'max-width': settings.maxWidth
-        });
-      }else{
-        toolTip.css({
-          'width': 'auto'
-        });
-      }
-
 
 
 
@@ -145,38 +148,40 @@
         var stopLeft = (-parentX);
         toolTip.css({
           'left': stopLeft,
-          'right': 'auto',
-          'top': -(curTarget.offset().top + parentHeight - posY) + offsetTop
+          'right': 'auto'
         });
 
       } else if (posX >= windowWidth  - (childCurWidth - offset)) {
-
 
         //прилипание к правой границе
         var stopRight = parentXWithWidth - windowWidth;
         toolTip.css({
           'left': 'auto',
-          'right': stopRight,
-          'top': -(curTarget.offset().top + parentHeight - posY) + offsetTop
+          'right': stopRight
 
         });
-        console.log(childCurWidth );
+
 
       }else{
         toolTip.css({
           'left': posX - curTarget.offset().left - offset,
-          'right': 'auto',
-          'top': -(curTarget.offset().top + parentHeight - posY) + offsetTop
-
+          'right': 'auto'
         });
       }
+
+      toolTip.css({
+
+        'top': posY - curTarget.offset().top  - offsetTop,
+        'max-width': windowWidth
+
+      });
 
 
 
 
     });
 
-    $(this).on('mouseleave', This, function () {
+    $(this).on('mouseleave', function () {
 
 
       toolTip.hide();

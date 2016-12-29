@@ -47,27 +47,27 @@
 	left: 0 !important
 	right: 0 !important
 
-.cases-link .splash, .cases-list .splash
-
-	overflow: visible
-	z-index: 10
-	height: 1px
-	background-color: blue
-
 //js-tooltip
 .js__tool-tip
+	//requiered styles
 	position: relative
 	display: block
 
+	//decorative styles
+	padding: 50px
+
 .tooltip
+	//requiered styles
 	position: absolute
 	width: auto
-	color: red
 	display: none
+
+	//decorative styles
 	background: black
 	border-radius: 4px
 	padding: 20px
-
+	color: red
+	font-size: 15px
 
 //Стили только для демо-блока для анимации, к работе самих анимаций отношения не имеет: можно удалить
 .animations-demo
@@ -81,10 +81,31 @@
 .animations-demo__descriptions
 	margin: 10px 0
 
-.animations-demo__list
+%animations-demo__list
 	padding: 10px 0
 	li
-		display: inline-block
 		a
 			text-decoration: none
 			border: none
+
+.animations-demo__list-item--inline
+	display: inline-block
+
+.animations-demo__list
+	@extend %animations-demo__list
+
+.animations-demo__descr-list
+	@extend %animations-demo__list
+	li
+		margin-top: 10px
+
+.animations-demo__list-item-inline
+	li
+		display: inline-block
+
+.animations-demo__tooltip
+	color: $active-color
+	font-size: 20px
+	margin-top: 40px
+
+

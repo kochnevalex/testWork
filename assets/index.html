@@ -413,19 +413,26 @@
           <h3>js__underline-effect</h3>
           <p class="animations-demo__descriptions">Добавте класс .js__underline-effect к ссылке или любому inline-блoчному элементу(подчеркивает только одноу строку)</p>
           <ul class="animations-demo__list">
-            <li><a href="#" class="js__underline-effect">наведи на меня</a></li>
-            <li><a href="#" class="js__underline-effect">и на меня наведи</a></li>
+            <li class="animations-demo__list-item--inline"><a href="#" class="js__underline-effect">наведи на меня</a></li>
+            <li class="animations-demo__list-item--inline"><a href="#" class="js__underline-effect">и на меня наведи</a></li>
           </ul>
           <h3>js__ripple-button</h3>
           <p class="animations-demo__descriptions">Добавте класс js__ripple-button к кнопке</p>
           <button class="btn js__ripple-button">Нажми меня нежно</button>
           <button class="btn js__ripple-button">Нажми меня нежно</button>
-          <p><span href="#" class="js__tool-tip">Всплывающая подсказка<span class="tooltip">Im yours tooltip</span></span></p>
+          <h3>js__tool-tip Всплывающая подсказка</h3>
+          <ul class="animations-demo__descr-list">
+            <li>Ширина всплывающей подсказки (.tooltip) может быть установлена в пикселах, или процентах от ширины блока js__tool-tip:</li>
+            <li>adaptiveWidth: '200%', либо adaptiveWidth: '200px'</li>
+            <li>По умолчанию ширина подсказки равна ширине её содержимого, изначально не может быть более ширины блока js__tool-tip.</li>
+            <li>Максимальная ширина подсказки всегда не больше ширины экрана</li>
+          </ul>
+          <p><span class="animations-demo__tooltip js__tool-tip">Всплывающая подсказка<span class="tooltip">Im yours tooltip</span></span></p>
         </section>
         <script>
           $('.js__ripple-button').rippleEffect({duration: 1000, delay: 200, color: '#fff', animationDuration: 1000});
           $('.js__underline-effect').underlineEffect({bottomOffset: -4, thick: 2, color: '#2185D0'});
-          $('.js__tool-tip').toolTip({offsetXpercentage: 50, offsetYpercentage: -30});
+          $('.js__tool-tip').toolTip({offsetXpercentage: 50, offsetYpx: 0, adaptiveWidth: 200});
         </script>
       </div>
     </div>
