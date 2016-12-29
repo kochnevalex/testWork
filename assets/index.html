@@ -287,6 +287,35 @@
           });
         </script>
       </div>
+      <!--include parts/productBlock/productBlock-->
+      <div class="container">
+        <div class="rater-wrap">
+          <h4>Rater</h4>
+          <div class="rater"></div>
+        </div>
+      </div>
+      <script>
+        $('.rater').rate({
+          max_value: 6,
+          step_size: 0.5,
+          initial_value: 3.5,
+          update_input_field_name: $("#input2")
+        });
+      </script>
+      <div class="container">
+        <div class="subscribe-wrap center">
+          <div class="subscribe__header">
+            <h2 class="subscribe__ttl">Подписывайтесь</h2>
+            <p class="subscribe__sub-ttl">на рассылку новинок, акций и скидок</p>
+          </div>
+          <form id="subscribeLine" action="#" method="POST" class="subscribe subscribe--line">
+            <div class="form-group">
+              <input type="email" name="email" placeholder="Ваш e-mail*:" required class="subscribe__input form-control">
+            </div>
+            <button type="submit" name="subscribe" class="btn">Подписаться</button>
+          </form>
+        </div>
+      </div>
       <div class="container">
         <h2 class="heading heading--center">Отзывы</h2>
         <div id="reviewsSlider" class="review-slider">
@@ -403,8 +432,6 @@
               fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
               mollit anim id est laborum
               
-              
-              
             </p>
           </div>
         </div>
@@ -434,6 +461,45 @@
           $('.js__tool-tip').toolTip({offsetXpercentage: 50, offsetYpx: 0});
           $('.js__tool-tip-full-width').toolTip({offsetXpercentage: 50, offsetYpx: 0, adaptiveWidth: '50%'});
         </script>
+        <h2 class="heading heading--center">Центрирование</h2>
+        <div class="pagination">
+          <ul class="pagination__list">
+            <li class="pagination__prev"><a href="#"><span>предыдущая</span></a></li>
+            <li class="visible-lg"><a href="#">1</a></li>
+            <li class="pagination__etc visible-lg">...</li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li class="current"><a>9</a></li>
+            <li><a href="#">10</a></li>
+            <li><a href="#">11</a></li>
+            <li class="pagination__etc visible-lg">...</li>
+            <li class="visible-lg"><a href="#">15</a></li>
+            <li class="pagination__next"><a href="#"><span>следующая</span></a></li>
+          </ul>
+        </div>
+        <h2 class="heading heading--center">Центрирование</h2>
+        <div class="pagination pagination--center">
+          <ul class="pagination__list">
+            <li class="pagination__prev"><a href="#"><span>предыдущая</span></a></li>
+            <li class="visible-lg"><a href="#">1</a></li>
+            <li class="pagination__etc visible-lg">...</li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li class="current"><a>9</a></li>
+            <li><a href="#">10</a></li>
+            <li><a href="#">11</a></li>
+            <li class="pagination__etc visible-lg">...</li>
+            <li class="visible-lg"><a href="#">15</a></li>
+            <li class="pagination__next"><a href="#"><span>следующая</span></a></li>
+          </ul>
+        </div>
+        <h2 class="heading heading--center">Вправо-влево</h2>
+        <div class="pagination pagination--center">
+          <ul class="pagination__list">
+            <li class="pagination__prev"><a href="#"><span>предыдущая</span></a></li>
+            <li class="pagination__next"><a href="#"><span>следующая</span></a></li>
+          </ul>
+        </div>
       </div>
     </div>
     <footer id="footer" class="footer">

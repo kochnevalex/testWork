@@ -3135,6 +3135,11 @@ textarea.form-control
             box-shadow: 0 4px 15px 0 rgba(0, 0, 0, .1);
 }
 
+.subscribe-wrap.center
+{
+    text-align: center;
+}
+
 .form-wrap
 {
     position: relative;
@@ -3468,6 +3473,69 @@ textarea.form-control
     {
         width: calc(25% - 25px);
     }
+}
+
+.pagination
+{
+    position: relative;
+
+    clear: both;
+    overflow: hidden; 
+
+    min-height: 40px;
+}
+
+.pagination__list
+{
+    float: left;
+
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+
+.pagination.pagination--center .pagination__list
+{
+    display: table;
+    float: none;
+
+    margin: auto;
+}
+
+.pagination__list li
+{
+    float: left;
+
+    text-align: center;
+    vertical-align: top; 
+
+    border-right: 1px solid #eee;
+}
+
+.pagination.pagination--center .pagination__list .pagination__prev,
+.pagination.pagination--center .pagination__list .pagination__next
+{
+    position: absolute;
+
+    border: 1px solid #eee;
+    border-radius: 3px;
+}
+
+.pagination.pagination--center .pagination__list .pagination__prev
+{
+    left: 0;
+}
+
+.pagination.pagination--center .pagination__list .pagination__next
+{
+    right: 0;
+}
+
+.pagination__list li a,
+.pagination__etc
+{
+    display: inline-block;
+
+    padding: 10px;
 }
 
 .review-slider
