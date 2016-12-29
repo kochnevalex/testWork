@@ -3176,12 +3176,11 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
     width: 10px;
     height: 10px;
 
-    -webkit-animation: ripple-animation 1s;
-         -o-animation: ripple-animation 1s;
-            animation: ripple-animation 1s; 
+    -webkit-animation: ripple-animation;
+         -o-animation: ripple-animation;
+            animation: ripple-animation; 
 
     border-radius: 50%;
-    background-color: #fff;
 }
 
 .js__ripple-button
@@ -3282,16 +3281,30 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
     opacity: 1;
 }
 
-.cases-link .splash,
-.cases-list .splash
+.js__tool-tip
 {
-    z-index: 10;
+    position: relative;
 
-    overflow: visible;
+    padding: 20px 0;
+}
 
-    height: 1px;
+.tooltip
+{
+    font-size: 15px; 
 
-    background-color: blue;
+    position: absolute;
+    z-index: 1;
+
+    display: none;
+
+    width: auto;
+    padding: 20px;
+
+    color: red;
+    border-radius: 4px;
+    background: black;
+
+    will-change: left, top;
 }
 
 .animations-demo
@@ -3313,19 +3326,41 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
     margin: 10px 0;
 }
 
-.animations-demo__list
+.animations-demo__list,
+.animations-demo__descr-list
 {
     padding: 10px 0;
 }
-.animations-demo__list li
-{
-    display: inline-block;
-}
-.animations-demo__list li a
+.animations-demo__list li a,
+.animations-demo__descr-list li a
 {
     text-decoration: none;
 
     border: none;
+}
+
+.animations-demo__list-item--inline
+{
+    display: inline-block;
+}
+
+.animations-demo__descr-list li
+{
+    margin-top: 10px;
+}
+
+.animations-demo__list-item-inline li
+{
+    display: inline-block;
+}
+
+.animations-demo__tooltip
+{
+    font-size: 20px;
+
+    margin-top: 40px; 
+
+    color: #2185d0;
 }
 
 /*# sourceMappingURL=global.css.map */

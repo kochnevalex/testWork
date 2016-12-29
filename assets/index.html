@@ -440,8 +440,8 @@
           <h3>js__underline-effect</h3>
           <p class="animations-demo__descriptions">Добавте класс .js__underline-effect к ссылке или любому inline-блoчному элементу(подчеркивает только одноу строку)</p>
           <ul class="animations-demo__list">
-            <li><a href="#" class="js__underline-effect">наведи на меня</a></li>
-            <li><a href="#" class="js__underline-effect">и на меня наведи</a></li>
+            <li class="animations-demo__list-item--inline"><a href="#" class="js__underline-effect">наведи на меня</a></li>
+            <li class="animations-demo__list-item--inline"><a href="#" class="js__underline-effect">и на меня наведи</a></li>
           </ul>
           <h3>js__ripple-button</h3>
           <p class="animations-demo__descriptions">Добавте класс js__ripple-button к кнопке</p>
@@ -449,8 +449,8 @@
           <button class="btn js__ripple-button">Нажми меня нежно</button>
         </section>
         <script>
-          $('.js__ripple-button').rippleEffect();
-          $('.js__underline-effect').underlineEffect();
+          $('.js__ripple-button').rippleEffect({duration: 1000, delay: 200, color: '#fff', animationDuration: 1000});
+          $('.js__underline-effect').underlineEffect({bottomOffset: -4, thick: 2, color: '#2185D0'});
         </script>
         <h2 class="heading heading--center">Центрирование</h2>
         <div class="pagination">

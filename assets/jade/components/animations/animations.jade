@@ -5,8 +5,8 @@ section.animations-demo
 
   ul.animations-demo__list
 
-    li: a.js__underline-effect(href="#") наведи на меня
-    li: a.js__underline-effect(href="#") и на меня наведи
+    li.animations-demo__list-item--inline: a.js__underline-effect(href="#") наведи на меня
+    li.animations-demo__list-item--inline: a.js__underline-effect(href="#") и на меня наведи
 
   h3 js__ripple-button
   p.animations-demo__descriptions Добавте класс js__ripple-button к кнопке
@@ -14,6 +14,9 @@ section.animations-demo
   button.btn.js__ripple-button Нажми меня нежно
   button.btn.js__ripple-button Нажми меня нежно
 
+
 script.
-  $('.js__ripple-button').rippleEffect();
-  $('.js__underline-effect').underlineEffect();
+  $('.js__ripple-button').rippleEffect({duration: 1000, delay: 200, color: '#fff', animationDuration: 1000});
+  $('.js__underline-effect').underlineEffect({bottomOffset: -4, thick: 2, color: '#2185D0'});
+
+
