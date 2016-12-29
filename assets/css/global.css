@@ -3287,7 +3287,7 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
 
     display: block;
 
-    padding: 50px;
+    padding: 20px 0;
 }
 
 .tooltip
@@ -3295,6 +3295,7 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
     font-size: 15px; 
 
     position: absolute;
+    z-index: 1;
 
     display: none;
 
@@ -3304,6 +3305,8 @@ body[data-aos-easing='ease-in-out-quart'] [data-aos],
     color: red;
     border-radius: 4px;
     background: black;
+
+    will-change: left, top;
 }
 
 .animations-demo
