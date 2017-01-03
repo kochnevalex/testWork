@@ -12,11 +12,11 @@ const bs = require('browser-sync').create();
 const csscomb = require('gulp-csscomb');
 const babel = require('gulp-babel');
 const imagemin = require('gulp-imagemin');
-const spritesmith = require("gulp-spritesmith");
+const spritesmith = require("gulp.spritesmith");
 const gulpif = require("gulp-if");
 const flexibility = require('postcss-flexibility');
 
-gulp.task('serve', function () {
+gulp.task('serve', function() {
 
   bs.init({
     proxy: "http://localhost:63342/assets/basetheme-design/",
@@ -30,11 +30,11 @@ gulp.task('serve', function () {
   gulp.watch("*.html").on('change', bs.reload);
 });
 
-gulp.task('sass', function (callback) {
+gulp.task('sass', function(callback) {
   return gulp.src('css/sass/*.sass')
     .pipe(sourcemaps.init())
     .pipe(sass().on('error', sass.logError))
-    .pipe(debug({title: 'sass:'}))
+    .pipe(debug({ title: 'sass:' }))
     .pipe(postcss([flexibility]))
     .pipe(autoprefixer({
       browsers: [
@@ -50,46 +50,47 @@ gulp.task('sass', function (callback) {
       ],
       cascade: true
     }))
-    .pipe(debug({title: 'prefx:'}))
+    .pipe(debug({ title: 'prefx:' }))
     .pipe(sourcemaps.write('.', {
       includeContent: false,
       sourceRoot: 'source'
     }))
-    .pipe(debug({title: 'maps:'}))
-    .pipe(csscomb())
+    .pipe(debug({ title: 'maps:' }))
     .pipe(gulp.dest('css'));
   callback();
 });
 
-gulp.task('templates', function (callback) {
+gulp.task('templates', function(callback) {
   gulp.src('jade/*.jade')
     .pipe(plumber())
     .pipe(jade({
       pretty: true
     }))
     .pipe(gulp.dest('.'))
-    .pipe(debug({title: 'jade:'}));
+    .pipe(debug({ title: 'jade:' }));
   callback();
 });
 
-gulp.task('imagemin', () =>
+gulp.task('imagemin', function() {
   gulp.src('images/nonoptimised/*')
     .pipe(imagemin())
     .pipe(gulp.dest('images'))
-);
+});
 
-gulp.task('sprites', () =>
-  gulp.src('images/sprite/*.png')
-    .pipe(spritesmith({
-      imgName: 'sprite.png',
-      styleName: 'sprite.css',
-      imgPath: 'images/sprite.png'
-    }))
-    .pipe(gulpif('*.png', gulp.dest('images/nonoptimised/')))
-    .pipe(gulpif('*.css', gulp.dest('css/')))
-);
+gulp.task('sprites', function() {
+  console.log('sprites');
+  var spriteData = gulp.src('images/sprite/*.png').pipe(spritesmith({
+    imgName: 'sprite.png',
+    cssName: 'sprite.sass',
+    padding: 4
+  }));
+  return (
+    spriteData.pipe(gulpif('*.png', gulp.dest('images/nonoptimised/'))),
+    spriteData.pipe(gulpif('*.sass', gulp.dest('css/sass/helpers/')))
+  )
+});
 
-gulp.task('watch', function () {
+gulp.task('watch', function() {
   gulp.watch('css/sass/**/**/*.*', ['sass']);
   gulp.watch('jade/**/**/*.*', ['templates']);
   gulp.watch('images/nonoptimised/*.*', ['imagemin']);
