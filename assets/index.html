@@ -295,7 +295,7 @@
             <p class="subscribe__sub-ttl">на рассылку новинок, акций и скидок</p>
           </div>
           <div class="form-wrap">
-            <form id="subscribeLine" action="#" method="POST" data-form="subscribe" class="form subscribe subscribe--line">
+            <form action="#" method="POST" data-form="subscribe" class="form subscribe subscribe--line">
               <div class="form-group required">
                 <input type="email" name="email" placeholder="Ваш email:" required class="subscribe__input form-control">
               </div>
@@ -309,7 +309,8 @@
             <div class="fmessage ferror">
               <button class="btn-close"></button>
               <div class="fmessage__ttl">Возникла ошибка</div>
-              <div class="fmessage__desc">Сообщение не получилось отправить</div><span class="fmessage__link">Попробовать еще раз</span>
+              <div class="fmessage__desc">Сообщение не получилось отправить</div>
+              <button class="btn fmessage__link">Попробовать еще раз</button>
             </div>
           </div>
         </div>
@@ -417,7 +418,8 @@
               <div class="fmessage ferror">
                 <button class="btn-close"></button>
                 <div class="fmessage__ttl">Возникла ошибка</div>
-                <div class="fmessage__desc">Сообщение не получилось отправить</div><span class="fmessage__link">Попробовать еще раз</span>
+                <div class="fmessage__desc">Сообщение не получилось отправить</div>
+                <button class="btn fmessage__link">Попробовать еще раз</button>
               </div>
             </div>
           </div>
@@ -482,7 +484,7 @@
                 <h2 class="subscribe__ttl">Подписывайтесь</h2>
                 <p class="subscribe__sub-ttl">на рассылку новинок, акций и скидок</p>
               </div>
-              <form id="subscribe" action="#" method="POST" class="subscribe">
+              <form action="#" method="POST" data-form="subscribe" class="subscribe form">
                 <div class="form-group form-group--line">
                   <div class="dropdown">
                     <div class="dropdown__state">Все категории</div>
@@ -507,6 +509,17 @@
                 </div>
                 <button type="submit" name="subscribe" class="btn">Подписаться</button>
               </form>
+              <div class="fmessage fsuccess">
+                <button class="btn-close"></button>
+                <div class="fmessage__ttl">Спасибо!</div>
+                <div class="fmessage__desc">Вы успешно подписались на новости.</div>
+              </div>
+              <div class="fmessage ferror">
+                <button class="btn-close"></button>
+                <div class="fmessage__ttl">Возникла ошибка</div>
+                <div class="fmessage__desc">Сообщение не получилось отправить</div>
+                <button class="btn fmessage__link">Попробовать еще раз</button>
+              </div>
               <script>
                 $('.dropdown__state').click(function () {
                   $(this).toggleClass("active");
@@ -521,7 +534,7 @@
                 <h2 class="subscribe__ttl">Подписывайтесь</h2>
                 <p class="subscribe__sub-ttl">на рассылку новинок, акций и скидок</p>
               </div>
-              <form id="subscribe" action="#" method="POST" class="subscribe">
+              <form action="#" method="POST" data-form="subscribe" class="subscribe form">
                 <div class="form-group form-group--line">
                   <select class="subscribe__cat">
                     <option>Все категории</option>
@@ -535,6 +548,17 @@
                 </div>
                 <button type="submit" name="subscribe" class="btn">Подписаться</button>
               </form>
+              <div class="fmessage fsuccess">
+                <button class="btn-close"></button>
+                <div class="fmessage__ttl">Спасибо!</div>
+                <div class="fmessage__desc">Вы успешно подписались на новости.</div>
+              </div>
+              <div class="fmessage ferror">
+                <button class="btn-close"></button>
+                <div class="fmessage__ttl">Возникла ошибка</div>
+                <div class="fmessage__desc">Сообщение не получилось отправить</div>
+                <button class="btn fmessage__link">Попробовать еще раз</button>
+              </div>
               <script>
                 $('.subscribe__cat').select2({
                   minimumResultsForSearch: Infinity,

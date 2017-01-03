@@ -2,7 +2,7 @@
   .subscribe__header
     h2.subscribe__ttl Подписывайтесь
     p.subscribe__sub-ttl на рассылку новинок, акций и скидок
-  form#subscribe.subscribe(action='#', method='POST')
+  form.subscribe.form(action='#', method='POST', data-form='subscribe')
     .form-group.form-group--line
       .dropdown
         .dropdown__state Все категории
@@ -19,6 +19,15 @@
     .form-group.required
       input.subscribe__input.form-control(type='email', name='email', placeholder='Ваш e-mail:', required)
     button.btn(type='submit', name='subscribe') Подписаться
+  .fmessage.fsuccess
+    button.btn-close
+    .fmessage__ttl Спасибо!
+    .fmessage__desc Вы успешно подписались на новости.
+  .fmessage.ferror
+    button.btn-close
+    .fmessage__ttl Возникла ошибка
+    .fmessage__desc Сообщение не получилось отправить
+    button.btn.fmessage__link Попробовать еще раз
 
   script.
     $('.dropdown__state').click(function () {

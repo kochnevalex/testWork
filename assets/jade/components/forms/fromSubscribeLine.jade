@@ -5,7 +5,7 @@
       h2.subscribe__ttl Подписывайтесь
       p.subscribe__sub-ttl на рассылку новинок, акций и скидок
     .form-wrap
-      form#subscribeLine.form.subscribe.subscribe--line(action='#', method='POST', data-form='subscribe')
+      form.form.subscribe.subscribe--line(action='#', method='POST', data-form='subscribe')
         .form-group.required
           input.subscribe__input.form-control(type='email', name='email', placeholder='Ваш email:', required)
         button.btn(type='submit', name='subscribe') Подписаться
@@ -17,4 +17,4 @@
         button.btn-close
         .fmessage__ttl Возникла ошибка
         .fmessage__desc Сообщение не получилось отправить
-        span.fmessage__link Попробовать еще раз
+        button.btn.fmessage__link Попробовать еще раз

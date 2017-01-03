@@ -45,43 +45,46 @@ appMakeBeCool.gateway.addClass('FormValidate', function (properties, $, $window,
     _setup = function () {
       if (_g.forms.length) {
         for (var i in _g.forms) {
-          _g.forms[i].validate({
-            rules: {
-              name: {
-                required: true,
-                minlength: 2
+          _g.forms[i].each(function () {
+            $(this).validate({
+              rules: {
+                name: {
+                  required: true,
+                  minlength: 2
+                },
+                email: {
+                  required: true,
+                  email: true
+                },
+                skype: {
+                  required: true
+                }
               },
-              email: {
-                required: true,
-                email: true
+              messages: {
+                name: {
+                  required: global.validationMessages.name,
+                  minlength: global.validationMessages.nameMinLength
+                },
+                email: {
+                  required: global.validationMessages.emailRequired,
+                  email: global.validationMessages.email
+                },
+                text: global.validationMessages.text,
+                skype: {
+                  required: global.validationMessages.skypeRequired
+                },
+                message: global.validationMessages.text
               },
-              skype: {
-                required: true
+              errorPlacement: function (error, element) {
+                $(element).parent().addClass('error');
+                $(element).parent().append(error);
+              },
+              success: function (element) {
+                $(element).parent().removeClass('error');
               }
-            },
-            messages: {
-              name: {
-                required: global.validationMessages.name,
-                minlength: global.validationMessages.nameMinLength
-              },
-              email: {
-                required: global.validationMessages.emailRequired,
-                email: global.validationMessages.email
-              },
-              text: global.validationMessages.text,
-              skype: {
-                required: global.validationMessages.skypeRequired
-              },
-              message: global.validationMessages.text
-            },
-            errorPlacement: function(error, element) {
-              $(element).parent().addClass('error');
-              $(element).parent().append(error);
-            },
-            success: function(element){
-              $(element).parent().removeClass('error');
-            }
+            });
           });
+
         }
       }
 
