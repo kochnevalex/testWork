@@ -137,7 +137,7 @@
         </div>
       </header>
       <div class="container">
-        <h2 class="heading heading--center">Новые товары</h2>
+        <h2 class="heading text-center">Новые товары</h2>
         <div class="goodsList">
           <article class="b-product__article">
             <div class="b-product__img"><img src="http://placehold.it/250x310"/></div>
@@ -203,7 +203,7 @@
       </div>
       <div class="container">
         <div class="b-brands">
-          <h2 class="heading heading--center">Бренды</h2>
+          <h2 class="heading text-center">Бренды</h2>
           <div class="b-brands__items b-brands__items--grayscale">
             <div class="brand-item"><a href=""><img src="http://placehold.it/25x31" alt=""></a></div>
             <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
@@ -228,7 +228,7 @@
       </div>
       <div class="container">
         <div class="b-brands">
-          <h2 class="heading heading--center">Бренды слайдер</h2>
+          <h2 class="heading text-center">Бренды слайдер</h2>
           <div id="brandsSlider" class="b-brands__items b-brands__items--slider">
             <div class="brand-item"><a href=""><img src="http://placehold.it/25x31" alt=""></a></div>
             <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
@@ -287,37 +287,35 @@
           });
         </script>
       </div>
-      <!--include parts/productBlock/productBlock-->
       <div class="container">
-        <div class="rater-wrap">
-          <h4>Rater</h4>
-          <div class="rater"></div>
-        </div>
-      </div>
-      <script>
-        $('.rater').rate({
-          max_value: 6,
-          step_size: 0.5,
-          initial_value: 3.5,
-          update_input_field_name: $("#input2")
-        });
-      </script>
-      <div class="container">
-        <div class="subscribe-wrap center">
+        <h2 class="heading text-center">Форма подписки</h2>
+        <div class="subscribe text-center">
           <div class="subscribe__header">
             <h2 class="subscribe__ttl">Подписывайтесь</h2>
             <p class="subscribe__sub-ttl">на рассылку новинок, акций и скидок</p>
           </div>
-          <form id="subscribeLine" action="#" method="POST" class="subscribe subscribe--line">
-            <div class="form-group">
-              <input type="email" name="email" placeholder="Ваш e-mail*:" required class="subscribe__input form-control">
+          <div class="form-wrap">
+            <form id="subscribeLine" action="#" method="POST" data-form="subscribe" class="form subscribe subscribe--line">
+              <div class="form-group required">
+                <input type="email" name="email" placeholder="Ваш email:" required class="subscribe__input form-control">
+              </div>
+              <button type="submit" name="subscribe" class="btn">Подписаться</button>
+            </form>
+            <div class="fmessage fsuccess">
+              <button class="btn-close"></button>
+              <div class="fmessage__ttl">Спасибо!</div>
+              <div class="fmessage__desc">Вы успешно подписались на новости.</div>
             </div>
-            <button type="submit" name="subscribe" class="btn">Подписаться</button>
-          </form>
+            <div class="fmessage ferror">
+              <button class="btn-close"></button>
+              <div class="fmessage__ttl">Возникла ошибка</div>
+              <div class="fmessage__desc">Сообщение не получилось отправить</div><span class="fmessage__link">Попробовать еще раз</span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="container">
-        <h2 class="heading heading--center">Отзывы</h2>
+        <h2 class="heading text-center">Отзывы</h2>
         <div id="reviewsSlider" class="review-slider">
                 <div class="b-review b-review--sticky-footer">
                   <div class="b-review__descr">
@@ -431,41 +429,10 @@
               ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
               fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
               mollit anim id est laborum
-              
             </p>
           </div>
         </div>
-        <section class="animations-demo">
-          <h2 class="heading heading--center">Js + Css анимации</h2>
-          <h3>js__underline-effect</h3>
-          <p class="animations-demo__descriptions">Добавте класс .js__underline-effect к ссылке или любому inline-блoчному элементу(подчеркивает только одноу строку)</p>
-          <ul class="animations-demo__list">
-            <li class="animations-demo__list-item--inline"><a href="#" class="js__underline-effect">наведи на меня</a></li>
-            <li class="animations-demo__list-item--inline"><a href="#" class="js__underline-effect">и на меня наведи</a></li>
-          </ul>
-          <h3>js__ripple-button</h3>
-          <p class="animations-demo__descriptions">Добавте класс js__ripple-button к кнопке</p>
-          <button class="btn js__ripple-button">Нажми меня нежно</button>
-          <button class="btn js__ripple-button">Нажми меня нежно</button>
-          <h3>js__tool-tip Всплывающая подсказка</h3>
-          <ul class="animations-demo__descr-list">
-            <li>Ширина всплывающей подсказки (.tooltip) может быть установлена в пикселах, или процентах от ширины блока js__tool-tip:
-              <p>adaptiveWidth: '200%', либо adaptiveWidth: 150, можно не указывать - adaptiveWidth:, тогда ширина подсказки равна ширине её содержимого, максимальная ширина равна ширине блока-родителя (js__tool-tip)</p>
-            </li>
-            <li>Максимальная ширина подсказки всегда равна ширине экрана</li>
-            <li>При необходимости можно задать смещение подсказки относительно курсора по оси х в процентах от ее ширины, по оси y в пикселах:
-              <p>offsetXpercentage: 50, offsetYpx: 0 настройки по-умолчанию</p>
-            </li>
-          </ul>
-          <p><span class="animations-demo__tooltip animations-demo__tooltip--inline js__tool-tip">Всплывающая подсказка к инлайн-блоку<span class="tooltip">Im yours tooltip</span></span><span class="animations-demo__tooltip animations-demo__tooltip--inline js__tool-tip">Всплывающая подсказка к инлайн-блоку<span class="tooltip">Im yours second tooltip</span></span><span class="animations-demo__tooltip js__tool-tip-full-width">Всплывающая подсказка (шириной 50%) к блоку<span class="tooltip">Im yours 50%width tooltip</span></span></p>
-        </section>
-        <script>
-          $('.js__ripple-button').rippleEffect({duration: 1000, delay: 200, color: '#fff', animationDuration: 1000});
-          $('.js__underline-effect').underlineEffect({bottomOffset: -4, thick: 2, color: '#2185D0'});
-          $('.js__tool-tip').toolTip({offsetXpercentage: 50, offsetYpx: 0});
-          $('.js__tool-tip-full-width').toolTip({offsetXpercentage: 50, offsetYpx: 0, adaptiveWidth: '50%'});
-        </script>
-        <h2 class="heading heading--center">Центрирование</h2>
+        <h2 class="heading text-center">Центрирование</h2>
         <div class="pagination">
           <ul class="pagination__list">
             <li class="pagination__prev"><a href="#"><span>предыдущая</span></a></li>
@@ -481,7 +448,7 @@
             <li class="pagination__next"><a href="#"><span>следующая</span></a></li>
           </ul>
         </div>
-        <h2 class="heading heading--center">Центрирование</h2>
+        <h2 class="heading text-center">Центрирование</h2>
         <div class="pagination pagination--center">
           <ul class="pagination__list">
             <li class="pagination__prev"><a href="#"><span>предыдущая</span></a></li>
@@ -497,7 +464,7 @@
             <li class="pagination__next"><a href="#"><span>следующая</span></a></li>
           </ul>
         </div>
-        <h2 class="heading heading--center">Вправо-влево</h2>
+        <h2 class="heading text-center">Вправо-влево</h2>
         <div class="pagination pagination--center">
           <ul class="pagination__list">
             <li class="pagination__prev"><a href="#"><span>предыдущая</span></a></li>

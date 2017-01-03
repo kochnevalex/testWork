@@ -4,7 +4,8 @@ appMakeBeCool.gateway.addClass('FormValidate', function (properties, $, $window,
   var _formValidate = this,
     _d = {
       // elements
-      forms: ['.form[data-form="contact"]']
+      forms: ['.form[data-form="contact"]',
+        '.form[data-form="subscribe"]']
       // prop
       // data
       // classes ans styles

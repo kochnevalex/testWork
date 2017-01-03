@@ -2296,6 +2296,11 @@ a
     color: #2185d0;
 }
 
+.text-center
+{
+    text-align: center;
+}
+
 html,
 body
 {
@@ -3245,11 +3250,6 @@ textarea.form-control
     overflow: hidden; 
 
     margin: 40px 0 20px;
-}
-
-.heading--center
-{
-    text-align: center;
 }
 
 .heading::before,

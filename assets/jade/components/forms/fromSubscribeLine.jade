@@ -1,9 +1,20 @@
 .container
-    .subscribe-wrap.center
-        .subscribe__header
-            h2.subscribe__ttl Подписывайтесь
-            p.subscribe__sub-ttl на рассылку новинок, акций и скидок
-        form#subscribeLine.subscribe.subscribe--line(action='#', method='POST')
-            .form-group
-                input.subscribe__input.form-control(type='email', name='email', placeholder='Ваш e-mail*:', required)
-            button.btn(type='submit', name='subscribe') Подписаться
+  h2.heading.text-center Форма подписки
+  .subscribe.text-center
+    .subscribe__header
+      h2.subscribe__ttl Подписывайтесь
+      p.subscribe__sub-ttl на рассылку новинок, акций и скидок
+    .form-wrap
+      form#subscribeLine.form.subscribe.subscribe--line(action='#', method='POST', data-form='subscribe')
+        .form-group.required
+          input.subscribe__input.form-control(type='email', name='email', placeholder='Ваш email:', required)
+        button.btn(type='submit', name='subscribe') Подписаться
+      .fmessage.fsuccess
+        button.btn-close
+        .fmessage__ttl Спасибо!
+        .fmessage__desc Вы успешно подписались на новости.
+      .fmessage.ferror
+        button.btn-close
+        .fmessage__ttl Возникла ошибка
+        .fmessage__desc Сообщение не получилось отправить
+        span.fmessage__link Попробовать еще раз
