@@ -2065,7 +2065,6 @@ textarea.form-control {
 
 .pagination__list {
   float: left;
-  border: 1px solid #eee;
   border-radius: 3px; }
 
 .pagination.pagination--center .pagination__list {
@@ -2076,13 +2075,23 @@ textarea.form-control {
 .pagination__list li {
   float: left;
   text-align: center;
-  border-right: 1px solid #eee;
   vertical-align: top; }
+  .pagination__list li:first-child a,
+  .pagination__list li:first-child span {
+    margin-left: 0;
+    border-top-left-radius: 3px;
+    border-bottom-left-radius: 3px; }
+  .pagination__list li:last-child a,
+  .pagination__list li:last-child span {
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px; }
 
 .pagination.pagination--center .pagination__list .pagination__prev,
 .pagination.pagination--center .pagination__list .pagination__next {
-  position: absolute;
-  border: 1px solid #eee;
+  position: absolute; }
+
+.pagination.pagination--center .pagination__list .pagination__prev a,
+.pagination.pagination--center .pagination__list .pagination__next a {
   border-radius: 3px; }
 
 .pagination.pagination--center .pagination__list .pagination__prev {
@@ -2092,9 +2101,13 @@ textarea.form-control {
   right: 0; }
 
 .pagination__list li a,
+.pagination__list li > span,
 .pagination__etc {
   display: inline-block;
-  padding: 10px; }
+  padding: 10px;
+  border: 1px solid #eee;
+  margin-left: -1px;
+  color: inherit; }
 
 .review-slider {
   margin-left: -10px;
