@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<body>
+<a href="https://learn.javascript.ru/decorators#декоратор-для-проверки-типа">использование-функции-вопросов</a>
+
+
+<script>
+	'use strict';
+	// вспомогательная функция для проверки на число
+	function checkNumber(value) {
+		//вернет value равный number
+		return typeof value == 'number';
+	}
+	//функция typeCheck -
+	// декоратор, проверяющий типы для f
+	// второй аргумент checks - массив с функциями для проверки (откуда берется?)
+	//берется он sum = typeCheck(sum, [checkNumber, checkNumber]) из квадратных скобок
+	function typeCheck(f, checks) {
+		//возвращает функцию
+		return function () {
+			//которая переберает аргументы
+			for (var i = 0; i < arguments.length; i++) {
+				//и если функция итая из checks ункция  checkNumber вызванная след образом: checks[i](arguments[i])
+				// возвращает false
+
+				if (!checks[i](arguments[i])) {
+					//то тогда функция останавливается, возвращая:
+					alert("Некорректный тип аргумента номер " + i);
+					return;
+				}
+			}
+			//если же все checks[i](arguments[i]) равны true
+			//тогда возвратим вызов самой функции f равной sum через .apply с явно заданным this (в данном случае это:
+			//функция f из type check с атрибутами arguments
+			return f.apply(this, arguments);
+		}
+	}
+
+	function sum(a, b) {
+		return a + b;
+	}
+
+	// обернём декоратор для проверки
+	sum = typeCheck(sum, [checkNumber, checkNumber]); // оба аргумента - числа
+
+	// пользуемся функцией как обычно
+	alert(sum(1, 2)); // 3, все хорошо
+
+	// а вот так - будет ошибка
+	sum(true, null); // некорректный аргумент номер 0
+	sum(1, ["array", "in", "sum?!?"]); // некорректный аргумент номер 1
+	//работает функция следующим образом:
+	//вызываем alert(sum(1, 2))
+	//что происходит:
+	//sum = typeCheck(sum, [checkNumber, checkNumber])
+	//sum это функция function sum(a, b) {return a + b;}
+	//и одновременно вызов sum = typeCheck(sum, [checkNumber, checkNumber])
+	//как такое здоровому(не больному на голову человеку придет в голову??? Никак
+	//По логике по порядку сначала вызывается верхний function sum(a, b) {return a + b;},
+	//а затем нижний sum = typeCheck(sum, [checkNumber, checkNumber])
+	//При вызове sum = typeCheck(sum, [checkNumber, checkNumber]) что происходит
+	//первый аргумент ее вызова - это функция sum, второй - это массив в который передается checkNumber
+	//Что такое checkNumber в данном контексте? - ХЗ, ведь она не передает в функцию checkNumber никаких аргументов
+	//typeCheck возвращает функцию return function
+
+</script>
+</body>
+
+</html>
