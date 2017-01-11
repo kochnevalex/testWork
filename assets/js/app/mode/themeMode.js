@@ -34,11 +34,13 @@ appMakeBeCool.gateway.addClass('ThemeMode', function (properties, $, $window, $d
     _extendClasses = function () {
       _globals.siteObj.utils.extend(_globals.siteObj.classes.FormValidate, _globals.siteObj.base.Class);
       _globals.siteObj.utils.extend(_globals.siteObj.classes.FormAjax, _globals.siteObj.base.Class);
+      _globals.siteObj.utils.extend(_globals.siteObj.classes.OpenBlock, _globals.siteObj.base.Class);
     },
 
     _instantiateClasses = function () {
       _globals.siteObj.createClassInstance('formValidate', _globals.siteObj.classes.FormValidate, {classId: 'FormValidate'});
       _globals.siteObj.createClassInstance('formAjax', _globals.siteObj.classes.FormAjax, {classId: 'FormAjax'});
+      _globals.siteObj.createClassInstance('openBlock', _globals.siteObj.classes.OpenBlock, {classId: 'OpenBlock'});
     },
 
     _setup = function () {
@@ -56,6 +58,7 @@ appMakeBeCool.gateway.addClass('ThemeMode', function (properties, $, $window, $d
           _themeMode.bind($window, _themeMode.globals.classType + '_Complete', function (e, data) {
             _themeMode.trigger('FormValidate_Init', data);
             _themeMode.trigger('FormAjax_Init', data);
+            _themeMode.trigger('OpenBlock_Init', data);
           });
         }
       }
