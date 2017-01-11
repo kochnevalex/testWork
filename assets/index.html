@@ -49,6 +49,7 @@
   <script src="./js/jquery/plugins/rater/rater.min.js"></script>
   <script src="./js/plugins/aos/aos.js"></script>
   <script src="./js/jquery/plugins/textarea-autoresize/autosize.js"></script>
+  <script src="./js/jquery/plugins/charts/chartist.min.js"></script>
   <body>
     <div class="wrap">
       <header id="header" class="header">
@@ -501,6 +502,110 @@
             </div>
           </div>
         </div>
+        <script>
+          $('.b-opening__open-desc').on('click', function (e) {
+            var $parent = $(e.target).closest('.parent-desc');
+            $parent.find('.b-opening__item-ttl, .b-opening__open-desc').toggleClass('active');
+            $parent.find('.item-full-desc').slideToggle(400);
+          
+          })
+        </script>
+      </section>
+      <section class="b-chart-donut">
+        <div class="container">
+          <div class="b-chart-donut__list">
+            <div class="b-chart-donut__item">
+              <div class="b-chart-donut__item-top"><b>Lorem ipsum dolor sit amet,</b>
+                <p>consectetur adipiscing elit. Aliquam ipsum orci, gravida sit amet molestie sed, suscipit sed ante.</p>
+              </div>
+              <div class="b-chart-donut__item-bottom">
+                <div data-result="90.0" class="b-chart-donut__chart"></div>
+                <p>
+                  Integer hendrerit elit eget fermentum malesuada. Ut sagittis commodo sapien, nec laoreet neque finibus eget.
+                  In hac habitasse platea dictumst.
+                  
+                </p>
+              </div>
+            </div>
+            <div class="b-chart-donut__item">
+              <div class="b-chart-donut__item-top"><b>Lorem ipsum dolor sit amet,</b>
+                <p>consectetur adipiscing elit. Aliquam ipsum orci, gravida sit amet molestie sed, suscipit sed ante.</p>
+              </div>
+              <div class="b-chart-donut__item-bottom">
+                <div data-result="89.9" class="b-chart-donut__chart"></div>
+                <p>
+                  Integer hendrerit elit eget fermentum malesuada. Ut sagittis commodo sapien, nec laoreet neque finibus eget.
+                  In hac habitasse platea dictumst.
+                  
+                </p>
+              </div>
+            </div>
+            <div class="b-chart-donut__item">
+              <div class="b-chart-donut__item-top"><b>Lorem ipsum dolor sit amet,</b>
+                <p>consectetur adipiscing elit. Aliquam ipsum orci, gravida sit amet molestie sed, suscipit sed ante.</p>
+              </div>
+              <div class="b-chart-donut__item-bottom">
+                <div data-result="88.0" class="b-chart-donut__chart"></div>
+                <p>
+                  Integer hendrerit elit eget fermentum malesuada. Ut sagittis commodo sapien, nec laoreet neque finibus eget.
+                  In hac habitasse platea dictumst.
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          $(window).bind('scroll', function () {
+            if (!$('.b-chart-donut').hasClass('active')) {
+              if ($(window).scrollTop() > $('.b-chart-donut').offset().top - $(window).height() / 1.5) {
+                $('.b-chart-donut__chart').each(function () {
+                  var val = ' ' + $(this).data('result');
+                  var label = val.replace(".", ",");
+                  var chart = new Chartist.Pie(this, {
+                    series: [val],
+                    labels: [label + '%']
+                  }, {
+                    donut: true,
+                    donutWidth: 17,
+                    total: 100
+                  });
+          
+                  chart.on('draw', function (data) {
+                    if (data.type === 'slice') {
+                      var pathLength = data.element._node.getTotalLength();
+                      data.element.attr({
+                        'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
+                      });
+          
+                      var animationDefinition = {
+                        'stroke-dashoffset': {
+                          id: 'anim' + data.index,
+                          dur: 1500,
+                          from: -pathLength + 'px',
+                          to: '0px',
+                          easing: Chartist.Svg.Easing.easeOutQuint,
+                          fill: 'freeze'
+                        }
+                      };
+          
+                      if (data.index !== 0) {
+                        animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
+                      }
+          
+                      data.element.attr({
+                        'stroke-dashoffset': -pathLength + 'px'
+                      });
+          
+                      data.element.animate(animationDefinition, false);
+                    }
+                  });
+                })
+                $('.b-chart-donut').addClass('active')
+              }
+            }
+          })
+        </script>
       </section>
       <div class="container">
         <h2 class="heading">Форма Send</h2>
@@ -707,7 +812,6 @@
     <script src="./js/app/mode/themeMode.js"></script>
     <script src="./js/app/modules/formValidate.js"></script>
     <script src="./js/app/modules/formAjax.js"></script>
-    <script src="./js/app/modules/openBlock.js"></script>
     <script>
       var global = {
         siteUrl: '',

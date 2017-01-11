@@ -88,3 +88,11 @@ section.b-opening
               li 1. Lorem ipsum dolor sit amet, consectetur
           .b-opening__btn
             a.btn(href="") Узнать больше
+
+  script.
+    $('.b-opening__open-desc').on('click', function (e) {
+      var $parent = $(e.target).closest('.parent-desc');
+      $parent.find('.b-opening__item-ttl, .b-opening__open-desc').toggleClass('active');
+      $parent.find('.item-full-desc').slideToggle(400);
+
+    })
