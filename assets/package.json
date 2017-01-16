@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "node_modules/.bin/jsdoc -c jsdoc.json",
     "check-updates": "npm install -g npm-check-updates"
   },
   "author": "makebecool.com.ua",

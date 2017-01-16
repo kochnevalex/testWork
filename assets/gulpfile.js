@@ -15,6 +15,7 @@ const imagemin = require('gulp-imagemin');
 const spritesmith = require("gulp.spritesmith");
 const gulpif = require("gulp-if");
 const flexibility = require('postcss-flexibility');
+const eslint = require('gulp-eslint');
 
 gulp.task('serve', function() {
 
@@ -97,4 +98,6 @@ gulp.task('watch', function() {
   gulp.watch('images/sprite/*.*', ['sprites']);
 });
 
+
 gulp.task('default', ['templates', 'sass', 'imagemin', 'sprites', 'serve', 'watch']);
+gulp.task('test-js', ['lint-js']);
