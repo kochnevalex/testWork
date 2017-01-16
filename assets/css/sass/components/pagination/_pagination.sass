@@ -6,7 +6,7 @@
 
 .pagination__list
   float: left
-  border: 1px solid #eee
+  //border: 1px solid #eee
   border-radius: 3px
 
 .pagination.pagination--center .pagination__list
@@ -17,13 +17,24 @@
 .pagination__list li
   float: left
   text-align: center
-  border-right: 1px solid #eee
   vertical-align: top
+  &:first-child a,
+  &:first-child span
+    margin-left: 0
+    border-top-left-radius: 3px
+    border-bottom-left-radius: 3px
+  &:last-child a,
+  &:last-child span
+    border-top-right-radius: 3px
+    border-bottom-right-radius: 3px
 
 .pagination.pagination--center .pagination__list .pagination__prev,
 .pagination.pagination--center .pagination__list .pagination__next
   position: absolute
-  border: 1px solid #eee
+  //border: 1px solid #eee
+
+.pagination.pagination--center .pagination__list .pagination__prev a,
+.pagination.pagination--center .pagination__list .pagination__next a
   border-radius: 3px
 
 .pagination.pagination--center .pagination__list .pagination__prev
@@ -33,7 +44,11 @@
   right: 0
 
 .pagination__list li a,
+.pagination__list li > span,
 .pagination__etc
   display: inline-block
   padding: 10px
+  border: 1px solid #eee
+  margin-left: -1px
+  color: inherit
 

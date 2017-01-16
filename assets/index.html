@@ -42,7 +42,6 @@
     <link rel="stylesheet" href="css/critical.css">
   </head>
   <script src="./js/jquery-3.1.1.min.js"></script>
-  <script src="./js/jquery/plugins/animations/animations.js"></script>
   <script src="./js/jquery/plugins/validation/jquery.validate.min.js"></script>
   <script src="./js/jquery/plugins/form/jquery.form.js"></script>
   <script src="./js/jquery/plugins/select2/select2.full.js"></script>
@@ -50,6 +49,7 @@
   <script src="./js/jquery/plugins/rater/rater.min.js"></script>
   <script src="./js/plugins/aos/aos.js"></script>
   <script src="./js/jquery/plugins/textarea-autoresize/autosize.js"></script>
+  <script src="./js/jquery/plugins/charts/chartist.min.js"></script>
   <body>
     <div class="wrap">
       <header id="header" class="header">
@@ -393,6 +393,220 @@
           });
         </script>
       </div>
+      <section class="b-opening">
+        <div class="container">
+          <div class="b-opening__list">
+            <div class="b-opening__item parent-desc">
+              <div class="b-opening_short-info">
+                <h3 class="b-opening__item-ttl">Lorem ipsum dolor sit amet</h3>
+                <div class="b-opening__short-desc">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    
+                  </p><span class="b-opening__open-desc"></span>
+                </div>
+              </div>
+              <div class="b-opening__full_desc item-full-desc">
+                <h3 class="b-opening__item-ttl">Lorem ipsum dolor sit amet</h3>
+                <div class="b-opening__full_desc-text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus aliquam est maximus volutpat
+                    noneget justo. Quisque semper, leo at ultricies tristique, metus risus blandit ligula, quis varius augue
+                  </p>
+                  <ul>
+                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
+                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
+                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
+                  </ul>
+                </div>
+                <div class="b-opening__btn"><a href="" class="btn">Узнать больше</a></div>
+              </div>
+            </div>
+            <div class="b-opening__item parent-desc">
+              <div class="b-opening_short-info">
+                <h3 class="b-opening__item-ttl">Lorem ipsum dolor sit amet</h3>
+                <div class="b-opening__short-desc">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    
+                  </p><span class="b-opening__open-desc"></span>
+                </div>
+              </div>
+              <div class="b-opening__full_desc item-full-desc">
+                <h3 class="b-opening__item-ttl">Lorem ipsum dolor sit amet</h3>
+                <div class="b-opening__full_desc-text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus aliquam est maximus volutpat
+                    noneget justo. Quisque semper, leo at ultricies tristique, metus risus blandit ligula, quis varius augue
+                  </p>
+                  <ul>
+                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
+                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
+                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
+                  </ul>
+                </div>
+                <div class="b-opening__btn"><a href="" class="btn">Узнать больше</a></div>
+              </div>
+            </div>
+            <div class="b-opening__item parent-desc">
+              <div class="b-opening_short-info">
+                <h3 class="b-opening__item-ttl">Lorem ipsum dolor sit amet</h3>
+                <div class="b-opening__short-desc">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    
+                  </p><span class="b-opening__open-desc"></span>
+                </div>
+              </div>
+              <div class="b-opening__full_desc item-full-desc">
+                <h3 class="b-opening__item-ttl">Lorem ipsum dolor sit amet</h3>
+                <div class="b-opening__full_desc-text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus aliquam est maximus volutpat
+                    noneget justo. Quisque semper, leo at ultricies tristique, metus risus blandit ligula, quis varius augue
+                  </p>
+                  <ul>
+                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
+                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
+                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
+                  </ul>
+                </div>
+                <div class="b-opening__btn"><a href="" class="btn">Узнать больше</a></div>
+              </div>
+            </div>
+            <div class="b-opening__item parent-desc">
+              <div class="b-opening_short-info">
+                <h3 class="b-opening__item-ttl">Lorem ipsum dolor sit amet</h3>
+                <div class="b-opening__short-desc">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    
+                  </p><span class="b-opening__open-desc"></span>
+                </div>
+              </div>
+              <div class="b-opening__full_desc item-full-desc">
+                <h3 class="b-opening__item-ttl">Lorem ipsum dolor sit amet</h3>
+                <div class="b-opening__full_desc-text">
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus aliquam est maximus volutpat
+                    noneget justo. Quisque semper, leo at ultricies tristique, metus risus blandit ligula, quis varius augue
+                  </p>
+                  <ul>
+                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
+                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
+                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
+                  </ul>
+                </div>
+                <div class="b-opening__btn"><a href="" class="btn">Узнать больше</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          $('.b-opening__open-desc').on('click', function (e) {
+            var $parent = $(e.target).closest('.parent-desc');
+            $parent.find('.b-opening__item-ttl, .b-opening__open-desc').toggleClass('active');
+            $parent.find('.item-full-desc').slideToggle(400);
+          
+          })
+        </script>
+      </section>
+      <section class="b-chart-donut">
+        <div class="container">
+          <div class="b-chart-donut__list">
+            <div class="b-chart-donut__item">
+              <div class="b-chart-donut__item-top"><b>Lorem ipsum dolor sit amet,</b>
+                <p>consectetur adipiscing elit. Aliquam ipsum orci, gravida sit amet molestie sed, suscipit sed ante.</p>
+              </div>
+              <div class="b-chart-donut__item-bottom">
+                <div data-result="90.0" class="b-chart-donut__chart"></div>
+                <p>
+                  Integer hendrerit elit eget fermentum malesuada. Ut sagittis commodo sapien, nec laoreet neque finibus eget.
+                  In hac habitasse platea dictumst.
+                  
+                </p>
+              </div>
+            </div>
+            <div class="b-chart-donut__item">
+              <div class="b-chart-donut__item-top"><b>Lorem ipsum dolor sit amet,</b>
+                <p>consectetur adipiscing elit. Aliquam ipsum orci, gravida sit amet molestie sed, suscipit sed ante.</p>
+              </div>
+              <div class="b-chart-donut__item-bottom">
+                <div data-result="89.9" class="b-chart-donut__chart"></div>
+                <p>
+                  Integer hendrerit elit eget fermentum malesuada. Ut sagittis commodo sapien, nec laoreet neque finibus eget.
+                  In hac habitasse platea dictumst.
+                  
+                </p>
+              </div>
+            </div>
+            <div class="b-chart-donut__item">
+              <div class="b-chart-donut__item-top"><b>Lorem ipsum dolor sit amet,</b>
+                <p>consectetur adipiscing elit. Aliquam ipsum orci, gravida sit amet molestie sed, suscipit sed ante.</p>
+              </div>
+              <div class="b-chart-donut__item-bottom">
+                <div data-result="88.0" class="b-chart-donut__chart"></div>
+                <p>
+                  Integer hendrerit elit eget fermentum malesuada. Ut sagittis commodo sapien, nec laoreet neque finibus eget.
+                  In hac habitasse platea dictumst.
+                  
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <script>
+          $(window).bind('scroll', function () {
+            if (!$('.b-chart-donut').hasClass('active')) {
+              if ($(window).scrollTop() > $('.b-chart-donut').offset().top - $(window).height() / 1.5) {
+                $('.b-chart-donut__chart').each(function () {
+                  var val = ' ' + $(this).data('result');
+                  var label = val.replace(".", ",");
+                  var chart = new Chartist.Pie(this, {
+                    series: [val],
+                    labels: [label + '%']
+                  }, {
+                    donut: true,
+                    donutWidth: 17,
+                    total: 100
+                  });
+          
+                  chart.on('draw', function (data) {
+                    if (data.type === 'slice') {
+                      var pathLength = data.element._node.getTotalLength();
+                      data.element.attr({
+                        'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
+                      });
+          
+                      var animationDefinition = {
+                        'stroke-dashoffset': {
+                          id: 'anim' + data.index,
+                          dur: 1500,
+                          from: -pathLength + 'px',
+                          to: '0px',
+                          easing: Chartist.Svg.Easing.easeOutQuint,
+                          fill: 'freeze'
+                        }
+                      };
+          
+                      if (data.index !== 0) {
+                        animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
+                      }
+          
+                      data.element.attr({
+                        'stroke-dashoffset': -pathLength + 'px'
+                      });
+          
+                      data.element.animate(animationDefinition, false);
+                    }
+                  });
+                })
+                $('.b-chart-donut').addClass('active')
+              }
+            }
+          })
+        </script>
+      </section>
       <div class="container">
         <h2 class="heading">Форма Send</h2>
         <div class="row">
@@ -439,29 +653,42 @@
           <ul class="pagination__list">
             <li class="pagination__prev"><a href="#"><span>предыдущая</span></a></li>
             <li class="visible-lg"><a href="#">1</a></li>
-            <li class="pagination__etc visible-lg">...</li>
+            <li class="visible-lg"><span>...</span></li>
             <li><a href="#">7</a></li>
             <li><a href="#">8</a></li>
-            <li class="current"><a>9</a></li>
+            <li class="current"><span>9</span></li>
             <li><a href="#">10</a></li>
             <li><a href="#">11</a></li>
-            <li class="pagination__etc visible-lg">...</li>
+            <li class="visible-lg"><span>...</span></li>
             <li class="visible-lg"><a href="#">15</a></li>
             <li class="pagination__next"><a href="#"><span>следующая</span></a></li>
           </ul>
         </div>
         <h2 class="heading text-center">Центрирование</h2>
+        <!--.pagination.pagination--center-->
+        <!--  ul.pagination__list-->
+        <!--    li.pagination__prev: a(href="#") #[span предыдущая]-->
+        <!--    li.visible-lg: a(href="#") 1-->
+        <!--    li.pagination__etc.visible-lg ...-->
+        <!--    li: a(href="#") 7-->
+        <!--    li: a(href="#") 8-->
+        <!--    li.current: a(class="") 9-->
+        <!--    li: a(href="#") 10-->
+        <!--    li: a(href="#") 11-->
+        <!--    li.pagination__etc.visible-lg ...-->
+        <!--    li.visible-lg: a(href="#") 15-->
+        <!--    li.pagination__next: a(href="#") #[span следующая]-->
         <div class="pagination pagination--center">
           <ul class="pagination__list">
             <li class="pagination__prev"><a href="#"><span>предыдущая</span></a></li>
             <li class="visible-lg"><a href="#">1</a></li>
-            <li class="pagination__etc visible-lg">...</li>
+            <li class="visible-lg"><span>...</span></li>
             <li><a href="#">7</a></li>
             <li><a href="#">8</a></li>
-            <li class="current"><a>9</a></li>
+            <li class="current"><span>9</span></li>
             <li><a href="#">10</a></li>
             <li><a href="#">11</a></li>
-            <li class="pagination__etc visible-lg">...</li>
+            <li class="visible-lg"><span>...</span></li>
             <li class="visible-lg"><a href="#">15</a></li>
             <li class="pagination__next"><a href="#"><span>следующая</span></a></li>
           </ul>

@@ -1,0 +1,98 @@
+section.b-opening
+  .container
+    .b-opening__list
+      .b-opening__item.parent-desc
+        .b-opening_short-info
+          h3.b-opening__item-ttl Lorem ipsum dolor sit amet
+          .b-opening__short-desc
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+            span.b-opening__open-desc
+        .b-opening__full_desc.item-full-desc
+          h3.b-opening__item-ttl Lorem ipsum dolor sit amet
+
+          .b-opening__full_desc-text
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus aliquam est maximus volutpat
+              noneget justo. Quisque semper, leo at ultricies tristique, metus risus blandit ligula, quis varius augue
+            ul
+              li 1. Lorem ipsum dolor sit amet, consectetur
+              li 1. Lorem ipsum dolor sit amet, consectetur
+              li 1. Lorem ipsum dolor sit amet, consectetur
+          .b-opening__btn
+            a.btn(href="") Узнать больше
+
+      .b-opening__item.parent-desc
+        .b-opening_short-info
+          h3.b-opening__item-ttl Lorem ipsum dolor sit amet
+          .b-opening__short-desc
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+            span.b-opening__open-desc
+        .b-opening__full_desc.item-full-desc
+          h3.b-opening__item-ttl Lorem ipsum dolor sit amet
+
+          .b-opening__full_desc-text
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus aliquam est maximus volutpat
+              noneget justo. Quisque semper, leo at ultricies tristique, metus risus blandit ligula, quis varius augue
+            ul
+              li 1. Lorem ipsum dolor sit amet, consectetur
+              li 1. Lorem ipsum dolor sit amet, consectetur
+              li 1. Lorem ipsum dolor sit amet, consectetur
+          .b-opening__btn
+            a.btn(href="") Узнать больше
+
+      .b-opening__item.parent-desc
+        .b-opening_short-info
+          h3.b-opening__item-ttl Lorem ipsum dolor sit amet
+          .b-opening__short-desc
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+            span.b-opening__open-desc
+        .b-opening__full_desc.item-full-desc
+          h3.b-opening__item-ttl Lorem ipsum dolor sit amet
+
+          .b-opening__full_desc-text
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus aliquam est maximus volutpat
+              noneget justo. Quisque semper, leo at ultricies tristique, metus risus blandit ligula, quis varius augue
+            ul
+              li 1. Lorem ipsum dolor sit amet, consectetur
+              li 1. Lorem ipsum dolor sit amet, consectetur
+              li 1. Lorem ipsum dolor sit amet, consectetur
+          .b-opening__btn
+            a.btn(href="") Узнать больше
+
+      .b-opening__item.parent-desc
+        .b-opening_short-info
+          h3.b-opening__item-ttl Lorem ipsum dolor sit amet
+          .b-opening__short-desc
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+
+            span.b-opening__open-desc
+        .b-opening__full_desc.item-full-desc
+          h3.b-opening__item-ttl Lorem ipsum dolor sit amet
+
+          .b-opening__full_desc-text
+            p.
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus aliquam est maximus volutpat
+              noneget justo. Quisque semper, leo at ultricies tristique, metus risus blandit ligula, quis varius augue
+            ul
+              li 1. Lorem ipsum dolor sit amet, consectetur
+              li 1. Lorem ipsum dolor sit amet, consectetur
+              li 1. Lorem ipsum dolor sit amet, consectetur
+          .b-opening__btn
+            a.btn(href="") Узнать больше
+
+  script.
+    $('.b-opening__open-desc').on('click', function (e) {
+      var $parent = $(e.target).closest('.parent-desc');
+      $parent.find('.b-opening__item-ttl, .b-opening__open-desc').toggleClass('active');
+      $parent.find('.item-full-desc').slideToggle(400);
+
+    })
