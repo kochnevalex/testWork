@@ -1,0 +1,48 @@
+.b-share
+	margin-top: 15px
+	@include clearfix()
+
+.b-share > p
+	font-size: 18px
+	font-family: $base-font-bold
+	text-transform: uppercase
+
+.b-share .don-share
+	margin-left: -10px
+
+.b-share .don-share .don-ico
+	color: $black-color
+	background: $white-color
+
+.b-share .don-share [class^=don-share-]
+	margin-right: 5px
+
+.b-share .don-btn
+	background: none
+	border: 0
+	box-shadow: none
+	vertical-align: top
+	&:hover
+		box-shadow: none
+
+.b-share .don-bubble-right a .don-count
+	border: 0
+	font-size: 18px
+	font-family: $base-font
+	line-height: 34px
+	margin-left: 0
+	&:before
+		display: none
+
+@media (min-width: $screen-sm)
+	.b-share > p
+		float: left
+		margin-right: 20px
+
+	.b-share .don-share [class^=don-share-]
+		margin-right: 10px
+
+	.b-share .don-share
+		float: left
+		margin: 0
+		top: -8px
