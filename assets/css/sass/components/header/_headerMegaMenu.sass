@@ -1,0 +1,245 @@
+@mixin media($mediaquery)
+	@media (min-width: $mediaquery)
+		@content
+
+@mixin mediaDown($mediaquery)
+	@media (max-width: $mediaquery - 1)
+		@content
+
+.megamenu__title
+	display: block
+	padding: 5px
+	cursor: pointer
+
+	+media($screen-md)
+		display: none
+
+.header-container
+	position: relative
+	display: flex
+	flex-wrap: wrap
+	width: 100%
+
+	//+media($screen-md)
+		flex-wrap: nowrap
+		align-items: center
+		padding: 16px 0
+		border-bottom: 1px solid #eaedec
+
+//Обертка мегаменю (атом)
+.megamenu
+	display: flex
+	flex-direction: column
+	flex-grow: 5
+
+	//+media($screen-md)
+		flex-direction: row
+		flex-grow: 5
+
+.megamenu__category.mod--actual .megamenu__dropdown-wrap
+
+	//+mediaDown($screen-md)
+		display: initial
+
+.megamenu__dropdown-wrap
+//+mediaDown($screen-md)
+      display: none
+      position: absolute
+      top: 0
+      left: 50%
+
+.megamenu__categories
+	display: none
+
+//+media($screen-md)
+
+      display: flex !important
+      flex-wrap: wrap
+
+.megamenu__category
+	display: flex
+	flex-wrap: nowrap
+	padding: 5px 15px
+
+//+media($screen-md)
+      z-index: auto
+      display: inline-flex
+      flex-wrap: nowrap
+
+      &:hover
+          > .megamenu__dropdown-wrap
+              display: flex
+          > .megamenu__has-sub
+
+//Dropdown Контейнер подкатегорий
+
+.megamenu__dropdown-wrap
+	display: none
+
+//+media($screen-md)
+      display: none
+      position: absolute
+      top: auto
+      left: 0
+      right: 0
+
+      justify-content: center
+      margin-top: 20px
+      padding-top: 34px
+
+.megamenu__dropdown
+//+media($screen-md)
+      display: flex
+      flex-wrap: wrap
+
+      width: 100%
+      justify-content: center
+
+      background-color: grey
+
+.megamenu__sub-container
+//+media($screen-md)
+      display: flex
+      flex-wrap: nowrap
+      justify-content: space-between
+
+      max-width: $screen-sm
+      width: 100%
+
+.megamenu__categories
+//+mediaDown($screen-md)
+      position: relative
+      padding-right: 50%
+
+.megamenu__has-sub
+	position: relative
+	margin-left: 5px
+	padding: 10px
+
+//+media($screen-md)
+      align-self: flex-end
+
+.megamenu__has-sub::before
+	content: ''
+	position: absolute
+	top: 5px
+	width: 0
+	height: 0
+	border-style: solid
+	border-width: 7px 4px 0 4px
+	border-color: grey transparent transparent transparent
+	transform-origin: center
+	transform: rotate(-90deg)
+
+//+media($screen-md)
+      top: 5px
+      transform: rotate(0deg)
+
+.megamenu__category.mod--actual .megamenu__has-sub::before
+//+mediaDown($screen-md)
+//	transform-origin: center
+//	//transform: rotate(180deg)
+//	opacity: 0
+
+//Подкатегории
+.megamenu__sub-categories
+//+media($screen-md)
+//	flex: 1
+//	display: flex
+//	flex-direction: column
+
+//Подкатегория
+.megamenu__sub-categoriy
+
+@media (max-width: $screen-md)
+	.megamenu__category.mod--actual .megamenu__has-sub::before
+		transform-origin: center
+		//transform: rotate(180deg)
+		opacity: 0
+
+	.megamenu__categories
+		position: relative
+		padding-right: 50%
+
+	.megamenu__dropdown-wrap
+		display: none
+		position: absolute
+		top: 0
+		left: 50%
+
+	.megamenu__category.mod--actual .megamenu__dropdown-wrap
+
+		display: initial
+
+@media (min-width: $screen-md)
+	.megamenu__sub-categories
+		flex: 1
+		display: flex
+		flex-direction: column
+
+	.megamenu__has-sub::before
+
+		top: 5px
+		transform: rotate(0deg)
+
+	.megamenu__has-sub
+
+		align-self: flex-end
+
+	.megamenu__sub-container
+		display: flex
+		flex-wrap: nowrap
+		justify-content: space-between
+
+		max-width: $screen-sm
+		width: 100%
+
+	.megamenu__dropdown
+		display: flex
+		flex-wrap: wrap
+		justify-content: center
+
+		width: 100%
+
+		background-color: grey
+
+	.megamenu__dropdown-wrap
+		display: none
+		position: absolute
+		top: auto
+		left: 0
+		right: 0
+
+		justify-content: center
+		margin-top: 20px
+		padding-top: 34px
+
+	.megamenu__category
+		z-index: auto
+		display: inline-flex
+		flex-wrap: nowrap
+
+	.megamenu__category:hover
+		> .megamenu__dropdown-wrap
+			display: flex
+		> .megamenu__has-sub
+
+	.megamenu__categories
+		display: flex !important
+		flex-wrap: wrap
+
+	.megamenu
+		flex-direction: row
+		flex-grow: 5
+
+
+	.header-container
+		flex-wrap: nowrap
+		align-items: center
+		padding: 16px 0
+		border-bottom: 1px solid #eaedec
+
+
+	.megamenu__title  
+		display: none
+
