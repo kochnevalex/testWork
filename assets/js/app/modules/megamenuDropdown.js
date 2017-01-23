@@ -1,5 +1,5 @@
 "use strict";
-appMakeBeCool.gateway.addClass('HeaderDropdown', function (properties, $, $window, $document) {
+appMakeBeCool.gateway.addClass('MegamenuDropdown', function (properties, $, $window, $document) {
   var _megamenuOpening = this,
     _d = {
       openSubcategory: '.megamenu__has-sub',

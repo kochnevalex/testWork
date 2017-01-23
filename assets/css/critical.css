@@ -2263,7 +2263,8 @@ textarea.form-control {
   -webkit-box-flex: 5;
   -webkit-flex-grow: 5;
       -ms-flex-positive: 5;
-          flex-grow: 5; }
+          flex-grow: 5;
+  width: 100%; }
 
 .megamenu__categories {
   display: none; }
