@@ -81,13 +81,13 @@ gulp.task('imagemin', function() {
 gulp.task('sprites', function() {
   console.log('sprites');
   var spriteData = gulp.src('images/sprite/*.png').pipe(spritesmith({
-    imgName: 'sprite.png',
+    imgName: '../images/sprite.png',
     cssName: 'sprite.sass',
     padding: 4
   }));
   return (
-    spriteData.pipe(gulpif('*.png', gulp.dest('images/nonoptimised/'))),
-    spriteData.pipe(gulpif('*.sass', gulp.dest('css/sass/helpers/')))
+    spriteData.pipe(gulpif('*.png', gulp.dest('images/'))),
+      spriteData.pipe(gulpif('*.scss', gulp.dest('css/sass/helpers/')))
   )
 });
 
