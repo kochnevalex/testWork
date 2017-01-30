@@ -5,38 +5,47 @@
 	max-width: 100%
 	display: block
 
-.b-content__ttl
+.b-content__ttl,
+.b-content__article h1,
+.b-content__article h2,
+.b-content__article h3,
+.b-content__article h4
 	font-family: $second-font
 	line-height: 1.25
 	font-weight: 400
 
-.b-content__ttl--h1
-	font-size: 36px
+h1.b-content__ttl,
+.b-content__article h1
 	margin-bottom: 55px
+	font-size: 36px
 
-.b-content__ttl--h2
-	font-size: 30px
+
+h2.b-content__ttl,
+.b-content__article h2
 	margin-bottom: 25px
 	margin-top: 40px
+	font-size: 30px
 
-.b-content__ttl--h3
+h3.b-content__ttl,
+.b-content__article h3
+	margin-bottom: 25px
+	margin-top: 40px
 	font-family: $base-font-bold
 	font-size: 24px
+
+h4.b-content__ttl,
+.b-content__article h4
 	margin-bottom: 25px
 	margin-top: 40px
-
-.b-content__ttl--uppercase
 	font-family: $base-font-bold
 	font-size: 18px
-	margin-bottom: 25px
 	text-transform: uppercase
-	margin-top: 40px
 
-.b-content__item
+.b-content__article
 	font-size: 18px
 	line-height: 27px
 
-.b-content__item p,
+.b-content__article p,
 .b-content__media
 	margin-bottom: 15px
 
@@ -48,45 +57,45 @@
 	font-size: 14px
 	line-height: 21px
 
-ol.b-content__list-numeric
+.b-content__article ol
 	counter-reset: myCounter
 
-.b-content__list li,
-ol.b-content__list-numeric li
-	padding-left: 30px
+.b-content__article ul li,
+.b-content__article ol li
 	position: relative
-	font-family: $base-font-italic
+	padding-left: 30px
 	margin-bottom: 10px
+	font-family: $base-font-italic
 
-ol.b-content__list-numeric li:before
+.b-content__article ol li:before
 	position: absolute
+	left: 0
+	top: 1px
+	display: inline-block
 	counter-increment: myCounter
 	content: counter(myCounter) '.'
 	color: $grey-color
-	display: inline-block
 	text-align: left
-	left: 0
-	top: 1px
 	font-family: $base-font
 
-.b-content__list li:before
+.b-content__article ul li:before
 	content: ''
 	display: block
 	position: absolute
+	left: 0
+	top: 12px
 	width: 5px
 	height: 5px
 	border-radius: 5px
 	background: $grey-color
-	left: 0
-	top: 12px
 
 .b-content__article b
 	font-weight: 400
 	font-family: $base-font-bold
 
-.b-content__blockquote-line
+.b-content__article blockquote:not([class])
 	position: relative
-	padding: 10px 40px 5px 30px
+	padding: 10px 40px 20px 30px
 	font-family: $base-font-italic
 	font-size: 16px
 	font-style: normal
@@ -101,12 +110,12 @@ ol.b-content__list-numeric li:before
 		width: 4px
 		background: $active-color
 
-.b-content__blockquote-fon
+.b-content__article blockquote.b-content__blockquote-fon
 	position: relative
 	background: $grey-color
 	margin: 0 0 30px
-	text-align: center
 	padding: 50px 15px 30px
+	text-align: center
 	&:before
 		content: ''
 		position: absolute
@@ -115,24 +124,24 @@ ol.b-content__list-numeric li:before
 		margin-left: -12px
 		@include sprite($quote-icon)
 
-.b-content__blockquote-fon p
+.b-content__article blockquote.b-content__blockquote-fon p
 	font-size: 24px
 	line-height: 28px
 	margin-bottom: 20px
 
-.b-content__blockquote-fon span
+.b-content__article blockquote.b-content__blockquote-fon span
 	font-size: 16px
 
 .b-content__table-wrap
 	max-width: 100%
 	overflow: auto
 
-.b-content__table
+.b-content__article table
 	border-collapse: collapse
 	margin-bottom: 50px
 	min-width: 600px
 
-.b-content__table th
+.b-content__article table th
 	font-weight: 400
 	font-family: $base-font-bold
 	text-align: left
@@ -145,14 +154,14 @@ ol.b-content__list-numeric li:before
 	&:first-child
 		width: 45%
 
-.b-content__table td
+.b-content__article table td
 	font-size: 16px
 	vertical-align: top
 	line-height: 24px
 	padding: 30px 25px 15px 5px
 	border-bottom: 1px solid #e5e5e5
 
-.b-content__table tr:last-of-type td
+.b-content__article table tr:last-of-type td
 	border-bottom: 0
 
 .b-content__media-img
@@ -162,14 +171,14 @@ ol.b-content__list-numeric li:before
 	width: 100%
 
 .b-content__media-img iframe
-	border: 0
 	width: 100%
 	height: calc((100vw - 30px) * 0.5625)
+	border: 0
 
 .b-content__form
+	padding-bottom: 0
 	border: 0
 	border-top: 8px solid $grey-color
-	padding-bottom: 0
 
 .b-content__form .b-consultation__inner-container
 	padding-bottom: 0
@@ -178,34 +187,34 @@ ol.b-content__list-numeric li:before
 	margin-top: 120px
 
 .aside-ttl
+	margin-bottom: 30px
 	font-size: 24px
 	font-weight: 400
 	text-transform: uppercase
 	font-family: $base-font-bold
 	color: $grey-color
-	margin-bottom: 30px
 
 .list-other-article
 	margin-bottom: 30px
 
 .list-other-article li a
-	text-decoration: none
 	display: block
-	background: $grey-color
 	margin-bottom: 20px
 	padding: 25px 18px
 	font-family: $base-font-bold
+	text-decoration: none
+	background: $grey-color
 	&:hover
 		background: $white-color
 		box-shadow: 0 0 30px $grey-color
 
 .list-other-article li a .date
+	display: block
+	margin-bottom: 5px
 	font-weight: 400
 	font-size: 10px
 	color: $grey-color
 	text-transform: uppercase
-	display: block
-	margin-bottom: 5px
 
 .list-other-article li a .ttl
 	display: block

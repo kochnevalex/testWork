@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Item | grid360</title>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="images/iconsite/favicon.ico">
+    <link rel="dns-prefetch" href="http://www.google-analytics.com">
+    <link rel="author" href="humans.txt">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="makebecool">
+    <meta name="twitter:title" content="Item | grid360">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image:src" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Item | grid360">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="application-name" content="Item | grid360">
+    <meta name="msapplication-TileColor" content="">
+    <meta name="msapplication-square70x70logo" content="images/iconsite/msapplication-square70x70logo.png">
+    <meta name="msapplication-square150x150logo" content="images/iconsite/msapplication-square150x150logo.png">
+    <meta name="msapplication-wide310x150logo" content="images/iconsite/msapplication-wide310x150logo.png">
+    <meta name="msapplication-square310x310logo" content="images/iconsite/msapplication-square310x310logo.png">
+    <link rel="apple-touch-icon" href="images/iconsite/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/iconsite/apple-touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/iconsite/apple-touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/iconsite/apple-touch-icon-ipad-retina.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/iconsite/apple-touch-icon-iphone6plus-retina.png">
+    <meta name="cmsmagazine" content="a39ef97fd1d4cf6d3e103f0ff48ea4f6">
+    <meta name="it-rating" content="it-rat-c2fb848de4ce4a9d8631b1558f63157d">
+    <link rel="stylesheet" href="css/base64-fonts.css">
+    <link rel="stylesheet" href="css/critical.css">
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/jquery/plugins/validation/jquery.validate.min.js"></script>
+    <script src="./js/jquery/plugins/form/jquery.form.js"></script>
+    <script src="./js/jquery/plugins/select2/select2.full.js"></script>
+    <script src="./js/jquery/plugins/slick/slick.min.js"></script>
+    <script src="./js/jquery/plugins/rater/rater.min.js"></script>
+    <script src="./js/plugins/aos/aos.js"></script>
+    <script src="./js/jquery/plugins/textarea-autoresize/autosize.js"></script>
+    <script src="./js/jquery/plugins/charts/chartist.min.js"></script>
+    <script src="./js/plugins/lightGallery/lightgallery.min.js"></script>
+    <script src="./js/plugins/lightGallery/lg-thumbnail.min.js"></script>
+    <script src="./js/plugins/lightGallery/lg-fullscreen.min.js"></script>
+  </head>
+  <body>
+    <div class="wrap">
+      <header id="header" class="header">
+        <div id="headerBanner" class="header__banner">
+          <div class="container">Top banner
+            <button id="headerBannerCloseBtn" type="button" class="header__banner-close"></button>
+          </div>
+          <script>
+            $('#headerBannerCloseBtn').on('click', function (e) {
+              e.preventDefault();
+              if (!$('#headerBanner').hasClass('hide')) {
+                $('#headerBanner').slideUp(function () {
+                  $('#headerBanner').addClass('hide');
+                });
+              }
+            });
+          </script>
+        </div>
+        <div class="header__top-bar">
+          <div class="container">
+            <nav id="headerTopNav" class="header__top-nav">
+              <button id="headerTopBtn" type="button" class="header__top-btn"><span></span><span></span><span></span></button><span class="header__top-ttl">Меню</span>
+              <div id="headerTopMenu" class="header__top-menu">
+                <ul class="header__top-menu-list">
+                  <li><a href="#">Контакты</a></li>
+                  <li><a href="#">Способы доставки</a></li>
+                  <li><a href="#">Оплата</a></li>
+                  <li><a href="#">О нас</a></li>
+                </ul>
+              </div>
+            </nav>
+            <div class="header__top-info">
+              <ul class="header__top-info-list">
+                <li><a href="tel:+7495540-50-86">+7 (495) 540-50-86</a></li>
+                <li><a href="#">Войти</a></li>
+              </ul>
+            </div>
+          </div>
+          <script>
+            $('#headerTopBtn').on('click', function (e) {
+              e.preventDefault();
+              $('#headerTopNav').toggleClass('active');
+            });
+          </script>
+        </div>
+        <div class="header_main">
+          <div class="container">
+            <div class="header-logo"><a href="#"><img src="http://placehold.it/100x50" alt="" class="header-logo__img"></a></div>
+            <div id="headerSearch" class="search-w">
+              <button id="headerSearchOpen" type="button" class="search-w__open-btn">&#128269;</button>
+              <button id="headerSearchClose" type="button" class="search-w__close-btn hide">&#10006;</button>
+              <form id="headerSearchForm" method="get" action="" class="search-w__form">
+                <input type="hidden" name="controller" value="search"><span role="status" aria-live="polite"></span>
+                <input type="text" name="s" value="" placeholder="Поиск" autocomplete="off" class="search-w__form-input">
+                <button type="submit" class="search-w__form-search">&#128269;</button>
+              </form>
+              <script>
+                $('#headerSearchOpen').on('click', function (e) {
+                  e.preventDefault();
+                  $('#headerSearchForm').addClass('active');
+                  $('#headerSearchOpen').addClass('hide');
+                  $('#headerSearchClose').removeClass('hide');
+                });
+                
+                $('#headerSearchClose').on('click', function (e) {
+                  e.preventDefault();
+                  $('#headerSearchForm').removeClass('active');
+                  $('#headerSearchOpen').removeClass('hide');
+                  $('#headerSearchClose').addClass('hide');
+                });
+              </script>
+            </div>
+            <div class="basket-w"><a href="" class="basket-w__link"><img src="images/basket.png" alt=""></a></div>
+          </div>
+        </div>
+        <div id="headerMenu" class="header_menu">
+          <div class="container">
+            <div class="header_menu-ttl">Каталог</div>
+            <div class="header_menu-cat">
+              <ul class="header_menu-cal-list">
+                <li><a href="#">Пункт</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <div role="navigation" class="b-breadcrumbs">
+          <ul>
+            <li><a href="indexBoxed.html">Главная</a></li>
+            <li><span>Подменю</span></li>
+          </ul>
+        </div>
+        <div class="item">
+          <div class="item__desc">
+            <div class="item-info">
+              <h2 class="item-info__ttl">BUDX021301LG Hafirah</h2>
+              <div class="b-product__rating">
+                <div class="b-product__stars">
+                  <div class="rating"></div>
+                </div>
+                <div class="b-product__comments"><a href="#" class="b-product__comments-link">78 отзывов</a></div>
+              </div>
+            </div>
+          </div>
+          <div class="item__gallery-slider">
+            <div class="slider-for-wrap">
+              <div class="open-gallery"></div>
+              <div class="close-gallery"></div>
+              <div class="slider-for">
+                <div><img src="http://placehold.it/504x671" alt=""></div>
+                <div><img src="http://placehold.it/504x671" alt=""></div>
+                <div><img src="http://placehold.it/504x671" alt=""></div>
+                <div><img src="http://placehold.it/504x671" alt=""></div>
+                <div><img src="http://placehold.it/504x671" alt=""></div>
+                <div><img src="http://placehold.it/504x671" alt=""></div>
+              </div>
+              <div class="video-link-wrap"><a href="#" rel="nofollow" class="video-link"><span>Смотреть видео</span></a></div>
+            </div>
+            <div class="slider-nav-wrap">
+              <div class="slider-top"></div>
+              <div class="slider-bottom"></div>
+              <div class="slider-nav">
+                <div><img src="http://placehold.it/96x128" alt=""></div>
+                <div><img src="http://placehold.it/96x128" alt=""></div>
+                <div><img src="http://placehold.it/96x128" alt=""></div>
+                <div><img src="http://placehold.it/96x128" alt=""></div>
+                <div><img src="http://placehold.it/96x128" alt=""></div>
+                <div><img src="http://placehold.it/96x128" alt=""></div>
+              </div>
+            </div>
+            <div class="video-wrap">
+              <div class="video-container">
+                <div class="video">
+                  <div class="close-video"></div><iframe src="https://www.youtube.com/embed/3ROS_resQPA" allowfullscreen></iframe>
+                </div>
+              </div>
+            </div>
+            <script type="text/javascript">
+              $('.slider-top').on('click', function (e) {
+                $('.slick-slider').slick('slickPrev');
+              });
+              $('.slider-bottom').on('click', function (e) {
+                $('.slick-slider').slick('slickNext');
+              });
+              $('.video-link').on('click', function (e) {
+                $('.video-wrap').addClass('fullsize');
+                $('body').css('overflow', 'hidden');
+              });
+              $('.close-video').on('click', function (e) {
+                $('.video-wrap').removeClass('fullsize');
+                var videoAttr = $('.video-wrap').find('iframe').attr('src');
+                videoAttr = videoAttr + '?enablejsapi=1';
+                $('.video-wrap').find('iframe').attr('src', videoAttr);
+                $('body').css('overflow', 'visible');
+              });
+              $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                dots: true,
+                fade: true,
+                focusOnSelect: true,
+                asNavFor: '.slider-nav'
+              });
+              $('.slider-nav').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                centerMode: true,
+                focusOnSelect: true,
+                asNavFor: '.slider-for',
+                vertical: true
+              });
+              
+              $('.open-gallery').on('click', function (e) {
+              
+                $('.item__gallery-slider').addClass('fullsize');
+                $('body').css('overflow', 'hidden');
+              
+              
+                $('.slider-for').slick('destroy');
+                $('.slider-nav').slick('destroy');
+              
+                $('.slider-for').slick({
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  dots: true,
+                  fade: true,
+                  focusOnSelect: true,
+                  asNavFor: '.slider-nav'
+                });
+              
+                $('.slider-nav').slick({
+                  centerMode: true,
+                  slidesToShow: 5,
+                  slidesToScroll: 1,
+                  focusOnSelect: true,
+                  asNavFor: '.slider-for',
+                  vertical: true
+              
+                });
+              
+              
+              });
+              $('.close-gallery').on('click', function (e) {
+              
+                $('.item__gallery-slider').removeClass('fullsize');
+                $('body').css('overflow', 'visible');
+                $('.slider-for').slick('destroy');
+                $('.slider-nav').slick('destroy');
+                $('.slider-for').slick({
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  dots: true,
+                  fade: true,
+                  focusOnSelect: true,
+                  centerMode: true,
+                  asNavFor: '.slider-nav'
+                });
+                $('.slider-nav').slick({
+                  slidesToShow: 5,
+                  slidesToScroll: 1,
+                  focusOnSelect: true,
+                  centerMode: true,
+                  asNavFor: '.slider-for',
+                  vertical: true
+              
+                });
+              
+              });
+            </script>
+          </div>
+          <div class="b-characteristic">
+            <div class="b-characteristic__option">
+              <div class="b-characteristic__change-type">
+                <form action="#" class="form-filter">
+                  <div class="form-filter__top">
+                    <div class="form-group">
+                      <div class="form-group__filter-ttl"><span>Выберите цвет</span></div>
+                      <ul id="ul_layered_id_attribute_group_2" class="form-group__filter form-group__filter-color clearfix">
+                        <li>
+                          <div class="checker">
+                            <input id="layered_id_attribute_group_21" type="radio" name="layered_id_attribute_group_29" value="29_5" checked="true" data-style="#d7dcda" class="checkbox">
+                            <label for="layered_id_attribute_group_21" class="form__label"><a href="#"><span style="background: #d7dcda"></span><span class="fa fa-check"></span></a></label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="checker">
+                            <input id="layered_id_attribute_group_22" type="radio" name="layered_id_attribute_group_29" value="29_5" data-style="#d7dcda" class="checkbox">
+                            <label for="layered_id_attribute_group_22" class="form__label"><a href="#"><span style="background: #d7dcda"></span><span class="fa fa-check"></span></a></label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="checker">
+                            <input id="layered_id_attribute_group_22" type="radio" name="layered_id_attribute_group_29" value="29_5" data-style="#f3e0c9" class="checkbox">
+                            <label for="layered_id_attribute_group_22" class="form__label"><a href="#"><span style="background: #f3e0c9"></span><span class="fa fa-check"></span></a></label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="checker">
+                            <input id="layered_id_attribute_group_22" type="radio" name="layered_id_attribute_group_29" value="29_5" data-style="#f3e0c9" class="checkbox">
+                            <label for="layered_id_attribute_group_22" class="form__label"><a href="#"><span style="background: #e4caab"></span><span class="fa fa-check"></span></a></label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="checker">
+                            <input id="layered_id_attribute_group_22" type="radio" name="layered_id_attribute_group_29" value="29_5" data-style="#b1a79b" class="checkbox">
+                            <label for="layered_id_attribute_group_22" class="form__label"><a href="#"><span style="background: #b1a79b"></span><span class="fa fa-check"></span></a></label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="checker">
+                            <input id="layered_id_attribute_group_22" type="radio" name="layered_id_attribute_group_29" value="29_5" data-style="#b1a79b" class="checkbox">
+                            <label for="layered_id_attribute_group_22" class="form__label"><a href="#"><span style="background: #000000"></span><span class="fa fa-check"></span></a></label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="checker">
+                            <input id="layered_id_attribute_group_22" type="radio" name="layered_id_attribute_group_29" value="29_5" data-style="#663399" class="checkbox">
+                            <label for="layered_id_attribute_group_22" class="form__label"><a href="#"><span style="background: #663399"></span><span class="fa fa-check"></span></a></label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="checker">
+                            <input id="layered_id_attribute_group_22" type="radio" name="layered_id_attribute_group_29" value="29_5" data-style="#7a4a38" class="checkbox">
+                            <label for="layered_id_attribute_group_22" class="form__label"><a href="#"><span style="background: #7a4a38"></span><span class="fa fa-check"></span></a></label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="checker">
+                            <input id="layered_id_attribute_group_22" type="radio" name="layered_id_attribute_group_29" value="29_5" data-style="url(images/colorfull.png)" class="checkbox">
+                            <label for="layered_id_attribute_group_22" class="form__label"><a href="#"><span style="background-image: url(images/colorfull.png)"></span><span class="fa fa-check"></span></a></label>
+                          </div>
+                        </li>
+                      </ul><a href="" class="form-group__filter-color-add"><span>Показать еще</span></a>
+                    </div>
+                    <div class="form-group form-group__change-size">
+                      <div class="form-group__filter-ttl"><span>Выберите размер</span></div>
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <div class="form-group__select-size">
+                            <select tabindex="-1" aria-hidden="true" class="subscribe__cat select2-hidden-accessible">
+                              <option>65BB</option>
+                              <option>65BС 1</option>
+                              <option>65BD</option>
+                              <option>70BB</option>
+                              <option>75BB</option>
+                              <option>80BB</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="b-product__price">
+                    <div class="b-product__cash-wrap">
+                      <div class="b-product__cash">4509 ₽</div>
+                    </div>
+                    <div class="b-product__counter">
+                      <div class="b-product__counter-ttl">Количество</div><a href="#" rel="nofollow">-</a>
+                      <input type="text" value="1" name="price"><a href="#" rel="nofollow">+</a>
+                    </div>
+                  </div>
+                  <div>
+                    <button id="order" href="#" rel="nofollow" class="btn">Купить</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="review">
+          <div class="headline-wrap coma">
+            <h2 class="headline"> Отзывы</h2>
+          </div>
+          <div class="review-forms">
+            <div class="review-form-wrap">
+              <div class="review-form not-authorized hide">
+                <div class="review-form-head">
+                  <div class="head-rating"></div>
+                  <p><span>78</span> отзывовб <span>3.5</span> из  <span>5</span></p>
+                </div>
+                <div class="subscribe-wrap">
+                  <div class="subscribe__header">
+                    <h2 class="subscribe__ttl">Войдите,</h2>
+                    <p class="subscribe__sub-ttl">чтобы оставлять отзывы и задавать вопросы</p>
+                  </div>
+                  <form id="form-rewiew" action="#" method="POST" class="subscribe">
+                    <div class="form-group">
+                      <input type="email" name="email" placeholder="Ваш e-mail" required class="subscribe__input form-control">
+                    </div>
+                    <div class="form-group">
+                      <input type="password" name="password" placeholder="Пароль" required class="subscribe__input form-control">
+                    </div>
+                    <button type="submit" name="subscribe" class="btn">Войти</button>
+                  </form>
+                </div>
+              </div>
+              <div class="review-form authorized">
+                <div class="review-form-head">
+                  <div class="head-rating"></div>
+                  <p><span>78</span> отзывовб <span>3.5</span> из  <span>5</span></p>
+                  <ul class="nav nav-tabs">
+                    <li class="active"><a href="#" data-target="#home"><span>Оставить отзыв</span></a></li>
+                    <li><a href="#" data-target="#menu1"><span>Задать вопрос</span></a></li>
+                  </ul>
+                  <div class="tab-content">
+                    <div id="home" class="tab-pane active">
+                      <div class="feedback__rating-wrap">
+                        <div class="feedback__rating-ttl"> Ваша оценка</div>
+                        <div class="feedback__rating"></div>
+                        <input type="text" name="rating-number" readonly class="feedback__rating-number">
+                      </div>
+                      <div class="feedback-form-wrap">
+                        <form id="feedback-form" class="feedback__form">
+                          <fieldset aria-required="true">
+                            <label for="feedback__input" class="label">Текст отзыва</label>
+                            <textarea id="feedback__input" class="feedback__input"></textarea>
+                          </fieldset>
+                          <button type="submit" name="feedback" class="btn">Отправить</button>
+                        </form>
+                      </div>
+                    </div>
+                    <div id="menu1" class="tab-pane">
+                      <div class="question-form-wrap">
+                        <form id="question-form" class="question-form">
+                          <fieldset aria-required="true">
+                            <label for="question__input" class="label">Введите вопрос</label>
+                            <textarea id="question__input" class="question__input"></textarea>
+                          </fieldset>
+                          <button type="submit" name="question" class="btn">Отправить</button>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="review-list">
+            <div class="headline-wrap coma">
+              <h2 class="headline"> Отзывы</h2>
+            </div>
+            <div class="review-list__item-recall">
+              <div class="head-recall">
+                <div class="client-name">Маша Грузина</div>
+                <div class="client-rating"></div>
+                <div class="city">Москва</div>
+                <time datetime="2016-03-28T08:23:11+02:00">28 Марта 2016</time>
+              </div>
+              <div class="recall-desc">Связались через 2 часа после заказа, уточнили все подробности (размеры, способ оплаты и пересылки), о получении денег и отправке уведомили через СМС, на следующий день посылка была уже в моем отделении Новой Почты. Может показаться, что много эмоций в отзыве, но обслуживание и товар действительно безукоризненные.</div>
+            </div>
+            <div class="review-list__item-question">
+              <div class="client-item-question">
+                <div class="head-recall">
+                  <div class="client-name">Маша Грузина</div>
+                  <div class="city">Москва</div>
+                  <time datetime="2016-03-28T08:23:11+02:00">28 Марта 2016</time>
+                </div>
+                <div class="recall-desc">Мой сын любит их! Они выглядят плитка галстук обувь, а просто есть липучки. Префект для дошкольных учреждениях.</div>
+              </div>
+              <div class="admin-item-answer">
+                <div class="head-recall">
+                  <div class="client-name">Светлана, <span>администратор</span></div>
+                  <time datetime="2016-03-28T08:23:11+02:00">28 Марта 2016</time>
+                </div>
+                <div class="recall-desc">Да, Ann, Вы правы - они более эластичные именно из-за кружева, но уверена, что все равно пришлись Вам по душе. Как я уже писала, пусть не смущает Албания (производство у Клео сейчас уже в 5 странах мира, но контроль качества пошива и материалов по прежнему на очень высоком уровне!) Носите с удовольствием!</div>
+              </div>
+            </div>
+            <div class="pagination">
+              <ul class="pagination__list">
+                <li class="visible-lg"><a href="#">1</a></li>
+                <li class="visible-lg"><span>...</span></li>
+                <li><a href="#">7</a></li>
+                <li><a href="#">8</a></li>
+                <li class="current"><span>9</span></li>
+                <li><a href="#">10</a></li>
+                <li><a href="#">11</a></li>
+                <li class="visible-lg"><span>...</span></li>
+                <li class="visible-lg"><a href="#">15</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <script>
+          $(".head-rating").rate({initial_value: 3.5, readonly: true});
+          $(".feedback__rating").rate({initial_value: 2, update_input_field_name: $(".feedback__rating-number")});
+          $(".client-rating").rate({initial_value: 3.5, readonly: true});
+          
+          $('.review-form-wrap fieldset textarea').focus(function () {
+            $(this).parent().find('label').addClass('active')
+          });
+          $('.review-form-wrap fieldset textarea').blur(function () {
+            if($(this).val() === ''){
+              $(this).parent().find('label').removeClass('active')
+            }
+          })
+          
+          $('.nav-tabs > li a').on('click', function (e) {
+            e.preventDefault();
+            if(!$(this).parent().hasClass('active')){
+              var target = $(this).data('target');
+          
+              $('.nav-tabs > li').removeClass('active');
+              $(this).parent().addClass('active');
+          
+              $('.tab-content > .active').removeClass('active');
+              $(target).addClass('active');
+            }
+          })
+        </script>
+        <script type="text/javascript">
+          var options = {
+            max_value: 5,
+            step_size: 0.5,
+            initial_value: 3.5,
+            readonly: true
+          };
+          $(".rating").rate(options);
+        </script>
+      </div>
+    </div>
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <div class="subscribe-wrap">
+              <div class="subscribe__header">
+                <h2 class="subscribe__ttl">Подписывайтесь</h2>
+                <p class="subscribe__sub-ttl">на рассылку новинок, акций и скидок</p>
+              </div>
+              <form action="#" method="POST" data-form="subscribe" class="subscribe form">
+                <div class="form-group form-group--line">
+                  <div class="dropdown">
+                    <div class="dropdown__state">Все категории</div>
+                    <div class="dropdown__list">
+                      <div class="dropdown__item">
+                        <input id="cat-1" type="checkbox" name="test[]">
+                        <label for="cat-1">Пункт категории 1</label>
+                      </div>
+                      <div class="dropdown__item">
+                        <input id="cat-2" type="checkbox" name="test[]">
+                        <label for="cat-2">Пункт категории 2</label>
+                      </div>
+                      <div class="dropdown__item">
+                        <input id="cat-3" type="checkbox" name="test[]">
+                        <label for="cat-3">Пункт категории 3</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group required">
+                  <input type="email" name="email" placeholder="Ваш e-mail:" required class="subscribe__input form-control">
+                </div>
+                <button type="submit" name="subscribe" class="btn">Подписаться</button>
+              </form>
+              <div class="fmessage fsuccess">
+                <button class="btn-close"></button>
+                <div class="fmessage__ttl">Спасибо!</div>
+                <div class="fmessage__desc">Вы успешно подписались на новости.</div>
+              </div>
+              <div class="fmessage ferror">
+                <button class="btn-close"></button>
+                <div class="fmessage__ttl">Возникла ошибка</div>
+                <div class="fmessage__desc">Сообщение не получилось отправить</div>
+                <button class="btn fmessage__link">Попробовать еще раз</button>
+              </div>
+              <script>
+                $('.dropdown__state').click(function () {
+                  $(this).toggleClass("active");
+                  $('.dropdown__list').toggleClass("active");
+                });
+              </script>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="subscribe-wrap">
+              <div class="subscribe__header">
+                <h2 class="subscribe__ttl">Подписывайтесь</h2>
+                <p class="subscribe__sub-ttl">на рассылку новинок, акций и скидок</p>
+              </div>
+              <form action="#" method="POST" data-form="subscribe" class="subscribe form">
+                <div class="form-group form-group--line">
+                  <select class="subscribe__cat">
+                    <option>Все категории</option>
+                    <option>Раздел 1</option>
+                    <option>Раздел 2</option>
+                    <option>Раздел 3</option>
+                  </select>
+                </div>
+                <div class="form-group required">
+                  <input type="email" name="email" placeholder="Ваш e-mail:" required class="subscribe__input form-control">
+                </div>
+                <button type="submit" name="subscribe" class="btn">Подписаться</button>
+              </form>
+              <div class="fmessage fsuccess">
+                <button class="btn-close"></button>
+                <div class="fmessage__ttl">Спасибо!</div>
+                <div class="fmessage__desc">Вы успешно подписались на новости.</div>
+              </div>
+              <div class="fmessage ferror">
+                <button class="btn-close"></button>
+                <div class="fmessage__ttl">Возникла ошибка</div>
+                <div class="fmessage__desc">Сообщение не получилось отправить</div>
+                <button class="btn fmessage__link">Попробовать еще раз</button>
+              </div>
+              <script>
+                $('.subscribe__cat').select2({
+                  minimumResultsForSearch: Infinity,
+                  containerCssClass: "subscribe-select2",
+                  dropdownCssClass: "subscribe-select2-dropdown"
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="cpr">
+              <div class="cpr__dt">© 2012 - 2016 «Этажерка» Интернет-магазин элитной мебели и декора</div>
+              <div class="cpr__link">Адаптивные сайты от <a href="https://makebecool.com/">MakeBeCool</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <link rel="stylesheet" href="css/global.css">
+    <script src="./js/app/lib/site.js"></script>
+    <script src="./js/app/lib/siteMode.js"></script>
+    <script src="./js/app/mode/themeMode.js"></script>
+    <script src="./js/app/modules/formValidate.js"></script>
+    <script src="./js/app/modules/formAjax.js"></script>
+    <script>
+      var global = {
+        siteUrl: '',
+        baseUrl: '/',
+        assetsUrl: '/assets/',
+        cultureKey: 'ru',
+        validationMessages: {
+          name: 'Будьте добры, введите ваше имя.',
+          phone: 'Вы забыли оставить ваш номер телефона.',
+          email: 'Адрес электронной почты имеет формат site@mail.com.',
+          emailRequired: 'Адрес электронной почты имеет формат site@mail.com.',
+          text: 'Здесь должно быть ваше сообщение.'
+        }
+      }
+      appMakeBeCool.gateway.init();
+    </script>
+  </body>
+</html>

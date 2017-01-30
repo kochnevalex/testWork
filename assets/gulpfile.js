@@ -82,12 +82,12 @@ gulp.task('sprites', function() {
   console.log('sprites');
   var spriteData = gulp.src('images/sprite/*.png').pipe(spritesmith({
     imgName: '../images/sprite.png',
-    cssName: 'sprite.sass',
+    cssName: 'sprite.scss',
     padding: 4
   }));
   return (
     spriteData.pipe(gulpif('*.png', gulp.dest('images/'))),
-      spriteData.pipe(gulpif('*.scss', gulp.dest('css/sass/helpers/')))
+    spriteData.pipe(gulpif('*.scss', gulp.dest('css/sass/helpers/')))
   )
 });
 

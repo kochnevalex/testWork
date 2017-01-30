@@ -1,0 +1,184 @@
+/*
+SCSS variables are information about icon's compiled state, stored under its original file name
+
+.icon-home {
+  width: $icon-home-width;
+}
+
+The large array-like variables contain all information about a single icon
+$icon-home: x y offset_x offset_y width height total_width total_height image_path;
+
+At the bottom of this section, we provide information about the spritesheet itself
+$spritesheet: width height image $spritesheet-sprites;
+*/
+$arrow-down-name: 'arrow-down';
+$arrow-down-x: 77px;
+$arrow-down-y: 29px;
+$arrow-down-offset-x: -77px;
+$arrow-down-offset-y: -29px;
+$arrow-down-width: 8px;
+$arrow-down-height: 6px;
+$arrow-down-total-width: 91px;
+$arrow-down-total-height: 90px;
+$arrow-down-image: '../images/sprite.png';
+$arrow-down: (77px, 29px, -77px, -29px, 8px, 6px, 91px, 90px, '../images/sprite.png', 'arrow-down', );
+$basket-name: 'basket';
+$basket-x: 43px;
+$basket-y: 0px;
+$basket-offset-x: -43px;
+$basket-offset-y: 0px;
+$basket-width: 30px;
+$basket-height: 33px;
+$basket-total-width: 91px;
+$basket-total-height: 90px;
+$basket-image: '../images/sprite.png';
+$basket: (43px, 0px, -43px, 0px, 30px, 33px, 91px, 90px, '../images/sprite.png', 'basket', );
+$close-gallery-name: 'close-gallery';
+$close-gallery-x: 0px;
+$close-gallery-y: 43px;
+$close-gallery-offset-x: 0px;
+$close-gallery-offset-y: -43px;
+$close-gallery-width: 22px;
+$close-gallery-height: 23px;
+$close-gallery-total-width: 91px;
+$close-gallery-total-height: 90px;
+$close-gallery-image: '../images/sprite.png';
+$close-gallery: (0px, 43px, 0px, -43px, 22px, 23px, 91px, 90px, '../images/sprite.png', 'close-gallery', );
+$open-gallery-name: 'open-gallery';
+$open-gallery-x: 0px;
+$open-gallery-y: 0px;
+$open-gallery-offset-x: 0px;
+$open-gallery-offset-y: 0px;
+$open-gallery-width: 39px;
+$open-gallery-height: 39px;
+$open-gallery-total-width: 91px;
+$open-gallery-total-height: 90px;
+$open-gallery-image: '../images/sprite.png';
+$open-gallery: (0px, 0px, 0px, 0px, 39px, 39px, 91px, 90px, '../images/sprite.png', 'open-gallery', );
+$quote-icon-name: 'quote-icon';
+$quote-icon-x: 26px;
+$quote-icon-y: 43px;
+$quote-icon-offset-x: -26px;
+$quote-icon-offset-y: -43px;
+$quote-icon-width: 23px;
+$quote-icon-height: 18px;
+$quote-icon-total-width: 91px;
+$quote-icon-total-height: 90px;
+$quote-icon-image: '../images/sprite.png';
+$quote-icon: (26px, 43px, -26px, -43px, 23px, 18px, 91px, 90px, '../images/sprite.png', 'quote-icon', );
+$recall-question-name: 'recall-question';
+$recall-question-x: 53px;
+$recall-question-y: 43px;
+$recall-question-offset-x: -53px;
+$recall-question-offset-y: -43px;
+$recall-question-width: 17px;
+$recall-question-height: 16px;
+$recall-question-total-width: 91px;
+$recall-question-total-height: 90px;
+$recall-question-image: '../images/sprite.png';
+$recall-question: (53px, 43px, -53px, -43px, 17px, 16px, 91px, 90px, '../images/sprite.png', 'recall-question', );
+$recall-right-name: 'recall-right';
+$recall-right-x: 77px;
+$recall-right-y: 0px;
+$recall-right-offset-x: -77px;
+$recall-right-offset-y: 0px;
+$recall-right-width: 14px;
+$recall-right-height: 25px;
+$recall-right-total-width: 91px;
+$recall-right-total-height: 90px;
+$recall-right-image: '../images/sprite.png';
+$recall-right: (77px, 0px, -77px, 0px, 14px, 25px, 91px, 90px, '../images/sprite.png', 'recall-right', );
+$twitter-name: 'twitter';
+$twitter-x: 19px;
+$twitter-y: 70px;
+$twitter-offset-x: -19px;
+$twitter-offset-y: -70px;
+$twitter-width: 18px;
+$twitter-height: 15px;
+$twitter-total-width: 91px;
+$twitter-total-height: 90px;
+$twitter-image: '../images/sprite.png';
+$twitter: (19px, 70px, -19px, -70px, 18px, 15px, 91px, 90px, '../images/sprite.png', 'twitter', );
+$video-btn-name: 'video-btn';
+$video-btn-x: 0px;
+$video-btn-y: 70px;
+$video-btn-offset-x: 0px;
+$video-btn-offset-y: -70px;
+$video-btn-width: 15px;
+$video-btn-height: 20px;
+$video-btn-total-width: 91px;
+$video-btn-total-height: 90px;
+$video-btn-image: '../images/sprite.png';
+$video-btn: (0px, 70px, 0px, -70px, 15px, 20px, 91px, 90px, '../images/sprite.png', 'video-btn', );
+$spritesheet-width: 91px;
+$spritesheet-height: 90px;
+$spritesheet-image: '../images/sprite.png';
+$spritesheet-sprites: ($arrow-down, $basket, $close-gallery, $open-gallery, $quote-icon, $recall-question, $recall-right, $twitter, $video-btn, );
+$spritesheet: (91px, 90px, '../images/sprite.png', $spritesheet-sprites, );
+
+/*
+The provided mixins are intended to be used with the array-like variables
+
+.icon-home {
+  @include sprite-width($icon-home);
+}
+
+.icon-email {
+  @include sprite($icon-email);
+}
+
+Example usage in HTML:
+
+`display: block` sprite:
+<div class="icon-home"></div>
+
+To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+
+// CSS
+.icon {
+  display: inline-block;
+}
+
+// HTML
+<i class="icon icon-home"></i>
+*/
+@mixin sprite-width($sprite) {
+  width: nth($sprite, 5);
+}
+
+@mixin sprite-height($sprite) {
+  height: nth($sprite, 6);
+}
+
+@mixin sprite-position($sprite) {
+  $sprite-offset-x: nth($sprite, 3);
+  $sprite-offset-y: nth($sprite, 4);
+  background-position: $sprite-offset-x  $sprite-offset-y;
+}
+
+@mixin sprite-image($sprite) {
+  $sprite-image: nth($sprite, 9);
+  background-image: url(#{$sprite-image});
+}
+
+@mixin sprite($sprite) {
+  @include sprite-image($sprite);
+  @include sprite-position($sprite);
+  @include sprite-width($sprite);
+  @include sprite-height($sprite);
+}
+
+/*
+The `sprites` mixin generates identical output to the CSS template
+  but can be overridden inside of SCSS
+
+@include sprites($spritesheet-sprites);
+*/
+@mixin sprites($sprites) {
+  @each $sprite in $sprites {
+    $sprite-name: nth($sprite, 10);
+    .#{$sprite-name} {
+      @include sprite($sprite);
+    }
+  }
+}
