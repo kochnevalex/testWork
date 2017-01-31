@@ -5,6 +5,7 @@
   "main": "gulpfile.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
+    "docs": "node_modules/.bin/jsdoc -c jsdoc.json",
     "check-updates": "npm install -g npm-check-updates"
   },
   "author": "makebecool.com.ua",
@@ -12,11 +13,13 @@
   "devDependencies": {
     "babel-preset-es2015": "^6.13.2",
     "browser-sync": "^2.11.1",
+    "docdash": "^0.4.0",
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^3.1.0",
     "gulp-babel": "^6.1.2",
     "gulp-csscomb": "^3.0.7",
     "gulp-debug": "^3.0.0",
+    "gulp-eslint": "^3.0.1",
     "gulp-if": "^2.0.1",
     "gulp-imagemin": "^3.0.3",
     "gulp-jade": "^1.1.0",
