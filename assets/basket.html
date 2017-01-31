@@ -1,0 +1,1055 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Basket | grid360</title>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="images/iconsite/favicon.ico">
+    <link rel="dns-prefetch" href="http://www.google-analytics.com">
+    <link rel="author" href="humans.txt">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="makebecool">
+    <meta name="twitter:title" content="Basket | grid360">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image:src" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Basket | grid360">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="application-name" content="Basket | grid360">
+    <meta name="msapplication-TileColor" content="">
+    <meta name="msapplication-square70x70logo" content="images/iconsite/msapplication-square70x70logo.png">
+    <meta name="msapplication-square150x150logo" content="images/iconsite/msapplication-square150x150logo.png">
+    <meta name="msapplication-wide310x150logo" content="images/iconsite/msapplication-wide310x150logo.png">
+    <meta name="msapplication-square310x310logo" content="images/iconsite/msapplication-square310x310logo.png">
+    <link rel="apple-touch-icon" href="images/iconsite/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/iconsite/apple-touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/iconsite/apple-touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/iconsite/apple-touch-icon-ipad-retina.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/iconsite/apple-touch-icon-iphone6plus-retina.png">
+    <meta name="cmsmagazine" content="a39ef97fd1d4cf6d3e103f0ff48ea4f6">
+    <meta name="it-rating" content="it-rat-c2fb848de4ce4a9d8631b1558f63157d">
+    <link rel="stylesheet" href="css/base64-fonts.css">
+    <link rel="stylesheet" href="css/critical.css">
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/jquery/plugins/validation/jquery.validate.min.js"></script>
+    <script src="./js/jquery/plugins/form/jquery.form.js"></script>
+    <script src="./js/jquery/plugins/select2/select2.full.js"></script>
+    <script src="./js/jquery/plugins/slick/slick.min.js"></script>
+    <script src="./js/jquery/plugins/rater/rater.min.js"></script>
+    <script src="./js/plugins/aos/aos.js"></script>
+    <script src="./js/jquery/plugins/textarea-autoresize/autosize.js"></script>
+    <script src="./js/jquery/plugins/charts/chartist.min.js"></script>
+    <script src="./js/plugins/lightGallery/lightgallery.min.js"></script>
+    <script src="./js/plugins/lightGallery/lg-thumbnail.min.js"></script>
+    <script src="./js/plugins/lightGallery/lg-fullscreen.min.js"></script>
+  </head>
+  <body>
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/jquery/plugins/validation/jquery.validate.min.js"></script>
+    <script src="./js/jquery/plugins/form/jquery.form.js"></script>
+    <script src="./js/jquery/plugins/select2/select2.full.js"></script>
+    <script src="./js/jquery/plugins/slick/slick.min.js"></script>
+    <script src="./js/jquery/plugins/rater/rater.min.js"></script>
+    <script src="./js/plugins/aos/aos.js"></script>
+    <script src="./js/jquery/plugins/textarea-autoresize/autosize.js"></script>
+    <script src="./js/jquery/plugins/charts/chartist.min.js"></script>
+    <script src="./js/plugins/lightGallery/lightgallery.min.js"></script>
+    <script src="./js/plugins/lightGallery/lg-thumbnail.min.js"></script>
+    <script src="./js/plugins/lightGallery/lg-fullscreen.min.js"></script>
+    <div class="wrap">
+      <header id="header" class="header">
+        <div id="headerBanner" class="header__banner">
+          <div class="container">Top banner
+            <button id="headerBannerCloseBtn" type="button" class="header__banner-close"></button>
+          </div>
+          <script>
+            $('#headerBannerCloseBtn').on('click', function (e) {
+              e.preventDefault();
+              if (!$('#headerBanner').hasClass('hide')) {
+                $('#headerBanner').slideUp(function () {
+                  $('#headerBanner').addClass('hide');
+                });
+              }
+            });
+          </script>
+        </div>
+        <div class="header__top-bar">
+          <div class="container">
+            <nav id="headerTopNav" class="header__top-nav">
+              <button id="headerTopBtn" type="button" class="header__top-btn"><span></span><span></span><span></span></button><span class="header__top-ttl">Меню</span>
+              <div id="headerTopMenu" class="header__top-menu">
+                <ul class="header__top-menu-list">
+                  <li><a href="#">Контакты</a></li>
+                  <li><a href="#">Способы доставки</a></li>
+                  <li><a href="#">Оплата</a></li>
+                  <li><a href="#">О нас</a></li>
+                </ul>
+              </div>
+            </nav>
+            <div class="header__top-info">
+              <ul class="header__top-info-list">
+                <li><a href="tel:+7495540-50-86">+7 (495) 540-50-86</a></li>
+                <li><a href="#">Войти</a></li>
+              </ul>
+            </div>
+          </div>
+          <script>
+            $('#headerTopBtn').on('click', function (e) {
+              e.preventDefault();
+              $('#headerTopNav').toggleClass('active');
+            });
+          </script>
+        </div>
+        <div class="header_main">
+          <div class="container">
+            <div class="header-container">
+              <div class="header-logo"></div><a href="#"><img src="http://placehold.it/100x50" alt="" class="header-logo__img"></a>
+              <div class="megamenu-wrap"><span data-state="closed" class="megamenu__title">Каталог</span>
+                <div id="megamenu" class="megamenu mod--closed">
+                  <ul class="megamenu__categories">
+                    <!--Категория 1-->
+                    <li class="megamenu__category mod--actual"><span>Категория 1</span>
+                      <button class="megamenu__has-sub"></button>
+                      <div class="megamenu__dropdown-wrap">
+                        <div class="megamenu__dropdown">
+                          <div class="megamenu__sub-container">
+                            <ul class="megamenu__sub-categories">
+                              <li class="megamenu__sub-category"><span>Подкатегория 1 Категории 1</span></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 2 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 3 Категории 1</a></li>
+                            </ul>
+                            <ul class="megamenu__sub-categories">
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 4 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 5 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 6 Категории 1</a></li>
+                            </ul>
+                            <ul class="megamenu__sub-categories">
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 7 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 8 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 9 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 10 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 11 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 12 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 13 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 14 Категории 1</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <!--Категория 2-->
+                    <li class="megamenu__category"><a href="#">Категория 2</a><i class="megamenu__has-sub"></i>
+                      <div class="megamenu__dropdown-wrap">
+                        <div class="megamenu__dropdown">
+                          <div class="megamenu__sub-container">
+                            <ul class="megamenu__sub-categories">
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 1 Категории 2</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <!--Категория 3-->
+                    <li class="megamenu__category"><a href="#">Категория 3</a><i class="megamenu__has-sub"></i>
+                      <div class="megamenu__dropdown-wrap">
+                        <div class="megamenu__dropdown">
+                          <div class="megamenu__sub-container">
+                            <ul class="megamenu__sub-categories">
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 1 Категории 3</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 2 Категории 3</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 3 Категории 3</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="megamenu__category"><a href="#">Категория 4</a><i class="megamenu__has-sub"></i>
+                      <div class="megamenu__dropdown-wrap">
+                        <div class="megamenu__dropdown">
+                          <div class="megamenu__sub-container">
+                            <ul class="megamenu__sub-categories">
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 1 Категории 4</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 2 Категории 4</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 3 Категории 4</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="megamenu__category"><a href="#">Категория 5</a><i class="megamenu__has-sub"></i>
+                      <div class="megamenu__dropdown-wrap">
+                        <div class="megamenu__dropdown">
+                          <!--Подкатегории-->
+                          <div class="megamenu__sub-container">
+                            <ul class="megamenu__sub-categories">
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 1 Категории 5</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 2 Категории 5</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 3 Категории 5</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="headerSearch" class="search-w">
+                <button id="headerSearchOpen" type="button" class="search-w__open-btn">&#128269;</button>
+                <button id="headerSearchClose" type="button" class="search-w__close-btn hide">&#10006;</button>
+                <form id="headerSearchForm" method="get" action="" class="search-w__form">
+                  <input type="hidden" name="controller" value="search"><span role="status" aria-live="polite"></span>
+                  <input type="text" name="s" value="" placeholder="Поиск" autocomplete="off" class="search-w__form-input">
+                  <button type="submit" class="search-w__form-search">&#128269;</button>
+                </form>
+                <script>
+                  $('#headerSearchOpen').on('click', function (e) {
+                    e.preventDefault();
+                    $('#headerSearchForm').addClass('active');
+                    $('#headerSearchOpen').addClass('hide');
+                    $('#headerSearchClose').removeClass('hide');
+                  });
+                  
+                  $('#headerSearchClose').on('click', function (e) {
+                    e.preventDefault();
+                    $('#headerSearchForm').removeClass('active');
+                    $('#headerSearchOpen').removeClass('hide');
+                    $('#headerSearchClose').addClass('hide');
+                  });
+                </script>
+              </div>
+              <div class="basket-w"><a href="" class="basket-w__link"><img src="images/basket.png" alt=""></a></div>
+            </div>
+          </div>
+        </div>
+        <!--include headerMainMenu-->
+        
+        
+      </header>
+      <div class="container">
+        <div class="b-cart">
+          <div class="breadcrumbs">
+            <ul class="b-breadcrumbs__list">
+              <li><a href="#">Главная</a></li>
+              <li>Корзина</li>
+            </ul>
+          </div>
+          <div class="cart-success">
+            <h1 class="heading heading--cart-style">Спасибо! Ваш заказ #543-321 принят</h1>
+            <div class="cart-success__content">
+              <p>Наш сотрудник свяжется с вами в ближайшее время для подтверждения заказа</p><a class="button button--cart"><span>Продолжить покупки</span></a>
+            </div>
+          </div>
+          <div class="cart-body">
+            <h1 class="heading">Корзина</h1>
+            <div class="b-cart__content">
+              <div class="b-cart__l-colum">
+                <div class="b-cart__l-body">
+                  <div class="b-cart__head">
+                    <p class="b-cart__t-delivery">Получите бесплатную доставку</p>
+                    <p class="b-cart__t-order">Оформите заказ от 3 500 Р</p><a class="button button--cart"><span>Продолжить покупки</span></a>
+                  </div>
+                  <div class="b-cart__product">
+                    <div class="b-cart__product-wrap">
+                      <div class="b-cart__items"><img src="images/cart1.jpg" alt="">
+                        <div class="b-cart__items-wrap"><a href="#" class="b-cart__items-ttl">Грезы RF570-1053 <span>Tribuna</span></a>
+                          <p class="b-cart__cost b-cart__cost--old b-cart__cost--old-wrap">5 990</p>
+                          <p class="b-cart__cost b-cart__cost--wrap">4 560 Р</p>
+                        </div>
+                      </div>
+                      <div class="b-cart__details-size"><img src="images/cart-icon-red.png" alt="" class="b-cart__items-color">
+                        <div class="b-cart__items-color-desc">Красный</div><span class="b-cart__size-wrap">Размер 65BB</span>
+                      </div>
+                      <div class="b-cart__delete"><a href="#"><img src="images/cart-delete.png" alt=""></a></div>
+                      <div class="b-cart__details">
+                        <div class="b-cart__details-count">
+                          <ul class="b-cart__counter-item">
+                            <li class="b-cart__counter-minus"><a href="" class="b-cart__counter-link"></a></li>
+                            <li>2</li>
+                            <li class="b-cart__counter-plus"><a href="" class="b-cart__counter-link"></a></li>
+                          </ul>
+                          <p class="b-cart__cost b-cart__cost--counter-wrap">4 560 Р</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="b-cart__product">
+                    <div class="b-cart__product-wrap">
+                      <div class="b-cart__items"><img src="images/cart1.jpg" alt="">
+                        <div class="b-cart__items-wrap"><a href="#" class="b-cart__items-ttl">Грезы RF570-1053 <span>Tribuna</span></a>
+                          <!--p.b-cart__cost.b-cart__cost--old.b-cart__cost--old-wrap 5 990-->
+                          <p class="b-cart__cost b-cart__cost--no-old-wrap">4 560 Р</p>
+                        </div>
+                      </div>
+                      <div class="b-cart__details-size"><img src="images/cart-icon-darkred.png" alt=""><span class="b-cart__size-wrap">Размер 65BB</span></div><span class="b-cart__delete"><a href=""><img src="images/cart-delete.png" alt=""></a></span>
+                      <div class="b-cart__details">
+                        <div class="b-cart__details-count">
+                          <ul class="b-cart__counter-item">
+                            <li class="b-cart__counter-minus"><a href="" class="b-cart__counter-link"></a></li>
+                            <li>2</li>
+                            <li class="b-cart__counter-plus"><a href="" class="b-cart__counter-link"></a></li>
+                          </ul>
+                          <p class="b-cart__cost b-cart__cost--counter-wrap">4 560 Р</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="b-cart__product">
+                    <div class="b-cart__product-wrap">
+                      <div class="b-cart__items"><img src="images/cart1.jpg" alt="">
+                        <div class="b-cart__items-wrap"><a href="#" class="b-cart__items-ttl">Грезы RF570-1053 <span>Tribuna</span></a>
+                          <p class="b-cart__cost b-cart__cost--old b-cart__cost--old-wrap">5 990</p>
+                          <p class="b-cart__cost b-cart__cost--wrap">4 560 Р</p>
+                        </div>
+                      </div>
+                      <div class="b-cart__details-size"><img src="images/cart-icon-colors.png" alt=""><span class="b-cart__size-wrap">Размер 65BB</span></div><span class="b-cart__delete"><a href=""><img src="images/cart-delete.png" alt=""></a></span>
+                      <div class="b-cart__details">
+                        <div class="b-cart__details-count">
+                          <ul class="b-cart__counter-item">
+                            <li class="b-cart__counter-minus"><a href="" class="b-cart__counter-link"></a></li>
+                            <li>2</li>
+                            <li class="b-cart__counter-plus"><a href="" class="b-cart__counter-link"></a></li>
+                          </ul>
+                          <p class="b-cart__cost b-cart__cost--counter-wrap">4 560 Р</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="b-cart__product">
+                    <div class="b-cart__product-wrap">
+                      <div class="b-cart__items"><img src="images/cart1.jpg" alt="">
+                        <div class="b-cart__items-wrap"><a href="#" class="b-cart__items-ttl">Грезы RF570-1053 <span>Tribuna</span></a>
+                          <p class="b-cart__cost b-cart__cost--old b-cart__cost--old-wrap">5 990</p>
+                          <p class="b-cart__cost b-cart__cost--wrap">4 560 Р</p>
+                        </div>
+                      </div>
+                      <div class="b-cart__details-size"><img src="images/cart-icon-red.png" alt=""><span class="b-cart__size-wrap">Размер 65BB</span></div><span class="b-cart__delete"><a href=""><img src="images/cart-delete.png" alt=""></a></span>
+                      <div class="b-cart__details">
+                        <div class="b-cart__details-count">
+                          <ul class="b-cart__counter-item">
+                            <li class="b-cart__counter-minus"><a href="" class="b-cart__counter-link"></a></li>
+                            <li>2</li>
+                            <li class="b-cart__counter-plus"><a href="" class="b-cart__counter-link"></a></li>
+                          </ul>
+                          <p class="b-cart__cost b-cart__cost--counter-wrap">4 560 Р</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="b-cart__product">
+                    <div class="b-cart__product-wrap">
+                      <div class="b-cart__items"><img src="images/cart1.jpg" alt="">
+                        <div class="b-cart__items-wrap"><a href="#" class="b-cart__items-ttl">Грезы RF570-1053 <span>Tribuna</span></a>
+                          <p class="b-cart__cost b-cart__cost--old b-cart__cost--old-wrap">5 990</p>
+                          <p class="b-cart__cost b-cart__cost--wrap">4 560 Р</p>
+                        </div>
+                      </div>
+                      <div class="b-cart__details-size"><img src="images/cart-icon-darkred.png" alt="" class="b-cart__items-color"><span class="b-cart__size-wrap">Размер 65BB</span></div><span class="b-cart__delete"><a href=""><img src="images/cart-delete.png" alt=""></a></span>
+                      <div class="b-cart__details">
+                        <div class="b-cart__details-count">
+                          <ul class="b-cart__counter-item">
+                            <li class="b-cart__counter-minus"><a href="" class="b-cart__counter-link"></a></li>
+                            <li>2</li>
+                            <li class="b-cart__counter-plus"><a href="" class="b-cart__counter-link"></a></li>
+                          </ul>
+                          <p class="b-cart__cost b-cart__cost--counter-wrap">4 560 Р</p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="b-cart__payment b-cart__payment--wrap">
+                    <div class="b-cart__payment-items">
+                      <div class="b-cart__payment-text">Итого, 12 товаров</div>
+                      <div class="b-cart__payment-cost b-cart__payment-cost--wrap">237 870 Р</div>
+                    </div>
+                    <div class="b-cart__payment-items b-cart__payment-items--purpure">
+                      <div class="b-cart__payment-text">Скидка бонусной системы</div>
+                      <div class="b-cart__payment-cost b-cart__payment-cost--wrap">- 5%</div>
+                    </div>
+                    <div class="b-cart__payment-items b-cart__payment-items--purpure">
+                      <div class="b-cart__payment-text">Доставка</div>
+                      <div class="b-cart__payment-cost b-cart__payment-cost--wrap">Бесплатно</div>
+                    </div>
+                    <div class="b-cart__payment-items b-cart__payment-items--wrap b-cart__payment-items--purpure">
+                      <div class="b-cart__payment-text">Доставка</div>
+                      <div class="b-cart__payment-cost b-cart__payment-cost--pos">
+                        <div class="b-cart__payment-discount"><span class="payment-discount__text">Получите бесплатную доставку оплатив заказ сейчас</span><span class="payment-discount__price">350 Р</span></div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="b-cart__payment b-cart__payment--no-border">
+                    <div class="b-cart__payment-items b-cart__payment-items--pink">
+                      <div class="b-cart__payment-text">Сумма к оплате</div>
+                      <div class="b-cart__payment-cost b-cart__payment-cost--wrap b-cart__payme">225 870 Р</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="b-cart__r-colum">
+                <form id="form-delivery" action="#" method="POST">
+                  <div class="b-cart__accordion b-cart__accordion--success">Оформление заказа</div>
+                  <div class="b-cart__panel">
+                    <div class="b-cart__panel-form accaunt">
+                      <div class="row">
+                        <div class="col-lg-6 col-sm-6">
+                          <fieldset aria-required="true" class="required">
+                            <input id="name" class="b-cart__panel-control">
+                            <label for="name" class="label">Ваше имя</label>
+                          </fieldset>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                          <fieldset aria-required="true" class="required">
+                            <input id="surname" class="b-cart__panel-control">
+                            <label for="surname" class="label">Фамилия</label>
+                          </fieldset>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                          <fieldset aria-required="true" class="required">
+                            <input id="tel" type="tel" placeholder="(000) 000-00-00" class="tel subscribe__input form-control">
+                          </fieldset>
+                        </div>
+                        <div class="col-lg-6 col-sm-6">
+                          <fieldset aria-required="true" class="required">
+                            <input id="email" class="b-cart__panel-control">
+                            <label for="email" class="label">E-mail</label>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="b-cart__panel-content">
+                      <button class="button button--cart-panel">Далее</button>
+                      <div class="b-cart__panel-discount">
+                        <p class="panel_disc-text--param">Ваша скидка по бонуной системе 5%</p>
+                        <p class="panel_disc-text"><span>Получите 10% скидки по бонусной системе</span> соврешив покупки еще на 23 500 Р</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="b-cart__accordion b-cart__accordion--success">Способ доставки</div>
+                  <div class="b-cart__panel">
+                    <div class="b-cart__panel-form-new">
+                      <div class="b-cart__panel-form">
+                        <div class="row">
+                          <div class="col-lg-6 col-sm-6">
+                            <fieldset aria-required="true" class="required">
+                              <input id="city" class="b-cart__panel-control b-cart__city">
+                              <label for="city" class="label">Город</label>
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-6 col-sm-6">
+                            <fieldset aria-required="true" class="required">
+                              <input id="street" class="b-cart__panel-control b-cart__street">
+                              <label for="street" class="label">Улица</label>
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-6 col-sm-6">
+                            <fieldset aria-required="true" class="required">
+                              <input id="home" class="b-cart__panel-control b-cart__home">
+                              <label for="home" class="label">Дом</label>
+                            </fieldset>
+                          </div>
+                          <div class="col-lg-6 col-sm-6">
+                            <fieldset aria-required="true" class="required">
+                              <input class="b-cart__panel-control b-cart__kv">
+                              <label id="kv" for="kv" class="label">Квартира</label>
+                            </fieldset>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="b-cart__panel-content"><a class="button button--cart-panel b-cart__add-adress button--cart-color">Добавить</a>
+                        <div class="btn-cancel"><a class="btn-cancel-link">Отмена</a></div>
+                      </div>
+                    </div>
+                    <div class="b-cart__panel-form-list">
+                      <div class="b-cart__panel-form-item">
+                        <select class="payment-panel-list">
+                          <option selected disabled>Выберите способ доставки</option>
+                          <option>Новая Почта</option>
+                          <option>UPS</option>
+                        </select>
+                      </div>
+                      <div class="b-cart__panel-form-item">
+                        <select class="payment-panel-menu">
+                          <option value="1" selected>Ваш адрес для доставки</option>
+                          <option value="2">Санкт-Петербург, пр. Мира 117-А, 1</option>
+                          <option value="add-address">Добавить другой адрес</option>
+                        </select>
+                      </div>
+                      <div class="b-cart__panel-content"><a disabled class="button button--cart-panel button--cart-panel-go button--cart-gray">Далее</a></div>
+                    </div>
+                  </div>
+                  <div class="b-cart__accordion b-cart__accordion-comment last">Способ оплаты</div>
+                  <div class="b-cart__panel">
+                    <select class="payment-panel-list">
+                      <option>Предварительная оплата</option>
+                      <option>Предварительная оплата</option>
+                    </select>
+                    <div class="b-cart__panel-wrap">
+                      <div class="b-cart__panel-pay">
+                        <input id="pay-check" name="pay-1" type="radio">
+                        <label for="pay-check">Робокасса</label><img src="images/cart-robokassa.jpg" alt="" class="b-cart__pay-screen">
+                      </div>
+                      <div class="b-cart__panel-pay">
+                        <div class="panel-pay-item">
+                          <input id="pay-check-1" name="pay-1" type="radio">
+                          <label for="pay-check-1">Сбербанк</label><img src="images/cart-sberbank.jpg" alt="" class="b-cart__pay-screen">
+                        </div>
+                        <div class="panel-pay-item">
+                          <input id="pay-check-2" name="pay-1" type="radio">
+                          <label for="pay-check-2">Тинькофф</label><img src="images/cart-tinkoff.jpg" alt="" class="b-cart__pay-screen">
+                        </div>
+                        <div class="panel-pay-item">
+                          <input id="pay-check-3" name="pay-1" type="radio">
+                          <label for="pay-check-3">Другой банк</label>
+                        </div>
+                      </div>
+                      <div class="b-cart__panel-pay b-cart__panel-select">
+                        <input id="pay-check-4" name="pay-1" type="radio">
+                        <label for="pay-check-4"></label>
+                        <select class="payment-panel-list">
+                          <option>Выбрать другой способ оплаты</option>
+                          <option>Предварительная оплата</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="b-cart__panel b-cart__panel-comment">
+                    <div class="b-cart__panel-form">
+                      <div class="row">
+                        <div class="col-xs-12">
+                          <fieldset aria-required="true">
+                            <input id="comment" class="b-cart__panel-control b-cart__panel-control--color">
+                            <label for="comment" class="label">Комментарий к заказу</label>
+                          </fieldset>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="b-cart__panel-checkout">
+                      <div class="b-cart__checkout-wrap">
+                        <input id="checkout-order" name="checkout-order" type="checkbox">
+                        <label for="checkout-order"><span>Согласен с <a class="b-cart__checkout-link" href="#agreement"> договором о правах потребителя</a></span></label>
+                      </div><a href="#" rel="nofollow" class="button b-cart__checkout-btn">Оформить заказ</a>
+                    </div>
+                  </div>
+                </form>
+                <div id="agreement" class="b-cart__agreement">
+                  <div class="b-cart__agreement-text">
+                    <span>1. Терминология</span>
+                    <p>Покупатель - физическое лицо, имеющее намерение заказать или приобрести товары, либо заказывающее, приобретающее или использующее товары исключительно для личных, семейных, домашних и иных нужд, не связанных с осуществлением предпринимательской деятельности.</p>
+                    <p><span>Продавец</span> - ООО "ВИДЖИС", ОГРН 1097746613612, 109316, г.Москва, Остаповский проезд, д. 5, стр. 4.
+                    <span>Товар</span> - одежда, аксессуары и прочие изделия, предлагаемые к продаже Продавцом посредством Каталога.
+                    <span>Каталог</span> - каталог Товаров, расположенный в сети Интернет по адресу www.moisekreti.ru.</p>
+                    
+                    <span>2. Основные условия</span>
+                    <p>Заказы по Каталогу принимаются только от Покупателей физических лиц Российской Федерации старше 18 лет.</p>
+                    <p>Оформив заказ по Каталогу Покупатель извещает Продавца о своем полном и безоговорочном согласии с содержанием заказа и выражает согласие на заключение с Продавцом договора в соответствии с частью 2 статьи 158 Гражданского Кодекса Российской Федерации, в т.ч. Покупатель дает согласие Продавцу на обработку и использование персональных данных Покупателя согласно статьи 3 Федерального Закона О персональных данных от 27.07.2006 г. (далее - Закон) , в целях, определенных Уставом Продавца, различными способами, в том числе путем осуществления автоматизированного анализа персональных данных и поручение Продавцом под свою ответственность обработку персональных данных любому третьему лицу по усмотрению Продавца при условии соблюдения требований ст.6 Закона, в том числе осуществления таким лицом конфиденциальности и защиты персональных данных, без ограничения срока действия.</p>
+                    <p>Согласно пункта 5 статьи 21 Закона, настоящее согласие может быть отозвано только при условии письменного уведомления Продавца не менее чем за 180 дней до предполагаемой даты прекращения использования персональных данных Продавцом.<p>
+                    
+                    <span>3. Стоимость заказа и доставки</span>
+                    Общая стоимость заказа складывается из цен всех выбранных Покупателем товаров, указанных в Каталоге и стоимости доставки. За каждый заказ взимается фиксированная стоимость доставки заказа Покупателю, которая добавляется к заказу и включается в конечную стоимость заказа автоматически. Стоимость доставки зависит от региона и способа доставки заказа и устанавливается Продавцом отдельно в разделе «Доставка» Каталога. Стоимость доставки взимается один раз за каждый заказ. Доставка заказов осуществляется ФГУП «Почта России» и ОАО «Фрейт-Линк» по поручению Продавца.
+                    
+                    <span>4. Порядок формирования и доставки заказа</span>
+                    Обработка заказа начинается сразу же после его поступления Продавцу. Доставку заказа Покупателю осуществляет внешняя Служба доставки, выбранная Покупателем при формировании заказа (далее - Служба доставки). Сроки доставки установлены в разделе «Доставка» Каталога и рассчитываются с момента передачи посылки от Продавца в Службу доставки.
+                    В случае полного наличия заказанного Покупателем Товара на складе Продавца, посылка формируется и передается в Службу доставки в течение 3 рабочих дней с момента получения Продавцом заказа от Покупателя.
+                    В случаях, когда заказ не может быть полностью сформирован, чтобы не увеличивать срок ожидания заказа, посылка формируется частично и передается в Службу доставки в указанные выше сроки при выполнении следующего условия: - стоимость товара в отправлении составляет не менее 2000 рублей. При этом общая стоимость доставки заказ, определенная при формировании заказа не изменяется. Товары, заказанные Покупателем и прибывшие на склад Продавца после передачи в Службу доставки первой посылки, высылаются отдельно по мере поступления за счет Продавца. Общий срок, в течение которого весь заказ может быть сформирован, составляет максимально 4 недели с момента получения Продавцом заказа от Покупателя. В случае, если в указанный период времени, заказанный товар не прибыл на склад Продавца, Покупателю направляется уведомление о том, что указанный товар не может быть доставлен.
+                    В иных случаях частичного наличия заказанного Покупателем Товара на складе Продавца, посылка формируется и передается в Службу доставки в течение 3 рабочих дней с момента согласования Продавцом с Покупателем изменений в заказ посредством электронной почты или телефонной связи.
+                    
+                    <span>5. Оплата, политика безопасности платежей и получение товара</span>
+                    Оплата Товара производится Покупателем одним из следующих способов:
+                    - наличными денежными средствами в момент получения заказа;
+                    - банковской картой одной из платежных систем - Visa International, MasterCard Worldwide в момент оформления заказа на сайте. При оплате заказа банковской картой все транзакции проводятся в Рублях РФ (RUR).
+                    При оплате заказа банковской картой (включая ввод номера карты), обработка платежа происходит на сайте системы электронных платежей Яндекс.Касса, которая прошла международную сертификацию. Это значит, что конфиденциальные данные Покупателя (реквизиты карты, регистрационные данные и др.) не поступают в интернет-магазин, их обработка полностью защищена и никто, в том числе moisekreti.ru (ООО «ВИДЖИС»), не может получить персональные и банковские данные клиента. Для защиты информации от несанкционированного доступа на этапе передачи от клиента на сервер системы Яндекс.Касса используется протокол SSL. Компания Яндекс.Касса прошла PCI-сертификацию (PCI Data Security Standards или Стандарты безопасности хранения данных PCI, разработанные и внедренные платежными системами VISA и MasterCard для обеспечения безопасного хранения личных данных владельца банковской карты.
+                    
+                    6. Возврат товара.
+                    - Возврат товара надлежащего качества: Покупатель вправе отказаться от заказанного Товара в любое время до его получения, а после получения Товара - в течение 14 дней со дня получения товара (заказа) Покупателем. Возврат Товара надлежащего качества возможен в случае, если сохранены его товарный вид (оригинальная упаковка, ярлыки), потребительские свойства, специальные пломбы Продавца, а также документ, подтверждающий факт и условия покупки указанного Товара. Расходы на обратную доставку Товара Продавцу оплачивает Покупатель.
+                    - Возврат товаров ненадлежащего качества: Возврат Товара возможен в случаях неправильного вложения или заводского брака. В случае возврата Товара по причине заводского брака, такой товар может быть направлен на экспертизу, по результатам которой устанавливается ответственная сторона. Если ответственной стороной признается Продавец, расходы на обмен/возврат Товара, транспортировку, хранение и проведение экспертизы оплачивает Продавец. В случае если ответственной стороной признан Покупатель, указанные расходы оплачиваются Покупателем.
+                    Для возврата Покупателю необходимо направить Продавцу Товар, копии документов, подтверждающих факт покупки Товара, копию удостоверения личности и заполненное и подписанное заявление на возврат - Почтой России по адресу: ООО ВИДЖИС, 109316, г. Москва, Остаповский проезд, д.5 стр.4. Продавец не принимает посылки с Товаром от физических лиц, направленные в его адрес наложенным платежом. Бланк заявления предоставляется Продавцом по запросу Покупателя в электронном виде для последующего его распечатывания Покупателем.
+                    В случае нарушения Покупателем условий возврата Товара - Покупатель оплачивает Продавцу расходы на обратную доставку Покупателю непринятого к возврату Товара. Непринятый к возврату Товар, и невостребованный Покупателем в течение 6 (шести) месяцев с момента предъявления товара к возврату, утилизируется Продавцом без возмещения каких-либо средств Покупателю.
+                    Возврат денежных средств Покупателю осуществляется на банковский счет в течение 10 дней с момента получения Продавцом от Покупателя Товара и письменного заявления на возврат с приложением всех необходимых документов. При оплате заказа банковской картой в момент его оформления возврат денежных средств производится на ту же банковскую карту, с которой был произведен платеж. Покупателю возвращается полная стоимость возвращенных товаров за вычетом расходов Продавца на доставку данных товаров до Покупателя.
+                    Весь товар сертифицирован согласно требованиям законодательства Российской Федерации. Настоящие Правила и условия являются условиями договора купли-продажи, заключенного между Покупателем и ООО "ВИДЖИС".
+                    
+                    ООО "ВИДЖИС"
+                    ОГРН 1097746613612
+                    Наш адрес: 109316, г. Москва, Остаповский проезд, д. 5, стр. 4.
+                  </div>
+                  <div class="b-cart__agreement-close"><a class="button button--cart close-btn"><span>Закрыть</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <aside class="aside-filters">
+          <div class="b-filters">
+            <div class="b-filters__title">Фильтр</div><a id="filterBtn" href="#" rel="nofollow" class="b-filters__btn">Фильтр<span></span></a>
+            <div class="b-filters__form">
+              <form id="layered_form" action="#" class="form-filter">
+                <div class="form-group">
+                  <div class="form-group__filter-ttl"><span>Цена,<span class="currency-style">₽</span></span><span class="icon icon-chevron-down pull-right"></span></div>
+                  <ul class="form-group__filter">
+                    <li class="clearfix">
+                      <div class="form-group__input-price pull-left">
+                        <div class="checker">
+                          <input id="amountMin" type="text">
+                        </div>
+                      </div>
+                      <div class="form-group__input-price pull-right">
+                        <div class="checker">
+                          <input id="amountMax" type="text">
+                        </div>
+                      </div>
+                    </li>
+                    <li class="b-filters__slider clearfix">
+                      <div class="checker">
+                        <div id="slider-range" data-min="50" data-max="600"></div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="form-group">
+                  <div class="form-group__filter-ttl"><span>Размер</span><span class="icon icon-chevron-down pull-right"></span></div>
+                  <ul id="ul_layered_id_attribute_group_1" class="form-group__filter form-group__filter-size clearfix">
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_11" type="checkbox" name="layered_id_attribute_group_29" value="29_5" checked class="checkbox">
+                        <label for="layered_id_attribute_group_11" class="form__label"><a href="#"><span class="icon icon-check"></span>70A</a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_12" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_12" class="form__label"><a href="#"><span class="icon icon-check"></span>70B</a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_13" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_13" class="form__label"><a href="#"><span class="icon icon-check"></span>70C</a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_14" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_14" class="form__label"><a href="#"><span class="icon icon-check"></span>70D</a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_15" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_15" class="form__label"><a href="#"><span class="icon icon-check"></span>75E</a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_16" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_16" class="form__label"><a href="#"><span class="icon icon-check"></span>75G</a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_17" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_17" class="form__label"><a href="#"><span class="icon icon-check"></span>80A</a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_18" type="checkbox" name="layered_id_attribute_group_29" value="29_5" checked class="checkbox">
+                        <label for="layered_id_attribute_group_18" class="form__label"><a href="#"><span class="icon icon-check"></span>80C</a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_19" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_12" class="form__label"><a href="#"><span class="icon icon-check"></span>70B</a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_20" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_13" class="form__label"><a href="#"><span class="icon icon-check"></span>70C</a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_21" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_14" class="form__label"><a href="#"><span class="icon icon-check"></span>70D</a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_22" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_15" class="form__label"><a href="#"><span class="icon icon-check"></span>75E</a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_23" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_16" class="form__label"><a href="#"><span class="icon icon-check"></span>75G</a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_24" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_17" class="form__label"><a href="#"><span class="icon icon-check"></span>80A</a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_25" type="checkbox" name="layered_id_attribute_group_29" value="29_5" checked class="checkbox">
+                        <label for="layered_id_attribute_group_18" class="form__label"><a href="#"><span class="icon icon-check"></span>80C</a></label>
+                      </div>
+                    </li>
+                    <li class="form-group__wide-li">
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_26" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_19" class="form__label"><a href="#"><span class="icon icon-check"></span>FF 136-138</a></label>
+                      </div>
+                    </li>
+                    <li class="form-group__wide-li">
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_27" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_19" class="form__label"><a href="#"><span class="icon icon-check"></span>FF 136-138</a></label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="form-group">
+                  <div class="form-group__filter-ttl"><span>Цвет</span><span class="icon icon-chevron-down pull-right"></span></div>
+                  <ul id="ul_layered_id_attribute_group_2" class="form-group__filter form-group__filter-color clearfix">
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_28" type="checkbox" name="layered_id_attribute_group_29" value="29_5" checked class="checkbox">
+                        <label for="layered_id_attribute_group_21" class="form__label"><a href="#"><span></span><span class="icon icon-check"></span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_29" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_22" class="form__label"><a href="#"><span style="background: #d7dcda"></span><span class="icon icon-check"></span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_30" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_22" class="form__label"><a href="#"><span style="background: #f3e0c9"></span><span class="icon icon-check"></span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_31" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_22" class="form__label"><a href="#"><span style="background: #e4caab"></span><span class="icon icon-check"></span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_32" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_22" class="form__label"><a href="#"><span style="background: #b1a79b"></span><span class="icon icon-check"></span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_33" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_22" class="form__label"><a href="#"><span style="background: #000000"></span><span class="icon icon-check"></span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_34" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_22" class="form__label"><a href="#"><span style="background: #663399"></span><span class="icon icon-check"></span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_35" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_22" class="form__label"><a href="#"><span style="background: #7a4a38"></span><span class="icon icon-check"></span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_37" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_22" class="form__label"><a href="#"><span style="background-image: url(images/colorfull.png)"></span><span class="icon icon-check"></span></a></label>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+                <div class="form-group">
+                  <div class="form-group__filter-ttl"><span>Тип изделия</span><span class="icon icon-chevron-down pull-right"></span></div>
+                  <ul id="ul_layered_id_attribute_group_35" class="form-group__filter form-group__filter-type clearfix">
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_38" type="checkbox" name="layered_id_attribute_group_29" value="29_5" checked class="checkbox">
+                        <label for="layered_id_attribute_group_38" class="form__label"><a href="#">Балконет (анжелика)<span>32</span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_39" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_39" class="form__label"><a href="#">Мягкий<span>33</span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_40" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_40" class="form__label"><a href="#">Плотная чашка<span>98</span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_41" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_41" class="form__label"><a href="#">Пуш-ап<span>132</span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_42" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_42" class="form__label"><a href="#">Невидимка (силиконовый)<span>77</span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_43" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_43" class="form__label"><a href="#">Плотная чашка<span>98</span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_44" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_44" class="form__label"><a href="#">Пуш-ап<span>132</span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_55" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_55" class="form__label"><a href="#">Невидимка (силиконовый)<span>77</span></a></label>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="show-all-filters"><a href="#">Показать все</a></div>
+                </div>
+                <div class="form-group">
+                  <div class="form-group__filter-ttl"><span>Бренд</span><span class="icon icon-chevron-down pull-right"></span></div>
+                  <ul id="ul_layered_id_attribute_group_45" class="form-group__filter form-group__filter-type form-group__filter-brand clearfix">
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_45" type="checkbox" name="layered_id_attribute_group_29" value="29_5" checked class="checkbox">
+                        <label for="layered_id_attribute_group_45" class="form__label"><a href="#">Ava</a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_46" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_46" class="form__label"><a href="#">Corine<span>54</span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_47" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_47" class="form__label"><a href="#">Corine<span>54</span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_48" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_48" class="form__label"><a href="#">Eldar<span>99</span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_49" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_49" class="form__label"><a href="#">Eldar<span>99</span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_50" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_50" class="form__label"><a href="#">Kameo<span>14</span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_51" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_51" class="form__label"><a href="#">Kameo<span>14</span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_52" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_52" class="form__label"><a href="#">Lelio<span>63</span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_53" type="checkbox" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
+                        <label for="layered_id_attribute_group_53" class="form__label"><a href="#">Lelio<span>63</span></a></label>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="checker">
+                        <input id="layered_id_attribute_group_54" type="checkbox" name="layered_id_attribute_group_29" value="29_5" checked class="checkbox">
+                        <label for="layered_id_attribute_group_54" class="form__label"><a href="#">Ava</a></label>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="show-all-filters"><a href="#">Показать все</a></div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="b-res-filters__sort-res nav-help nav--dropdown"><span>Сортировать
+              <div class="down"><b id="getSorted">по убыванию цены<span class="icon icon-chevron-down"></span></b>
+                <ul class="nav-help__more">
+                  <li><a href="#">по рейтингу</a></li>
+                  <li><a href="#">по убыванию цены</a></li>
+                  <li><a href="#">по увеличению цены</a></li>
+                  <li><a href="#">новинки</a></li>
+                  <li><a href="#">акционные</a></li>
+                </ul>
+              </div></span></div>
+        </aside>
+      </div>
+    </div>
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <div class="subscribe-wrap">
+              <div class="subscribe__header">
+                <h2 class="subscribe__ttl">Подписывайтесь</h2>
+                <p class="subscribe__sub-ttl">на рассылку новинок, акций и скидок</p>
+              </div>
+              <form action="#" method="POST" data-form="subscribe" class="subscribe form">
+                <div class="form-group form-group--line">
+                  <div class="dropdown">
+                    <div class="dropdown__state">Все категории</div>
+                    <div class="dropdown__list">
+                      <div class="dropdown__item">
+                        <input id="cat-1" type="checkbox" name="test[]">
+                        <label for="cat-1">Пункт категории 1</label>
+                      </div>
+                      <div class="dropdown__item">
+                        <input id="cat-2" type="checkbox" name="test[]">
+                        <label for="cat-2">Пункт категории 2</label>
+                      </div>
+                      <div class="dropdown__item">
+                        <input id="cat-3" type="checkbox" name="test[]">
+                        <label for="cat-3">Пункт категории 3</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group required">
+                  <input type="email" name="email" placeholder="Ваш e-mail:" required class="subscribe__input form-control">
+                </div>
+                <button type="submit" name="subscribe" class="btn">Подписаться</button>
+              </form>
+              <div class="fmessage fsuccess">
+                <button class="btn-close"></button>
+                <div class="fmessage__ttl">Спасибо!</div>
+                <div class="fmessage__desc">Вы успешно подписались на новости.</div>
+              </div>
+              <div class="fmessage ferror">
+                <button class="btn-close"></button>
+                <div class="fmessage__ttl">Возникла ошибка</div>
+                <div class="fmessage__desc">Сообщение не получилось отправить</div>
+                <button class="btn fmessage__link">Попробовать еще раз</button>
+              </div>
+              <script>
+                $('.dropdown__state').click(function () {
+                  $(this).toggleClass("active");
+                  $('.dropdown__list').toggleClass("active");
+                });
+              </script>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="subscribe-wrap">
+              <div class="subscribe__header">
+                <h2 class="subscribe__ttl">Подписывайтесь</h2>
+                <p class="subscribe__sub-ttl">на рассылку новинок, акций и скидок</p>
+              </div>
+              <form action="#" method="POST" data-form="subscribe" class="subscribe form">
+                <div class="form-group form-group--line">
+                  <select class="subscribe__cat">
+                    <option>Все категории</option>
+                    <option>Раздел 1</option>
+                    <option>Раздел 2</option>
+                    <option>Раздел 3</option>
+                  </select>
+                </div>
+                <div class="form-group required">
+                  <input type="email" name="email" placeholder="Ваш e-mail:" required class="subscribe__input form-control">
+                </div>
+                <button type="submit" name="subscribe" class="btn">Подписаться</button>
+              </form>
+              <div class="fmessage fsuccess">
+                <button class="btn-close"></button>
+                <div class="fmessage__ttl">Спасибо!</div>
+                <div class="fmessage__desc">Вы успешно подписались на новости.</div>
+              </div>
+              <div class="fmessage ferror">
+                <button class="btn-close"></button>
+                <div class="fmessage__ttl">Возникла ошибка</div>
+                <div class="fmessage__desc">Сообщение не получилось отправить</div>
+                <button class="btn fmessage__link">Попробовать еще раз</button>
+              </div>
+              <script>
+                $('.subscribe__cat').select2({
+                  minimumResultsForSearch: Infinity,
+                  containerCssClass: "subscribe-select2",
+                  dropdownCssClass: "subscribe-select2-dropdown"
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="cpr">
+              <div class="cpr__dt">© 2012 - 2016 «Этажерка» Интернет-магазин элитной мебели и декора</div>
+              <div class="cpr__link">Адаптивные сайты от <a href="https://makebecool.com/">MakeBeCool</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <link rel="stylesheet" href="css/global.css">
+    <script src="./js/app/lib/site.js"></script>
+    <script src="./js/app/lib/siteMode.js"></script>
+    <script src="./js/app/mode/themeMode.js"></script>
+    <script src="./js/app/modules/formValidate.js"></script>
+    <script src="./js/app/modules/megamenuDropdown.js"></script>
+    <script src="./js/app/modules/formAjax.js"></script>
+    <script src="./js/jquery/plugins/ui/jquery-ui.js"></script>
+    <script src="./js/jquery/plugins/ui/jquery-ui-touch.js"></script>
+    <script src="./js/jquery/plugins/select2/select2.full.js"></script>
+    <script src="./js/jquery/plugins/inputmask/inputmask.min.js"></script>
+    <script src="./js/jquery/plugins/inputmask/inputmask.js"></script>
+    <script src="./js/app/modules/DropDown.js"></script>
+    <script src="./js/app/modules/PriceSlider.js"></script>
+    <script>
+      var global = {
+        siteUrl: '',
+        baseUrl: '/',
+        assetsUrl: '/assets/',
+        cultureKey: 'ru',
+        validationMessages: {
+          name: 'Будьте добры, введите ваше имя.',
+          phone: 'Вы забыли оставить ваш номер телефона.',
+          email: 'Адрес электронной почты имеет формат site@mail.com.',
+          emailRequired: 'Адрес электронной почты имеет формат site@mail.com.',
+          text: 'Здесь должно быть ваше сообщение.'
+        }
+      }
+      appMakeBeCool.gateway.init();
+    </script>
+  </body>
+</html>

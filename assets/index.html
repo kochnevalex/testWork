@@ -54,6 +54,18 @@
     <script src="./js/plugins/lightGallery/lg-fullscreen.min.js"></script>
   </head>
   <body>
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/jquery/plugins/validation/jquery.validate.min.js"></script>
+    <script src="./js/jquery/plugins/form/jquery.form.js"></script>
+    <script src="./js/jquery/plugins/select2/select2.full.js"></script>
+    <script src="./js/jquery/plugins/slick/slick.min.js"></script>
+    <script src="./js/jquery/plugins/rater/rater.min.js"></script>
+    <script src="./js/plugins/aos/aos.js"></script>
+    <script src="./js/jquery/plugins/textarea-autoresize/autosize.js"></script>
+    <script src="./js/jquery/plugins/charts/chartist.min.js"></script>
+    <script src="./js/plugins/lightGallery/lightgallery.min.js"></script>
+    <script src="./js/plugins/lightGallery/lg-thumbnail.min.js"></script>
+    <script src="./js/plugins/lightGallery/lg-fullscreen.min.js"></script>
     <div class="wrap">
       <header id="header" class="header">
         <div id="headerBanner" class="header__banner">
@@ -100,44 +112,128 @@
         </div>
         <div class="header_main">
           <div class="container">
-            <div class="header-logo"><a href="#"><img src="http://placehold.it/100x50" alt="" class="header-logo__img"></a></div>
-            <div id="headerSearch" class="search-w">
-              <button id="headerSearchOpen" type="button" class="search-w__open-btn">&#128269;</button>
-              <button id="headerSearchClose" type="button" class="search-w__close-btn hide">&#10006;</button>
-              <form id="headerSearchForm" method="get" action="" class="search-w__form">
-                <input type="hidden" name="controller" value="search"><span role="status" aria-live="polite"></span>
-                <input type="text" name="s" value="" placeholder="Поиск" autocomplete="off" class="search-w__form-input">
-                <button type="submit" class="search-w__form-search">&#128269;</button>
-              </form>
-              <script>
-                $('#headerSearchOpen').on('click', function (e) {
-                  e.preventDefault();
-                  $('#headerSearchForm').addClass('active');
-                  $('#headerSearchOpen').addClass('hide');
-                  $('#headerSearchClose').removeClass('hide');
-                });
-                
-                $('#headerSearchClose').on('click', function (e) {
-                  e.preventDefault();
-                  $('#headerSearchForm').removeClass('active');
-                  $('#headerSearchOpen').removeClass('hide');
-                  $('#headerSearchClose').addClass('hide');
-                });
-              </script>
+            <div class="header-container">
+              <div class="header-logo"></div><a href="#"><img src="http://placehold.it/100x50" alt="" class="header-logo__img"></a>
+              <div class="megamenu-wrap"><span data-state="closed" class="megamenu__title">Каталог</span>
+                <div id="megamenu" class="megamenu mod--closed">
+                  <ul class="megamenu__categories">
+                    <!--Категория 1-->
+                    <li class="megamenu__category mod--actual"><span>Категория 1</span>
+                      <button class="megamenu__has-sub"></button>
+                      <div class="megamenu__dropdown-wrap">
+                        <div class="megamenu__dropdown">
+                          <div class="megamenu__sub-container">
+                            <ul class="megamenu__sub-categories">
+                              <li class="megamenu__sub-category"><span>Подкатегория 1 Категории 1</span></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 2 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 3 Категории 1</a></li>
+                            </ul>
+                            <ul class="megamenu__sub-categories">
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 4 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 5 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 6 Категории 1</a></li>
+                            </ul>
+                            <ul class="megamenu__sub-categories">
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 7 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 8 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 9 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 10 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 11 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 12 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 13 Категории 1</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 14 Категории 1</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <!--Категория 2-->
+                    <li class="megamenu__category"><a href="#">Категория 2</a><i class="megamenu__has-sub"></i>
+                      <div class="megamenu__dropdown-wrap">
+                        <div class="megamenu__dropdown">
+                          <div class="megamenu__sub-container">
+                            <ul class="megamenu__sub-categories">
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 1 Категории 2</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <!--Категория 3-->
+                    <li class="megamenu__category"><a href="#">Категория 3</a><i class="megamenu__has-sub"></i>
+                      <div class="megamenu__dropdown-wrap">
+                        <div class="megamenu__dropdown">
+                          <div class="megamenu__sub-container">
+                            <ul class="megamenu__sub-categories">
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 1 Категории 3</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 2 Категории 3</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 3 Категории 3</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="megamenu__category"><a href="#">Категория 4</a><i class="megamenu__has-sub"></i>
+                      <div class="megamenu__dropdown-wrap">
+                        <div class="megamenu__dropdown">
+                          <div class="megamenu__sub-container">
+                            <ul class="megamenu__sub-categories">
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 1 Категории 4</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 2 Категории 4</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 3 Категории 4</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                    <li class="megamenu__category"><a href="#">Категория 5</a><i class="megamenu__has-sub"></i>
+                      <div class="megamenu__dropdown-wrap">
+                        <div class="megamenu__dropdown">
+                          <!--Подкатегории-->
+                          <div class="megamenu__sub-container">
+                            <ul class="megamenu__sub-categories">
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 1 Категории 5</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 2 Категории 5</a></li>
+                              <li class="megamenu__sub-category"><a href="#">Подкатегория 3 Категории 5</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+              <div id="headerSearch" class="search-w">
+                <button id="headerSearchOpen" type="button" class="search-w__open-btn">&#128269;</button>
+                <button id="headerSearchClose" type="button" class="search-w__close-btn hide">&#10006;</button>
+                <form id="headerSearchForm" method="get" action="" class="search-w__form">
+                  <input type="hidden" name="controller" value="search"><span role="status" aria-live="polite"></span>
+                  <input type="text" name="s" value="" placeholder="Поиск" autocomplete="off" class="search-w__form-input">
+                  <button type="submit" class="search-w__form-search">&#128269;</button>
+                </form>
+                <script>
+                  $('#headerSearchOpen').on('click', function (e) {
+                    e.preventDefault();
+                    $('#headerSearchForm').addClass('active');
+                    $('#headerSearchOpen').addClass('hide');
+                    $('#headerSearchClose').removeClass('hide');
+                  });
+                  
+                  $('#headerSearchClose').on('click', function (e) {
+                    e.preventDefault();
+                    $('#headerSearchForm').removeClass('active');
+                    $('#headerSearchOpen').removeClass('hide');
+                    $('#headerSearchClose').addClass('hide');
+                  });
+                </script>
+              </div>
+              <div class="basket-w"><a href="" class="basket-w__link"><img src="images/basket.png" alt=""></a></div>
             </div>
-            <div class="basket-w"><a href="" class="basket-w__link"><img src="images/basket.png" alt=""></a></div>
           </div>
         </div>
-        <div id="headerMenu" class="header_menu">
-          <div class="container">
-            <div class="header_menu-ttl">Каталог</div>
-            <div class="header_menu-cat">
-              <ul class="header_menu-cal-list">
-                <li><a href="#">Пункт</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
+        <!--include headerMainMenu-->
+        
+        
       </header>
       <div class="container">
         <h2 class="heading text-center">Новые товары</h2>
@@ -970,7 +1066,15 @@
     <script src="./js/app/lib/siteMode.js"></script>
     <script src="./js/app/mode/themeMode.js"></script>
     <script src="./js/app/modules/formValidate.js"></script>
+    <script src="./js/app/modules/megamenuDropdown.js"></script>
     <script src="./js/app/modules/formAjax.js"></script>
+    <script src="./js/jquery/plugins/ui/jquery-ui.js"></script>
+    <script src="./js/jquery/plugins/ui/jquery-ui-touch.js"></script>
+    <script src="./js/jquery/plugins/select2/select2.full.js"></script>
+    <script src="./js/jquery/plugins/inputmask/inputmask.min.js"></script>
+    <script src="./js/jquery/plugins/inputmask/inputmask.js"></script>
+    <script src="./js/app/modules/DropDown.js"></script>
+    <script src="./js/app/modules/PriceSlider.js"></script>
     <script>
       var global = {
         siteUrl: '',

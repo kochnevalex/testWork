@@ -1,0 +1,28 @@
+- var pageTitle = "Categories | grid360";
+include parts/goods/goodsMixins
+
+doctype html
+html(lang='ru')
+  include components/head/head
+
+  body
+    include components/scripts/scripts
+    .wrap
+      include components/header/header
+      .container
+        .breadcrumbs
+          ul.b-breadcrumbs__list
+            li: a(href="#") Главная
+            li Категории
+
+
+      .container
+        aside.aside-filters
+          include parts/filters/filters
+    include components/footer/footer
+    include components/scripts/bottomScripts
+
+
+
+
+

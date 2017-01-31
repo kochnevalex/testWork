@@ -100,7 +100,9 @@
 	top: 50%
 	transform: translateY(-50%)
 	content: ''
-	@include sprite($video-btn)
+	width: 15px
+	height: 20px
+	background: url("../images/video-btn.png") 50% 50% no-repeat
 
 .video-link-wrap .video-link:hover span
 	@include linkBorder($grey-color)
@@ -127,7 +129,6 @@
 	position: absolute
 	right: -60px
 	cursor: pointer
-	@include sprite($close-gallery)
 
 .video-container
 	width: 60%
@@ -197,9 +198,10 @@
 		position: absolute
 		right: 25px
 		bottom: 65px
+		width: 39px
+		height: 39px
 		z-index: 2
 		cursor: pointer
-		@include sprite($open-gallery)
 
 	.item__gallery-slider.fullsize
 		align-items: center
@@ -235,8 +237,30 @@
 		right: -60px
 		top: 0
 		content: ''
-		@include sprite($close-gallery)
 		cursor: pointer
+		width: 22px
+		height: 22px
+		z-index: 10
+		&:before, &:after
+			display: block
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 30px
+			height: 2px
+			margin-top: -1px
+			margin-left: -15px
+			background: $black-color
+
+		&:before
+			transform: rotate(45deg)
+		&:after
+			transform: rotate(-45deg)
+
+		&:hover
+			&:before, &:after
+				background: $grey-color
 
 	.item__gallery-slider.fullsize .slider-nav
 		width: 100px
