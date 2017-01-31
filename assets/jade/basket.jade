@@ -170,18 +170,18 @@ html(lang='ru')
                     .b-cart__panel-form.accaunt
                       .row
                         .col-lg-6.col-sm-6
-                          fieldset.required(aria-required="true")
+                          fieldset.required
                             input#name.b-cart__panel-control
                             label.label(for="name") Ваше имя
                         .col-lg-6.col-sm-6
-                          fieldset.required(aria-required="true")
+                          fieldset.required
                             input#surname.b-cart__panel-control
                             label.label(for="surname") Фамилия
                         .col-lg-6.col-sm-6
-                          fieldset.required(aria-required="true")
+                          fieldset.required
                             input#tel.tel.subscribe__input.form-control(type='tel' placeholder='(000) 000-00-00')
                         .col-lg-6.col-sm-6
-                          fieldset.required(aria-required="true")
+                          fieldset.required
                             input#email.b-cart__panel-control
                             label.label(for="email") E-mail
                     .b-cart__panel-content
@@ -195,19 +195,19 @@ html(lang='ru')
                       .b-cart__panel-form
                         .row
                           .col-lg-6.col-sm-6
-                            fieldset.required(aria-required="true")
-                              input#city.b-cart__panel-control.b-cart__city
+                            fieldset.required
+                              input#city.b-cart__panel-control.b-cart__ci
                               label.label(for="city") Город
                           .col-lg-6.col-sm-6
-                            fieldset.required(aria-required="true")
+                            fieldset.required
                               input#street.b-cart__panel-control.b-cart__street
                               label.label(for="street") Улица
                           .col-lg-6.col-sm-6
-                            fieldset.required(aria-required="true")
+                            fieldset.required
                               input#home.b-cart__panel-control.b-cart__home
                               label.label(for="home") Дом
                           .col-lg-6.col-sm-6
-                            fieldset.required(aria-required="true")
+                            fieldset.required
                               input.b-cart__panel-control.b-cart__kv
                               label#kv.label(for="kv") Квартира
                       .b-cart__panel-content
@@ -226,7 +226,7 @@ html(lang='ru')
                           option(value="2") Санкт-Петербург, пр. Мира 117-А, 1
                           option(value="add-address") Добавить другой адрес
                       .b-cart__panel-content
-                        a.button.button--cart-panel.button--cart-panel-go(disabled) Далее
+                        button.button.button--cart-panel.button--cart-panel-go(disabled) Дале
                   .b-cart__accordion.b-cart__accordion-comment.last Способ оплаты
                   .b-cart__panel
                     select.payment-panel-list
@@ -259,7 +259,7 @@ html(lang='ru')
                     .b-cart__panel-form
                       .row
                         .col-xs-12
-                          fieldset(aria-required="true")
+                          fieldset
                             input#comment.b-cart__panel-control.b-cart__panel-control--color
                             label.label(for="comment") Комментарий к заказу
                     .b-cart__panel-checkout
