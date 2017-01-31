@@ -1,0 +1,111 @@
+.review
+  .headline-wrap.coma
+    h2.headline  Отзывы
+  .review-forms
+    .review-form-wrap
+      .review-form.not-authorized.hide
+        .review-form-head
+          .head-rating
+          p #[span 78] отзывовб #[span 3.5] из  #[span 5]
+        .subscribe-wrap
+          .subscribe__header
+            h2.subscribe__ttl Войдите,
+            p.subscribe__sub-ttl чтобы оставлять отзывы и задавать вопросы
+          form#form-rewiew.subscribe(action='#', method='POST')
+            .form-group
+              input.subscribe__input.form-control(type='email', name='email', placeholder='Ваш e-mail', required)
+            .form-group
+              input.subscribe__input.form-control(type='password', name='password', placeholder='Пароль', required)
+            button.btn(type='submit', name='subscribe') Войти
+
+      .review-form.authorized
+        .review-form-head
+          .head-rating
+          p #[span 78] отзывовб #[span 3.5] из  #[span 5]
+
+          ul.nav.nav-tabs
+            li.active: a(href='#' data-target="#home") #[span Оставить отзыв]
+            li: a(href='#' data-target="#menu1") #[span Задать вопрос]
+
+          .tab-content
+            #home.tab-pane.active
+              .feedback__rating-wrap
+                .feedback__rating-ttl  Ваша оценка
+                .feedback__rating
+                input.feedback__rating-number(type='text' name='rating-number' readonly)
+              .feedback-form-wrap
+                form#feedback-form.feedback__form
+                  fieldset(aria-required="true")
+                    label(class='label' for='feedback__input') Текст отзыва
+                    textarea#feedback__input.feedback__input
+                  button.btn(type='submit', name='feedback') Отправить
+            #menu1.tab-pane
+              .question-form-wrap
+                form#question-form.question-form
+                  fieldset(aria-required="true")
+                    label.label( for='question__input') Введите вопрос
+                    textarea#question__input.question__input
+                  button.btn(type='submit', name='question') Отправить
+
+  .review-list
+    .headline-wrap.coma
+      h2.headline  Отзывы
+
+    .review-list__item-recall
+      .head-recall
+        .client-name Маша Грузина
+        .client-rating
+        .city Москва
+        time(datetime="2016-03-28T08:23:11+02:00") 28 Марта 2016
+      .recall-desc Связались через 2 часа после заказа, уточнили все подробности (размеры, способ оплаты и пересылки), о получении денег и отправке уведомили через СМС, на следующий день посылка была уже в моем отделении Новой Почты. Может показаться, что много эмоций в отзыве, но обслуживание и товар действительно безукоризненные.
+    .review-list__item-question
+      .client-item-question
+        .head-recall
+          .client-name Маша Грузина
+          .city Москва
+          time(datetime="2016-03-28T08:23:11+02:00") 28 Марта 2016
+        .recall-desc Мой сын любит их! Они выглядят плитка галстук обувь, а просто есть липучки. Префект для дошкольных учреждениях.
+      .admin-item-answer
+        .head-recall
+          .client-name Светлана, #[span администратор]
+          time(datetime="2016-03-28T08:23:11+02:00") 28 Марта 2016
+        .recall-desc Да, Ann, Вы правы - они более эластичные именно из-за кружева, но уверена, что все равно пришлись Вам по душе. Как я уже писала, пусть не смущает Албания (производство у Клео сейчас уже в 5 странах мира, но контроль качества пошива и материалов по прежнему на очень высоком уровне!) Носите с удовольствием!
+
+    .pagination
+      ul.pagination__list
+        li.visible-lg: a(href="#") 1
+        li.visible-lg: span ...
+        li: a(href="#") 7
+        li: a(href="#") 8
+        li.current: span(class="") 9
+        li: a(href="#") 10
+        li: a(href="#") 11
+        li.visible-lg: span ...
+        li.visible-lg: a(href="#") 15
+
+script.
+  $(".head-rating").rate({initial_value: 3.5, readonly: true});
+  $(".feedback__rating").rate({initial_value: 2, update_input_field_name: $(".feedback__rating-number")});
+  $(".client-rating").rate({initial_value: 3.5, readonly: true});
+
+  $('.review-form-wrap fieldset textarea').focus(function () {
+    $(this).parent().find('label').addClass('active')
+  });
+  $('.review-form-wrap fieldset textarea').blur(function () {
+    if($(this).val() === ''){
+      $(this).parent().find('label').removeClass('active')
+    }
+  })
+
+  $('.nav-tabs > li a').on('click', function (e) {
+    e.preventDefault();
+    if(!$(this).parent().hasClass('active')){
+      var target = $(this).data('target');
+
+      $('.nav-tabs > li').removeClass('active');
+      $(this).parent().addClass('active');
+
+      $('.tab-content > .active').removeClass('active');
+      $(target).addClass('active');
+    }
+  })

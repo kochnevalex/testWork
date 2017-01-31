@@ -1,0 +1,403 @@
+.item__gallery-slider .slider-for-wrap .share-block
+	position: static
+	margin-top: 20px
+	text-align: center
+
+.item__gallery-slider .slider-for-wrap .share-block .share__list-socials
+	display: inline-block
+
+.item__gallery-slider .slider-for-wrap
+	position: relative
+
+.slick-list.draggable
+	padding: 0 !important
+
+.item__gallery-slider .slider-nav
+	display: none
+
+.item__gallery-slider .slick-dots
+	bottom: 5px
+
+.item__gallery-slider .slick-dots li button::before
+	top: 5px
+	left: 5px
+	content: ''
+	height: 10px
+	width: 10px
+	bottom: -30px
+	border-radius: 50%
+	background: #6c1287
+
+.slider-for
+	background: #eaedec
+
+.slider-for img
+	height: 420px
+	width: auto
+	margin: 0 auto
+
+.slider-for .slick-prev
+	width: 26px
+	height: 26px
+	top: 50%
+	left: 10px
+	right: auto
+	opacity: .2
+	z-index: 1
+
+.slider-for .slick-next
+	width: 26px
+	height: 26px
+	top: 50%
+	right: 10px
+	left: auto
+	opacity: .2
+	z-index: 1
+
+.slider-for .slick-prev:before,
+.slider-for .slick-next:before
+	content: ''
+	position: absolute
+	display: block
+	width: 18px
+	height: 18px
+	top: 50%
+	left: 50%
+	margin-top: -9px
+	margin-left: -9px
+	box-sizing: border-box
+	border-width: 0 2px 2px 0
+	border-style: solid
+	border-color: $grey-color
+	transform: rotate(-45deg)
+	transform-origin: 50% 50%
+
+.slider-for .slick-prev:before
+	content: ''
+	border-width: 0 0 2px 2px
+	transform: rotate(45deg)
+
+.slider-for .slick-dots
+	display: none !important
+
+.video-link-wrap
+	margin-top: 15px
+	text-align: center
+
+.video-link-wrap .video-link
+	position: relative
+	padding-left: 22px
+	color: $grey-color
+	font-size: 16px
+	font-family: $base-font-bold
+
+.video-link-wrap .video-link span
+	@include linkBorder(rgba($grey-color, .2))
+
+.video-link-wrap .video-link::before
+	position: absolute
+	left: 0
+	top: 50%
+	transform: translateY(-50%)
+	content: ''
+	width: 15px
+	height: 20px
+	background: url("../images/video-btn.png") 50% 50% no-repeat
+
+.video-link-wrap .video-link:hover span
+	@include linkBorder($grey-color)
+
+.video-wrap
+	display: none
+
+.video-wrap.fullsize
+	position: fixed
+	z-index: 10
+	display: flex
+	justify-content: center
+	align-items: center
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	overflow-x: hidden
+	overflow-y: scroll
+	background: rgba(234, 237, 236, .9)
+	vertical-align: middle
+
+.video-wrap .video-container .close-video
+	position: absolute
+	right: -60px
+	cursor: pointer
+
+.video-container
+	width: 60%
+
+.video
+	position: relative
+	display: block
+	padding: 0
+	padding-bottom: 56.25%
+	height: 0
+
+.video iframe
+	position: absolute
+	top: 0
+	bottom: 0
+	left: 0
+	width: 100%
+	height: 100%
+	border: 0
+	@include absolute-center()
+
+@media (min-width: $screen-sm)
+
+	.item__gallery-slider .slider-nav-wrap
+		position: relative
+		order: 1
+		width: 100px
+		padding: 35px 0 40px 0
+		overflow: hidden
+
+	.item__gallery-slider .slider-nav
+		display: block
+		height: 535px
+		width: 100%
+		padding: 0
+		overflow: hidden
+
+	.item__gallery-slider
+		display: flex
+		align-items: flex-start
+		position: relative
+		padding-right: 40px
+		@include clearfix()
+
+	.item__gallery-slider .slider-for-wrap
+		order: 2
+		position: relative
+		width: calc(80% - 30px)
+		margin-left: 30px
+
+	.item__gallery-slider .slider-for-wrap .share-block
+		position: absolute
+		margin-left: 20px
+		left: 100%
+
+	.item__gallery-slider .slider-for-wrap .share-block .share__list-socials
+		margin-bottom: 5px
+
+	.item__gallery-slider .slider-for-wrap .share-block .share__list-socials .share-count
+		display: block
+
+	.item__gallery-slider .slider-for-wrap .share-block .share__list-socials li + li
+		margin: 12px 0 0 0
+
+	.item__gallery-slider .slider-for-wrap .open-gallery
+		display: block
+		position: absolute
+		right: 25px
+		bottom: 65px
+		width: 39px
+		height: 39px
+		z-index: 2
+		cursor: pointer
+
+	.item__gallery-slider.fullsize
+		align-items: center
+
+	.item__gallery-slider.fullsize .b-product__label-new
+		display: none
+
+	.item__gallery-slider.fullsize .slider-for-wrap .open-gallery
+		display: none
+
+	.item__gallery-slider.fullsize
+		justify-content: center
+		position: fixed
+		height: 100%
+		width: 100%
+		margin-top: 0
+		background: rgba(234, 237, 236, .9)
+		top: 0
+		left: 0
+		right: 0
+		z-index: 10
+		overflow-y: scroll
+		overflow-x: hidden
+
+	.item__gallery-slider.fullsize .slider-nav-wrap
+		position: relative
+		width: auto
+		padding: 35px 0 40px 0
+
+	.item__gallery-slider.fullsize .slider-for-wrap .close-gallery
+		display: block
+		position: absolute
+		right: -60px
+		top: 0
+		content: ''
+		cursor: pointer
+		width: 22px
+		height: 22px
+		z-index: 10
+		&:before, &:after
+			display: block
+			content: ''
+			position: absolute
+			top: 50%
+			left: 50%
+			width: 30px
+			height: 2px
+			margin-top: -1px
+			margin-left: -15px
+			background: $black-color
+
+		&:before
+			transform: rotate(45deg)
+		&:after
+			transform: rotate(-45deg)
+
+		&:hover
+			&:before, &:after
+				background: $grey-color
+
+	.item__gallery-slider.fullsize .slider-nav
+		width: 100px
+		height: 525px
+		padding: 0
+		order: 1
+		overflow: hidden
+
+	.item__gallery-slider .slider-nav-wrap .slider-top
+		top: 0
+		left: 50%
+		z-index: 2
+		position: absolute
+		height: 30px
+		width: 30px
+		cursor: pointer
+		opacity: 0.2
+		transform: translateX(-50%)
+		&:before
+			content: ''
+			position: absolute
+			display: block
+			top: 50%
+			left: 50%
+			margin-top: -9px
+			margin-left: -9px
+			width: 18px
+			height: 18px
+			border-width: 2px 2px 0 0
+			border-style: solid
+			border-color: $grey-color
+			transform: rotate(-45deg)
+			box-sizing: border-box
+			opacity: 0.75
+
+		&:hover:before
+			opacity: 1
+
+	.item__gallery-slider .slider-nav-wrap .slider-bottom
+		bottom: 0
+		left: 50%
+		transform: translateX(-50%)
+		z-index: 2
+		position: absolute
+		height: 30px
+		width: 30px
+		cursor: pointer
+		opacity: 0.2
+		&:before
+			content: ''
+			position: absolute
+			display: block
+			top: 50%
+			left: 50%
+			margin-top: -9px
+			margin-left: -9px
+			width: 18px
+			height: 18px
+			border-width: 2px 2px 0 0
+			border-style: solid
+			border-color: $grey-color
+			transform: rotate(135deg)
+			box-sizing: border-box
+			opacity: 0.75
+
+		&:hover:before
+			opacity: 1
+
+
+	.item__gallery-slider.fullsize .slider-for
+		margin: 0
+
+	.item__gallery-slider.fullsize .slider-for-wrap
+		position: relative
+		order: 2
+		width: 60%
+		margin-bottom: 0
+		margin-left: 10px
+		background: #ddd
+
+	.item__gallery-slider .slider-for img
+		height: 610px
+
+	.item__gallery-slider.fullsize .slider-for img
+		height: 600px
+		margin: 0 auto
+
+	.item__gallery-slider .slider-nav img
+		border: none
+
+	.item__gallery-slider .slider-nav div
+		margin: 5px 0
+		width: auto !important
+
+	.item__gallery-slider .slider-nav .slick-current
+		position: relative
+
+	.item__gallery-slider .slider-nav .slick-current::before
+		content: ''
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		bottom: 0
+		background-image: linear-gradient(to left bottom, $active-color, #fdfb82)
+		opacity: .5
+
+	.item__gallery-slider.fullsize .slider-nav img
+		display: inline-block
+		height: auto
+		width: auto
+
+	.item__gallery-slider.fullsize .slider-for .slick-dots
+		display: none !important
+	.item__gallery-slider.fullsize .slider-for-wrap .video-link-wrap
+		display: none
+
+	.item__gallery-slider.fullsize .slider-for-wrap .share-block
+		display: none
+
+@media (min-width: $screen-lg)
+	.item__gallery-slider
+		float: left
+		position: relative
+		width: 50%
+		margin-top: 30px
+		padding-right: 0
+
+	.item__gallery-slider .slider-for
+		margin-bottom: 25px
+
+	.slider-for .slick-dots li button::before
+		background: #000
+
+	.slider-for .slick-dots
+		display: block !important
+
+	.item__gallery-slider .slider-for-wrap
+		width: calc(80% - 10px)
+		margin-left: 10px

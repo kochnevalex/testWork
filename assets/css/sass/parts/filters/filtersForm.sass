@@ -1,0 +1,296 @@
+.b-filters
+	position: relative
+
+.form-group__filter-ttl
+	position: relative
+	cursor: pointer
+	line-height: 30px
+	&:before
+		content: ''
+		position: absolute
+		left: 0
+		right: 40px
+		top: 50%
+		margin-top: 1px
+		height: 1px
+		background: #eaedec
+
+.form-group__filter-ttl span
+	position: relative
+	z-index: 1
+	background: #ffffff
+	padding-right: 7px
+	font-size: 16px
+
+.form-group__filter
+	padding-top: 20px
+	width: 100%
+	@include clearfix()
+
+.form-group__filter-size
+	width: 280px
+
+.form-group__filter li
+	position: relative
+
+.form-group__filter-size li
+	float: left
+	width: 65px
+	margin-right: 6px
+	margin-bottom: 10px
+	&:nth-child(4n)
+		margin-right: 0
+
+.form-group__filter-size li.form-group__wide-li
+	width: 100%
+
+.form-group__filter li input
+	width: 100%
+	height: 40px
+	z-index: 2
+	left: 0
+	cursor: pointer
+
+.form-group__filter-size li label
+	position: relative
+	display: block
+	width: 100%
+	height: 40px
+	line-height: 37px
+	padding-left: 25px
+	border: 1px solid #d7dcda
+	border-bottom-width: 2px
+	border-radius: 4px
+	font-size: 16px
+
+.form-group__filter-size li label span
+	position: absolute
+	left: 5px
+	display: block
+	width: 15px
+	height: 15px
+	border-radius: 50%
+	border: 1px solid #eaedec
+	background: #ffffff
+	font-size: 8px
+	text-align: center
+	line-height: 14px
+	top: 50%
+	margin-top: -7px
+	&:before
+		content: ''
+
+.form-group__filter-size li input:checked + label
+	background: #eaedec
+	border-color: #eaedec
+	border-top: 2px solid #d7dcda
+
+.form-group__filter-size li input:checked + label span:before
+	content: '\f00c'
+
+.checkbox, .radio
+	position: absolute
+	opacity: 0
+
+.form-group__filter-color li
+	position: relative
+	float: left
+	margin-right: 8px
+	margin-bottom: 10px
+	width: 40px
+	height: 40px
+	text-align: center
+	&:nth-child(6n)
+		margin-right: 0
+
+.form-group__filter-color li > div
+	height: 100%
+
+.form-group__filter-color li label
+	display: block
+	position: relative
+	width: 100%
+	height: 100%
+	line-height: 40px
+
+.form-group__filter-color li label span
+	display: block
+	width: 100%
+	height: 100%
+	border-radius: 4px
+	box-shadow: inset 0 -3px 3px -2px #d7dcda
+	background: 50% 50% no-repeat
+
+.form-group__filter-color li label span.fa
+	display: none
+	position: absolute
+	width: 16px
+	height: 16px
+	-webkit-border-radius: 50%
+	-moz-border-radius: 50%
+	border-radius: 50%
+	background: #d7dcda
+	font-size: 10px
+	top: 50%
+	margin-top: -8px
+	left: 50%
+	margin-left: -8px
+	line-height: 16px
+
+.form-group__filter-color li input:checked + label span
+	box-shadow: inset 0 3px 3px -2px #d7dcda
+	display: block
+
+.form-group__filter-type li
+	min-height: 30px
+	line-height: 30px
+	margin-bottom: 20px
+
+.form-group__filter-type li input
+	height: 100%
+
+.form-group__filter-type li label
+	position: relative
+	display: block
+	font-size: 18px
+	padding-left: 40px
+	&:before
+		content: ''
+		position: absolute
+		display: block
+		width: 30px
+		height: 30px
+		border-radius: 4px
+		border: 1px solid #d7dcda
+		border-bottom-width: 2px
+		left: 0
+		top: 0
+		box-sizing: border-box
+
+.form-group__filter-type li label a span
+	color: #ababab
+	margin-left: 5px
+
+.form-group__filter-type li input:checked + label
+	&:before
+		background: #eaedec
+		border: 1px solid #eaedec
+		border-top: 2px solid #d7dcda
+	&:after
+		position: absolute
+		width: 30px
+		height: 30px
+		left: 0
+		top: 0
+		text-align: center
+		content: '\f00c'
+		font: normal normal normal 13px/1 FontAwesome
+		display: inline-block
+		text-rendering: auto
+		-webkit-font-smoothing: antialiased
+		-moz-osx-font-smoothing: grayscale
+		box-sizing: border-box
+		line-height: 30px
+
+.form-group__filter-brand li
+	width: 50%
+	float: left
+
+@media (min-width: $screen-md)
+
+	.form-group__filter-size
+		width: 598px
+
+	.form-group__filter-size li
+		margin-right: 10px
+		width: 66px
+		&:nth-child(4n)
+			margin-right: 10px
+		&:nth-child(8n)
+			margin-right: 0
+
+	.form-group__filter-size li.form-group__wide-li
+		width: calc(50% - 5px)
+		margin-right: 0
+		&:nth-of-type(2n)
+			float: right
+
+	.form-group__filter-color li
+		margin-right: 10px
+		&:nth-child(6n)
+			margin-right: 10px
+
+	.form-group__filter-type li
+		width: 33.3333%
+		float: left
+		padding-right: 20px
+
+	.form-group__filter-type li label a
+		line-height: 20px
+		display: inline-block
+
+@media (min-width: $screen-xm)
+	.form-group__filter-ttl:before
+		right: 30px
+
+	.form-group__filter-ttl span.fa
+		background: #ffffff
+
+	.form-group__input-price #amountMin,
+	.form-group__input-price #amountMax
+		height: 30px
+
+	.form-group__filter-size
+		width: 225px
+		max-width: 103%
+		margin-left: -4px
+
+	.form-group__filter-size li
+		margin-right: 4px
+		margin-left: 4px
+		&:nth-child(8n),
+		&:nth-child(4n)
+			margin-right: 4px
+			margin-left: 4px
+
+	.form-group__filter-size li.form-group__wide-li
+		width: calc(100% - 9px)
+		max-width: 225px
+		margin-right: 0
+		&:nth-of-type(2n)
+			float: left
+
+	.form-group__filter-size li label,
+	.form-group__filter li input
+		height: 100%
+		line-height: 27px
+
+	.form-group__filter-size li input:checked + label
+		line-height: 26px
+
+	.form-group__filter-color li
+		height: 30px
+		width: 30px
+
+	.form-group__filter-type li
+		line-height: 20px
+		min-height: 24px
+		margin-bottom: 10px
+
+	.form-group__filter-type li
+		width: 100%
+		padding-right: 0
+		&:nth-child(1n+6)
+			display: none
+
+	.form-group__filter-type li label
+		font-size: 14px
+		padding-left: 31px
+		&:before
+			width: 24px
+			height: 24px
+
+	.form-group__filter-type li input:checked + label:after
+		width: 24px
+		height: 24px
+		line-height: 24px

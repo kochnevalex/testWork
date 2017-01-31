@@ -1,0 +1,56 @@
+.item
+	position: relative
+	@include clearfix()
+
+.item-info
+	position: relative
+	margin-top: 50px
+
+.item-info h2.item-info__ttl
+	margin: 0
+	font-size: 24px
+	line-height: 40px
+
+.item-info .b-product__comments
+	display: inline-block
+	float: none
+	margin-left: 20px
+
+.item-info .b-product__comments-link
+	display: inline
+	font-size: 10px
+	vertical-align: bottom
+
+.item-info .b-product__rating .b-product__stars
+	display: inline-block
+
+.item-info .b-product__rating .b-product__stars .rating
+	color: rgba(#000, 0.5)
+	font-size: 22px
+
+.item-info .b-product__rating .b-product__stars .rate-select-layer,
+.item-info .b-product__rating .b-product__stars .rate-select-layer
+	color: #000
+
+.item-info .b-product__rating
+	margin-bottom: 25px
+
+.item-info .brand-link,
+.item-info .brand-desc
+	font-size: 12px
+	font-family: $base-font-bold
+
+@media screen and (min-width: $screen-md)
+	.item-info
+		margin-top: 45px
+		min-height: 100px
+
+	.item-info h2.item-info__ttl
+		width: 50%
+		font-size: 36px
+
+@media screen and (min-width: $screen-lg)
+	.item__desc
+		float: right
+		width: calc(50% - 100px)
+

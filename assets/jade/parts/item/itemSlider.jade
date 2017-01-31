@@ -1,0 +1,133 @@
+.item__gallery-slider
+  .slider-for-wrap
+    .open-gallery
+      img(src='images/open-gallery.png' alt='')
+    .close-gallery
+    .slider-for
+      div
+        img(src="http://placehold.it/504x671" alt='')
+      div
+        img(src="http://placehold.it/504x671" alt='')
+      div
+        img(src="http://placehold.it/504x671" alt='')
+      div
+        img(src="http://placehold.it/504x671" alt='')
+      div
+        img(src="http://placehold.it/504x671" alt='')
+      div
+        img(src="http://placehold.it/504x671" alt='')
+    .video-link-wrap
+      a.video-link(href='#' rel='nofollow') #[span Смотреть видео]
+  .slider-nav-wrap
+    .slider-top
+    .slider-bottom
+    .slider-nav
+      div
+        img(src="http://placehold.it/96x128" alt='')
+      div
+        img(src="http://placehold.it/96x128" alt='')
+      div
+        img(src="http://placehold.it/96x128" alt='')
+      div
+        img(src="http://placehold.it/96x128" alt='')
+      div
+        img(src="http://placehold.it/96x128" alt='')
+      div
+        img(src="http://placehold.it/96x128" alt='')
+  .video-wrap
+    .video-container
+      .video
+        .close-video
+        <iframe src="https://www.youtube.com/embed/3ROS_resQPA" allowfullscreen></iframe>
+
+  script(type='text/javascript').
+    $('.slider-top').on('click', function (e) {
+      $('.slick-slider').slick('slickPrev');
+    });
+    $('.slider-bottom').on('click', function (e) {
+      $('.slick-slider').slick('slickNext');
+    });
+    $('.video-link').on('click', function (e) {
+      $('.video-wrap').addClass('fullsize');
+      $('body').css('overflow', 'hidden');
+    });
+    $('.close-video').on('click', function (e) {
+      $('.video-wrap').removeClass('fullsize');
+      var videoAttr = $('.video-wrap').find('iframe').attr('src');
+      videoAttr = videoAttr + '?enablejsapi=1';
+      $('.video-wrap').find('iframe').attr('src', videoAttr);
+      $('body').css('overflow', 'visible');
+    });
+    $('.slider-for').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      fade: true,
+      focusOnSelect: true,
+      asNavFor: '.slider-nav'
+    });
+    $('.slider-nav').slick({
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      centerMode: true,
+      focusOnSelect: true,
+      asNavFor: '.slider-for',
+      vertical: true
+    });
+
+    $('.open-gallery').on('click', function (e) {
+
+      $('.item__gallery-slider').addClass('fullsize');
+      $('body').css('overflow', 'hidden');
+
+
+      $('.slider-for').slick('destroy');
+      $('.slider-nav').slick('destroy');
+
+      $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        fade: true,
+        focusOnSelect: true,
+        asNavFor: '.slider-nav'
+      });
+
+      $('.slider-nav').slick({
+        centerMode: true,
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        focusOnSelect: true,
+        asNavFor: '.slider-for',
+        vertical: true
+
+      });
+
+
+    });
+    $('.close-gallery').on('click', function (e) {
+
+      $('.item__gallery-slider').removeClass('fullsize');
+      $('body').css('overflow', 'visible');
+      $('.slider-for').slick('destroy');
+      $('.slider-nav').slick('destroy');
+      $('.slider-for').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true,
+        fade: true,
+        focusOnSelect: true,
+        centerMode: true,
+        asNavFor: '.slider-nav'
+      });
+      $('.slider-nav').slick({
+        slidesToShow: 5,
+        slidesToScroll: 1,
+        focusOnSelect: true,
+        centerMode: true,
+        asNavFor: '.slider-for',
+        vertical: true
+
+      });
+
+    });

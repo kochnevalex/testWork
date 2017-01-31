@@ -1,0 +1,137 @@
+.b-characteristic
+	width: 100%
+	margin: 40px 0
+	min-height: auto
+	padding: 0
+	box-shadow: 0 0 0 0 rgba(83, 75, 66, .5), 0 0 10px 0 rgba(83, 75, 66, .15)
+	@include clearfix()
+
+.b-characteristic__option
+	max-width: 100%
+	padding: 0 20px
+
+.form-filter
+	@include clearfix()
+
+.b-characteristic__change-type .form-group__filter-ttl:before
+	display: none
+
+.b-characteristic .b-characteristic__change-type
+	max-width: 100%
+	padding: 25px 0 0 0
+
+.b-characteristic .b-characteristic__change-type .form-group
+	margin-bottom: 5px
+
+.b-characteristic .b-characteristic__change-type .form-group__filter
+	padding-top: 0
+	display: block
+
+.b-characteristic.item-custom .form-group__select-size .select2-container .select2-selection--single .select2-selection__rendered
+	color: $active-color
+
+.b-characteristic .item__associated-wrap
+	width: 100%
+	display: none
+
+.form-filter .form-group__filter-color-add
+	display: block
+	padding-right: 15px
+	padding-left: 15px
+	margin: 15px 0 30px
+	text-align: center
+	border: 1px solid #d7dcda
+	border-bottom-width: 2px
+	background: #fff
+	border-radius: 4px
+	line-height: 40px
+
+
+.form-filter .form-group__filter-color-add span
+	@include linkBorder($black-color)
+
+.form-filter .form-group__filter-color-add:hover span
+	@include linkBorder($black-color)
+
+.b-product__counter input, .b-product__counter a
+	position: relative
+	display: inline-block
+	height: 40px
+	width: 40px
+	background: #fff
+	border-radius: 4px
+	border: 1px solid #d7dcda
+	border-bottom-width: 2px
+	vertical-align: middle
+	text-align: center
+	font-size: 14px
+	font-family: $base-font-bold
+	text-decoration: none
+
+.b-product__counter a:hover
+	background: #d7dcda
+
+.b-product__counter a
+	line-height: 30px
+	font-size: 24px
+
+.b-product__counter input[type=text]
+	margin-right: 3px
+	border: none
+
+.b-product__counter input[type=button]:active
+	background: #eaedec
+
+.b-product__counter .b-product__counter-ttl
+	padding-bottom: 5px
+	font-size: 16px
+	text-align: left
+
+.item .b-product__price .b-product__buy
+	float: none
+	width: 100%
+
+.item .b-product__price
+	position: relative
+	display: flex
+	width: 100%
+	max-width: 100%
+	padding: 30px 0 0 0
+	flex-wrap: wrap
+	justify-content: space-between
+	align-items: center
+
+@media (min-width: $screen-md)
+	.b-characteristic__option
+		padding: 20px 30px 5px 30px
+
+	.b-characteristic__change-type .form-filter
+		margin-bottom: 20px
+
+	.b-characteristic__change-type .form-filter__top
+		display: flex
+		justify-content: space-between
+
+	.b-characteristic__change-type .form-group
+		width: 47%
+
+	.b-characteristic__change-type .form-group__filter-ttl
+		margin-bottom: 5px
+
+	.b-product__counter
+		width: 47%
+
+@media (min-width: $screen-lg)
+	.item .b-characteristic
+		float: right
+		width: calc(50% - 100px)
+		margin-top: 0
+		margin-bottom: 50px
+
+	.b-product__counter input, .b-product__counter a
+		height: 30px
+		width: 30px
+		line-height: 27px
+
+	.b-product__counter a
+		line-height: 22px
