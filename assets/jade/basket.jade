@@ -1,5 +1,6 @@
 - var pageTitle = "Basket | grid360";
 include parts/goods/goodsMixins
+include components/breadcrubms/breadcrumbsMixins
 
 doctype html
 html(lang='ru')
@@ -11,10 +12,9 @@ html(lang='ru')
       include components/header/header
       .container
         .b-cart
-          .breadcrumbs
-            ul.b-breadcrumbs__list
-              li: a(href="#") Главная
-              li Корзина
+          -var menuArray = [{linkName:'Главная', href: 'index.html', active: false}, {linkName:pageTitle, href: 'basket.html', active: true}];
+          +breadCrumbs(menuArray,'mod--centered')
+
           .cart-success
             h1.heading.heading--cart-style Спасибо! Ваш заказ #543-321 принят
             .cart-success__content
@@ -34,7 +34,7 @@ html(lang='ru')
                   .b-cart__product
                     .b-cart__product-wrap
                       .b-cart__items
-                        img(src="images/cart1.jpg", alt="")
+                        img(src="http://placehold.it/250x310", alt="")
                         .b-cart__items-wrap
                           a.b-cart__items-ttl(href="#") Грезы RF570-1053 #[span Tribuna]
                           p.b-cart__cost.b-cart__cost--old.b-cart__cost--old-wrap 5 990
@@ -57,7 +57,7 @@ html(lang='ru')
                   .b-cart__product
                     .b-cart__product-wrap
                       .b-cart__items
-                        img(src="images/cart1.jpg", alt="")
+                        img(src="http://placehold.it/250x310", alt="")
                         .b-cart__items-wrap
                           a.b-cart__items-ttl(href="#") Грезы RF570-1053 #[span Tribuna]
                           //p.b-cart__cost.b-cart__cost--old.b-cart__cost--old-wrap 5 990
@@ -79,7 +79,7 @@ html(lang='ru')
                   .b-cart__product
                     .b-cart__product-wrap
                       .b-cart__items
-                        img(src="images/cart1.jpg", alt="")
+                        img(src="http://placehold.it/250x310", alt="")
                         .b-cart__items-wrap
                           a.b-cart__items-ttl(href="#") Грезы RF570-1053 #[span Tribuna]
                           p.b-cart__cost.b-cart__cost--old.b-cart__cost--old-wrap 5 990
@@ -101,7 +101,7 @@ html(lang='ru')
                   .b-cart__product
                     .b-cart__product-wrap
                       .b-cart__items
-                        img(src="images/cart1.jpg", alt="")
+                        img(src="http://placehold.it/250x310", alt="")
                         .b-cart__items-wrap
                           a.b-cart__items-ttl(href="#") Грезы RF570-1053 #[span Tribuna]
                           p.b-cart__cost.b-cart__cost--old.b-cart__cost--old-wrap 5 990
@@ -123,7 +123,7 @@ html(lang='ru')
                   .b-cart__product
                     .b-cart__product-wrap
                       .b-cart__items
-                        img(src="images/cart1.jpg", alt="")
+                        img(src="http://placehold.it/250x310", alt="")
                         .b-cart__items-wrap
                           a.b-cart__items-ttl(href="#") Грезы RF570-1053 #[span Tribuna]
                           p.b-cart__cost.b-cart__cost--old.b-cart__cost--old-wrap 5 990
@@ -226,7 +226,7 @@ html(lang='ru')
                           option(value="2") Санкт-Петербург, пр. Мира 117-А, 1
                           option(value="add-address") Добавить другой адрес
                       .b-cart__panel-content
-                        a.button.button--cart-panel.button--cart-panel-go.button--cart-gray(disabled) Далее
+                        a.button.button--cart-panel.button--cart-panel-go(disabled) Далее
                   .b-cart__accordion.b-cart__accordion-comment.last Способ оплаты
                   .b-cart__panel
                     select.payment-panel-list
@@ -311,10 +311,6 @@ html(lang='ru')
                   .b-cart__agreement-close
                     a.button.button--cart.close-btn
                       span Закрыть
-
-      .container
-        aside.aside-filters
-          include parts/filters/filters
     include components/footer/footer
     include components/scripts/bottomScripts
 

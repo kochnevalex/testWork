@@ -125,6 +125,11 @@ appMakeBeCool.gateway.addClass('DropDown', function (properties, $, $window, $do
         containerCssClass: "payment-select2",
         dropdownCssClass: "payment-select2__dropdown"
       });
+      $("#tel").intlTelInput({
+        autoHideDialCode: false,
+        separateDialCode: true,
+        onlyCountries: ['ua', 'ru', 'am', 'az', 'kz', 'kg']
+      })
 
       $('.payment-panel-menu').on('select2:select', function (evt) {
         var $select = $(evt.target);

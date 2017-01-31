@@ -1,0 +1,12 @@
+mixin breadCrumbs(crumbsArr,modifier)
+  if(crumbsArr && crumbsArr.length > 0)
+    div(class="b-breadcrumbs #{modifier}")
+      ul
+        each obj in crumbsArr
+          if (obj.active !== false)
+            li.active
+              span #{obj.linkName}
+
+          else
+            li
+              a.tile-link(href=obj.href) #{obj.linkName}

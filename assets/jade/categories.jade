@@ -1,5 +1,6 @@
 - var pageTitle = "Categories | grid360";
 include parts/goods/goodsMixins
+include components/breadcrubms/breadcrumbsMixins
 
 doctype html
 html(lang='ru')
@@ -10,12 +11,8 @@ html(lang='ru')
     .wrap
       include components/header/header
       .container
-        .breadcrumbs
-          ul.b-breadcrumbs__list
-            li: a(href="#") Главная
-            li Категории
-
-
+        -var menuArray = [{linkName:'Главная', href: 'index.html', active: false}, {linkName:pageTitle, href: 'categories.html', active: true}];
+        +breadCrumbs(menuArray,'mod--centered')
       .container
         aside.aside-filters
           include parts/filters/filters
