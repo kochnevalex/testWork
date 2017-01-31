@@ -4,10 +4,14 @@ include parts/goods/goodsMixins
 doctype html
 html(lang='ru')
   include components/head/head
-  include components/scripts/scripts
+
   body
+    include components/scripts/scripts
     .wrap
       include components/header/header
+      .container
+        aside.aside-filters
+          include parts/filters/filters
       include parts/goods/goodsBlock
       include parts/brands/brands
       include parts/brands/brandsSlider
@@ -27,6 +31,8 @@ html(lang='ru')
               fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
               mollit anim id est laborum
         include components/paginations/pagination
+
+
     include components/footer/footer
     include components/scripts/bottomScripts
 

@@ -2,6 +2,7 @@
 appMakeBeCool.gateway.addClass('MegamenuDropdown', function (properties, $, $window, $document) {
   var _megamenuOpening = this,
     _d = {
+      megamenu: '#megamenu',
       openSubcategory: '.megamenu__has-sub',
       openMegamenu: '.megamenu__title',
       megamenuDropdown: '.megamenu__dropdown',
@@ -11,6 +12,7 @@ appMakeBeCool.gateway.addClass('MegamenuDropdown', function (properties, $, $win
     },
     _p = $.extend(_d, properties),
     _g = {
+      megamenu: null,
       openSubcategory: null,
       openMegamenu: null,
       megamenuDropdown: null,
@@ -36,6 +38,7 @@ appMakeBeCool.gateway.addClass('MegamenuDropdown', function (properties, $, $win
     },
 
     _config = function () {
+      _g.megamenu = $(_p.megamenu);
       _g.openSubcategory = $(_p.openSubcategory);
       _g.openMegamenu = $(_p.openMegamenu);
       _g.megamenuDropdown = $(_p.megamenuDropdown);
@@ -44,34 +47,79 @@ appMakeBeCool.gateway.addClass('MegamenuDropdown', function (properties, $, $win
     },
 
     _setup = function () {
+      _g.megamenu.removeClass('mod--closed');
+
+      var minHight = function(parentHeight,openHeight){
+
+        if(openHeight < parentHeight){
+
+          return parentHeight;
+
+        }else if(openHeight >= parentHeight){
+          return openHeight
+        }
+
+
+      };
       _g.openMegamenu.on('click',function () {
+
         var This = $(this);
-        This.toggleClass('opened').next().slideToggle();
+        var ThisNext = This.next();
+
+        if(This.attr('data-state') == 'closed'){
+
+          This.addClass('opened');
+          var ThisNextHeight = $('.megamenu__categories').outerHeight();
+          console.log(ThisNextHeight);
+          var ThisNextDropdown = ThisNext.find('.mod--actual .megamenu__dropdown-wrap').outerHeight();
+
+          ThisNext.addClass('opened');
+          ThisNext.css({height : minHight(ThisNextHeight,ThisNextDropdown)});
+          This.attr('data-state','opened');
+
+        }else if(This.attr('data-state') == ('opened')){
+          ThisNext.removeClass('opened');
+          ThisNext.css({height : '0'});
+          // This.removeClass('opened');
+          This.attr('data-state','closed');
+
+        }
+
       });
 
       _g.openSubcategory.each(function(){
         var This = $(this);
         var ThisClos = This.closest('.megamenu__category');
         var ThisClosSibl = ThisClos.siblings();
+
         This.on('click',function () {
 
+
           if($window.width() < 992){
+
+            var This = $(this),
+              $parental = This.closest('.megamenu__categories'),
+              parentalHeight = $parental.outerHeight(),
+              ThisNext = This.next(),
+              ThisNextHeight = ThisNext.outerHeight();
 
             if(!ThisClos.hasClass('mod--actual')){
               ThisClos.addClass('mod--actual');
               ThisClosSibl.removeClass('mod--actual');
-              // This.next().removeClass('mod--display-none').addClass('mod--actual');
+
 
             }
-          }
-        });
-        This.on('resize',function(){
-          if($window.width() >= 992 && This.hasClass('opened')){
-            Theese.toggleClass('opened').next().slideToggle();
+            This.closest('.megamenu').css({height : minHight(parentalHeight,ThisNextHeight)});
 
           }
-        })
+        });
+
       });
+      $window.on('resize',function(){
+        if($window.width() <= 992){
+          // This.closest('.megamenu').css({height : minHight(parentalHeight,ThisNextHeight)});
+        }
+      })
 
 
 
@@ -87,18 +135,10 @@ appMakeBeCool.gateway.addClass('MegamenuDropdown', function (properties, $, $win
     _binds = function () {
       return {
         setClickBind: function () {
-          _megamenuOpening.bind(_g.openSubcategory, 'click', function (event, data, el) {
 
-            _megamenuOpening.globals.dropMegamenu(event);
-
-          });
         },
         setResizeBind: function () {
-          _megamenuOpening.bind($window, 'resize', function (event, data, el) {
 
-            _megamenuOpening.globals.dropMegamenu(event);
-
-          });
         }
 
 

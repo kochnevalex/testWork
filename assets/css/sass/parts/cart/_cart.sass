@@ -1,0 +1,726 @@
+.b-cart__content
+		position: relative
+
+		&::before,
+		&::after
+			content: ""
+			display: table
+			clear: both
+
+.b-cart__l-colum
+	float: left
+	margin-bottom: 70px
+	width: 100%
+	border-top: 1px solid #cccccc
+
+.b-cart__head
+	margin: 25px 0 0 0
+	padding-bottom: 25px
+	text-align: center
+	border-bottom: 1px solid #cccccc
+
+.b-cart__t-delivery
+	margin: 0
+	font-family: $base-font-bold
+	font-size: 16px
+	color: #cccccc
+
+.b-cart__t-order
+	margin: 5px 0 15px 0
+	font-family: $base-font
+	font-size: 14px
+
+.button--cart span
+	font-family: $base-font
+	font-size: 14px
+	border-bottom: 1px solid #ccc
+
+.b-cart__product
+	position: relative
+
+.b-cart__product-wrap
+	margin: 30px 0 50px 0
+	padding-bottom: 10px
+	height: 185px
+	overflow: hidden
+	border-bottom: 1px solid #cccccc
+
+.b-cart__items img
+	max-width: 76px
+	float: left
+
+.b-cart__items-wrap
+	float: left
+	margin: 5px 0 0 10px
+	width: 150px
+
+.b-cart__cost--old-wrap
+	margin: 30px 0 0 0
+
+.b-cart__cost--wrap
+	margin: 5px 0 0 0
+
+.b-cart__cost--no-old-wrap
+	margin: 45px 0 0 0
+
+.b-cart__items-ttl
+	line-height: 20px
+	font-size: 14px
+	font-family: $base-font
+	border-bottom: 1px solid #ccc
+
+.b-cart__items-ttl span
+	font-family: $base-font
+
+.b-cart__cost
+	font-size: 18px
+	font-family: $base-font
+	font-weight: bold
+
+.b-cart__cost--old
+	font-size: 14px
+	color: #b2b2b2
+	text-decoration: line-through
+
+.b-cart__details-size
+	position: absolute
+	top: 95px
+	right: 0
+	padding: 0 0 0 10px
+	font-family: $base-font-bold
+	font-size: 14px
+
+.b-cart__size-wrap
+	vertical-align: text-top
+
+.b-cart__details
+	position: absolute
+	float: right
+	left: 0
+	right: 0
+	bottom: 0
+
+.b-cart__size-wrap
+	padding-left: 10px
+
+.b-cart__details-count
+	padding: 10px
+	height: 60px
+	background-color: #cccccc
+
+.b-cart__counter-item
+	display: inline-block
+	vertical-align: top
+
+.b-cart__counter-item li
+	display: inline-block
+	position: relative
+
+.b-cart__counter-item li:nth-child(2)
+	padding: 0 15px
+	line-height: 39px
+	vertical-align: top
+	text-align: center
+	font-family: $base-font-bold
+
+.b-cart__counter-minus, .b-cart__counter-plus
+	width: 42px
+	height: 42px
+	background-color: #fff
+	border: 1px solid #d7dcda
+	border-bottom: 2px solid #d7dcda
+	border-radius: 4px
+
+.b-cart__counter-minus::before
+	content: ''
+	position: absolute
+	top: 0
+	right: 0
+	left: 1px
+	bottom: 0
+	margin: auto
+	width: 13px
+	height: 2px
+	background: url('../images/cart-minus.png') no-repeat
+
+.b-cart__counter-plus::before
+	content: ''
+	position: absolute
+	top: 0
+	right: 0
+	left: 1px
+	bottom: 0
+	margin: auto
+	width: 13px
+	height: 13px
+	background: url('../images/cart-plus.png') no-repeat
+
+.b-cart__counter-link
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+
+.b-cart__cost--counter-wrap
+	display: inline-block
+	margin: 0
+	line-height: 42px
+	float: right
+	font-size: 24px
+
+.b-cart__delete
+	position: absolute
+	top: 7px
+	right: 7px
+
+.b-cart__r-colum
+	float: right
+	margin-bottom: 150px
+	width: 100%
+	border: 1px solid #cccccc
+	box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07)
+
+.b-cart__payment
+	margin-bottom: 20px
+	border-bottom: 2px solid #fa3972
+
+.b-cart__payment--wrap
+	margin-top: -25px
+
+.b-cart__payment--no-border
+	border: none
+
+.b-cart__payment-items--pink
+	color: #fa3972
+
+.b-cart__payment-items--purpure
+	color: #cccccc
+
+.b-cart__payment-items
+	overflow: hidden
+	position: relative
+	margin-bottom: 6px
+
+.b-cart__payment-items--wrap
+	margin-top: 15px
+
+.b-cart__payment-text
+	display: inline-block
+	font-family: $base-font-bold
+	font-size: 14px
+	line-height: 25px
+
+.b-cart__payment-cost
+	float: right
+	font-family: $base-font
+	font-size: 24px
+
+.b-cart__payment-cost--wrap
+	padding-right: 10px
+
+.b-cart__payment-cost--pos
+	float: none
+
+.b-cart__payment-discount
+	padding: 8px 10px
+	background-color: #cccccc
+	border-radius: 4px
+
+.payment-discount__text
+	display: inline-block
+	padding-right: 10px
+	width: 182px
+	font-family: $base-font
+	font-size: 12px
+	color: #fff
+	text-align: right
+
+.payment-discount__price
+	display: inline-block
+	font-family: $base-font
+	font-size: 24px
+	color: #fff
+
+.b-cart__items-color-desc
+	display: none
+	position: absolute
+	top: -28px
+	left: -17px
+	padding: 5px 10px
+	background-color: #fa3972
+	font-size: 12px
+	color: #fff
+	border-radius: 4px
+	line-height: 11px
+
+.b-cart__items-color-desc::before
+	content: ''
+	position: absolute
+	left: 45%
+	bottom: -8px
+	border: 4px solid
+	border-color: #fa3972 transparent transparent transparent
+
+.b-cart__items-color:hover
+	cursor: pointer
+
+.b-cart__items-color:hover + .b-cart__items-color-desc
+	display: block
+
+.b-cart__accordion
+	position: relative
+	background-color: #fff
+	color: #000
+	cursor: pointer
+	//padding: 18px
+	width: 100%
+	height: 70px
+	line-height: 69px
+	text-align: center
+	font-family: $base-font-bold
+	font-size: 16px
+	border: none
+	border-bottom: 1px solid #e5e5e5
+	outline: none
+
+.b-cart__accordion--success
+	position: relative
+	color: #cccccc
+	text-decoration: underline
+
+.b-cart__accordion--success::before
+	content: ''
+	position: absolute
+	top: 30px
+	left: 30px
+	background: url('../images/cart-success.png') no-repeat
+	width: 20px
+	height: 14px
+
+.b-cart__accordion.last
+	border-bottom: none
+
+.b-cart__accordion.last.active
+	border-bottom: 1px solid #e5e5e5
+
+.b-cart__panel-wrap
+	margin-top: 45px
+
+.b-cart__panel
+	position: relative
+	padding: 0 30px
+	background-color: white
+	max-height: 0
+	overflow: hidden
+	transition: .3s
+	opacity: 0
+	border-bottom: 1px solid #e5e5e5
+
+.b-cart__panel:last-child
+	border-bottom: none
+
+.b-cart__panel.show
+	opacity: 1
+	max-height: 500px
+	padding-top: 30px
+	padding-bottom: 30px
+	overflow: inherit
+
+.b-cart__panel-control
+	width: 100%
+	border: none
+	border-bottom: 2px solid #000
+	outline: none
+
+.b-cart__panel:first-child
+	overflow: inherit
+
+.b-cart__panel:last-child
+	overflow: hidden
+
+.b-cart__panel:last-child.b-cart__panel.show
+	overflow: inherit
+
+fieldset
+	position: relative
+	margin-top: 7px
+	margin-bottom: 28px
+
+fieldset input
+	height: 35px
+
+fieldset .label
+	position: absolute
+	top: 0
+	left: 0
+	font-family: $base-font
+	font-size: 14px
+	color: rgba(0, 0, 0, 0.5)
+	transform: translateY(0)
+	transition: all .2s ease-out
+	cursor: text
+
+fieldset .label.active
+	font-size: 12px
+	transform: translateY(-115%)
+
+fieldset.required:after
+	content: '*'
+	position: absolute
+	top: 0
+	right: 0
+	display: block
+	font-family: $base-font
+	font-size: 18px
+	color: #2a2829
+
+.b-cart__panel-form-new
+	display: none
+	z-index: 4
+
+.b-cart__panel-content
+	margin-top: 22px
+
+.button--cart-panel
+	vertical-align: top
+	padding: 10px 30px
+
+.b-cart__panel-discount
+	display: inline-block
+	vertical-align: top
+	padding-top: 15px
+	max-width: 300px
+
+.btn-cancel
+	display: inline-block
+	vertical-align: top
+	padding-left: 15px
+	max-width: 300px
+
+.b-cart__panel-discount p
+	margin: 0
+
+.panel_disc-text--param
+	padding-bottom: 10px
+	font-family: $base-font-bold
+	font-size: 16px
+	color: #cccccc
+
+.panel_disc-text
+	font-family: $base-font
+	font-size: 12px
+
+.panel_disc-text span
+	font-family: $base-font-bold
+
+.button--cart-color
+	background-color: #cccccc
+	border-bottom: 2px solid #5b1073
+
+.button--cart-color:hover
+	background-color: #751392
+
+.button--cart-gray
+	background-color: #cccccc
+	border-bottom: 2px solid #c5ccca
+	color: #c5ccca
+
+.button--cart-gray:hover
+	background-color: #cccccc
+	border-bottom: 2px solid #c5ccca
+
+.b-cart__panel-form .tel
+	float: right
+	width: calc(100% - 90px)
+	margin-left: 120px
+	padding-left: 0 !important
+	text-align: left
+
+.b-cart__panel-form .intl-tel-input .selected-flag
+	padding: 0
+
+.btn-cancel-link
+	line-height: 39px
+	font-family: $base-font-bold
+	font-size: 14px
+	color: #cccccc
+	cursor: pointer
+	border-bottom: 1px solid #cccccc
+
+.b-cart__panel-control--color
+	border-color: #7f7f7f
+
+.b-cart__panel::before
+	content: ''
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	height: 10px
+	background: linear-gradient(to bottom, rgba(248, 249, 249, 1) 0%, rgba(248, 249, 249, 0) 100%)
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80f8f9f9', endColorstr='#00f8f9f9', GradientType=0)
+
+div.b-cart__r-colum .b-cart__panel .select2-container
+	width: 100% !important
+
+div.b-cart__r-colum .b-cart__panel .select2-selection__arrow b
+	display: none
+
+div.b-cart__r-colum .b-cart__panel .select2-selection--single
+	border: none
+	border-radius: 0
+	background: transparent
+
+div.b-cart__r-colum .b-cart__panel .select2-selection__rendered
+	display: inline-block
+	padding: 0
+	width: 100%
+	height: 39px
+	line-height: 23px
+	border-bottom: 2px solid #000
+
+div.b-cart__r-colum .b-cart__panel .select2-container .select2-selection--single
+	height: 39px
+
+div.b-cart__r-colum .b-cart__panel .select2-container
+	font-family: $base-font-bold
+	font-size: 14px
+
+div.b-cart__r-colum .b-cart__panel .b-cart__panel-select .select2-container
+	width: 88% !important
+
+.b-cart__panel-pay
+	margin-bottom: 30px
+
+.b-cart__panel-pay input[type=radio]
+	display: none
+
+div.b-cart__r-colum .b-cart__panel-pay label
+	position: relative
+	padding-left: 26px
+	font-family: $base-font-bold
+	font-size: 14px
+	cursor: pointer
+
+.b-cart__panel-pay label:before
+	content: " "
+	position: absolute
+	top: 1px
+	left: 0
+	width: 12px
+	height: 12px
+	background: #fff
+	border: 2px solid #000
+	border-radius: 20px
+
+.b-cart__panel-pay input[type=radio]:checked + label:before
+	content: ' '
+	background: url('../images/cart-radio-active.png') 50% 50% no-repeat
+
+.panel-pay-item
+	margin-bottom: 25px
+
+.b-cart__pay-screen
+	display: block
+	margin-left: 25px
+	margin-top: 10px
+	filter: grayscale(100%)
+	filter: gray
+/* IE 6-9 */
+
+.b-cart__pay-screen.active
+	filter: grayscale(0%)
+
+.b-cart__panel-checkout
+	position: absolute
+	left: 0
+	right: 0
+	margin-top: 60px
+	text-align: center
+
+.b-cart__panel-checkout label
+	font-family: $base-font
+	font-size: 14px
+
+.b-cart__panel-checkout input[type=checkbox]
+	display: none
+
+.b-cart__panel-checkout label
+	display: block
+	position: relative
+	margin-left: 15px
+	cursor: pointer
+
+.b-cart__panel-checkout label:before
+	content: ''
+	position: absolute
+	top: -3px
+	width: 22px
+	height: 21px
+	border: 1px solid #d7dcda
+	border-radius: 2px
+	box-shadow: 0 1px 0 0 #d7dcda
+
+.b-cart__panel-checkout input[type=checkbox]:checked + label:before
+	content: '\f00c'
+	top: -3px
+	line-height: 21px
+	font: normal normal normal 13px/1 $fa
+
+.b-cart__checkout-wrap
+	margin-bottom: 25px
+
+.b-cart__checkout-wrap span
+	display: inline-block
+	padding-top: 2px
+	padding-left: 30px
+
+.b-cart__checkout-btn
+	padding: 10px 60px
+	height: 40px
+	box-sizing: border-box
+
+.b-cart__checkout-link
+	color: #cccccc
+	text-decoration: underline
+
+.b-cart__agreement
+	display: none
+	background-color: #fff
+	border: 1px solid #cccccc
+	z-index: 4
+
+.b-cart__agreement-text
+	padding: 30px
+	max-height: 430px
+	font-family: $base-font
+	font-size: 12px
+	overflow: auto
+
+.b-cart__agreement-text span
+	font-family: $base-font-bold
+
+.b-cart__agreement-close
+	border-top: 1px solid #eaeaea
+	padding: 20px
+	text-align: center
+
+.b-cart__panel-form-item
+	margin-bottom: 40px
+
+.cart-success
+	display: none
+	margin-bottom: 120px
+	text-align: center
+
+.heading--cart-style
+	padding-bottom: 40px
+	border-bottom: 1px solid #cccccc
+	color: #cccccc
+
+.cart-success p
+	margin: 0 auto 40px
+	width: 100%
+	font-family: $base-font
+	font-size: 18px
+
+.info
+	color: #00f
+	font-weight: bold
+	font-size: 10px
+	float: right
+	position: relative
+	z-index: 1
+
+.info:hover
+	text-decoration: underline
+
+.select2-results .select2-results__option
+	padding: 15px 20px
+
+.payment-select2__dropdown .select2-results .select2-results__options
+	font-family: $base-font
+
+.payment-select2__dropdown .select2-results .select2-results__option--highlighted[aria-selected],
+.payment-select2__dropdown .select2-results .select2-results__option--highlighted[aria-selected]
+	background-color: #cccccc
+	color: $black-color
+
+.payment-select2__dropdown .select2-results .select2-results__options li:last-child
+	font-family: $base-font-bold
+	color: #cccccc
+
+@media (min-width: $screen-xs)
+	.b-cart__payment-cost--pos
+		float: right
+
+@media (min-width: $screen-sm)
+	.cart-success p
+		width: 400px
+
+	.b-cart__panel-checkout label:before
+		margin-left: -16px
+
+	.b-cart__panel-select
+		margin-top: -15px
+
+	.panel-pay-item
+		display: inline-block
+		margin-left: 40px
+
+	.panel-pay-item:first-child
+		margin-left: 0
+
+	div.b-cart__r-colum .b-cart__panel .b-cart__panel-select .select2-container
+		width: 94.4% !important
+
+	.b-cart__panel-discount
+		padding-top: inherit
+		padding-left: 15px
+
+@media (min-width: $screen-xm)
+	.b-cart__l-colum
+		width: calc(60% - 15px)
+
+	.b-cart__r-colum
+		width: calc(40% - 15px)
+
+	.b-cart__payment
+		padding-left: 105px
+
+	.b-cart__agreement
+		position: absolute
+		left: 0
+		margin-top: -150px
+		width: 636px
+		box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.07)
+
+@media (min-width: $screen-md)
+	.b-cart__product-wrap
+		height: inherit
+
+	.b-cart__items-wrap
+		margin: 5px 0 0 30px
+
+	.b-cart__details-size
+		top: 10px
+		width: 300px
+
+	.b-cart__details
+		left: auto
+
+	.b-cart__details-count
+		padding: 15px 10px
+		width: 300px
+
+	.b-cart__counter-item li:nth-child(2)
+		padding: 0 18px
+		line-height: 29px
+
+	.b-cart__counter-minus, .b-cart__counter-plus
+		width: 32px
+		height: 32px
+
+	.b-cart__cost--counter-wrap
+		line-height: 32px
