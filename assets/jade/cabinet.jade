@@ -48,7 +48,7 @@ html(lang='ru')
                       input.subscribe__input.form-control(type='email', name='email', placeholder='Имейл', required, value='maxim@mail.ru')
                     .form-group
                       label Телефон
-                      input#tel.tel.subscribe__input.form-control(type='tel' placeholder='(000) 000-00-00')
+                      input#tel.tel.subscribe__input.form-control(type='tel')
                     .form-group
                       label День рождения
                       input#datepicker-accaunt.subscribe__input.form-control.calendar-input(type="text" placeholder='Выбрать дату своего рождения' name='calendar' value='01/01/1999')
@@ -127,7 +127,7 @@ html(lang='ru')
                       button.button(type='submit', name='subscribe') Сохранить
                       .form-close
                     .show-wrap--border
-                      a.show-more(href='' rel='nofolllow') #[span Добавить адрес]
+                      a.show-more(href='' rel='nofollow') #[span Добавить адрес]
                 .tabs__container-box
                   form#form-password.subscribe.form-password(action='#', method='POST')
                     .form-group
