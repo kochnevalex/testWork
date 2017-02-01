@@ -1,0 +1,63 @@
+mixin productRequest(code, time, status, path, ttl1, ttl2, color, size, sum , price)
+  article.b-product__article
+    .b-product-wrap.request
+      .b-product__info
+        .b-product__code #{code}
+        time.b-product__data(datetime="2014-09-24T08:23:08+03:00") #{time}
+      .b-product__status #{status}
+      .b-product__img
+        a(href='#' rel='nofollow')
+          img(src='#{path}' alt='')
+      .b-product-desc
+        h4.b-product__ttl
+          a.b-product__ttl-link(href="#")  #[span #{ttl1}]
+          br
+          a.b-product__ttl-link.b-product__ttl-brand(href="#")  #[span #{ttl2}]
+
+        .b-product__param
+          .b-product__color(data-style='#{color}' style='background: #{color};')
+          .b-product__size #{size}
+          .b-product__sum #{sum}
+      .b-product__cash #{price}
+
+
+
+mixin productRequestFirst(code, time, status, path, ttl1, ttl2, color, size, sum , price)
+  article.b-product__article
+    .b-product-wrap.request.firtst-child
+      .b-product__info
+        .b-product__code #{code}
+        time.b-product__data(datetime="2014-09-24T08:23:08+03:00") #{time}
+      .b-product__status #{status}
+      .b-product__img
+        a(href='#' rel='nofollow')
+          img(src='#{path}' alt='')
+      .b-product-desc
+        h4.b-product__ttl
+          a.b-product__ttl-link(href="#")  #[span #{ttl1}]
+          br
+          a.b-product__ttl-link.b-product__ttl-brand(href="#")  #[span #{ttl2}]
+        .b-product__param
+          .b-product__color(data-style='#{color}' style='background: #{color};')
+          .b-product__size #{size}
+          .b-product__sum #{sum}
+      .b-product__cash #{price}
+
+
+
+mixin productApplication( path, ttl1, ttl2, color, size, sum , price)
+  article.b-product__article
+    .b-product-wrap.request.firtst-child
+      .b-product__img
+        a(href='#' rel='nofollow')
+          img(src='#{path}' alt='')
+      .b-product-desc
+        h4.b-product__ttl
+          a.b-product__ttl-link(href="#")  #[span #{ttl1}]
+          br
+          a.b-product__ttl-link.b-product__ttl-brand(href="#")  #[span #{ttl2}]
+        .b-product__param
+          .b-product__color(data-style='#{color}' style='background: #{color};')
+          .b-product__size #{size}
+          .b-product__sum #{sum}
+      .b-product__cash #{price}

@@ -1,0 +1,44 @@
+.dashboard-popup-container
+    .dashboard-popup
+        .dashboard-popup-success
+            p На вашу электронную почту отправлено письмо, #[span в нем нажмите ссылку для подтверждения регистрации]
+            a.close-dashboard(href='#' rel='nofollow') #[span Хорошо]
+        ul.nav.nav-tabs
+            li.active: a(data-toggle="tab" href="#enter") #[span Вход]
+            li: a(data-toggle="tab" href="#registration") #[span Регистрация]
+
+        .tab-content.dashboard
+            #enter.tab-pane.fade.in.active
+                    form#form-enter.subscribe.form-enter(action='#', method='POST')
+                        .col-sm-12.col-lg-6.border-line
+                            .form-group
+                                input.subscribe__input.form-control(type='email', name='email', placeholder='Электронная почта', required)
+                            .form-group
+                                input.subscribe__input.form-control(type='password', name='password', placeholder='Пароль', required)
+                                a(href='#' rel='nofollow') Напомнить пароль
+                            button.button(type='submit', name='subscribe') Войти
+                            a.close-dashboard(href='#' rel='nofollow') Отмена
+                        .col-sm-12.col-lg-6
+                            .form-group.form-group-enter
+                                p Войти через соцсеть
+                                a.button.button-vk(href='#' rel='nofollow') Вконтакте
+                                br
+                                a.button.button-facebook(href='#' rel='nofollow') Вконтакте
+            #registration.tab-pane.fade
+                form#form-registration.subscribe.form-registration(action='#', method='POST')
+                    .col-sm-12.col-lg-6.border-line
+                        .form-group
+                            input.subscribe__input.form-control(type='text', name='email', placeholder='Ваше имя', required)
+                        .form-group
+                            input.subscribe__input.form-control(type='email', name='email', placeholder='Электронная почта', required)
+                        .form-group
+                            input.subscribe__input.form-control(type='password', name='password', placeholder='Придумайте пароль', required)
+                        button.button(type='submit', name='subscribe') Зарегистрироваться
+                        a.close-dashboard(href='#' rel='nofollow') Отмена
+                    .col-sm-12.col-lg-6
+                        span.cake
+                        p Укажите свой день рождения, мы найдем чем вас порадовать
+                        .form-group
+                            input#datepicker.subscribe__input.form-control.calendar-input(type="text" placeholder='Выбрать дату своего рождения' name='calendar')
+                            label(for='datepicker')
+

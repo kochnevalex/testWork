@@ -1,0 +1,122 @@
+.tabs__container .tabs__container-box
+	width: 100%
+
+.tabs.dropdown
+	display: none
+
+.tabs.dropdown .active
+	background-color: #aaaaaa
+
+.tabs.dropdown .active a
+
+	color: #000
+
+.tabs__container .tabs__container-box
+	display: none
+	padding: 30px 30px 60px
+	border: 1px solid #aaaaaa
+
+.tabs__container .tabs__container-box.active
+	display: block
+
+
+.dd__tabs.wrapper-dropdown-3
+	position: relative
+	padding-bottom: 10px
+
+.dd__tabs.wrapper-dropdown-3 .dd__tabs-current
+	display: block
+	padding: 0 20px
+	font-size: 16px
+	font-family: $base-font-bold
+	line-height: 40px
+	border: 1px solid #aaaaaa
+	border-bottom-width: 2px
+
+.dd__tabs.wrapper-dropdown-3 .dd__tabs-current::before
+	right: 10px
+//@include sprite($dropdown-accaunt)
+
+.tabs.dropdown
+	pointer-events: auto
+	cursor: pointer
+
+.tabs.dropdown li a
+	padding-left: 20px
+	font-size: 14px
+	font-family: $base-font
+
+.tabs.dropdown li a span
+	font-family: $second-font-italic
+	color: #aaaaaa
+
+.tabs.dropdown li a span::before
+	display: none
+
+.tabs.dropdown::before
+	display: none
+
+.dd__tabs.wrapper-dropdown-3.active .dd__tabs-current
+	border-bottom-width: 1px
+	border-top-width: 2px
+
+.dd__tabs.wrapper-dropdown-3 .dd__tabs-current span
+	font-family: $second-font-italic
+	color: #aaaaaa
+
+@media screen and (min-width: $screen-md)
+
+	.dd__tabs.wrapper-dropdown-3
+		display: inline-block
+		width: 35%
+
+	.dd__tabs.wrapper-dropdown-3
+		float: left
+		margin-top: 30px
+		margin-right: 30px
+
+
+
+	.tabs.dropdown .active
+		background-color: transparent
+
+@media screen and (min-width: $screen-lg)
+	.tabs.dropdown
+		display: inline-block
+
+	.dd__tabs.wrapper-dropdown-3
+		margin: 10px 0 0 0
+		width: 100%
+
+	.dd__tabs.wrapper-dropdown-3 .dd__tabs-current
+		display: none
+
+	.dd__tabs.wrapper-dropdown-3 .dropdown
+		display: block
+		position: static
+		box-shadow: none
+
+	.dd__tabs.wrapper-dropdown-3 .dropdown li
+		padding: 10px 0
+		cursor: auto
+
+	.dd__tabs.wrapper-dropdown-3 .dropdown li:hover a
+		background: transparent
+	//@include linkBorder(rgba(#aaaaaa, .2))
+
+	.dd__tabs.wrapper-dropdown-3 .dropdown li a
+		display: inline
+		padding: 0
+		font-size: 16px
+		color: #aaaaaa
+		font-family: $base-font-bold
+		text-decoration: none
+		@include linkBorder(rgba(#aaaaaa, .2))
+
+	.dd__tabs.wrapper-dropdown-3 .dropdown li a:hover
+		@include linkBorder(#aaaaaa)
+
+	.tabs.dropdown li a span
+		padding: 0
+
+
