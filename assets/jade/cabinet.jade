@@ -1,6 +1,7 @@
-- var pageTitle = "Index | grid360";
+- var pageTitle = "Cabinet| grid360"
 include parts/goods/goodsMixins
 include mixins/product/product
+include components/breadcrubms/breadcrumbsMixins
 
 doctype html
 html(lang='ru')
@@ -11,11 +12,10 @@ html(lang='ru')
     .wrap
       include components/header/header
       .container
-        include parts/dashboard/dashboard
-        .breadcrumbs.breadcrumbs--no-border
-          ul.b-breadcrumbs__list
-            li: a(href="#") bretelka.ua
-            li Мой кабинет
+        //include parts/dashboard/dashboard
+        -var menuArray = [{linkName:'Главная', href: 'index.html', active: false}, {linkName:pageTitle, href: 'cabinet.html', active: true}];
+        +breadCrumbs(menuArray,'mod--centered')
+
         .accaunt-wrap
           h1.accaunt__ttl Мой кабинет
           .accaunt.row

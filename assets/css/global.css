@@ -3688,6 +3688,7 @@ a.ui-button:active,
   position: relative; }
 
 .accaunt-wrap {
+  margin-top: 50px;
   margin-bottom: 100px; }
 
 .accaunt-wrap .accaunt__ttl {
