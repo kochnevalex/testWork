@@ -3705,7 +3705,7 @@ a.ui-button:active,
 
 .accaunt .accaunt__info {
   width: 50%;
-  padding: 20px 0;
+  padding: 20px 0 21px;
   font-size: 16px;
   line-height: 20px;
   font-family: "Open Sans bold", sans-serif;
