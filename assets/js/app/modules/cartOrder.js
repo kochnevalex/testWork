@@ -52,9 +52,7 @@ appMakeBeCool.gateway.addClass('CartOrder', function (properties, $, $window, $d
       }
       _g.fieldsetInput.each(function(){
         var theese = $(this);
-        console.log(theese);
         if(theese.val().length){
-
           theese.next().addClass('active');
         }
       });
