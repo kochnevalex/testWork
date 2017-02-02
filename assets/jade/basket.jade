@@ -184,6 +184,14 @@ html(lang='ru')
                           fieldset.required
                             input#email.b-cart__panel-control
                             label.label(for="email") E-mail
+                        .col-lg-6.col-sm-6
+                          fieldset
+                            input#password.b-cart__panel-control(type="password" name="password" value="3546546")
+                            label.label(for="password") Пароль
+                        .col-lg-6.col-sm-6
+                          fieldset
+                            input#birthdate.b-cart__panel-control.mod--has-placeholder(type="text" name="birthdate" value="12-12-1986" placeholder="DD-MM-YYYY")
+                            label.label(for="birthdate") Дата рождени
                     .b-cart__panel-content
                       button.button.button--cart-panel Далее
                       .b-cart__panel-discount

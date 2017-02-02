@@ -89,6 +89,7 @@ appMakeBeCool.gateway.addClass('FormValidate', function (properties, $, $window,
       }
 
       _phoneInputMask();
+      _dateInputMask();
       _textareaAutosize();
     },
 
@@ -114,6 +115,17 @@ appMakeBeCool.gateway.addClass('FormValidate', function (properties, $, $window,
             var processedValue = pastedValue;
             return processedValue;
           }
+        });
+      }
+    },
+    _dateInputMask = function () {
+      if ($('#birthdate').length) {
+        $('#birthdate').inputmask({
+          mask: '99-99-9999',
+          placeholder: 'DD-MM-YYYY',
+          showMaskOnHover: false,
+          showMaskOnFocus: true,
+          showMask: true
         });
       }
     },

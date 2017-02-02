@@ -417,7 +417,7 @@ button.ui-button::-moz-focus-inner {
 }
 .ui-datepicker .ui-datepicker-prev-hover,
 .ui-datepicker .ui-datepicker-next-hover {
-  top: 1px;
+  top: 2px;
 }
 .ui-datepicker .ui-datepicker-prev {
   left: 2px;
@@ -426,10 +426,10 @@ button.ui-button::-moz-focus-inner {
   right: 2px;
 }
 .ui-datepicker .ui-datepicker-prev-hover {
-  left: 1px;
+  left: 2px;
 }
 .ui-datepicker .ui-datepicker-next-hover {
-  right: 1px;
+  right: 2px;
 }
 .ui-datepicker .ui-datepicker-prev span,
 .ui-datepicker .ui-datepicker-next span {
@@ -1275,7 +1275,9 @@ a.ui-button:active,
 
 /* Misc visuals
 ----------------------------------*/
-
+.ui-corner-all{
+  border: 1px solid #222222
+}
 /* Corner radius */
 .ui-corner-all,
 .ui-corner-top,
