@@ -4236,6 +4236,18 @@ a.ui-button:active,
   height: 60px;
   background-color: #cccccc; }
 
+.b-cart__counter-input {
+  display: inline-block;
+  vertical-align: middle;
+  width: 30px;
+  text-align: center; }
+
+input.b-cart__counter-input::-webkit-outer-spin-button,
+input.b-cart__counter-input::-webkit-inner-spin-button {
+  -moz-appearance: textfield;
+  -webkit-appearance: none;
+  margin: 0; }
+
 .b-cart__counter-item {
   display: inline-block;
   vertical-align: top; }

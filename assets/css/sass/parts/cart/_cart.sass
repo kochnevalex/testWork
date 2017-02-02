@@ -1,11 +1,11 @@
 .b-cart__content
-		position: relative
+	position: relative
 
-		&::before,
-		&::after
-			content: ""
-			display: table
-			clear: both
+	&::before,
+	&::after
+		content: ""
+		display: table
+		clear: both
 
 .b-cart__l-colum
 	float: left
@@ -108,6 +108,18 @@
 	height: 60px
 	background-color: #cccccc
 
+.b-cart__counter-input
+	display: inline-block
+	vertical-align: middle
+	width: 30px
+	text-align: center
+
+input.b-cart__counter-input::-webkit-outer-spin-button,
+input.b-cart__counter-input::-webkit-inner-spin-button
+	-moz-appearance: textfield
+	-webkit-appearance: none
+	margin: 0
+
 .b-cart__counter-item
 	display: inline-block
 	vertical-align: top
@@ -128,7 +140,6 @@
 	height: 42px
 	background-color: #fff
 	border: 1px solid transparent
-
 
 .b-cart__counter-minus::before
 	content: ''
@@ -415,7 +426,6 @@ fieldset.required:after
 
 .panel_disc-text span
 	font-family: $base-font-bold
-
 
 .b-cart__panel-form .tel
 	float: right
