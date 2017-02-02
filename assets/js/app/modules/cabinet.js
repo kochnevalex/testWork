@@ -90,20 +90,20 @@ appMakeBeCool.gateway.addClass('Cabinet', function (properties, $, $window, $doc
             $currentLi.addClass('active');
             _g.$tabs.removeClass('active');
             _g.$tabs.eq(index).addClass('active');
-            if (_g.window.width() < 993) {
+            if (_g.window.width() < 1280) {
               _g.$dropdown.slideToggle(500);
             }
             return false;
           });
 
 
-          _g.$tabsCurrent.on('click', function (e) {
+          _g.$tabsCurrent.on('click', function () {
             var theese = $(this);
             theese.parent().toggleClass('active');
             theese.next().slideToggle(500);
           });
 
-          $('.dd__tabs .dropdown li a').on('click', function (e) {
+          $('.dd__tabs .dropdown li a').on('click', function () {
 
             $('.dd__tabs').toggleClass('active');
             _g.$tabsCurrent.html($(this).html());

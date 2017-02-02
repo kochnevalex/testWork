@@ -50,6 +50,13 @@ appMakeBeCool.gateway.addClass('CartOrder', function (properties, $, $window, $d
           this.nextElementSibling.classList.toggle("show");
         }
       }
+      _g.fieldsetInput.each(function(){
+        var theese = $(this);
+        if(theese.val().length){
+          console.log(theese.val());
+          theese.next().addClass('active');
+        }
+      });
 
       _g.fieldsetInput.on('click', function (e) {
         $(e.target).parent().find('label').addClass('active');

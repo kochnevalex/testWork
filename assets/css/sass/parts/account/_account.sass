@@ -1,6 +1,6 @@
-
 .accaunt
 	position: relative
+
 
 .accaunt-wrap
 	margin-top: 50px
@@ -15,8 +15,6 @@
 	font-family: $second-font-italic
 	border-bottom: 1px solid #aaaaaa
 
-.breadcrumbs.breadcrumbs--no-border
-	border-bottom: none
 
 .accaunt .accaunt__info
 	width: 50%
@@ -49,11 +47,6 @@
 	top: 30px
 	width: 115px
 	height: 115px
-
-.accaunt__discount .knob
-	width: 50px
-	height: 50px
-	color: transparent !important
 
 .accaunt__discount span
 	position: absolute
@@ -126,7 +119,6 @@
 .accaunt .intl-tel-input
 	width: 100%
 
-.accaunt__address
 
 .accaunt__address
 	position: relative
@@ -157,101 +149,13 @@
 .address .form-address
 	display: none
 
-//.accaunt-bra-fitting .form-bra
-  display: none
 
-.accaunt__bra-label
+//.accaunt__bra-label
 	position: relative
 
-//.accaunt-bra-measurement
-  color: #a3a3a3
-
-//.accaunt-bra-measurement--latest
-  color: #000
-
-//.accaunt-bra-measurement--latest .accaunt__bra-label
-  padding-left: 40px
-
-.accaunt__bra-label span
-	position: absolute
-	display: block
-	left: 15px
-	top: 50%
-	transform: translateY(-50%)
-	height: 18px
-	width: 18px
-	border-radius: 50%
-	border: 1px solid #a3a3a3
-	text-align: center
-	line-height: 16px
-	font-size: 8px
-	color: #a3a3a3
-
-.accaunt__bra-label span:hover
-	color: #aaaaaa
-	border-color: #aaaaaa
-
-.accaunt__bra-head
-	font-size: 12px
-	font-family: $base-font
-
-.accaunt-bra-measurement--latest .accaunt__bra-head-label
-	margin-left: -25px
-
-.bra-consultation-wrap
-	padding: 0 0 20px
-
-.bra-consultation-wrap .bra-consultation__button.button
-	font-size: 14px
-	padding: 5px 10px 8px
-	margin: 0 0 10px
-
-.bra-consultation-wrap .bra-consultation__desc
-	font-size: 12px
-	font-family: $base-font
-	line-height: 16px
-
-.bra-request-wrap
-	display: none
-	padding: 20px 40px 30px 40px
-	font-size: 14px
-	line-height: 16px
-	border-radius: 4px
-	background: #eaedec
-
-.bra-request-wrap .bra__request-ttl
-	position: relative
-	font-family: $base-font-bold
-
-.bra-request-wrap .bra__request-ttl::before
-	position: absolute
-	left: -20px
-	top: 2px
-	content: ''
-//@include sprite($check)
-
-.bra-request-wrap .bra__request-ttl span
-	font-family: $second-font-italic
-	color: #aaaaaa
-
-.bra-request-wrap .bra__request-desc
-	font-family: $base-font
-
-.bra-request-wrap .bra__request-desc span
-	font-family: $base-font-bold
-
-.form-bra,
 .form-address
 	padding: 20px 0
 	margin-top: 20px
-
-.bra-recommendation
-	display: inline-block
-	width: 125px
-	vertical-align: middle
-	font-size: 12px
-	line-height: 16px
-	font-family: $base-font
 
 .accaunt-slide
 	padding: 0
@@ -356,11 +260,6 @@
 .application-table .b-product-wrap.request
 	font-size: 14px
 
-.bra-consultation-container .bra-consultation--ttl
-	display: none
-
-.bra-model-wrap
-	display: none
 
 .b-product-wrap.request
 
@@ -414,12 +313,6 @@
 		width: 100%
 		margin-bottom: 0
 
-	.accaunt .accaunt__product-wrap .b-product__article
-		margin-bottom: 0
-		padding: 0
-
-	.accaunt__product-wrap .b-product-wrap.request
-		padding-top: 10px
 
 	.accaunt__product-wrap .b-product-wrap.request .b-product-desc
 		width: 50%
@@ -450,8 +343,6 @@
 	.application-table .b-product-wrap.request .b-product__status
 		text-align: left
 
-	.application-table
-		padding-bottom: 60px
 
 	.b-product-wrap.request .b-product__info time.b-product__data
 		display: block
@@ -459,8 +350,6 @@
 
 	.b-product-wrap.request .b-product__info .b-product__code
 		padding-bottom: 5px
-
-	.accaunt-slide .accaunt-slide-toggle
 
 	.form-accaunt .form-group,
 	.form-password .form-group
@@ -473,16 +362,6 @@
 		left: 0
 		top: 10px
 
-	.accaunt__bra-label span
-		z-index: 2
-		height: 22px
-		width: 22px
-		line-height: 20px
-		top: -15px
-		bottom: 100%
-		left: 15px
-		background: #fff
-		cursor: pointer
 
 	.form-accaunt .form-group .calendar
 		top: 4px
@@ -576,72 +455,6 @@
 	.accaunt .accaunt__discount
 		right: 45px
 
-	.bra-consultation-container
-		padding: 30px 30px 40px 30px
-		@include clearfix()
-
-	.bra-consultation-container .bra-consultation--ttl
-		display: block
-		float: left
-		font-size: 24px
-		font-family: $base-font-bold
-		width: 45%
-
-	.bra-consultation-container .bra-consultation--ttl span
-		display: block
-		line-height: 28px
-		font-family: $second-font-italic
-		color: #aaaaaa
-
-	.bra-request-wrap,
-	.bra-consultation-wrap
-		float: right
-		width: 220px
-
-	//.accaunt-bra-fitting-table
-    width: 70%
-    border-right: 1px solid #aaaaaa
-
-	.bra-model-wrap
-		position: relative
-		display: inline-block
-		width: 30%
-		padding: 60px 10px 0 30px
-
-	//.accaunt-bra-fitting
-    display: flex
-
-	.form-bra
-		position: relative
-		margin-top: 0
-		padding-left: 30px
-		padding-right: 30px
-		@include clearfix()
-
-	.form-bra .form-group
-		float: left
-		width: calc(15% - 30px)
-		margin-right: 30px
-
-	.form-bra .form-group label
-		display: none
-
-	.form-bra .form-group.width-2
-		width: calc(25% - 30px)
-
-	.form-bra .form-group.width-2 .form-control
-		border-bottom: 1px solid #aaaaaa
-		font-family: $base-font
-
-	.form-bra .form-group.width-2 .form-control:focus
-		border-bottom: 1px solid #aaaaaa
-
-	.bra-color .st1, .bra-color .st2, .bra-color .st4, .bra-color .st5
-		stroke: #aaaaaa
-
-	.bra-color .st3
-		fill: #aaaaaa
-
 @media screen and (min-width: $screen-lg)
 	.application-table-head .application-table-head-info
 		width: 25%
@@ -678,8 +491,4 @@
 
 	.accaunt__discount span
 		font-size: 36px
-
-@media screen and (min-width: $screen-xm)
-	.bra-model-wrap
-		padding: 60px 60px 0 60px
 
