@@ -130,8 +130,6 @@ appMakeBeCool.gateway.addClass('CartOrder', function (properties, $, $window, $d
       /*-----------------Функция добавления адреса-----------------*/
 
 
-
-
       $('.payment-panel-menu').on('select2:select', function (evt) {
         var $select = $(evt.target);
         var optionsAddressValue = $select.find("option:last-child").val();
@@ -172,7 +170,16 @@ appMakeBeCool.gateway.addClass('CartOrder', function (properties, $, $window, $d
           $('.b-cart__panel-form-new').find('input').val('');
         }
 
+
+
       });
+
+
+
+
+
+
+
 
 
     },
