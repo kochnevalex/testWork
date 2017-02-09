@@ -1,0 +1,39 @@
+/* Slider text + photo */
+
+.slider-img-text__slide
+	position: relative
+	display: flex
+	justify-content: center
+	align-items: center
+
+.slider-img-text__img
+	max-width: 100%
+	min-height: 320px
+
+.slider-img-text__text-block
+	position: absolute
+	top: 10%
+	left: 50%
+	width: 85%
+	max-height: 80%
+	margin-left: -45%
+	padding: 5px
+	background: $color-light-grey
+
+.slider-img-text .slick-prev
+	left: 25px
+	z-index: 2
+
+.slider-img-text .slick-next
+	right: 25px
+	z-index: 2
+
+@media (min-width: $screen-sm)
+	.slider-img-text__text-block
+		position: absolute
+		top: 20%
+		left: 50%
+		width: 50%
+		max-height: 50%
+		margin-left: -25%
+		padding: 10px 20px 20px

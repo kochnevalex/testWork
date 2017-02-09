@@ -1,0 +1,32 @@
+.b-slider
+  .container
+    h2.heading.text-center Слайдер фото + текс
+    .slider-img-text
+      .slider-img-text__slide
+        img.slider-img-text__img(src="http://placehold.it/1200x800" alt="")
+        .slider-img-text__text-block.text-center
+          h2.heading Lorem ipsum dolor
+          p.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+
+      .slider-img-text__slide
+        img.slider-img-text__img(src="http://placehold.it/1200x800" alt="")
+        .slider-img-text__text-block.text-center
+          h2.heading Lorem ipsum dolor
+          p.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+      .slider-img-text__slide
+        img.slider-img-text__img(src="http://placehold.it/1200x800" alt="")
+        .slider-img-text__text-block.text-center
+          h2.heading Lorem ipsum dolor
+          p.
+            Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et
+            dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+
+  script.
+    $('.slider-img-text').slick({
+      slidesToShow: 1,
+      slidesToScroll: 1
+    })
