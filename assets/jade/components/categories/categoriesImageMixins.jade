@@ -1,0 +1,8 @@
+mixin categoriesImages(image,amount,title)
+  acticle.b-catalog__list-wrap.col-xs-12.col-sm-6.col-md-4.col-lg-3.masonry__item
+    .b-catalog__item.b-catalog__item--mod
+      .b-catalog__img-gradient
+        img(src="#{image}" alt="")
+      .b-catalog__text.b-catalog__text--mod
+        .b-catalog__amount.b-catalog__amount--mod #{amount}
+        h4.b-catalog__link: a(href="#") #{title}

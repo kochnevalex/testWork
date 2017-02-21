@@ -1,6 +1,8 @@
 - var pageTitle = "Categories | grid360";
 include parts/goods/goodsMixins
 include components/breadcrubms/breadcrumbsMixins
+include components/categories/categoriesMixins
+include components/categories/categoriesImageMixins
 
 doctype html
 html(lang='ru')
@@ -16,6 +18,25 @@ html(lang='ru')
       .container
         aside.aside-filters
           include parts/filters/filters
+      .container
+        .row
+          .b-catalog__list.masonry
+            +categories('1','Категория 1')
+            +categories('1','Категория 2')
+            +categories('1','Категория 3')
+            +categoriesImages('http://placehold.it/450x350','1','Категория 5')
+            +categories('1','Категория 6')
+            +categories('1','Категория 7')
+            +categories('1','Категория 8')
+            +categories('1','Категория 9')
+            +categoriesImages('http://placehold.it/450x350','1','Категория 10')
+            +categories('1','Категория 11')
+            +categoriesImages('http://placehold.it/450x350','1','Категория 11')
+            +categories('1','Категория 12')
+            +categoriesImages('http://placehold.it/450x350','1','Категория 12')
+            +categories('1','Категория 13')
+            +categories('1','Категория 14')
+            +categoriesImages('http://placehold.it/450x350','1','Категория 15')
     include components/footer/footer
     include components/scripts/bottomScripts
 

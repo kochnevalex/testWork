@@ -37,6 +37,7 @@ appMakeBeCool.gateway.addClass('ThemeMode', function (properties, $, $window, $d
       _globals.siteObj.utils.extend(_globals.siteObj.classes.SelectAndTelInit, _globals.siteObj.base.Class);
       _globals.siteObj.utils.extend(_globals.siteObj.classes.CartOrder, _globals.siteObj.base.Class);
       _globals.siteObj.utils.extend(_globals.siteObj.classes.Cabinet, _globals.siteObj.base.Class);
+      _globals.siteObj.utils.extend(_globals.siteObj.classes.Masonry, _globals.siteObj.base.Class);
       _globals.siteObj.utils.extend(_globals.siteObj.classes.MegamenuDropdown, _globals.siteObj.base.Class);
       _globals.siteObj.utils.extend(_globals.siteObj.classes.FormValidate, _globals.siteObj.base.Class);
       _globals.siteObj.utils.extend(_globals.siteObj.classes.FormAjax, _globals.siteObj.base.Class);
@@ -49,6 +50,7 @@ appMakeBeCool.gateway.addClass('ThemeMode', function (properties, $, $window, $d
       _globals.siteObj.createClassInstance('SelectAndTelInit', _globals.siteObj.classes.SelectAndTelInit, {classId: 'SelectAndTelInit'});
       _globals.siteObj.createClassInstance('Cabinet', _globals.siteObj.classes.Cabinet, {classId: 'Cabinet'});
       _globals.siteObj.createClassInstance('CartOrder', _globals.siteObj.classes.CartOrder, {classId: 'CartOrder'});
+      _globals.siteObj.createClassInstance('Masonry', _globals.siteObj.classes.Masonry, {classId: 'Masonry'});
       _globals.siteObj.createClassInstance('MegamenuDropdown', _globals.siteObj.classes.MegamenuDropdown, {classId: 'MegamenuDropdown'});
       _globals.siteObj.createClassInstance('formValidate', _globals.siteObj.classes.FormValidate, {classId: 'FormValidate'});
       _globals.siteObj.createClassInstance('formAjax', _globals.siteObj.classes.FormAjax, {classId: 'FormAjax'});
@@ -73,6 +75,7 @@ appMakeBeCool.gateway.addClass('ThemeMode', function (properties, $, $window, $d
             _themeMode.trigger('Cabinet_Init', data);
             _themeMode.trigger('CartOrder_Init', data);
             _themeMode.trigger('DropDown_Init', data);
+            _themeMode.trigger('Masonry_Init', data);
             _themeMode.trigger('MegamenuDropdown_Init', data);
             _themeMode.trigger('FormValidate_Init', data);
             _themeMode.trigger('FormAjax_Init', data);

@@ -645,125 +645,6 @@
           });
         </script>
       </div>
-      <h2 class="heading text-center">Раскрывающийся блок</h2>
-      <section class="b-opening">
-        <div class="container">
-          <div class="b-opening__list">
-            <div class="b-opening__item parent-desc">
-              <div class="b-opening_short-info">
-                <h3 class="b-opening__item-ttl">Lorem ipsum dolor sit amet</h3>
-                <div class="b-opening__short-desc">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    
-                  </p><span class="b-opening__open-desc"></span>
-                </div>
-              </div>
-              <div class="b-opening__full_desc item-full-desc">
-                <h3 class="b-opening__item-ttl">Lorem ipsum dolor sit amet</h3>
-                <div class="b-opening__full_desc-text">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus aliquam est maximus volutpat
-                    noneget justo. Quisque semper, leo at ultricies tristique, metus risus blandit ligula, quis varius augue
-                  </p>
-                  <ul>
-                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
-                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
-                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
-                  </ul>
-                </div>
-                <div class="b-opening__btn"><a href="" class="btn">Узнать больше</a></div>
-              </div>
-            </div>
-            <div class="b-opening__item parent-desc">
-              <div class="b-opening_short-info">
-                <h3 class="b-opening__item-ttl">Lorem ipsum dolor sit amet</h3>
-                <div class="b-opening__short-desc">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    
-                  </p><span class="b-opening__open-desc"></span>
-                </div>
-              </div>
-              <div class="b-opening__full_desc item-full-desc">
-                <h3 class="b-opening__item-ttl">Lorem ipsum dolor sit amet</h3>
-                <div class="b-opening__full_desc-text">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus aliquam est maximus volutpat
-                    noneget justo. Quisque semper, leo at ultricies tristique, metus risus blandit ligula, quis varius augue
-                  </p>
-                  <ul>
-                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
-                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
-                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
-                  </ul>
-                </div>
-                <div class="b-opening__btn"><a href="" class="btn">Узнать больше</a></div>
-              </div>
-            </div>
-            <div class="b-opening__item parent-desc">
-              <div class="b-opening_short-info">
-                <h3 class="b-opening__item-ttl">Lorem ipsum dolor sit amet</h3>
-                <div class="b-opening__short-desc">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    
-                  </p><span class="b-opening__open-desc"></span>
-                </div>
-              </div>
-              <div class="b-opening__full_desc item-full-desc">
-                <h3 class="b-opening__item-ttl">Lorem ipsum dolor sit amet</h3>
-                <div class="b-opening__full_desc-text">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus aliquam est maximus volutpat
-                    noneget justo. Quisque semper, leo at ultricies tristique, metus risus blandit ligula, quis varius augue
-                  </p>
-                  <ul>
-                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
-                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
-                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
-                  </ul>
-                </div>
-                <div class="b-opening__btn"><a href="" class="btn">Узнать больше</a></div>
-              </div>
-            </div>
-            <div class="b-opening__item parent-desc">
-              <div class="b-opening_short-info">
-                <h3 class="b-opening__item-ttl">Lorem ipsum dolor sit amet</h3>
-                <div class="b-opening__short-desc">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                    
-                  </p><span class="b-opening__open-desc"></span>
-                </div>
-              </div>
-              <div class="b-opening__full_desc item-full-desc">
-                <h3 class="b-opening__item-ttl">Lorem ipsum dolor sit amet</h3>
-                <div class="b-opening__full_desc-text">
-                  <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam at lacus aliquam est maximus volutpat
-                    noneget justo. Quisque semper, leo at ultricies tristique, metus risus blandit ligula, quis varius augue
-                  </p>
-                  <ul>
-                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
-                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
-                    <li>1. Lorem ipsum dolor sit amet, consectetur</li>
-                  </ul>
-                </div>
-                <div class="b-opening__btn"><a href="" class="btn">Узнать больше</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <script>
-          $('.b-opening__open-desc').on('click', function (e) {
-            var $parent = $(e.target).closest('.parent-desc');
-            $parent.find('.b-opening__item-ttl, .b-opening__open-desc').toggleClass('active');
-            $parent.find('.item-full-desc').slideToggle(400);
-          
-          })
-        </script>
-      </section>
       <section class="b-chart-donut">
         <div class="container">
           <h2 class="heading text-center">Круговой график</h2>
@@ -1177,6 +1058,8 @@
     <script src="./js/app/modules/bgImages.js"></script>
     <script src="./js/jquery/plugins/ui/jquery-ui.js"></script>
     <script src="./js/jquery/plugins/ui/jquery-ui-touch.js"></script>
+    <script src="./js/jquery/plugins/imagesLoader/imagesloaded.pkgd.js"></script>
+    <script src="./js/jquery/plugins/masonry/masonry.pkgd.js"></script>
     <script src="./js/jquery/plugins/select2/select2.full.js"></script>
     <script src="./js/jquery/plugins/inputmask/inputmask.min.js"></script>
     <script src="./js/jquery/plugins/inputmask/inputmask.js"></script>
@@ -1184,8 +1067,14 @@
     <script src="./js/app/modules/dropDown.js"></script>
     <script src="./js/app/modules/selectAndTelInit.js"></script>
     <script src="./js/app/modules/cartOrder.js"></script>
+    <script src="./js/app/modules/masonry.js"></script>
     <script src="./js/app/modules/cabinet.js"></script>
     <script src="./js/app/modules/priceSlider.js"></script>
+    <!--script.-->
+    <!--  $('.masonry').masonry({-->
+    <!--    // options-->
+    <!--    itemSelector: '.masonry__item'-->
+    <!--  });-->
     <script>
       var global = {
         siteUrl: '',
