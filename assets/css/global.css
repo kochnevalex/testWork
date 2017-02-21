@@ -4126,7 +4126,21 @@ a.ui-button:active,
     width: 80px;
     height: 80px; }
   .accaunt__discount span {
-    font-size: 36px; } }
+    font-size: 36px; }
+  .accaunt--full-width {
+    display: block; }
+  .accaunt--full-width .accaunt__balance-wrap {
+    display: none; }
+  .accaunt--full-width .accaunt__info {
+    float: left;
+    width: auto;
+    border-bottom: 0; }
+  .accaunt--full-width .dd__tabs.wrapper-dropdown-3 {
+    float: right;
+    width: auto; }
+  .accaunt--full-width .dd__tabs.wrapper-dropdown-3 .dropdown li {
+    float: left;
+    margin-left: 20px; } }
 
 .b-cart__content {
   position: relative; }

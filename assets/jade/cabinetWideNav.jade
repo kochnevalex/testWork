@@ -1,0 +1,332 @@
+- var pageTitle = "Cabinet| grid360"
+include parts/goods/goodsMixins
+include mixins/product/product
+include components/breadcrubms/breadcrumbsMixins
+
+doctype html
+html(lang='ru')
+  include components/head/head
+
+  body
+    include components/scripts/scripts
+    .wrap
+      include components/header/header
+      .container
+        //include parts/dashboard/dashboard
+        -var menuArray = [{linkName:'Главная', href: 'index.html', active: false}, {linkName:pageTitle, href: 'cabinet.html', active: true}];
+        +breadCrumbs(menuArray,'mod--centered')
+
+        .accaunt-wrap
+          h1.accaunt__ttl Мой кабинет
+          .accaunt.row.accaunt--full-width
+            .col-lg-12.clearfix
+              .accaunt__info Максим
+              .accaunt__balance-wrap
+                .accaunt__balance Ваш баланс #[span 241 ₽]
+                .accaunt__amount Всего совершено заказов на 2 478 441 ₽
+              .dd__tabs.wrapper-dropdown-3
+                span.dd__tabs-current Личные данные
+                ul.tabs.dropdown
+                  li.active: a(href='#' rel='nofollow') Личные данные
+                  li: a(href='#' rel='nofollow') Адреса
+
+                  li: a(href='#' rel='nofollow') Пароль
+                  li: a(href='#' rel='nofollow') Заказы
+                  li: a(href='#' rel='nofollow') Заявки
+            .tabs-block.col-lg-12
+              .tabs__container
+                .tabs__container-box
+                  form#form-accaunt.subscribe.form-accaunt(action='#', method='POST')
+                    .form-group
+                      label Имя
+                      input.subscribe__input.form-control(type='text', name='name', placeholder='Имя', required,  value='Максим')
+                    .form-group
+                      label Фамилия
+                      input.subscribe__input.form-control(type='text', name='firstname', placeholder='Фамилия', required, value='Туру')
+                    .form-group
+                      label Имейл
+                      input.subscribe__input.form-control(type='email', name='email', placeholder='Имейл', required, value='maxim@mail.ru')
+                    .form-group
+                      label Телефон
+                      input#tel.tel.subscribe__input.form-control(type='tel')
+                    .form-group
+                      label День рождения
+                      input#datepicker-accaunt.subscribe__input.form-control.calendar-input(type="text" placeholder='Выбрать дату своего рождения' name='calendar' value='01/01/1999')
+                      label.calendar(for='datepicker-accaunt')
+                    button.button(type='submit', name='subscribe') Сохранить
+
+                .tabs__container-box.active
+                  .address
+                    .accaunt__address-head
+                      .row
+                        .col-md-3
+                          .accaunt__address-city-label Город
+                        .col-md-4
+                          .accaunt__address-street-label Улица
+                        .col-md-2
+                          .accaunt__address-build-label Дом
+                        .col-md-3
+                          .accaunt__address-flat-label Квартира/Офис
+                    .accaunt__address.accaunt__address--first
+                      .row
+                        span.address-delete
+                        .col-xs-6.accaunt__address-label
+                          .accaunt__address-city-label Город
+                        .col-xs-6.accaunt__address-param
+                          .accaunt__address-city Москва
+                      .row.row-md-3
+                        .col-xs-6.accaunt__address-label
+                          .accaunt__address-street-label Улица
+                        .col-xs-6.accaunt__address-param
+                          .accaunt__address-street Большая садовая
+                      .row.row-md-2
+                        .col-xs-6.accaunt__address-label
+                          .accaunt__address-build-label Дом
+                        .col-xs-6.accaunt__address-param
+                          .accaunt__address-build 10
+                      .row
+                        .col-xs-6.accaunt__address-label
+                          .accaunt__address-flat-label Квартира/Офис
+                        .col-xs-6.accaunt__address-param
+                          .accaunt__address-flat 27
+                    .accaunt__address
+                      .row
+                        span.address-delete
+                        .col-xs-6.accaunt__address-label
+                          .accaunt__address-city-label Город
+                        .col-xs-6.accaunt__address-param
+                          .accaunt__address-city Москва
+                      .row.row-md-3
+                        .col-xs-6.accaunt__address-label
+                          .accaunt__address-street-label Улица
+                        .col-xs-6.accaunt__address-param
+                          .accaunt__address-street Большая садовая
+                      .row.row-md-2
+                        .col-xs-6.accaunt__address-label
+                          .accaunt__address-build-label Дом
+                        .col-xs-6.accaunt__address-param
+                          .accaunt__address-build 10
+                      .row
+                        .col-xs-6.accaunt__address-label
+                          .accaunt__address-flat-label Квартира/Офис
+                        .col-xs-6.accaunt__address-param
+                          .accaunt__address-flat 27
+                    form#form-address.subscribe.form-address(action='#', method='POST')
+                      .form-group.width-3
+                        label Город
+                        input.subscribe__input.form-control(type='text', name='city', placeholder='', required)
+                      .form-group.width-4
+                        label Улица
+                        input.subscribe__input.form-control(type='text', name='street', placeholder='', required)
+                      .form-group.width-2
+                        label Дом
+                        input.subscribe__input.form-control(type='text', name='build', placeholder='', required)
+                      .form-group.width-3
+                        label Квартира/Офис
+                        input.subscribe__input.form-control(type='text', name='flat', placeholder='', required)
+                      button.button(type='submit', name='subscribe') Сохранить
+                      .form-close
+                    .show-wrap--border
+                      a.show-more(href='' rel='nofollow') #[span Добавить адрес]
+                .tabs__container-box
+                  form#form-password.subscribe.form-password(action='#', method='POST')
+                    .form-group
+                      label Старый пароль
+                      input.subscribe__input.form-control(type='password', name='password', placeholder='********', required)
+                    .form-group
+                      label Новый
+                      input.subscribe__input.form-control(type='password', name='password', placeholder='', required)
+                    .form-group
+                      label Еще раз новый
+                      input.subscribe__input.form-control(type='password', name='password', placeholder='', required)
+                    button.button(type='submit', name='subscribe') Сохранить
+                .tabs__container-box
+                  .accaunt-slide-list
+                    .accaunt-slide-head
+                      .row
+                        .col-md-3.hide Номер заказа
+                        .col-xs-6.col-md-3 Дата
+                        .col-xs-6.col-md-3.hide.txt-right Детали
+                        .col-xs-6.col-md-3 Статус
+                    .accaunt-slide
+                      .accaunt-slide-toggle
+                        .row
+                          .col-xs-6.col-md-3.hide
+                            .accaunt-slide-number-label # 912-778
+                          .col-xs-6.col-md-3
+                            .accaunt-slide-data-label 12 сентября 2012, 23:08
+                          .col-xs-6.col-md-3.hide
+                            .accaunt-slide-details-label 22 товарa на 225 191₽
+                          .col-xs-6.col-md-3
+                            .accaunt-slide-status-label Отправлен
+                      .accaunt-slide-body
+                        .row
+                          .col-xs-6.col-md-3.accaunt-slide-label  Заказ
+                          .col-xs-6.col-md-9 # 912-778
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Детали
+                          .col-xs-6.col-md-9 22 товарa на 225 191₽
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Способ оплаты
+                          .col-xs-6.col-md-9 Наличными при получении
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Способ доставки
+                          .col-xs-6.col-md-9 Доставка курьером по Москве
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Имя и фамилия
+                          .col-xs-6.col-md-9 Максим Туру
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Телефон
+                          .col-xs-6.col-md-9 +380 (91) 912-43-44
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Адрес
+                          .col-xs-6.col-md-9 Россия, г. Москва, пр Мира 71, офис 8
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Эл. почта
+                          .col-xs-6.col-md-9 maksim@mail.com
+
+                        .accaunt__product-wrap
+                          +productApplication('http://placehold.it/120x80', 'BUDX021301LG', 'Hafirah', 'red', 'Размер 65BB', '20 шт' , '34 560 ₽')
+
+                    .accaunt-slide
+                      .accaunt-slide-toggle
+                        .row
+                          .col-xs-6.col-md-3.hide
+                            .accaunt-slide-number-label # 912-778
+                          .col-xs-6.col-md-3
+                            .accaunt-slide-data-label 12 сентября 2012, 23:08
+                          .col-xs-6.col-md-3.hide
+                            .accaunt-slide-details-label 22 товарa на 225 191₽
+                          .col-xs-6.col-md-3
+                            .accaunt-slide-status-label Ожидает оплаты
+                      .accaunt-slide-body
+                        .row
+                          .col-xs-6.col-md-3.accaunt-slide-label  Заказ
+                          .col-xs-6.col-md-9 # 912-778
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Детали
+                          .col-xs-6.col-md-9 22 товарa на 225 191₽
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Способ оплаты
+                          .col-xs-6.col-md-9 Наличными при получении
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Способ доставки
+                          .col-xs-6.col-md-9 Доставка курьером по Москве
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Имя и фамилия
+                          .col-xs-6.col-md-9 Максим Туру
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Телефон
+                          .col-xs-6.col-md-9 +380 (91) 912-43-44
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Адрес
+                          .col-xs-6.col-md-9 Россия, г. Москва, пр Мира 71, офис 8
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Эл. почта
+                          .col-xs-6.col-md-9 maksim@mail.com
+
+
+                        .accaunt__product-wrap
+                          +productApplication('http://placehold.it/120x80', 'BUDX021301LG', 'Hafirah', 'red', 'Размер 65BB', '20 шт' , '34 560 ₽')
+
+                    .accaunt-slide
+                      .accaunt-slide-toggle
+                        .row
+                          .col-xs-6.col-md-3.hide
+                            .accaunt-slide-number-label # 912-778
+                          .col-xs-6.col-md-3
+                            .accaunt-slide-data-label 12 сентября 2012, 23:08
+                          .col-xs-6.col-md-3.hide
+                            .accaunt-slide-details-label 22 товарa на 225 191₽
+                          .col-xs-6.col-md-3
+                            .accaunt-slide-status-label Выполнен
+                      .accaunt-slide-body
+                        .row
+                          .col-xs-6.col-md-3.accaunt-slide-label  Заказ
+                          .col-xs-6.col-md-9 # 912-778
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Детали
+                          .col-xs-6.col-md-9 22 товарa на 225 191₽
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Способ оплаты
+                          .col-xs-6.col-md-9 Наличными при получении
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Способ доставки
+                          .col-xs-6.col-md-9 Доставка курьером по Москве
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Имя и фамилия
+                          .col-xs-6.col-md-9 Максим Туру
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Телефон
+                          .col-xs-6.col-md-9 +380 (91) 912-43-44
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Адрес
+                          .col-xs-6.col-md-9 Россия, г. Москва, пр Мира 71, офис 8
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Эл. почта
+                          .col-xs-6.col-md-9 maksim@mail.com
+
+                        .accaunt__product-wrap
+                          +productApplication('http://placehold.it/120x80', 'BUDX021301LG', 'Hafirah', 'red', 'Размер 65BB', '20 шт' , '34 560 ₽')
+                          +productApplication('http://placehold.it/120x80', 'BUDX021301LG', 'Hafirah', 'red', 'Размер 65BB', '20 шт' , '34 560 ₽')
+                    .accaunt-slide
+                      .accaunt-slide-toggle
+                        .row
+                          .col-xs-6.col-md-3.hide
+                            .accaunt-slide-number-label # 912-778
+                          .col-xs-6.col-md-3
+                            .accaunt-slide-data-label 12 сентября 2012, 23:08
+                          .col-xs-6.col-md-3.hide
+                            .accaunt-slide-details-label 22 товарa на 225 191₽
+                          .col-xs-6.col-md-3
+                            .accaunt-slide-status-label.canceled Отменен
+                      .accaunt-slide-body
+                        .row
+                          .col-xs-6.col-md-3.accaunt-slide-label  Заказ
+                          .col-xs-6.col-md-9 # 912-778
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Детали
+                          .col-xs-6.col-md-9 22 товарa на 225 191₽
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Способ оплаты
+                          .col-xs-6.col-md-9 Наличными при получении
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Способ доставки
+                          .col-xs-6.col-md-9 Доставка курьером по Москве
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Имя и фамилия
+                          .col-xs-6.col-md-9 Максим Туру
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Телефон
+                          .col-xs-6.col-md-9 +380 (91) 912-43-44
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Адрес
+                          .col-xs-6.col-md-9 Россия, г. Москва, пр Мира 71, офис 8
+
+                          .col-xs-6.col-md-3.accaunt-slide-label Эл. почта
+                          .col-xs-6.col-md-9 maksim@mail.com
+
+                        .accaunt__product-wrap
+                          +productApplication('http://placehold.it/120x80', 'BUDX021301LG', 'Hafirah', 'red', 'Размер 65BB', '20 шт' , '34 560 ₽')
+
+
+                .tabs__container-box
+                  .application-table
+                    .application-table-head
+                      .application-table-head-info Номер и дата заявки
+                      .application-table-head-product Товар
+                      .application-table-head-status Статус
+                    +productRequestFirst('# 321-099', '24 сентября 2014, 23:08', 'Ожидает оплаты', 'http://placehold.it/120x80', 'BUDX021301LG', 'Hafirah', 'red', 'Размер 65BB', '20 шт' , '34 560 ₽')
+                    +productRequest('# 321-099', '24 сентября 2014, 23:08', 'Ожидает оплаты', 'http://placehold.it/120x80', 'BUDX021301LG', 'Hafirah', 'red', 'Размер 65BB', '20 шт' , '34 560 ₽')
+
+
+
+
+
+    include components/footer/footer
+    include components/scripts/bottomScripts
+
+
+
+
+
