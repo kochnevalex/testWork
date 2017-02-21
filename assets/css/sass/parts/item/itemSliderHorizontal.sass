@@ -1,0 +1,75 @@
+@media (min-width: $screen-sm)
+  .item__gallery-slider--horizontal
+    display: block
+    padding-right: 0
+
+  .item__gallery-slider--horizontal .slider-for-wrap
+    margin: 0 auto
+
+  .item__gallery-slider--horizontal .slider-nav-wrap
+    width: 100%
+  .item__gallery-slider--horizontal .slider-nav
+    height: 100px
+
+  .item__gallery-slider--horizontal .slider-nav.slick-initialized .slick-slide
+    text-align: center
+
+  .item__gallery-slider--horizontal .slider-nav__img
+    display: inline-block
+    position: relative
+  .item__gallery-slider--horizontal .slider-nav .slick-current .slider-nav__img
+
+    &:before
+      content: ''
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background-image: linear-gradient(to left bottom, $active-color, #fdfb82)
+      opacity: .5
+
+  .item__gallery-slider--horizontal .slider-nav .slick-current::before
+    display: none
+
+  .item__gallery-slider--horizontal .slider-nav-wrap .slider-top
+    left: 15px
+    top: 50%
+    margin-top: -15px
+    &:before
+      transform: rotate(-135deg)
+
+  .item__gallery-slider--horizontal .slider-nav-wrap .slider-bottom
+    right: -15px
+    left: auto
+    top: 50%
+    margin-top: -15px
+    margin-left: 0
+    &:before
+      transform: rotate(45deg)
+
+  .item__gallery-slider--horizontal.fullsize
+    display: flex
+    flex-wrap: wrap
+  .item__gallery-slider--horizontal.fullsize .slider-for-wrap
+    order: 0
+    margin-left: auto
+  .item__gallery-slider--horizontal.fullsize .slider-nav-wrap
+    width: 100%
+  .item__gallery-slider--horizontal.fullsize .slider-nav
+    height: auto
+    width: 80%
+    margin: 0 auto
+
+@media (min-width: $screen-lg)
+  .item__gallery-slider--horizontal .slider-for-wrap
+    margin: 0 auto
+  .item__gallery-slider--horizontal .slider-nav-wrap
+    overflow: visible
+  .item__gallery-slider--horizontal .slider-nav-wrap .slider-bottom
+    right: -35px
+  .item__gallery-slider--horizontal .slider-nav-wrap .slider-top
+    left: -5px
+  .item__gallery-slider--horizontal.fullsize .slider-nav
+    height: auto
+    width: 60%
