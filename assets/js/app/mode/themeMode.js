@@ -41,6 +41,7 @@ appMakeBeCool.gateway.addClass('ThemeMode', function (properties, $, $window, $d
       _globals.siteObj.utils.extend(_globals.siteObj.classes.MegamenuDropdown, _globals.siteObj.base.Class);
       _globals.siteObj.utils.extend(_globals.siteObj.classes.FormValidate, _globals.siteObj.base.Class);
       _globals.siteObj.utils.extend(_globals.siteObj.classes.FormAjax, _globals.siteObj.base.Class);
+      _globals.siteObj.utils.extend(_globals.siteObj.classes.BgImages, _globals.siteObj.base.Class);
     },
 
     _instantiateClasses = function () {
@@ -53,6 +54,7 @@ appMakeBeCool.gateway.addClass('ThemeMode', function (properties, $, $window, $d
       _globals.siteObj.createClassInstance('MegamenuDropdown', _globals.siteObj.classes.MegamenuDropdown, {classId: 'MegamenuDropdown'});
       _globals.siteObj.createClassInstance('formValidate', _globals.siteObj.classes.FormValidate, {classId: 'FormValidate'});
       _globals.siteObj.createClassInstance('formAjax', _globals.siteObj.classes.FormAjax, {classId: 'FormAjax'});
+      _globals.siteObj.createClassInstance('bgImages', _globals.siteObj.classes.BgImages, {classId: 'BgImages'});
     },
 
     _setup = function () {
@@ -77,6 +79,7 @@ appMakeBeCool.gateway.addClass('ThemeMode', function (properties, $, $window, $d
             _themeMode.trigger('MegamenuDropdown_Init', data);
             _themeMode.trigger('FormValidate_Init', data);
             _themeMode.trigger('FormAjax_Init', data);
+            _themeMode.trigger('BgImages_Init', data);
           });
         }
       }

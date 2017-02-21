@@ -5555,26 +5555,64 @@ fieldset {
   -webkit-box-pack: center;
   -webkit-justify-content: center;
       -ms-flex-pack: center;
+          justify-content: center; }
+
+.slide-fon {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  max-height: 75vh;
+  background-position: 50% 50%;
+  background: no-repeat;
+  -webkit-background-size: cover;
+          background-size: cover; }
+  .slide-fon:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000000;
+    opacity: 0.5; }
+
+.slider-img-text__text-block {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  color: #fff; }
+
+.slider-img-text__text-block--center {
+  text-align: center;
+  height: 100%;
+  -js-display: flex;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
 
-.slider-img-text__img {
-  width: 100%;
-  max-width: 100%;
-  min-height: 320px; }
+.slider-img-text__text-block--center .col-center {
+  padding: 0 15px;
+  margin: 0 auto;
+  max-width: 50%; }
 
-.slider-img-text__text-block {
-  position: absolute;
-  top: 10%;
-  left: 50%;
-  width: 85%;
-  max-height: 80%;
-  margin-left: -45%;
-  padding: 5px;
-  background: rgba(34, 36, 38, 0.15); }
+.slider-img-text__text-block--bottom {
+  top: auto;
+  bottom: 0; }
+
+.slider-img-text__text-block--right {
+  text-align: right; }
 
 .slider-img-text .slick-prev {
   left: 25px;
@@ -5586,12 +5624,6 @@ fieldset {
 
 @media (min-width: 768px) {
   .slider-img-text__text-block {
-    position: absolute;
-    top: 20%;
-    left: 50%;
-    width: 50%;
-    max-height: 50%;
-    margin-left: -25%;
-    padding: 10px 20px 20px; } }
+    padding: 50px; } }
 
 /*# sourceMappingURL=critical.css.map */

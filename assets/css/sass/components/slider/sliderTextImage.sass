@@ -1,40 +1,62 @@
 /* Slider text + photo */
 
 .slider-img-text__slide
-	position: relative
-	display: flex
-	justify-content: center
-	align-items: center
+  position: relative
+  display: flex
+  justify-content: center
 
-.slider-img-text__img
-	width: 100%
-	max-width: 100%
-	min-height: 320px
+.slide-fon
+  position: relative
+  width: 100%
+  height: 600px
+  max-height: 75vh
+  background-position: 50% 50%
+  background: no-repeat
+  background-size: cover
+  &:before
+    content: ''
+    display: block
+    position: absolute
+    top: 0
+    left: 0
+    width: 100%
+    height: 100%
+    background: $black-color
+    opacity: 0.5
 
 .slider-img-text__text-block
-	position: absolute
-	top: 10%
-	left: 50%
-	width: 85%
-	max-height: 80%
-	margin-left: -45%
-	padding: 5px
-	background: $color-light-grey
+  position: absolute
+  top: 0
+  left: 0
+  width: 100%
+  padding: 20px
+  color: $white-color
 
+.slider-img-text__text-block--center
+  text-align: center
+  height: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+
+.slider-img-text__text-block--center .col-center
+  padding: 0 15px
+  margin: 0 auto
+  max-width: 50%
+
+.slider-img-text__text-block--bottom
+  top: auto
+  bottom: 0
+.slider-img-text__text-block--right
+  text-align: right
 .slider-img-text .slick-prev
-	left: 25px
-	z-index: 2
+  left: 25px
+  z-index: 2
 
 .slider-img-text .slick-next
-	right: 25px
-	z-index: 2
+  right: 25px
+  z-index: 2
 
 @media (min-width: $screen-sm)
-	.slider-img-text__text-block
-		position: absolute
-		top: 20%
-		left: 50%
-		width: 50%
-		max-height: 50%
-		margin-left: -25%
-		padding: 10px 20px 20px
+  .slider-img-text__text-block
+    padding: 50px
