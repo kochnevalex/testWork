@@ -79,9 +79,7 @@ appMakeBeCool.gateway.addClass('Masonry', function (properties, $, $window, $doc
           _g.masonry.imagesLoaded(function () {
             _g.masonry.masonry({
               itemSelector: _p.masonryItem,
-              columnWidth: '.grid-sizer',
               isResizable: true,
-              gutter: 30,
               percentPosition: true,
               animationOptions: {
                 duration: 250,
