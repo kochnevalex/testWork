@@ -1,0 +1,861 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Cabinet| grid360</title>
+    <meta name="description" content="">
+    <link rel="shortcut icon" href="images/iconsite/favicon.ico">
+    <link rel="dns-prefetch" href="http://www.google-analytics.com">
+    <link rel="author" href="humans.txt">
+    <meta name="twitter:site" content="">
+    <meta name="twitter:creator" content="makebecool">
+    <meta name="twitter:title" content="Cabinet| grid360">
+    <meta name="twitter:description" content="">
+    <meta name="twitter:image:src" content="">
+    <meta property="og:url" content="">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Cabinet| grid360">
+    <meta property="og:image" content="">
+    <meta property="og:description" content="">
+    <meta property="og:site_name" content="">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="">
+    <meta name="application-name" content="Cabinet| grid360">
+    <meta name="msapplication-TileColor" content="">
+    <meta name="msapplication-square70x70logo" content="images/iconsite/msapplication-square70x70logo.png">
+    <meta name="msapplication-square150x150logo" content="images/iconsite/msapplication-square150x150logo.png">
+    <meta name="msapplication-wide310x150logo" content="images/iconsite/msapplication-wide310x150logo.png">
+    <meta name="msapplication-square310x310logo" content="images/iconsite/msapplication-square310x310logo.png">
+    <link rel="apple-touch-icon" href="images/iconsite/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="images/iconsite/apple-touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="images/iconsite/apple-touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="images/iconsite/apple-touch-icon-ipad-retina.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/iconsite/apple-touch-icon-iphone6plus-retina.png">
+    <meta name="cmsmagazine" content="a39ef97fd1d4cf6d3e103f0ff48ea4f6">
+    <meta name="it-rating" content="it-rat-c2fb848de4ce4a9d8631b1558f63157d">
+    <link rel="stylesheet" href="css/base64-fonts.css">
+    <link rel="stylesheet" href="css/critical.css">
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/jquery/plugins/validation/jquery.validate.min.js"></script>
+    <script src="./js/jquery/plugins/form/jquery.form.js"></script>
+    <script src="./js/jquery/plugins/select2/select2.full.js"></script>
+    <script src="./js/jquery/plugins/slick/slick.min.js"></script>
+    <script src="./js/jquery/plugins/rater/rater.min.js"></script>
+    <script src="./js/plugins/aos/aos.js"></script>
+    <script src="./js/jquery/plugins/textarea-autoresize/autosize.js"></script>
+    <script src="./js/jquery/plugins/charts/chartist.min.js"></script>
+    <script src="./js/plugins/lightGallery/lightgallery.min.js"></script>
+    <script src="./js/plugins/lightGallery/lg-thumbnail.min.js"></script>
+    <script src="./js/plugins/lightGallery/lg-fullscreen.min.js"></script>
+  </head>
+  <body>
+    <script src="./js/jquery-3.1.1.min.js"></script>
+    <script src="./js/jquery/plugins/validation/jquery.validate.min.js"></script>
+    <script src="./js/jquery/plugins/form/jquery.form.js"></script>
+    <script src="./js/jquery/plugins/select2/select2.full.js"></script>
+    <script src="./js/jquery/plugins/slick/slick.min.js"></script>
+    <script src="./js/jquery/plugins/rater/rater.min.js"></script>
+    <script src="./js/plugins/aos/aos.js"></script>
+    <script src="./js/jquery/plugins/textarea-autoresize/autosize.js"></script>
+    <script src="./js/jquery/plugins/charts/chartist.min.js"></script>
+    <script src="./js/plugins/lightGallery/lightgallery.min.js"></script>
+    <script src="./js/plugins/lightGallery/lg-thumbnail.min.js"></script>
+    <script src="./js/plugins/lightGallery/lg-fullscreen.min.js"></script>
+    <div class="wrap">
+      <header id="header" class="header">
+        <div id="headerBanner" class="header__banner">
+          <div class="container">Top banner
+            <button id="headerBannerCloseBtn" type="button" class="header__banner-close"></button>
+          </div>
+          <script>
+            $('#headerBannerCloseBtn').on('click', function (e) {
+              e.preventDefault();
+              if (!$('#headerBanner').hasClass('hide')) {
+                $('#headerBanner').slideUp(function () {
+                  $('#headerBanner').addClass('hide');
+                });
+              }
+            });
+          </script>
+        </div>
+        <div class="header__top-bar">
+          <div class="container">
+            <nav id="headerTopNav" class="header__top-nav">
+              <button id="headerTopBtn" type="button" class="header__top-btn"><span></span><span></span><span></span></button><span class="header__top-ttl">Меню</span>
+              <div id="headerTopMenu" class="header__top-menu">
+                <ul class="header__top-menu-list">
+                  <li><a href="#">Контакты</a></li>
+                  <li><a href="#">Способы доставки</a></li>
+                  <li><a href="#">Оплата</a></li>
+                  <li><a href="#">О нас</a></li>
+                </ul>
+              </div>
+            </nav>
+            <div class="header__top-info">
+              <ul class="header__top-info-list">
+                <li><a href="tel:+7495540-50-86">+7 (495) 540-50-86</a></li>
+                <li><a href="#">Войти</a></li>
+              </ul>
+            </div>
+          </div>
+          <script>
+            $('#headerTopBtn').on('click', function (e) {
+              e.preventDefault();
+              $('#headerTopNav').toggleClass('active');
+            });
+          </script>
+        </div>
+        <div class="header_main">
+          <div class="container">
+            <div class="header-logo"><a href="#"><img src="http://placehold.it/100x50" alt="" class="header-logo__img"></a></div>
+            <div id="headerSearch" class="search-w">
+              <button id="headerSearchOpen" type="button" class="search-w__open-btn">&#128269;</button>
+              <button id="headerSearchClose" type="button" class="search-w__close-btn hide">&#10006;</button>
+              <form id="headerSearchForm" method="get" action="" class="search-w__form">
+                <input type="hidden" name="controller" value="search"><span role="status" aria-live="polite"></span>
+                <input type="text" name="s" value="" placeholder="Поиск" autocomplete="off" class="search-w__form-input">
+                <button type="submit" class="search-w__form-search">&#128269;</button>
+              </form>
+              <script>
+                $('#headerSearchOpen').on('click', function (e) {
+                  e.preventDefault();
+                  $('#headerSearchForm').addClass('active');
+                  $('#headerSearchOpen').addClass('hide');
+                  $('#headerSearchClose').removeClass('hide');
+                });
+                
+                $('#headerSearchClose').on('click', function (e) {
+                  e.preventDefault();
+                  $('#headerSearchForm').removeClass('active');
+                  $('#headerSearchOpen').removeClass('hide');
+                  $('#headerSearchClose').addClass('hide');
+                });
+              </script>
+            </div>
+            <div class="basket-w"><a href="" class="basket-w__link"><img src="images/basket.png" alt=""></a></div>
+          </div>
+        </div>
+        <div class="container">
+          <div class="header-container">
+            <div class="megamenu-wrap"><span data-state="closed" class="megamenu__title">Каталог</span>
+              <div id="megamenu" class="megamenu mod--closed">
+                <ul class="megamenu__categories">
+                  <!--Категория 1-->
+                  <li class="megamenu__category mod--actual"><span>Категория 1</span>
+                    <button class="megamenu__has-sub"></button>
+                    <div class="megamenu__dropdown-wrap">
+                      <div class="megamenu__dropdown">
+                        <div class="megamenu__sub-container">
+                          <ul class="megamenu__sub-categories">
+                            <li class="megamenu__sub-category"><span>Подкатегория 1 Категории 1</span></li>
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 2 Категории 1</a></li>
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 3 Категории 1</a></li>
+                          </ul>
+                          <ul class="megamenu__sub-categories">
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 4 Категории 1</a></li>
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 5 Категории 1</a></li>
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 6 Категории 1</a></li>
+                          </ul>
+                          <ul class="megamenu__sub-categories">
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 7 Категории 1</a></li>
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 8 Категории 1</a></li>
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 9 Категории 1</a></li>
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 10 Категории 1</a></li>
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 11 Категории 1</a></li>
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 12 Категории 1</a></li>
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 13 Категории 1</a></li>
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 14 Категории 1</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Категория 2-->
+                  <li class="megamenu__category"><a href="#">Категория 2</a><i class="megamenu__has-sub"></i>
+                    <div class="megamenu__dropdown-wrap">
+                      <div class="megamenu__dropdown">
+                        <div class="megamenu__sub-container">
+                          <ul class="megamenu__sub-categories">
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 1 Категории 2</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <!--Категория 3-->
+                  <li class="megamenu__category"><a href="#">Категория 3</a><i class="megamenu__has-sub"></i>
+                    <div class="megamenu__dropdown-wrap">
+                      <div class="megamenu__dropdown">
+                        <div class="megamenu__sub-container">
+                          <ul class="megamenu__sub-categories">
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 1 Категории 3</a></li>
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 2 Категории 3</a></li>
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 3 Категории 3</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="megamenu__category"><a href="#">Категория 4</a><i class="megamenu__has-sub"></i>
+                    <div class="megamenu__dropdown-wrap">
+                      <div class="megamenu__dropdown">
+                        <div class="megamenu__sub-container">
+                          <ul class="megamenu__sub-categories">
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 1 Категории 4</a></li>
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 2 Категории 4</a></li>
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 3 Категории 4</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                  <li class="megamenu__category"><a href="#">Категория 5</a><i class="megamenu__has-sub"></i>
+                    <div class="megamenu__dropdown-wrap">
+                      <div class="megamenu__dropdown">
+                        <!--Подкатегории-->
+                        <div class="megamenu__sub-container">
+                          <ul class="megamenu__sub-categories">
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 1 Категории 5</a></li>
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 2 Категории 5</a></li>
+                            <li class="megamenu__sub-category"><a href="#">Подкатегория 3 Категории 5</a></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="container">
+        <!--include parts/dashboard/dashboard-->
+        <div class="b-breadcrumbs mod--centered">
+          <ul>
+            <li><a href="index.html" class="tile-link">Главная</a></li>
+            <li class="active"><span>Cabinet| grid360</span></li>
+          </ul>
+        </div>
+        <div class="accaunt-wrap">
+          <h1 class="accaunt__ttl">Мой кабинет</h1>
+          <div class="accaunt row accaunt--full-width">
+            <div class="col-lg-12 clearfix">
+              <div class="accaunt__info">Максим</div>
+              <div class="accaunt__balance-wrap">
+                <div class="accaunt__balance">Ваш баланс <span>241 ₽</span></div>
+                <div class="accaunt__amount">Всего совершено заказов на 2 478 441 ₽</div>
+              </div>
+              <div class="dd__tabs wrapper-dropdown-3"><span class="dd__tabs-current">Личные данные</span>
+                <ul class="tabs dropdown">
+                  <li class="active"><a href="#" rel="nofollow">Личные данные</a></li>
+                  <li><a href="#" rel="nofollow">Адреса</a></li>
+                  <li><a href="#" rel="nofollow">Пароль</a></li>
+                  <li><a href="#" rel="nofollow">Заказы</a></li>
+                  <li><a href="#" rel="nofollow">Заявки</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="tabs-block col-lg-12">
+              <div class="tabs__container">
+                <div class="tabs__container-box">
+                  <form id="form-accaunt" action="#" method="POST" class="subscribe form-accaunt">
+                    <div class="form-group">
+                      <label>Имя</label>
+                      <input type="text" name="name" placeholder="Имя" required value="Максим" class="subscribe__input form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Фамилия</label>
+                      <input type="text" name="firstname" placeholder="Фамилия" required value="Туру" class="subscribe__input form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Имейл</label>
+                      <input type="email" name="email" placeholder="Имейл" required value="maxim@mail.ru" class="subscribe__input form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Телефон</label>
+                      <input id="tel" type="tel" class="tel subscribe__input form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>День рождения</label>
+                      <input id="datepicker-accaunt" type="text" placeholder="Выбрать дату своего рождения" name="calendar" value="01/01/1999" class="subscribe__input form-control calendar-input">
+                      <label for="datepicker-accaunt" class="calendar"></label>
+                    </div>
+                    <button type="submit" name="subscribe" class="button">Сохранить</button>
+                  </form>
+                </div>
+                <div class="tabs__container-box active">
+                  <div class="address">
+                    <div class="accaunt__address-head">
+                      <div class="row">
+                        <div class="col-md-3">
+                          <div class="accaunt__address-city-label">Город</div>
+                        </div>
+                        <div class="col-md-4">
+                          <div class="accaunt__address-street-label">Улица</div>
+                        </div>
+                        <div class="col-md-2">
+                          <div class="accaunt__address-build-label">Дом</div>
+                        </div>
+                        <div class="col-md-3">
+                          <div class="accaunt__address-flat-label">Квартира/Офис</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accaunt__address accaunt__address--first">
+                      <div class="row"><span class="address-delete"></span>
+                        <div class="col-xs-6 accaunt__address-label">
+                          <div class="accaunt__address-city-label">Город</div>
+                        </div>
+                        <div class="col-xs-6 accaunt__address-param">
+                          <div class="accaunt__address-city">Москва</div>
+                        </div>
+                      </div>
+                      <div class="row row-md-3">
+                        <div class="col-xs-6 accaunt__address-label">
+                          <div class="accaunt__address-street-label">Улица</div>
+                        </div>
+                        <div class="col-xs-6 accaunt__address-param">
+                          <div class="accaunt__address-street">Большая садовая</div>
+                        </div>
+                      </div>
+                      <div class="row row-md-2">
+                        <div class="col-xs-6 accaunt__address-label">
+                          <div class="accaunt__address-build-label">Дом</div>
+                        </div>
+                        <div class="col-xs-6 accaunt__address-param">
+                          <div class="accaunt__address-build">10</div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-6 accaunt__address-label">
+                          <div class="accaunt__address-flat-label">Квартира/Офис</div>
+                        </div>
+                        <div class="col-xs-6 accaunt__address-param">
+                          <div class="accaunt__address-flat">27</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accaunt__address">
+                      <div class="row"><span class="address-delete"></span>
+                        <div class="col-xs-6 accaunt__address-label">
+                          <div class="accaunt__address-city-label">Город</div>
+                        </div>
+                        <div class="col-xs-6 accaunt__address-param">
+                          <div class="accaunt__address-city">Москва</div>
+                        </div>
+                      </div>
+                      <div class="row row-md-3">
+                        <div class="col-xs-6 accaunt__address-label">
+                          <div class="accaunt__address-street-label">Улица</div>
+                        </div>
+                        <div class="col-xs-6 accaunt__address-param">
+                          <div class="accaunt__address-street">Большая садовая</div>
+                        </div>
+                      </div>
+                      <div class="row row-md-2">
+                        <div class="col-xs-6 accaunt__address-label">
+                          <div class="accaunt__address-build-label">Дом</div>
+                        </div>
+                        <div class="col-xs-6 accaunt__address-param">
+                          <div class="accaunt__address-build">10</div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-xs-6 accaunt__address-label">
+                          <div class="accaunt__address-flat-label">Квартира/Офис</div>
+                        </div>
+                        <div class="col-xs-6 accaunt__address-param">
+                          <div class="accaunt__address-flat">27</div>
+                        </div>
+                      </div>
+                    </div>
+                    <form id="form-address" action="#" method="POST" class="subscribe form-address">
+                      <div class="form-group width-3">
+                        <label>Город</label>
+                        <input type="text" name="city" placeholder="" required class="subscribe__input form-control">
+                      </div>
+                      <div class="form-group width-4">
+                        <label>Улица</label>
+                        <input type="text" name="street" placeholder="" required class="subscribe__input form-control">
+                      </div>
+                      <div class="form-group width-2">
+                        <label>Дом</label>
+                        <input type="text" name="build" placeholder="" required class="subscribe__input form-control">
+                      </div>
+                      <div class="form-group width-3">
+                        <label>Квартира/Офис</label>
+                        <input type="text" name="flat" placeholder="" required class="subscribe__input form-control">
+                      </div>
+                      <button type="submit" name="subscribe" class="button">Сохранить</button>
+                      <div class="form-close"></div>
+                    </form>
+                    <div class="show-wrap--border"><a href="" rel="nofollow" class="show-more"><span>Добавить адрес</span></a></div>
+                  </div>
+                </div>
+                <div class="tabs__container-box">
+                  <form id="form-password" action="#" method="POST" class="subscribe form-password">
+                    <div class="form-group">
+                      <label>Старый пароль</label>
+                      <input type="password" name="password" placeholder="********" required class="subscribe__input form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Новый</label>
+                      <input type="password" name="password" placeholder="" required class="subscribe__input form-control">
+                    </div>
+                    <div class="form-group">
+                      <label>Еще раз новый</label>
+                      <input type="password" name="password" placeholder="" required class="subscribe__input form-control">
+                    </div>
+                    <button type="submit" name="subscribe" class="button">Сохранить</button>
+                  </form>
+                </div>
+                <div class="tabs__container-box">
+                  <div class="accaunt-slide-list">
+                    <div class="accaunt-slide-head">
+                      <div class="row">
+                        <div class="col-md-3 hide">Номер заказа</div>
+                        <div class="col-xs-6 col-md-3">Дата</div>
+                        <div class="col-xs-6 col-md-3 hide txt-right">Детали</div>
+                        <div class="col-xs-6 col-md-3">Статус</div>
+                      </div>
+                    </div>
+                    <div class="accaunt-slide">
+                      <div class="accaunt-slide-toggle">
+                        <div class="row">
+                          <div class="col-xs-6 col-md-3 hide">
+                            <div class="accaunt-slide-number-label"># 912-778</div>
+                          </div>
+                          <div class="col-xs-6 col-md-3">
+                            <div class="accaunt-slide-data-label">12 сентября 2012, 23:08</div>
+                          </div>
+                          <div class="col-xs-6 col-md-3 hide">
+                            <div class="accaunt-slide-details-label">22 товарa на 225 191₽</div>
+                          </div>
+                          <div class="col-xs-6 col-md-3">
+                            <div class="accaunt-slide-status-label">Отправлен</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accaunt-slide-body">
+                        <div class="row">
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label"> Заказ</div>
+                          <div class="col-xs-6 col-md-9"># 912-778</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Детали</div>
+                          <div class="col-xs-6 col-md-9">22 товарa на 225 191₽</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Способ оплаты</div>
+                          <div class="col-xs-6 col-md-9">Наличными при получении</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Способ доставки</div>
+                          <div class="col-xs-6 col-md-9">Доставка курьером по Москве</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Имя и фамилия</div>
+                          <div class="col-xs-6 col-md-9">Максим Туру</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Телефон</div>
+                          <div class="col-xs-6 col-md-9">+380 (91) 912-43-44</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Адрес</div>
+                          <div class="col-xs-6 col-md-9">Россия, г. Москва, пр Мира 71, офис 8</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Эл. почта</div>
+                          <div class="col-xs-6 col-md-9">maksim@mail.com</div>
+                        </div>
+                        <div class="accaunt__product-wrap">
+                          <article class="b-product__article">
+                            <div class="b-product-wrap request firtst-child">
+                              <div class="b-product__img"><a href="#" rel="nofollow"><img src="http://placehold.it/120x80" alt=""/></a></div>
+                              <div class="b-product-desc">
+                                <h4 class="b-product__ttl"><a href="#" class="b-product__ttl-link"> <span>BUDX021301LG</span></a><br/><a href="#" class="b-product__ttl-link b-product__ttl-brand"> <span>Hafirah</span></a></h4>
+                                <div class="b-product__param">
+                                  <div data-style="red" style="background: red;" class="b-product__color"></div>
+                                  <div class="b-product__size">Размер 65BB</div>
+                                  <div class="b-product__sum">20 шт</div>
+                                </div>
+                              </div>
+                              <div class="b-product__cash">34 560 ₽</div>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accaunt-slide">
+                      <div class="accaunt-slide-toggle">
+                        <div class="row">
+                          <div class="col-xs-6 col-md-3 hide">
+                            <div class="accaunt-slide-number-label"># 912-778</div>
+                          </div>
+                          <div class="col-xs-6 col-md-3">
+                            <div class="accaunt-slide-data-label">12 сентября 2012, 23:08</div>
+                          </div>
+                          <div class="col-xs-6 col-md-3 hide">
+                            <div class="accaunt-slide-details-label">22 товарa на 225 191₽</div>
+                          </div>
+                          <div class="col-xs-6 col-md-3">
+                            <div class="accaunt-slide-status-label">Ожидает оплаты</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accaunt-slide-body">
+                        <div class="row">
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label"> Заказ</div>
+                          <div class="col-xs-6 col-md-9"># 912-778</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Детали</div>
+                          <div class="col-xs-6 col-md-9">22 товарa на 225 191₽</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Способ оплаты</div>
+                          <div class="col-xs-6 col-md-9">Наличными при получении</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Способ доставки</div>
+                          <div class="col-xs-6 col-md-9">Доставка курьером по Москве</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Имя и фамилия</div>
+                          <div class="col-xs-6 col-md-9">Максим Туру</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Телефон</div>
+                          <div class="col-xs-6 col-md-9">+380 (91) 912-43-44</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Адрес</div>
+                          <div class="col-xs-6 col-md-9">Россия, г. Москва, пр Мира 71, офис 8</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Эл. почта</div>
+                          <div class="col-xs-6 col-md-9">maksim@mail.com</div>
+                        </div>
+                        <div class="accaunt__product-wrap">
+                          <article class="b-product__article">
+                            <div class="b-product-wrap request firtst-child">
+                              <div class="b-product__img"><a href="#" rel="nofollow"><img src="http://placehold.it/120x80" alt=""/></a></div>
+                              <div class="b-product-desc">
+                                <h4 class="b-product__ttl"><a href="#" class="b-product__ttl-link"> <span>BUDX021301LG</span></a><br/><a href="#" class="b-product__ttl-link b-product__ttl-brand"> <span>Hafirah</span></a></h4>
+                                <div class="b-product__param">
+                                  <div data-style="red" style="background: red;" class="b-product__color"></div>
+                                  <div class="b-product__size">Размер 65BB</div>
+                                  <div class="b-product__sum">20 шт</div>
+                                </div>
+                              </div>
+                              <div class="b-product__cash">34 560 ₽</div>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accaunt-slide">
+                      <div class="accaunt-slide-toggle">
+                        <div class="row">
+                          <div class="col-xs-6 col-md-3 hide">
+                            <div class="accaunt-slide-number-label"># 912-778</div>
+                          </div>
+                          <div class="col-xs-6 col-md-3">
+                            <div class="accaunt-slide-data-label">12 сентября 2012, 23:08</div>
+                          </div>
+                          <div class="col-xs-6 col-md-3 hide">
+                            <div class="accaunt-slide-details-label">22 товарa на 225 191₽</div>
+                          </div>
+                          <div class="col-xs-6 col-md-3">
+                            <div class="accaunt-slide-status-label">Выполнен</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accaunt-slide-body">
+                        <div class="row">
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label"> Заказ</div>
+                          <div class="col-xs-6 col-md-9"># 912-778</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Детали</div>
+                          <div class="col-xs-6 col-md-9">22 товарa на 225 191₽</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Способ оплаты</div>
+                          <div class="col-xs-6 col-md-9">Наличными при получении</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Способ доставки</div>
+                          <div class="col-xs-6 col-md-9">Доставка курьером по Москве</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Имя и фамилия</div>
+                          <div class="col-xs-6 col-md-9">Максим Туру</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Телефон</div>
+                          <div class="col-xs-6 col-md-9">+380 (91) 912-43-44</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Адрес</div>
+                          <div class="col-xs-6 col-md-9">Россия, г. Москва, пр Мира 71, офис 8</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Эл. почта</div>
+                          <div class="col-xs-6 col-md-9">maksim@mail.com</div>
+                        </div>
+                        <div class="accaunt__product-wrap">
+                          <article class="b-product__article">
+                            <div class="b-product-wrap request firtst-child">
+                              <div class="b-product__img"><a href="#" rel="nofollow"><img src="http://placehold.it/120x80" alt=""/></a></div>
+                              <div class="b-product-desc">
+                                <h4 class="b-product__ttl"><a href="#" class="b-product__ttl-link"> <span>BUDX021301LG</span></a><br/><a href="#" class="b-product__ttl-link b-product__ttl-brand"> <span>Hafirah</span></a></h4>
+                                <div class="b-product__param">
+                                  <div data-style="red" style="background: red;" class="b-product__color"></div>
+                                  <div class="b-product__size">Размер 65BB</div>
+                                  <div class="b-product__sum">20 шт</div>
+                                </div>
+                              </div>
+                              <div class="b-product__cash">34 560 ₽</div>
+                            </div>
+                          </article>
+                          <article class="b-product__article">
+                            <div class="b-product-wrap request firtst-child">
+                              <div class="b-product__img"><a href="#" rel="nofollow"><img src="http://placehold.it/120x80" alt=""/></a></div>
+                              <div class="b-product-desc">
+                                <h4 class="b-product__ttl"><a href="#" class="b-product__ttl-link"> <span>BUDX021301LG</span></a><br/><a href="#" class="b-product__ttl-link b-product__ttl-brand"> <span>Hafirah</span></a></h4>
+                                <div class="b-product__param">
+                                  <div data-style="red" style="background: red;" class="b-product__color"></div>
+                                  <div class="b-product__size">Размер 65BB</div>
+                                  <div class="b-product__sum">20 шт</div>
+                                </div>
+                              </div>
+                              <div class="b-product__cash">34 560 ₽</div>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="accaunt-slide">
+                      <div class="accaunt-slide-toggle">
+                        <div class="row">
+                          <div class="col-xs-6 col-md-3 hide">
+                            <div class="accaunt-slide-number-label"># 912-778</div>
+                          </div>
+                          <div class="col-xs-6 col-md-3">
+                            <div class="accaunt-slide-data-label">12 сентября 2012, 23:08</div>
+                          </div>
+                          <div class="col-xs-6 col-md-3 hide">
+                            <div class="accaunt-slide-details-label">22 товарa на 225 191₽</div>
+                          </div>
+                          <div class="col-xs-6 col-md-3">
+                            <div class="accaunt-slide-status-label canceled">Отменен</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="accaunt-slide-body">
+                        <div class="row">
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label"> Заказ</div>
+                          <div class="col-xs-6 col-md-9"># 912-778</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Детали</div>
+                          <div class="col-xs-6 col-md-9">22 товарa на 225 191₽</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Способ оплаты</div>
+                          <div class="col-xs-6 col-md-9">Наличными при получении</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Способ доставки</div>
+                          <div class="col-xs-6 col-md-9">Доставка курьером по Москве</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Имя и фамилия</div>
+                          <div class="col-xs-6 col-md-9">Максим Туру</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Телефон</div>
+                          <div class="col-xs-6 col-md-9">+380 (91) 912-43-44</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Адрес</div>
+                          <div class="col-xs-6 col-md-9">Россия, г. Москва, пр Мира 71, офис 8</div>
+                          <div class="col-xs-6 col-md-3 accaunt-slide-label">Эл. почта</div>
+                          <div class="col-xs-6 col-md-9">maksim@mail.com</div>
+                        </div>
+                        <div class="accaunt__product-wrap">
+                          <article class="b-product__article">
+                            <div class="b-product-wrap request firtst-child">
+                              <div class="b-product__img"><a href="#" rel="nofollow"><img src="http://placehold.it/120x80" alt=""/></a></div>
+                              <div class="b-product-desc">
+                                <h4 class="b-product__ttl"><a href="#" class="b-product__ttl-link"> <span>BUDX021301LG</span></a><br/><a href="#" class="b-product__ttl-link b-product__ttl-brand"> <span>Hafirah</span></a></h4>
+                                <div class="b-product__param">
+                                  <div data-style="red" style="background: red;" class="b-product__color"></div>
+                                  <div class="b-product__size">Размер 65BB</div>
+                                  <div class="b-product__sum">20 шт</div>
+                                </div>
+                              </div>
+                              <div class="b-product__cash">34 560 ₽</div>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="tabs__container-box">
+                  <div class="application-table">
+                    <div class="application-table-head">
+                      <div class="application-table-head-info">Номер и дата заявки</div>
+                      <div class="application-table-head-product">Товар</div>
+                      <div class="application-table-head-status">Статус</div>
+                    </div>
+                    <article class="b-product__article">
+                      <div class="b-product-wrap request firtst-child">
+                        <div class="b-product__info">
+                          <div class="b-product__code"># 321-099</div>
+                          <time datetime="2014-09-24T08:23:08+03:00" class="b-product__data">24 сентября 2014, 23:08</time>
+                        </div>
+                        <div class="b-product__status">Ожидает оплаты</div>
+                        <div class="b-product__img"><a href="#" rel="nofollow"><img src="http://placehold.it/120x80" alt=""/></a></div>
+                        <div class="b-product-desc">
+                          <h4 class="b-product__ttl"><a href="#" class="b-product__ttl-link"> <span>BUDX021301LG</span></a><br/><a href="#" class="b-product__ttl-link b-product__ttl-brand"> <span>Hafirah</span></a></h4>
+                          <div class="b-product__param">
+                            <div data-style="red" style="background: red;" class="b-product__color"></div>
+                            <div class="b-product__size">Размер 65BB</div>
+                            <div class="b-product__sum">20 шт</div>
+                          </div>
+                        </div>
+                        <div class="b-product__cash">34 560 ₽</div>
+                      </div>
+                    </article>
+                    <article class="b-product__article">
+                      <div class="b-product-wrap request">
+                        <div class="b-product__info">
+                          <div class="b-product__code"># 321-099</div>
+                          <time datetime="2014-09-24T08:23:08+03:00" class="b-product__data">24 сентября 2014, 23:08</time>
+                        </div>
+                        <div class="b-product__status">Ожидает оплаты</div>
+                        <div class="b-product__img"><a href="#" rel="nofollow"><img src="http://placehold.it/120x80" alt=""/></a></div>
+                        <div class="b-product-desc">
+                          <h4 class="b-product__ttl"><a href="#" class="b-product__ttl-link"> <span>BUDX021301LG</span></a><br/><a href="#" class="b-product__ttl-link b-product__ttl-brand"> <span>Hafirah</span></a></h4>
+                          <div class="b-product__param">
+                            <div data-style="red" style="background: red;" class="b-product__color"></div>
+                            <div class="b-product__size">Размер 65BB</div>
+                            <div class="b-product__sum">20 шт</div>
+                          </div>
+                        </div>
+                        <div class="b-product__cash">34 560 ₽</div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer" class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-xs-12 col-md-6">
+            <div class="subscribe-wrap">
+              <div class="subscribe__header">
+                <h2 class="subscribe__ttl">Подписывайтесь</h2>
+                <p class="subscribe__sub-ttl">на рассылку новинок, акций и скидок</p>
+              </div>
+              <form action="#" method="POST" data-form="subscribe" class="subscribe form">
+                <div class="form-group form-group--line">
+                  <div class="dropdown">
+                    <div class="dropdown__state">Все категории</div>
+                    <div class="dropdown__list">
+                      <div class="dropdown__item">
+                        <input id="cat-1" type="checkbox" name="test[]">
+                        <label for="cat-1">Пункт категории 1</label>
+                      </div>
+                      <div class="dropdown__item">
+                        <input id="cat-2" type="checkbox" name="test[]">
+                        <label for="cat-2">Пункт категории 2</label>
+                      </div>
+                      <div class="dropdown__item">
+                        <input id="cat-3" type="checkbox" name="test[]">
+                        <label for="cat-3">Пункт категории 3</label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group required">
+                  <input type="email" name="email" placeholder="Ваш e-mail:" required class="subscribe__input form-control">
+                </div>
+                <button type="submit" name="subscribe" class="btn">Подписаться</button>
+              </form>
+              <div class="fmessage fsuccess">
+                <button class="btn-close"></button>
+                <div class="fmessage__ttl">Спасибо!</div>
+                <div class="fmessage__desc">Вы успешно подписались на новости.</div>
+              </div>
+              <div class="fmessage ferror">
+                <button class="btn-close"></button>
+                <div class="fmessage__ttl">Возникла ошибка</div>
+                <div class="fmessage__desc">Сообщение не получилось отправить</div>
+                <button class="btn fmessage__link">Попробовать еще раз</button>
+              </div>
+              <script>
+                $('.dropdown__state').click(function () {
+                  $(this).toggleClass("active");
+                  $('.dropdown__list').toggleClass("active");
+                });
+              </script>
+            </div>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <div class="subscribe-wrap">
+              <div class="subscribe__header">
+                <h2 class="subscribe__ttl">Подписывайтесь</h2>
+                <p class="subscribe__sub-ttl">на рассылку новинок, акций и скидок</p>
+              </div>
+              <form action="#" method="POST" data-form="subscribe" class="subscribe form">
+                <div class="form-group form-group--line">
+                  <select class="subscribe__cat">
+                    <option>Все категории</option>
+                    <option>Раздел 1</option>
+                    <option>Раздел 2</option>
+                    <option>Раздел 3</option>
+                  </select>
+                </div>
+                <div class="form-group required">
+                  <input type="email" name="email" placeholder="Ваш e-mail:" required class="subscribe__input form-control">
+                </div>
+                <button type="submit" name="subscribe" class="btn">Подписаться</button>
+              </form>
+              <div class="fmessage fsuccess">
+                <button class="btn-close"></button>
+                <div class="fmessage__ttl">Спасибо!</div>
+                <div class="fmessage__desc">Вы успешно подписались на новости.</div>
+              </div>
+              <div class="fmessage ferror">
+                <button class="btn-close"></button>
+                <div class="fmessage__ttl">Возникла ошибка</div>
+                <div class="fmessage__desc">Сообщение не получилось отправить</div>
+                <button class="btn fmessage__link">Попробовать еще раз</button>
+              </div>
+              <script>
+                $('.subscribe__cat').select2({
+                  minimumResultsForSearch: Infinity,
+                  containerCssClass: "subscribe-select2",
+                  dropdownCssClass: "subscribe-select2-dropdown"
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12">
+            <div class="cpr">
+              <div class="cpr__dt">© 2012 - 2016 «Этажерка» Интернет-магазин элитной мебели и декора</div>
+              <div class="cpr__link">Адаптивные сайты от <a href="https://makebecool.com/">MakeBeCool</a></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <link rel="stylesheet" href="css/global.css">
+    <script src="./js/app/lib/site.js"></script>
+    <script src="./js/app/lib/siteMode.js"></script>
+    <script src="./js/app/mode/themeMode.js"></script>
+    <script src="./js/app/modules/formValidate.js"></script>
+    <script src="./js/app/modules/megamenuDropdown.js"></script>
+    <script src="./js/app/modules/formAjax.js"></script>
+    <script src="./js/app/modules/bgImages.js"></script>
+    <script src="./js/jquery/plugins/ui/jquery-ui.js"></script>
+    <script src="./js/jquery/plugins/ui/jquery-ui-touch.js"></script>
+    <script src="./js/jquery/plugins/imagesLoader/imagesloaded.pkgd.js"></script>
+    <script src="./js/jquery/plugins/masonry/masonry.pkgd.js"></script>
+    <script src="./js/jquery/plugins/select2/select2.full.js"></script>
+    <script src="./js/jquery/plugins/inputmask/inputmask.min.js"></script>
+    <script src="./js/jquery/plugins/inputmask/inputmask.js"></script>
+    <script src="./js/jquery/plugins/intlTelInput/intlTelInput.js"></script>
+    <script src="./js/app/modules/dropDown.js"></script>
+    <script src="./js/app/modules/selectAndTelInit.js"></script>
+    <script src="./js/app/modules/cartOrder.js"></script>
+    <script src="./js/app/modules/masonry.js"></script>
+    <script src="./js/app/modules/cabinet.js"></script>
+    <script src="./js/app/modules/priceSlider.js"></script>
+    <!--script.-->
+    <!--  $('.masonry').masonry({-->
+    <!--    // options-->
+    <!--    itemSelector: '.masonry__item'-->
+    <!--  });-->
+    <script>
+      var global = {
+        siteUrl: '',
+        baseUrl: '/',
+        assetsUrl: '/assets/',
+        cultureKey: 'ru',
+        validationMessages: {
+          name: 'Будьте добры, введите ваше имя.',
+          phone: 'Вы забыли оставить ваш номер телефона.',
+          email: 'Адрес электронной почты имеет формат site@mail.com.',
+          emailRequired: 'Адрес электронной почты имеет формат site@mail.com.',
+          text: 'Здесь должно быть ваше сообщение.'
+        }
+      }
+      appMakeBeCool.gateway.init();
+    </script>
+  </body>
+</html>
