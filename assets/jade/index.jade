@@ -1,38 +1,31 @@
 - var pageTitle = "Index | grid360";
-include parts/goods/goodsMixins
 
 doctype html
 html(lang='ru')
   include components/head/head
-
   body
     include components/scripts/scripts
     .wrap
       include components/header/header
-      include parts/goods/goodsBlock
-      include components/modal/quicklyReview
-      include parts/brands/brands
-      include parts/brands/brandsSlider
-      include components/forms/fromSubscribeLine
-      include parts/reviews/reviews
-      include parts/charts/chartDonut
-      include components/slider/sliderTextImage
-      .container
-        h2.heading Форма Send
-        .row
-          .col-sm-6
-            include components/forms/formSend
-          .col-sm-6
-            h3 Заголовок
-            p.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum
-        include components/paginations/pagination
+      include components/poster/poster
+      section.description
+        .container
+          .row
+            .col-lg-5
+              .text-block
+                p The invitations set the tone for this special day since it is the very first thing your guest will see regarding your upcoming nuptials. Wedding invitations offer a glimpse into the style, theme, and vision for this special occasion.
 
+                p Invitations that are attractive and speak to the specific character of the bride and groom make a considerable impact on those they reach. They also make wonderful memorabilia to look back on for decades to come.
 
+                p At Lilian Designs Studios we work hard to deliver a very creative, unique, and personalized set of wedding invitations. We are one of the few companies in the area to focus almost exclusively on creating custom wedding invitations.
+
+                p Some of our exclusive designs include pocket invitations, lace invitations, silk pocket invitations, embossed invitations and letterpress invitations.
+
+                p.colored.strong Call us today to set up a free consultation at 305.447.6622
+            .col-lg-7
+              include components/slider/slider
+      include components/tiles/tiles
+      include components/social/social
     include components/footer/footer
     include components/scripts/bottomScripts
 

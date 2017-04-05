@@ -1,0 +1,77 @@
+.tiles
+	margin-bottom: 65px
+
+.tiles-wrap
+	display: flex
+	flex-wrap: wrap
+
+.tiles__item
+	position: relative
+	width: 100%
+	margin-bottom: 30px
+
+.tiles__item-img
+	display: block
+	position: relative
+	height: 255px
+
+.tiles__item-ttl
+	padding: 20px 0 15px
+	font-size: 18px
+	line-height: 24px
+	font-family: $second-font-light
+	text-transform: uppercase
+	text-align: center
+
+.tiles__item-info
+	display: flex
+	flex-wrap: wrap
+	align-items: center
+	justify-content: center
+	position: absolute
+	z-index: 2
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	padding: 0 35px
+	text-align: center
+	background-color: rgba($main-color, .6)
+
+.tiles__item-info .tiles__info-inner p
+	position: relative
+	height: 80px
+	padding-left: 40px
+	margin-top: 10px
+	margin-bottom: 40px
+	overflow: hidden
+	line-height: 20px
+	text-overflow: ellipsis
+	text-align: left
+	color: $white-color
+
+.tiles__item-info .tiles__info-inner p::before
+	position: absolute
+	content: ''
+	left: 0
+	top: 50%
+	transform: translateY(-50%)
+	@include sprite($bracket)
+
+@media (min-width: $screen-sm)
+
+	.tiles__item
+		width: calc(33.33% - 20px)
+		margin-right: 20px
+		margin-bottom: 0
+
+	.tiles__item:nth-child(3n)
+		margin-right: 0
+
+@media (min-width: $screen-lg)
+	.tiles__item-info
+		display: none
+
+	.tiles__item:hover .tiles__item-info
+		display: flex
+

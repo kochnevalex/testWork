@@ -1,7 +1,9 @@
 .megamenu__title
 	display: block
-	padding: 5px
+	padding: 15px 0
 	cursor: pointer
+	font-size: 20px
+	font-family: $second-font
 
 .header-container
 	position: relative
@@ -17,16 +19,55 @@
 	width: 100%
 
 .megamenu__category
+	position: relative
 	display: flex
-	flex-wrap: nowrap
-	padding: 5px 15px
+	flex-wrap: wrap
+
+.megamenu__category::before
+	opacity: 0
+	content: ''
+	display: block
+	position: absolute
+	bottom: 100%
+	left: 0
+	right: 0
+	height: 6px
+	background-color: $main-color
+	transition: all .5s ease
+
+.megamenu__category > a,
+.megamenu__category > span
+	font-size: 14px
+	line-height: 18px
+	padding: 16px 0
+	text-transform: uppercase
+	font-family: $second-font-light
+
+.megamenu__category:first-child > a,
+.megamenu__category:first-child > span
+	padding-left: 0
+
+.megamenu__category:last-child > a,
+.megamenu__category:last-child > span
+	padding-right: 0
 
 .megamenu__sub-category
-	padding-top: 5px
-	padding-bottom: 5px
+	padding: 0 25px
+
+.megamenu__sub-category a
+	display: block
+	padding-top: 10px
+	padding-bottom: 10px
+	line-height: 20px
+	font-size: 16px
+	font-family: $second-font-light
+	text-transform: none
+	color: $main-color
 
 .megamenu__dropdown-wrap
-	display: none
+	position: static
+	//display: none
+	width: 100%
 
 .down .icon-chevron-down:before
 	top: 3px
@@ -41,44 +82,32 @@
 	overflow: hidden
 	transition: height ease .48s
 
-.megamenu__has-sub
+.megamenu__sub-category .megamenu__img
+	display: none
 	position: relative
-	margin-left: 5px
-	padding: 10px
+	padding-bottom: 0
+	padding-bottom: 56.25%
+	margin-bottom: 20px
 
-.megamenu__has-sub::before
-	content: ''
-	position: absolute
-	top: 5px
-	width: 0
-	height: 0
-	border-style: solid
-	border-width: 7px 4px 0 4px
-	border-color: grey transparent transparent transparent
-	transform-origin: center
-	transform: rotate(-90deg)
+.megamenu__sub-category .megamenu__img.active
+	display: block
 
-@media (max-width: $screen-md)
+@media (max-width: $screen-lg)
 	.megamenu__category.mod--actual .megamenu__has-sub::before
 		transform-origin: center
-		//transform: rotate(180deg)
 		opacity: 0
 
 	.megamenu__categories
 		position: relative
-		padding-right: 50%
+	//padding-right: 50%
 
 	.megamenu__dropdown-wrap
 		display: none
-		position: absolute
+		//position: absolute
 		top: 0
-		left: 50%
+		left: 100%
 
-	.megamenu__category.mod--actual .megamenu__dropdown-wrap
-
-		display: initial
-
-@media (min-width: $screen-md)
+@media (min-width: $screen-lg)
 	.megamenu
 		height: auto !important
 
@@ -86,15 +115,6 @@
 		flex: 1
 		display: flex
 		flex-direction: column
-
-	.megamenu__has-sub::before
-
-		top: 5px
-		transform: rotate(0deg)
-
-	.megamenu__has-sub
-
-		align-self: flex-end
 
 	.megamenu__sub-container
 		display: flex
@@ -109,32 +129,28 @@
 		flex-wrap: wrap
 		justify-content: center
 		width: 100%
-		background-color: $white-color
 
 	.megamenu__dropdown-wrap
 		display: none
 		position: absolute
-		top: auto
+		top: 100%
 		left: 0
-		right: 0
+		min-width: 200px
 		z-index: 3
-
+		padding: 25px 0
+		background-color: $main-color
 		justify-content: center
-		margin-top: 20px
-		padding-top: 20px
 
 	.megamenu__category
 		z-index: auto
 		display: inline-flex
 		flex-wrap: nowrap
 
-	.megamenu__category:hover
-		> .megamenu__dropdown-wrap
-			display: flex
-
 	.megamenu__categories
-		display: flex !important
+		width: 100%
+		display: flex
 		flex-wrap: wrap
+		justify-content: space-between
 
 	.megamenu
 		flex-direction: row
@@ -148,3 +164,37 @@
 
 	.megamenu__title
 		display: none
+
+@media (min-width: $screen-lg)
+
+	.megamenu__category:hover::before
+		opacity: 1
+
+	.megamenu
+		overflow: visible
+
+	.megamenu__category:hover .megamenu__dropdown-wrap
+		display: block
+
+	.megamenu__sub-category .megamenu__img
+		display: none
+		position: absolute
+		left: 100%
+		top: 0
+		height: 100%
+		width: 140px
+		border-left: 1px solid $white-color
+
+	.megamenu__sub-category:hover .megamenu__img
+		display: block
+
+	.megamenu__sub-category a
+		display: block
+		padding-top: 5px
+		padding-bottom: 5px
+		line-height: 15px
+		font-size: 14px
+		font-family: $second-font-light
+		text-transform: none
+		color: $white-color
+

@@ -1,18 +1,31 @@
 .cpr
-  margin-top: 30px
-  font-size: 12px
+	padding-top: 15px
+	padding-bottom: 5px
+	margin-top: 30px
+	font-size: 11px
+	color: $pick-color
+	background-color: $color-light-grey
+
+.cpr-inner
+	display: flex
+	flex-wrap: wrap
+	justify-content: space-between
 
 .cpr a
-  color: $active-color
-  
-  
+	color: $active-color
+
+.cpr__dt,
+.cpr__link
+	width: 100%
+	padding: 10px 0
+
 @media (min-width: $screen-sm)
 
-  .cpr__dt
-    float: left
-    max-width: 40%
+	.cpr__dt
+		float: left
+		max-width: 40%
 
-  .cpr__link
-    float: right
-    max-width: 40%
-    text-align: right
+	.cpr__link
+		float: right
+		max-width: 40%
+		text-align: right

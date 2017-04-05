@@ -1,0 +1,57 @@
+.social-wrap
+	position: relative
+	text-align: center
+
+.social-wrap .hr
+	position: absolute
+	top: 50%
+	left: 0
+	right: 0
+	transform: translateY(-50%)
+
+.social-list
+	position: relative
+	z-index: 2
+	display: inline-block
+	background-color: $white-color
+
+.social-list li
+	display: inline-block
+	vertical-align: middle
+
+.social-list li a
+	display: block
+	height: 36px
+	width: 36px
+	position: relative
+	&:after
+		content: ''
+		display: block
+		position: absolute
+		top: 50%
+		left: 50%
+		transform: translateX(-50%) translateY(-50%)
+
+.facebook::after
+	@include sprite($facebook)
+
+.facebook:hover::after
+	@include sprite($facebook-hover)
+
+.pinterest::after
+	@include sprite($p)
+
+.pinterest:hover::after
+	@include sprite($p-hover)
+
+.twitter::after
+	@include sprite($twitter)
+
+.twitter:hover::after
+	@include sprite($twitter-hover)
+
+.in::after
+	@include sprite($in)
+
+.in:hover::after
+	@include sprite($in-hover)

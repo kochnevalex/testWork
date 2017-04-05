@@ -10,7 +10,7 @@
     <link rel="dns-prefetch" href="http://www.google-analytics.com">
     <link rel="author" href="humans.txt">
     <meta name="twitter:site" content="">
-    <meta name="twitter:creator" content="makebecool">
+    <meta name="twitter:creator" content="test">
     <meta name="twitter:title" content="Index | grid360">
     <meta name="twitter:description" content="">
     <meta name="twitter:image:src" content="">
@@ -36,8 +36,6 @@
     <link rel="apple-touch-icon" sizes="120x120" href="images/iconsite/apple-touch-icon-iphone-retina.png">
     <link rel="apple-touch-icon" sizes="152x152" href="images/iconsite/apple-touch-icon-ipad-retina.png">
     <link rel="apple-touch-icon" sizes="180x180" href="images/iconsite/apple-touch-icon-iphone6plus-retina.png">
-    <meta name="cmsmagazine" content="a39ef97fd1d4cf6d3e103f0ff48ea4f6">
-    <meta name="it-rating" content="it-rat-c2fb848de4ce4a9d8631b1558f63157d">
     <link rel="stylesheet" href="css/base64-fonts.css">
     <link rel="stylesheet" href="css/critical.css">
     <script src="./js/jquery-3.1.1.min.js"></script>
@@ -46,12 +44,8 @@
     <script src="./js/jquery/plugins/select2/select2.full.js"></script>
     <script src="./js/jquery/plugins/slick/slick.min.js"></script>
     <script src="./js/jquery/plugins/rater/rater.min.js"></script>
-    <script src="./js/plugins/aos/aos.js"></script>
     <script src="./js/jquery/plugins/textarea-autoresize/autosize.js"></script>
     <script src="./js/jquery/plugins/charts/chartist.min.js"></script>
-    <script src="./js/plugins/lightGallery/lightgallery.min.js"></script>
-    <script src="./js/plugins/lightGallery/lg-thumbnail.min.js"></script>
-    <script src="./js/plugins/lightGallery/lg-fullscreen.min.js"></script>
   </head>
   <body>
     <script src="./js/jquery-3.1.1.min.js"></script>
@@ -60,886 +54,154 @@
     <script src="./js/jquery/plugins/select2/select2.full.js"></script>
     <script src="./js/jquery/plugins/slick/slick.min.js"></script>
     <script src="./js/jquery/plugins/rater/rater.min.js"></script>
-    <script src="./js/plugins/aos/aos.js"></script>
     <script src="./js/jquery/plugins/textarea-autoresize/autosize.js"></script>
     <script src="./js/jquery/plugins/charts/chartist.min.js"></script>
-    <script src="./js/plugins/lightGallery/lightgallery.min.js"></script>
-    <script src="./js/plugins/lightGallery/lg-thumbnail.min.js"></script>
-    <script src="./js/plugins/lightGallery/lg-fullscreen.min.js"></script>
     <div class="wrap">
       <header id="header" class="header">
-        <div id="headerBanner" class="header__banner">
-          <div class="container">Top banner
-            <button id="headerBannerCloseBtn" type="button" class="header__banner-close"></button>
-          </div>
-          <script>
-            $('#headerBannerCloseBtn').on('click', function (e) {
-              e.preventDefault();
-              if (!$('#headerBanner').hasClass('hide')) {
-                $('#headerBanner').slideUp(function () {
-                  $('#headerBanner').addClass('hide');
-                });
-              }
-            });
-          </script>
-        </div>
-        <div class="header__top-bar">
-          <div class="container">
-            <nav id="headerTopNav" class="header__top-nav">
-              <button id="headerTopBtn" type="button" class="header__top-btn"><span></span><span></span><span></span></button><span class="header__top-ttl">Меню</span>
-              <div id="headerTopMenu" class="header__top-menu">
-                <ul class="header__top-menu-list">
-                  <li><a href="#">Контакты</a></li>
-                  <li><a href="#">Способы доставки</a></li>
-                  <li><a href="#">Оплата</a></li>
-                  <li><a href="#">О нас</a></li>
-                </ul>
-              </div>
-            </nav>
-            <div class="header__top-info">
-              <ul class="header__top-info-list">
-                <li><a href="tel:+7495540-50-86">+7 (495) 540-50-86</a></li>
-                <li><a href="#">Войти</a></li>
-              </ul>
-            </div>
-          </div>
-          <script>
-            $('#headerTopBtn').on('click', function (e) {
-              e.preventDefault();
-              $('#headerTopNav').toggleClass('active');
-            });
-          </script>
-        </div>
         <div class="header_main">
           <div class="container">
-            <div class="header-logo"><a href="#"><img src="http://placehold.it/100x50" alt="" class="header-logo__img"></a></div>
-            <div id="headerSearch" class="search-w">
-              <button id="headerSearchOpen" type="button" class="search-w__open-btn">&#128269;</button>
-              <button id="headerSearchClose" type="button" class="search-w__close-btn hide">&#10006;</button>
-              <form id="headerSearchForm" method="get" action="" class="search-w__form">
-                <input type="hidden" name="controller" value="search"><span role="status" aria-live="polite"></span>
-                <input type="text" name="s" value="" placeholder="Поиск" autocomplete="off" class="search-w__form-input">
-                <button type="submit" class="search-w__form-search">&#128269;</button>
-              </form>
-              <script>
-                $('#headerSearchOpen').on('click', function (e) {
-                  e.preventDefault();
-                  $('#headerSearchForm').addClass('active');
-                  $('#headerSearchOpen').addClass('hide');
-                  $('#headerSearchClose').removeClass('hide');
-                });
-                
-                $('#headerSearchClose').on('click', function (e) {
-                  e.preventDefault();
-                  $('#headerSearchForm').removeClass('active');
-                  $('#headerSearchOpen').removeClass('hide');
-                  $('#headerSearchClose').addClass('hide');
-                });
-              </script>
-            </div>
-            <div class="basket-w"><a href="" class="basket-w__link"><img src="images/basket.png" alt=""></a></div>
-          </div>
-        </div>
-        <div class="container">
-          <div class="header-container">
-            <div class="megamenu-wrap"><span data-state="closed" class="megamenu__title">Каталог</span>
-              <div id="megamenu" class="megamenu mod--closed">
-                <ul class="megamenu__categories">
-                  <!--Категория 1-->
-                  <li class="megamenu__category mod--actual"><span>Категория 1</span>
-                    <button class="megamenu__has-sub"></button>
-                    <div class="megamenu__dropdown-wrap">
-                      <div class="megamenu__dropdown">
-                        <div class="megamenu__sub-container">
-                          <ul class="megamenu__sub-categories">
-                            <li class="megamenu__sub-category"><span>Подкатегория 1 Категории 1</span></li>
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 2 Категории 1</a></li>
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 3 Категории 1</a></li>
-                          </ul>
-                          <ul class="megamenu__sub-categories">
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 4 Категории 1</a></li>
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 5 Категории 1</a></li>
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 6 Категории 1</a></li>
-                          </ul>
-                          <ul class="megamenu__sub-categories">
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 7 Категории 1</a></li>
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 8 Категории 1</a></li>
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 9 Категории 1</a></li>
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 10 Категории 1</a></li>
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 11 Категории 1</a></li>
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 12 Категории 1</a></li>
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 13 Категории 1</a></li>
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 14 Категории 1</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <!--Категория 2-->
-                  <li class="megamenu__category"><a href="#">Категория 2</a><i class="megamenu__has-sub"></i>
-                    <div class="megamenu__dropdown-wrap">
-                      <div class="megamenu__dropdown">
-                        <div class="megamenu__sub-container">
-                          <ul class="megamenu__sub-categories">
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 1 Категории 2</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <!--Категория 3-->
-                  <li class="megamenu__category"><a href="#">Категория 3</a><i class="megamenu__has-sub"></i>
-                    <div class="megamenu__dropdown-wrap">
-                      <div class="megamenu__dropdown">
-                        <div class="megamenu__sub-container">
-                          <ul class="megamenu__sub-categories">
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 1 Категории 3</a></li>
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 2 Категории 3</a></li>
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 3 Категории 3</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="megamenu__category"><a href="#">Категория 4</a><i class="megamenu__has-sub"></i>
-                    <div class="megamenu__dropdown-wrap">
-                      <div class="megamenu__dropdown">
-                        <div class="megamenu__sub-container">
-                          <ul class="megamenu__sub-categories">
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 1 Категории 4</a></li>
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 2 Категории 4</a></li>
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 3 Категории 4</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="megamenu__category"><a href="#">Категория 5</a><i class="megamenu__has-sub"></i>
-                    <div class="megamenu__dropdown-wrap">
-                      <div class="megamenu__dropdown">
-                        <!--Подкатегории-->
-                        <div class="megamenu__sub-container">
-                          <ul class="megamenu__sub-categories">
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 1 Категории 5</a></li>
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 2 Категории 5</a></li>
-                            <li class="megamenu__sub-category"><a href="#">Подкатегория 3 Категории 5</a></li>
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  </li>
+            <div class="header__main-inner">
+              <div class="header-logo"><a href="#"><img src="images/logo.png" alt="" class="header-logo__img"></a></div>
+              <div class="header__main-info">
+                <ul class="header__main-info-list">
+                  <li class="tel"><span>Call us Today</span><a href="tel:3054476622">305.447.6622</a></li>
+                  <li><a href="#" class="btn">view collection</a></li>
                 </ul>
               </div>
+            </div>
+          </div>
+        </div>
+        <div class="hr"></div>
+        <div class="container">
+          <div class="megamenu-wrap"><span data-state="closed" class="megamenu__title">Menu</span>
+            <div id="megamenu" class="megamenu mod--closed">
+              <ul class="megamenu__categories">
+                <li class="megamenu__category mod--actual megamenu__has-sub"><a href="#">Home</a>
+                  <!--button.megamenu__has-sub-->
+                </li>
+                <li class="megamenu__category megamenu__has-sub"><a href="#">Wedding</a>
+                  <div class="megamenu__dropdown-wrap">
+                    <div class="megamenu__dropdown">
+                      <div class="megamenu__sub-container">
+                        <ul class="megamenu__sub-categories">
+                          <li class="megamenu__sub-category"><a href="#">Simple and Elegant</a><a href="#" class="megamenu__img">
+                              <div data-bgimage="uploads-demo/nav1.jpg" class="bg-image"></div></a></li>
+                          <li class="megamenu__sub-category"><a href="#">Pebble paper</a></li>
+                          <li class="megamenu__sub-category"><a href="#">Pocket invitations</a></li>
+                          <li class="megamenu__sub-category"><a href="#">Elegant</a></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+                <li class="megamenu__category"><a href="#">Baby</a></li>
+                <li class="megamenu__category"><a href="#">Quinces/Mitzvah</a></li>
+                <li class="megamenu__category"><a href="#">Social</a></li>
+                <li class="megamenu__category"><a href="#">Other Products/Services</a></li>
+                <li class="megamenu__category"><a href="#">Online Consultation</a></li>
+                <li class="megamenu__category"><a href="#">Blog</a></li>
+                <li class="megamenu__category"><a href="#">White Papers</a></li>
+                <li class="megamenu__category"><a href="#">Contact Us</a></li>
+              </ul>
             </div>
           </div>
         </div>
       </header>
-      <div class="container">
-        <h2 class="heading text-center">Новые товары</h2>
-        <div class="goodsList">
-          <article class="b-product__article">
-            <div class="b-product__img"><img src="http://placehold.it/250x310"/></div>
-            <div class="b-product__ttl"><a href="#" class="b-product__ttl-link">Kris Line Fashion Edith brassiere комплект</a></div>
-            <div class="b-product__cat"><a href="#" class="b-product__cat-link">Аксессуары</a></div>
-            <div class="b-product__price">
-              <div class="b-product__cash">4 560 Р</div>
-              <div class="b-product__buy">Добавить в корзину</div>
-            </div>
-            <div class="b-product__rating">
-              <div data-rate-value="3.5" class="b-product__stars"></div>
-              <div class="b-product__comments"><a href="#" class="b-product__comments-link">78 отзывов</a></div>
-            </div>
-          </article>
-          <article class="b-product__article">
-            <div class="b-product__img"><img src="http://placehold.it/250x310"/></div>
-            <div class="b-product__ttl"><a href="#" class="b-product__ttl-link">Kris Line Fashion Edith brassiere комплект</a></div>
-            <div class="b-product__cat"><a href="#" class="b-product__cat-link">Аксессуары</a></div>
-            <div class="b-product__price">
-              <div class="b-product__cash">4 560 Р</div>
-              <div class="b-product__buy">Добавить в корзину</div>
-            </div>
-            <div class="b-product__rating">
-              <div data-rate-value="5" class="b-product__stars"></div>
-              <div class="b-product__comments"><a href="#" class="b-product__comments-link">78 отзывов</a></div>
-            </div>
-          </article>
-          <article class="b-product__article">
-            <div class="b-product__img"><img src="http://placehold.it/250x310"/></div>
-            <div class="b-product__ttl"><a href="#" class="b-product__ttl-link">Kris Line Fashion Edith brassiere комплект</a></div>
-            <div class="b-product__cat"><a href="#" class="b-product__cat-link">Аксессуары</a></div>
-            <div class="b-product__price">
-              <div class="b-product__cash">4 560 Р</div>
-              <div class="b-product__buy">Добавить в корзину</div>
-            </div>
-            <div class="b-product__rating">
-              <div data-rate-value="2.5" class="b-product__stars"></div>
-              <div class="b-product__comments"><a href="#" class="b-product__comments-link">78 отзывов</a></div>
-            </div>
-          </article>
-          <article class="b-product__article">
-            <div class="b-product__img"><img src="http://placehold.it/250x310"/></div>
-            <div class="b-product__ttl"><a href="#" class="b-product__ttl-link">Kris Line Fashion Edith brassiere комплект</a></div>
-            <div class="b-product__cat"><a href="#" class="b-product__cat-link">Аксессуары</a></div>
-            <div class="b-product__price">
-              <div class="b-product__cash">4 560 Р</div>
-              <div class="b-product__buy">Добавить в корзину</div>
-            </div>
-            <div class="b-product__rating">
-              <div data-rate-value="1.5" class="b-product__stars"></div>
-              <div class="b-product__comments"><a href="#" class="b-product__comments-link">78 отзывов</a></div>
-            </div>
-          </article>
-        </div>
-        <script>
-          $('.b-product__stars').rate({
-            max_value: 5,
-            step_size: 0.5,
-            initial_value: 3.5,
-            readonly: false
-          });
-        </script>
-      </div>
-      <div class="b-modal-item">
-        <div class="b-modal-item__fon"></div>
-        <div class="b-modal-item__content">
-          <div class="b-modal-item__close"></div>
-          <div class="b-modal-item__ttl">
-            <h2 class="heading">BUDX021301LG Hafiraha</h2><a href="#">Lora Grig</a>
-          </div>
-          <div class="b-modal-item__slider-block">
-            <div class="b-modal-item__slider">
-              <div class="slide"><img src="http://placehold.it/360x540" alt=""></div>
-              <div class="slide"><img src="http://placehold.it/360x540" alt=""></div>
-              <div class="slide"><img src="http://placehold.it/360x540" alt=""></div>
-            </div>
-          </div>
-          <div class="b-modal-item__desc">
-            <p>Светлая шляпка из легкой натуральной ткани с крупным цветочным принтом.<a href="#" class="detail-link">Подробное описание на странице товара</a></p>
-          </div>
-          <div class="b-modal-item__option">
-            <div class="b-modal-item__change-type">
-              <form id="" action="#" class="form-filter">
-                <div class="form-group">
-                  <div class="form-group__filter-ttl"><span>Выберите цвет</span></div>
-                  <ul id="ul_layered_id_attribute_group_2" class="form-group__filter form-group__filter-color clearfix">
-                    <li>
-                      <div class="checker">
-                        <input id="layered_id_attribute_group_21" type="radio" name="layered_id_attribute_group_29" value="29_5" checked="true" class="checkbox">
-                        <label for="layered_id_attribute_group_21" class="form__label"><a href="#"><span></span><span class="fa fa-check"></span></a></label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checker">
-                        <input id="layered_id_attribute_group_22_1" type="radio" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
-                        <label for="layered_id_attribute_group_22_1" class="form__label"><a href="#"><span style="background: #d7dcda"></span><span class="fa fa-check"></span></a></label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checker">
-                        <input id="layered_id_attribute_group_22_2" type="radio" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
-                        <label for="layered_id_attribute_group_22_2" class="form__label"><a href="#"><span style="background: #f3e0c9"></span><span class="fa fa-check"></span></a></label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checker">
-                        <input id="layered_id_attribute_group_22_3" type="radio" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
-                        <label for="layered_id_attribute_group_22_3" class="form__label"><a href="#"><span style="background: #e4caab"></span><span class="fa fa-check"></span></a></label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checker">
-                        <input id="layered_id_attribute_group_22_4" type="radio" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
-                        <label for="layered_id_attribute_group_22_4" class="form__label"><a href="#"><span style="background: #b1a79b"></span><span class="fa fa-check"></span></a></label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checker">
-                        <input id="layered_id_attribute_group_22_5" type="radio" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
-                        <label for="layered_id_attribute_group_22_5" class="form__label"><a href="#"><span style="background: #000000"></span><span class="fa fa-check"></span></a></label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checker">
-                        <input id="layered_id_attribute_group_22_6" type="radio" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
-                        <label for="layered_id_attribute_group_22_6" class="form__label"><a href="#"><span style="background: #663399"></span><span class="fa fa-check"></span></a></label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checker">
-                        <input id="layered_id_attribute_group_22_7" type="radio" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
-                        <label for="layered_id_attribute_group_22_7" class="form__label"><a href="#"><span style="background: #7a4a38"></span><span class="fa fa-check"></span></a></label>
-                      </div>
-                    </li>
-                    <li>
-                      <div class="checker">
-                        <input id="layered_id_attribute_group_22_8" type="radio" name="layered_id_attribute_group_29" value="29_5" class="checkbox">
-                        <label for="layered_id_attribute_group_22_8" class="form__label"><a href="#"><span style="background-image: url(images/colorfull.png)"></span><span class="fa fa-check"></span></a></label>
-                      </div>
-                    </li>
-                  </ul>
-                </div>
-                <div class="form-group form-group__change-size">
-                  <div class="form-group__filter-ttl"><span>Выберите размер</span></div>
-                  <div class="row">
-                    <div class="col-xs-6">
-                      <div class="form-group__select-size">
-                        <select class="subscribe__cat">
-                          <option>65BB</option>
-                          <option>65BС 1</option>
-                          <option>65BD</option>
-                          <option>70BB</option>
-                          <option>75BB</option>
-                          <option>80BB</option>
-                        </select>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </form>
-            </div>
-            <div class="b-product__price b-modal-item__price b-modal-item__price-sale clearfix">
-              <div class="b-product__cash">4 560 ₽</div>
-              <div class="b-product__buy"><a href="#" rel="nofollow" class="btn">Купить</a></div>
-            </div>
+      <section class="poster-wrap">
+        <div data-bgimage="uploads-demo/poster.jpg" class="bg-image"></div>
+        <div class="poster">
+          <div class="container">
+            <h1 class="poster__text">Pebble paper</h1>
           </div>
         </div>
-      </div>
-      <div class="container">
-        <h2 class="heading text-center">Быстрый просмотр товара</h2>
-        <p>Модал быстрого просмотра товара<a href="#" class="btn show-review">Показать окно</a></p>
-        <script>
-          $('.show-review').on('click', function (e) {
-            e.preventDefault();
-            $('body').addClass('show-modal').css('paddingRight', setPadding())
-            $('.b-modal-item').show();
-            $('.b-modal-item__slider').slick({
-              infinite: true,
-              slidesToShow: 1,
-              slidesToScroll: 1,
-              dots: true
-            });
-          });
-          
-          $('.b-modal-item__close, .b-modal-item__fon').on('click', function (e) {
-            e.preventDefault();
-            $('body').removeClass('show-modal').css('paddingRight', 0)
-            $('.b-modal-item').hide();
-          });
-          
-          function setPadding() {
-            var inner = document.createElement('p');
-            inner.style.width = "100%";
-            inner.style.height = "200px";
-          
-            var outer = document.createElement('div');
-            outer.style.position = "absolute";
-            outer.style.top = "0px";
-            outer.style.left = "0px";
-            outer.style.visibility = "hidden";
-            outer.style.width = "200px";
-            outer.style.height = "150px";
-            outer.style.overflow = "hidden";
-            outer.appendChild(inner);
-          
-            document.body.appendChild(outer);
-            var w1 = inner.offsetWidth;
-            outer.style.overflow = 'scroll';
-            var w2 = inner.offsetWidth;
-            if (w1 == w2) w2 = outer.clientWidth;
-          
-            document.body.removeChild(outer);
-          
-            return (w1 - w2);
-          }
-        </script>
-      </div>
-      <div class="container">
-        <div class="b-brands">
-          <h2 class="heading text-center">Бренды</h2>
-          <div class="b-brands__items b-brands__items--grayscale">
-            <div class="brand-item"><a href=""><img src="http://placehold.it/25x31" alt=""></a></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/350x150" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/500x400" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <div class="b-brands">
-          <h2 class="heading text-center">Бренды слайдер</h2>
-          <div id="brandsSlider" class="b-brands__items b-brands__items--slider">
-            <div class="brand-item"><a href=""><img src="http://placehold.it/25x31" alt=""></a></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/350x150" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/500x400" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-            <div class="brand-item"><img src="http://placehold.it/120x80" alt=""></div>
-          </div>
-        </div>
-        <script>
-          $('#brandsSlider').slick({
-            slidesToShow: 6,
-            slidesToScroll: 2,
-            responsive: [
-              {
-                breakpoint: 992,
-                settings: {
-                  slidesToShow: 5,
-                  slidesToScroll: 2
-                }
-              },
-              {
-                breakpoint: 768,
-                settings: {
-                  slidesToShow: 4,
-                  slidesToScroll: 1
-                }
-              },
-              {
-                breakpoint: 576,
-                settings: {
-                  slidesToShow: 3,
-                  slidesToScroll: 1
-                }
-              },
-              {
-                breakpoint: 480,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1
-                }
-              }
-            ]
-          });
-        </script>
-      </div>
-      <div class="container">
-        <h2 class="heading text-center">Форма подписки</h2>
-        <div class="subscribe text-center">
-          <div class="subscribe__header">
-            <h2 class="subscribe__ttl">Подписывайтесь</h2>
-            <p class="subscribe__sub-ttl">на рассылку новинок, акций и скидок</p>
-          </div>
-          <div class="form-wrap">
-            <form action="#" method="POST" data-form="subscribe" class="form subscribe subscribe--line">
-              <div class="form-group required">
-                <input type="email" name="email" placeholder="Ваш email:" required class="subscribe__input form-control">
-              </div>
-              <button type="submit" name="subscribe" class="btn">Подписаться</button>
-            </form>
-            <div class="fmessage fsuccess">
-              <button class="btn-close"></button>
-              <div class="fmessage__ttl">Спасибо!</div>
-              <div class="fmessage__desc">Вы успешно подписались на новости.</div>
-            </div>
-            <div class="fmessage ferror">
-              <button class="btn-close"></button>
-              <div class="fmessage__ttl">Возникла ошибка</div>
-              <div class="fmessage__desc">Сообщение не получилось отправить</div>
-              <button class="btn fmessage__link">Попробовать еще раз</button>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="container">
-        <h2 class="heading text-center">Отзывы</h2>
-        <div id="reviewsSlider" class="review-slider">
-                <div class="b-review b-review--sticky-footer">
-                  <div class="b-review__descr">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                  </div>
-                  <footer class="b-review__footer">
-                    <div class="b-review__author">
-                      <div class="b-review__author-image"><img src="http://placehold.it/120x120" alt="review"></div>
-                      <dl class="b-review__author-info">
-                        <dt class="b-review__author-name">Никита Михалков</dt>
-                        <dd class="b-review__author-about">62 года, Актер</dd>
-                      </dl>
-                    </div>
-                  </footer>
-                </div>
-                <div class="b-review b-review--sticky-footer">
-                  <div class="b-review__descr">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
-                  </div>
-                  <footer class="b-review__footer">
-                    <div class="b-review__author">
-                      <div class="b-review__author-image"><img src="http://placehold.it/120x120" alt="review"></div>
-                      <dl class="b-review__author-info">
-                        <dt class="b-review__author-name">Аркадий Укупник</dt>
-                        <dd class="b-review__author-about">52 года, Артист</dd>
-                      </dl>
-                    </div>
-                  </footer>
-                </div>
-                <div class="b-review b-review--sticky-footer">
-                  <div class="b-review__descr">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
-                  </div>
-                  <footer class="b-review__footer">
-                    <div class="b-review__author">
-                      <div class="b-review__author-image"><img src="http://placehold.it/120x120" alt="review"></div>
-                      <dl class="b-review__author-info">
-                        <dt class="b-review__author-name">Никита Михалков</dt>
-                        <dd class="b-review__author-about">62 года, Актер</dd>
-                      </dl>
-                    </div>
-                  </footer>
-                </div>
-                <div class="b-review b-review--sticky-footer">
-                  <div class="b-review__descr">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur...</p>
-                  </div>
-                  <footer class="b-review__footer">
-                    <div class="b-review__author">
-                      <div class="b-review__author-image"><img src="http://placehold.it/120x120" alt="review"></div>
-                      <dl class="b-review__author-info">
-                        <dt class="b-review__author-name">Аркадий Укупник</dt>
-                        <dd class="b-review__author-about">52 года, Артист</dd>
-                      </dl>
-                    </div>
-                  </footer>
-                </div>
-        </div>
-        <script>
-          $('#reviewsSlider').slick({
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            centerPadding: 0,
-            adaptiveHeight: true,
-            responsive: [
-              {
-                breakpoint: 600,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1
-                }
-              }
-            ]
-          });
-        </script>
-      </div>
-      <section class="b-chart-donut">
-        <div class="container">
-          <h2 class="heading text-center">Круговой график</h2>
-          <div class="b-chart-donut__list">
-            <div class="b-chart-donut__item">
-              <div class="b-chart-donut__item-top"><b>Lorem ipsum dolor sit amet,</b>
-                <p>consectetur adipiscing elit. Aliquam ipsum orci, gravida sit amet molestie sed, suscipit sed ante.</p>
-              </div>
-              <div class="b-chart-donut__item-bottom">
-                <div data-result="90.0" class="b-chart-donut__chart"></div>
-                <p>
-                  Integer hendrerit elit eget fermentum malesuada. Ut sagittis commodo sapien, nec laoreet neque finibus eget.
-                  In hac habitasse platea dictumst.
-                  
-                </p>
-              </div>
-            </div>
-            <div class="b-chart-donut__item">
-              <div class="b-chart-donut__item-top"><b>Lorem ipsum dolor sit amet,</b>
-                <p>consectetur adipiscing elit. Aliquam ipsum orci, gravida sit amet molestie sed, suscipit sed ante.</p>
-              </div>
-              <div class="b-chart-donut__item-bottom">
-                <div data-result="89.9" class="b-chart-donut__chart"></div>
-                <p>
-                  Integer hendrerit elit eget fermentum malesuada. Ut sagittis commodo sapien, nec laoreet neque finibus eget.
-                  In hac habitasse platea dictumst.
-                  
-                </p>
-              </div>
-            </div>
-            <div class="b-chart-donut__item">
-              <div class="b-chart-donut__item-top"><b>Lorem ipsum dolor sit amet,</b>
-                <p>consectetur adipiscing elit. Aliquam ipsum orci, gravida sit amet molestie sed, suscipit sed ante.</p>
-              </div>
-              <div class="b-chart-donut__item-bottom">
-                <div data-result="88.0" class="b-chart-donut__chart"></div>
-                <p>
-                  Integer hendrerit elit eget fermentum malesuada. Ut sagittis commodo sapien, nec laoreet neque finibus eget.
-                  In hac habitasse platea dictumst.
-                  
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <script>
-          $(window).bind('scroll', function () {
-            if (!$('.b-chart-donut').hasClass('active')) {
-              if ($(window).scrollTop() > $('.b-chart-donut').offset().top - $(window).height() / 1.5) {
-                $('.b-chart-donut__chart').each(function () {
-                  var val = ' ' + $(this).data('result');
-                  var label = val.replace(".", ",");
-                  var chart = new Chartist.Pie(this, {
-                    series: [val],
-                    labels: [label + '%']
-                  }, {
-                    donut: true,
-                    donutWidth: 17,
-                    total: 100
-                  });
-          
-                  chart.on('draw', function (data) {
-                    if (data.type === 'slice') {
-                      var pathLength = data.element._node.getTotalLength();
-                      data.element.attr({
-                        'stroke-dasharray': pathLength + 'px ' + pathLength + 'px'
-                      });
-          
-                      var animationDefinition = {
-                        'stroke-dashoffset': {
-                          id: 'anim' + data.index,
-                          dur: 1500,
-                          from: -pathLength + 'px',
-                          to: '0px',
-                          easing: Chartist.Svg.Easing.easeOutQuint,
-                          fill: 'freeze'
-                        }
-                      };
-          
-                      if (data.index !== 0) {
-                        animationDefinition['stroke-dashoffset'].begin = 'anim' + (data.index - 1) + '.end';
-                      }
-          
-                      data.element.attr({
-                        'stroke-dashoffset': -pathLength + 'px'
-                      });
-          
-                      data.element.animate(animationDefinition, false);
-                    }
-                  });
-                })
-                $('.b-chart-donut').addClass('active')
-              }
-            }
-          })
-        </script>
       </section>
-      <div id="sliderImgText" class="b-slider">
+      <section class="description">
         <div class="container">
-          <h2 class="heading text-center">Слайдер фото + текс</h2>
-          <div class="slider-img-text">
-            <div class="slider-img-text__slide">
-              <div data-bgimage="images/slideImage/fon1.jpg" class="slide-fon bg-image"></div>
-              <div class="slider-img-text__text-block slider-img-text__text-block--center">
-                <div class="row">
-                  <div class="col-center">
-                    <h2 class="slider-img-text__ttl">Lorem ipsum dolor</h2>
-                    <p class="slider-img-text__desc">
-                      <Lorem>ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</Lorem>
-                      <dolore>magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</dolore>
-                    </p>
-                    <div class="slider-img-text__btn"><a href="#" class="btn">Button</a></div>
+          <div class="row">
+            <div class="col-lg-5">
+              <div class="text-block">
+                <p>The invitations set the tone for this special day since it is the very first thing your guest will see regarding your upcoming nuptials. Wedding invitations offer a glimpse into the style, theme, and vision for this special occasion.</p>
+                <p>Invitations that are attractive and speak to the specific character of the bride and groom make a considerable impact on those they reach. They also make wonderful memorabilia to look back on for decades to come.</p>
+                <p>At Lilian Designs Studios we work hard to deliver a very creative, unique, and personalized set of wedding invitations. We are one of the few companies in the area to focus almost exclusively on creating custom wedding invitations.</p>
+                <p>Some of our exclusive designs include pocket invitations, lace invitations, silk pocket invitations, embossed invitations and letterpress invitations.</p>
+                <p class="colored strong">Call us today to set up a free consultation at 305.447.6622</p>
+              </div>
+            </div>
+            <div class="col-lg-7">
+              <div class="slider-wrap">
+                <div id="slider" class="slider">
+                  <div>
+                    <div data-bgimage="uploads-demo/slide1.jpg" class="slider-img bg-image"></div>
+                  </div>
+                  <div>
+                    <div data-bgimage="uploads-demo/slide2.jpg" class="slider-img bg-image"></div>
+                  </div>
+                  <div>
+                    <div data-bgimage="uploads-demo/slide3.jpg" class="slider-img bg-image"></div>
+                  </div>
+                </div>
+              </div>
+              <script>
+                $('#slider').slick({
+                  slidesToShow: 1,
+                  slidesToScroll: 1,
+                  dots: true
+                })
+              </script>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="tiles">
+        <div class="container">
+          <div class="tiles-wrap">
+            <div class="tiles__item">
+              <div class="hr"></div>
+              <div class="tiles__item-ttl">simple and elegant</div>
+              <div class="tiles__item-img">
+                <div data-bgimage="uploads-demo/slide3.jpg" class="bg-image"></div>
+                <div class="tiles__item-info">
+                  <div class="tiles__info-inner">
+                    <p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly...</p><a href="#" class="btn btn--white">view more</a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="slider-img-text__slide">
-              <div data-bgimage="images/slideImage/fon2.jpg" class="slide-fon bg-image"></div>
-              <div class="slider-img-text__text-block slider-img-text__text-block--bottom">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <h2 class="slider-img-text__ttl">Lorem ipsum dolor</h2>
-                  </div>
-                  <div class="col-sm-6">
-                    <p class="slider-img-text__desc">
-                      <Lorem>ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</Lorem>
-                      <dolore>magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</dolore>
-                    </p>
-                    <div class="slider-img-text__btn"><a href="#" class="btn">Button</a></div>
+            <div class="tiles__item">
+              <div class="hr"></div>
+              <div class="tiles__item-ttl">simple and elegant</div>
+              <div class="tiles__item-img">
+                <div data-bgimage="uploads-demo/slide2.jpg" class="bg-image"></div>
+                <div class="tiles__item-info">
+                  <div class="tiles__info-inner">
+                    <p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly...</p><a href="#" class="btn btn--white">view more</a>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="slider-img-text__slide">
-              <div data-bgimage="images/slideImage/fon1.jpg" class="slide-fon bg-image"></div>
-              <div class="slider-img-text__text-block">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <h2 class="slider-img-text__ttl">Lorem ipsum dolor</h2>
-                    <p class="slider-img-text__desc">
-                      <Lorem>ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</Lorem>
-                      <dolore>magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</dolore>
-                    </p>
-                    <div class="slider-img-text__btn"><a href="#" class="btn">Button</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="slider-img-text__slide">
-              <div data-bgimage="images/slideImage/fon2.jpg" class="slide-fon bg-image"></div>
-              <div class="slider-img-text__text-block slider-img-text__text-block--bottom">
-                <div class="row">
-                  <div class="col-sm-6">
-                    <h2 class="slider-img-text__ttl">Lorem ipsum dolor</h2>
-                    <p class="slider-img-text__desc">
-                      <Lorem>ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</Lorem>
-                      <dolore>magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</dolore>
-                    </p>
-                    <div class="slider-img-text__btn"><a href="#" class="btn">Button</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="slider-img-text__slide">
-              <div data-bgimage="images/slideImage/fon1.jpg" class="slide-fon bg-image"></div>
-              <div class="slider-img-text__text-block slider-img-text__text-block--right">
-                <div class="row">
-                  <div class="col-sm-6"></div>
-                  <div class="col-sm-6">
-                    <h2 class="slider-img-text__ttl">Lorem ipsum dolor</h2>
-                    <p class="slider-img-text__desc">
-                      <Lorem>ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</Lorem>
-                      <dolore>magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</dolore>
-                    </p>
-                    <div class="slider-img-text__btn"><a href="#" class="btn">Button</a></div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="slider-img-text__slide">
-              <div data-bgimage="images/slideImage/fon2.jpg" class="slide-fon bg-image"></div>
-              <div class="slider-img-text__text-block slider-img-text__text-block--bottom slider-img-text__text-block--right">
-                <div class="row">
-                  <div class="col-sm-6"></div>
-                  <div class="col-sm-6">
-                    <h2 class="slider-img-text__ttl">Lorem ipsum dolor</h2>
-                    <p class="slider-img-text__desc">
-                      <Lorem>ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et</Lorem>
-                      <dolore>magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.</dolore>
-                    </p>
-                    <div class="slider-img-text__btn"><a href="#" class="btn">Button</a></div>
+            <div class="tiles__item">
+              <div class="hr"></div>
+              <div class="tiles__item-ttl">simple and elegant</div>
+              <div class="tiles__item-img">
+                <div data-bgimage="uploads-demo/slide1.jpg" class="bg-image"></div>
+                <div class="tiles__item-info">
+                  <div class="tiles__info-inner">
+                    <p>Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly...</p><a href="#" class="btn btn--white">view more</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-        <script>
-          $('.slider-img-text').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1
-          })
-        </script>
       </div>
-      <div class="container">
-        <h2 class="heading">Форма Send</h2>
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="send-form form-wrap">
-              <form data-form="contact" action="#" method="POST" class="form">
-                <div class="form-group required">
-                  <input type="text" name="name" placeholder="Имя:" required="required" autocomplete="off" class="form-control">
-                </div>
-                <div class="form-group required">
-                  <input type="email" name="email" placeholder="Ваш email:" required="required" autocomplete="off" class="form-control">
-                </div>
-                <div class="form-group">
-                  <textarea name="message" placeholder="Сообщение:" required="required" class="form-control"></textarea>
-                </div>
-                <button type="submit" class="btn">Отправить</button>
-              </form>
-              <div class="fmessage fsuccess">
-                <button class="btn-close"></button>
-                <div class="fmessage__ttl">Спасибо!</div>
-                <div class="fmessage__desc">Ваше сообщение успешно отправленно</div>
-              </div>
-              <div class="fmessage ferror">
-                <button class="btn-close"></button>
-                <div class="fmessage__ttl">Возникла ошибка</div>
-                <div class="fmessage__desc">Сообщение не получилось отправить</div>
-                <button class="btn fmessage__link">Попробовать еще раз</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <h3>Заголовок</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-              ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-              fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-              mollit anim id est laborum
-            </p>
-          </div>
-        </div>
-        <h2 class="heading text-center">Центрирование</h2>
-        <div class="pagination">
-          <ul class="pagination__list">
-            <li class="pagination__prev"><a href="#"><span>предыдущая</span></a></li>
-            <li class="visible-lg"><a href="#">1</a></li>
-            <li class="visible-lg"><span>...</span></li>
-            <li><a href="#">7</a></li>
-            <li><a href="#">8</a></li>
-            <li class="current"><span>9</span></li>
-            <li><a href="#">10</a></li>
-            <li><a href="#">11</a></li>
-            <li class="visible-lg"><span>...</span></li>
-            <li class="visible-lg"><a href="#">15</a></li>
-            <li class="pagination__next"><a href="#"><span>следующая</span></a></li>
-          </ul>
-        </div>
-        <h2 class="heading text-center">Центрирование</h2>
-        <!--.pagination.pagination--center-->
-        <!--  ul.pagination__list-->
-        <!--    li.pagination__prev: a(href="#") #[span предыдущая]-->
-        <!--    li.visible-lg: a(href="#") 1-->
-        <!--    li.pagination__etc.visible-lg ...-->
-        <!--    li: a(href="#") 7-->
-        <!--    li: a(href="#") 8-->
-        <!--    li.current: a(class="") 9-->
-        <!--    li: a(href="#") 10-->
-        <!--    li: a(href="#") 11-->
-        <!--    li.pagination__etc.visible-lg ...-->
-        <!--    li.visible-lg: a(href="#") 15-->
-        <!--    li.pagination__next: a(href="#") #[span следующая]-->
-        <div class="pagination pagination--center">
-          <ul class="pagination__list">
-            <li class="pagination__prev"><a href="#"><span>предыдущая</span></a></li>
-            <li class="visible-lg"><a href="#">1</a></li>
-            <li class="visible-lg"><span>...</span></li>
-            <li><a href="#">7</a></li>
-            <li><a href="#">8</a></li>
-            <li class="current"><span>9</span></li>
-            <li><a href="#">10</a></li>
-            <li><a href="#">11</a></li>
-            <li class="visible-lg"><span>...</span></li>
-            <li class="visible-lg"><a href="#">15</a></li>
-            <li class="pagination__next"><a href="#"><span>следующая</span></a></li>
-          </ul>
-        </div>
-        <h2 class="heading text-center">Вправо-влево</h2>
-        <div class="pagination pagination--center">
-          <ul class="pagination__list">
-            <li class="pagination__prev"><a href="#"><span>предыдущая</span></a></li>
-            <li class="pagination__next"><a href="#"><span>следующая</span></a></li>
+      <div class="social-wrap">
+        <div class="hr"></div>
+        <div class="container">
+          <ul class="social-list">
+            <li><a href="#" class="facebook"></a></li>
+            <li><a href="#" class="pinterest"></a></li>
+            <li><a href="#" class="twitter"></a></li>
+            <li><a href="#" class="in"></a></li>
           </ul>
         </div>
       </div>
@@ -947,103 +209,54 @@
     <footer id="footer" class="footer">
       <div class="container">
         <div class="row">
-          <div class="col-xs-12 col-md-6">
-            <div class="subscribe-wrap">
-              <div class="subscribe__header">
-                <h2 class="subscribe__ttl">Подписывайтесь</h2>
-                <p class="subscribe__sub-ttl">на рассылку новинок, акций и скидок</p>
-              </div>
-              <form action="#" method="POST" data-form="subscribe" class="subscribe form">
-                <div class="form-group form-group--line">
-                  <div class="dropdown">
-                    <div class="dropdown__state">Все категории</div>
-                    <div class="dropdown__list">
-                      <div class="dropdown__item">
-                        <input id="cat-1" type="checkbox" name="test[]">
-                        <label for="cat-1">Пункт категории 1</label>
-                      </div>
-                      <div class="dropdown__item">
-                        <input id="cat-2" type="checkbox" name="test[]">
-                        <label for="cat-2">Пункт категории 2</label>
-                      </div>
-                      <div class="dropdown__item">
-                        <input id="cat-3" type="checkbox" name="test[]">
-                        <label for="cat-3">Пункт категории 3</label>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group required">
-                  <input type="email" name="email" placeholder="Ваш e-mail:" required class="subscribe__input form-control">
-                </div>
-                <button type="submit" name="subscribe" class="btn">Подписаться</button>
-              </form>
-              <div class="fmessage fsuccess">
-                <button class="btn-close"></button>
-                <div class="fmessage__ttl">Спасибо!</div>
-                <div class="fmessage__desc">Вы успешно подписались на новости.</div>
-              </div>
-              <div class="fmessage ferror">
-                <button class="btn-close"></button>
-                <div class="fmessage__ttl">Возникла ошибка</div>
-                <div class="fmessage__desc">Сообщение не получилось отправить</div>
-                <button class="btn fmessage__link">Попробовать еще раз</button>
-              </div>
-              <script>
-                $('.dropdown__state').click(function () {
-                  $(this).toggleClass("active");
-                  $('.dropdown__list').toggleClass("active");
-                });
-              </script>
+          <div class="col-sm-6 col-lg-4">
+            <div class="footer__list-wrap">
+              <div class="footer__list-ttl">Address</div>
+              <ul class="footer__list">
+                <li><span>60 Adress str, <br> FL 33134</span></li>
+                <li class="tel"><i></i> <span class="strong"> Phone:</span> <a href="tel:305 447 6633"> 305 447 6633</a></li>
+                <li class="mail"><i></i> <span class="strong">Email:</span> <a href="mailto:info@liliandesigns.com" class="colored">info@liliandesigns.com</a></li>
+              </ul>
             </div>
           </div>
-          <div class="col-xs-12 col-md-6">
-            <div class="subscribe-wrap">
-              <div class="subscribe__header">
-                <h2 class="subscribe__ttl">Подписывайтесь</h2>
-                <p class="subscribe__sub-ttl">на рассылку новинок, акций и скидок</p>
-              </div>
-              <form action="#" method="POST" data-form="subscribe" class="subscribe form">
-                <div class="form-group form-group--line">
-                  <select class="subscribe__cat">
-                    <option>Все категории</option>
-                    <option>Раздел 1</option>
-                    <option>Раздел 2</option>
-                    <option>Раздел 3</option>
-                  </select>
-                </div>
-                <div class="form-group required">
-                  <input type="email" name="email" placeholder="Ваш e-mail:" required class="subscribe__input form-control">
-                </div>
-                <button type="submit" name="subscribe" class="btn">Подписаться</button>
-              </form>
-              <div class="fmessage fsuccess">
-                <button class="btn-close"></button>
-                <div class="fmessage__ttl">Спасибо!</div>
-                <div class="fmessage__desc">Вы успешно подписались на новости.</div>
-              </div>
-              <div class="fmessage ferror">
-                <button class="btn-close"></button>
-                <div class="fmessage__ttl">Возникла ошибка</div>
-                <div class="fmessage__desc">Сообщение не получилось отправить</div>
-                <button class="btn fmessage__link">Попробовать еще раз</button>
-              </div>
-              <script>
-                $('.subscribe__cat').select2({
-                  minimumResultsForSearch: Infinity,
-                  containerCssClass: "subscribe-select2",
-                  dropdownCssClass: "subscribe-select2-dropdown"
-                });
-              </script>
+          <div class="col-sm-6 col-lg-4">
+            <div class="footer__list-wrap">
+              <div class="footer__list-ttl">Company</div>
+              <ul class="footer__list footer__list--flex">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Wedding</a></li>
+                <li><a href="#">Baby</a></li>
+                <li><a href="#">Quinces/Bar/Bat</a></li>
+                <li><a href="#">Social</a></li>
+                <li><a href="#">Products/Services</a></li>
+                <li><a href="#">Online Consultation</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">White Papers</a></li>
+                <li><a href="#">Contact Us</a></li>
+              </ul>
             </div>
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="footer__list-wrap">
+              <div class="footer__list-ttl">Newsletter</div>
+              <ul class="footer__list">
+                <li><span>Sign up for news & special offers!</span></li>
+              </ul>
+            </div>
+            <form method="POST" action="#" data-form="subscribe" class="form-subscribe form">
+              <div class="form-group">
+                <input type="email" placeholder="Enter email here" class="form-control">
+              </div>
+              <button type="submit" class="btn-submit"></button>
+            </form>
           </div>
         </div>
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="cpr">
-              <div class="cpr__dt">© 2012 - 2016 «Этажерка» Интернет-магазин элитной мебели и декора</div>
-              <div class="cpr__link">Адаптивные сайты от <a href="https://makebecool.com/">MakeBeCool</a></div>
-            </div>
+      </div>
+      <div class="cpr">
+        <div class="container">
+          <div class="cpr-inner">
+            <div class="cpr__dt">© 2014 CompanyName. All rights reserved.</div>
+            <div class="cpr__link">Terms  |  Privacy Policy</div>
           </div>
         </div>
       </div>

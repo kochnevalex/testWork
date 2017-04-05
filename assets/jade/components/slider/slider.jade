@@ -1,0 +1,16 @@
+.slider-wrap
+  #slider.slider
+    div
+      .slider-img.bg-image(data-bgimage='uploads-demo/slide1.jpg')
+    div
+      .slider-img.bg-image(data-bgimage='uploads-demo/slide2.jpg')
+    div
+      .slider-img.bg-image(data-bgimage='uploads-demo/slide3.jpg')
+
+
+script.
+  $('#slider').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true
+  })

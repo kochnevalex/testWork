@@ -1,24 +1,45 @@
 .btn
 	display: inline-block
 	width: auto
-	height: 40px
-	padding: 0 20px
-	line-height: 39px
-	color: #fff
-	background: $active-color
-	border-radius: 4px
-	font-size: 16px
+	padding: 5px 15px
+	line-height: 20px
+	color: $white-color
+	background: $main-color
+	border-radius: 2px
+	font-size: 14px
+	text-transform: uppercase
 	cursor: pointer
 	border: none
 	vertical-align: middle
 	text-decoration: none
-
 	&:hover
-		background-color: $active-color-hover
 
-.show-more
-	font-size: 14px
-	padding: 15px
-	border: 1px solid #d7dcda
-	border-radius: 4px
-	background: #fff
+		background-color: $hover-color
+
+.btn.btn--white
+	background-color: transparent
+	color: $white-color
+	border-radius: 0
+	border: 1px solid $white-color
+	&:hover
+		color: $hover-color
+		border-color: $hover-color
+
+.btn-submit
+	position: relative
+	display: inline-block
+	width: 40px
+	height: 40px
+	border: 1px solid $light-color
+	line-height: 40px
+	cursor: pointer
+	vertical-align: middle
+	text-decoration: none
+	&::after
+		position: absolute
+		content: ''
+		left: 50%
+		top: 50%
+		transform: translateX(-50%) translateY(-50%)
+		@include sprite($btn-submit)
+

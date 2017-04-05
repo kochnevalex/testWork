@@ -1,0 +1,78 @@
+.slider-wrap
+	margin-bottom: 30px
+
+.slider
+	border: 10px solid $white-color
+
+.slider .slider-img
+	position: relative
+	height: 300px
+	width: 100%
+
+.slider .slick-next
+	z-index: 2
+	right: 0
+	height: 0
+	width: 0
+	border: 40px solid transparent
+	border-right-color: white
+	border-left-width: 0
+	&::before
+		position: absolute
+		top: 50%
+		right: -40px
+		left: auto
+		transform: translateY(-50%)
+		content: ''
+		@include sprite($next)
+
+.slider .slick-prev
+	left: 0
+	z-index: 2
+	height: 0
+	width: 0
+	border: 40px solid transparent
+	border-left-color: white
+	border-right-width: 0
+	&::before
+		position: absolute
+		content: ''
+		top: 50%
+		left: -40px
+		right: auto
+		transform: translateY(-50%)
+		@include sprite($prev)
+
+.slider .slick-dots
+	display: none
+
+.slider .slick-dots li
+	float: right
+	height: 12px
+	width: 12px
+	margin: 0 2px
+	&:first-child
+		margin-right: 0
+
+.slider .slick-dots li button:before
+	height: 12px
+	width: 12px
+	background-color: $main-color
+	border-radius: 50%
+
+@media screen and (min-width: $screen-sm)
+	.slider .slider-img
+		height: 450px
+
+@media screen and (min-width: $screen-lg)
+	.slider-wrap
+		margin-top: -190px
+
+	.slider-wrap .slider
+		margin-left: 45px
+
+	.slider .slick-dots
+		display: inline-block
+
+	.slider .slider-img
+		height: 550px

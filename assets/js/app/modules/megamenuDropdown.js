@@ -3,7 +3,7 @@ appMakeBeCool.gateway.addClass('MegamenuDropdown', function (properties, $, $win
   var _megamenuOpening = this,
     _d = {
       megamenu: '#megamenu',
-      openSubcategory: '.megamenu__has-sub',
+      openSubcategory: '.megamenu__has-sub > a',
       openMegamenu: '.megamenu__title',
       megamenuDropdown: '.megamenu__dropdown',
       winHeight: 0
@@ -49,79 +49,81 @@ appMakeBeCool.gateway.addClass('MegamenuDropdown', function (properties, $, $win
     _setup = function () {
       _g.megamenu.removeClass('mod--closed');
 
-      var minHight = function(parentHeight,openHeight){
+      var minHight = function (parentHeight, openHeight) {
 
-        if(openHeight < parentHeight){
+        if (openHeight < parentHeight) {
 
           return parentHeight;
 
-        }else if(openHeight >= parentHeight){
+        } else if (openHeight >= parentHeight) {
           return openHeight
         }
 
 
       };
-      _g.openMegamenu.on('click',function () {
+      _g.openMegamenu.on('click', function () {
 
         var This = $(this);
         var ThisNext = This.next();
 
-        if(This.attr('data-state') == 'closed'){
+        if (This.attr('data-state') == 'closed') {
 
           This.addClass('opened');
           var ThisNextHeight = $('.megamenu__categories').outerHeight();
           console.log(ThisNextHeight);
-          var ThisNextDropdown = ThisNext.find('.mod--actual .megamenu__dropdown-wrap').outerHeight();
+          // var ThisNextDropdown = ThisNext.find('.mod--actual .megamenu__dropdown-wrap').outerHeight();
 
           ThisNext.addClass('opened');
-          ThisNext.css({height : minHight(ThisNextHeight,ThisNextDropdown)});
-          This.attr('data-state','opened');
+          ThisNext.css('height', 'auto');
+          This.attr('data-state', 'opened');
 
-        }else if(This.attr('data-state') == ('opened')){
+        } else if (This.attr('data-state') == ('opened')) {
           ThisNext.removeClass('opened');
-          ThisNext.css({height : '0'});
+          ThisNext.css({height: '0'});
           // This.removeClass('opened');
-          This.attr('data-state','closed');
+          This.attr('data-state', 'closed');
 
         }
 
       });
 
-      _g.openSubcategory.each(function(){
-        var This = $(this);
-        var ThisClos = This.closest('.megamenu__category');
-        var ThisClosSibl = ThisClos.siblings();
 
-        This.on('click',function () {
+      _g.openSubcategory.on('click', function () {
 
 
-          if($window.width() < 992){
+        if ($window.width() < 992) {
 
-            var This = $(this),
-              $parental = This.closest('.megamenu__categories'),
-              parentalHeight = $parental.outerHeight(),
-              ThisNext = This.next(),
-              ThisNextHeight = ThisNext.outerHeight();
+          var This = $(this),
+            // $parental = This.closest('.megamenu__category'),
+            ThisClos = This.closest('.megamenu__category'),
+            ThisClosSibl = ThisClos.siblings(),
+            // parentalHeight = $parental.outerHeight(),
+            ThisNext = ThisClos.find('.megamenu__dropdown-wrap');
+          // ThisNextHeight = ThisNext.outerHeight();
+          console.log($(this));
 
-            if(!ThisClos.hasClass('mod--actual')){
-              ThisClos.addClass('mod--actual');
-              ThisClosSibl.removeClass('mod--actual');
+          if (!ThisClos.hasClass('mod--actual')) {
+            ThisClos.addClass('mod--actual');
+            ThisClosSibl.removeClass('mod--actual');
 
-
-            }
-            This.closest('.megamenu').css({height : minHight(parentalHeight,ThisNextHeight)});
 
           }
-        });
+          ThisNext.slideToggle(500);
+          // ThisNext.closest('.megamenu').css({height: minHight(parentalHeight, ThisNextHeight)});
+
+        }
+
 
       });
-      $window.on('resize',function(){
-        if($window.width() <= 992){
+      $('.megamenu__sub-category').on('click', function () {
+        $(this).find('.megamenu__img').toggleClass('active');
+      });
+
+      $window.on('resize', function () {
+        if ($window.width() <= 992) {
           // This.closest('.megamenu').css({height : minHight(parentalHeight,ThisNextHeight)});
         }
       })
-
-
 
 
     },
@@ -142,14 +144,11 @@ appMakeBeCool.gateway.addClass('MegamenuDropdown', function (properties, $, $win
         }
 
 
-
       };
     },
 
     _triggers = function () {
-      return {
-
-      };
+      return {};
     },
 
     _setCustomMethods = function () {

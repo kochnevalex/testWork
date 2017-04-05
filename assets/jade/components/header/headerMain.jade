@@ -1,8 +1,15 @@
 .header_main
   .container
-    .header-logo
-      a(href="#")
-        img.header-logo__img(src="http://placehold.it/100x50", alt="")
-    include headerSearch
-    include headerBasket
+    .header__main-inner
+      .header-logo
+        a(href="#")
+          img.header-logo__img(src="images/logo.png", alt="")
+      .header__main-info
+        ul.header__main-info-list
+          li.tel
+            span Call us Today
+            a(href="tel:3054476622") 305.447.6622
+          li
+            a.btn(href="#") view collection
+
 

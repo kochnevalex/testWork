@@ -1,11 +1,56 @@
 footer#footer.footer
   .container
     .row
-      .col-xs-12.col-md-6
-        include ../forms/formSubscribeCheckbox
-      .col-xs-12.col-md-6
-        include ../forms/formSubscribe
-    .row
-      .col-xs-12
-        include footerCopyright/footerCopyright
+      .col-sm-6.col-lg-4
+        .footer__list-wrap
+          .footer__list-ttl Address
+          ul.footer__list
+            li: span 60 Adress str, #[br ] FL 33134
+            li.tel #[i] #[span.strong  Phone:] #[a(href='tel:305 447 6633')  305 447 6633]
+            li.mail #[i] #[span.strong Email:] #[a.colored(href='mailto:info@liliandesigns.com') info@liliandesigns.com]
+
+      .col-sm-6.col-lg-4
+        .footer__list-wrap
+          .footer__list-ttl Company
+          ul.footer__list.footer__list--flex
+            li: a(href='#') Home
+            li: a(href='#') Wedding
+            li: a(href='#') Baby
+            li: a(href='#') Quinces/Bar/Bat
+            li: a(href='#') Social
+            li: a(href='#') Products/Services
+            li: a(href='#') Online Consultation
+            li: a(href='#') Blog
+            li: a(href='#') White Papers
+            li: a(href='#') Contact Us
+      .col-sm-6.col-lg-4
+        .footer__list-wrap
+          .footer__list-ttl Newsletter
+          ul.footer__list
+            li: span Sign up for news & special offers!
+        form.form-subscribe.form(method='POST' , action='#', data-form='subscribe')
+          .form-group
+            input.form-control(type='email' placeholder='Enter email here')
+          button.btn-submit(type='submit')
+  include footerCopyright/footerCopyright
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

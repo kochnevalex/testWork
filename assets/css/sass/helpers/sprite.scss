@@ -1,114 +1,198 @@
-/*
-SCSS variables are information about icon's compiled state, stored under its original file name
-
-.icon-home {
-  width: $icon-home-width;
-}
-
-The large array-like variables contain all information about a single icon
-$icon-home: x y offset_x offset_y width height total_width total_height image_path;
-
-At the bottom of this section, we provide information about the spritesheet itself
-$spritesheet: width height image $spritesheet-sprites;
-*/
-$arrow-down-name: 'arrow-down';
-$arrow-down-x: 34px;
-$arrow-down-y: 22px;
-$arrow-down-offset-x: -34px;
-$arrow-down-offset-y: -22px;
-$arrow-down-width: 8px;
-$arrow-down-height: 6px;
-$arrow-down-total-width: 75px;
-$arrow-down-total-height: 53px;
-$arrow-down-image: '../images/sprite.png';
-$arrow-down: (34px, 22px, -34px, -22px, 8px, 6px, 75px, 53px, '../images/sprite.png', 'arrow-down', );
-$basket-name: 'basket';
-$basket-x: 0px;
-$basket-y: 0px;
-$basket-offset-x: 0px;
-$basket-offset-y: 0px;
-$basket-width: 30px;
-$basket-height: 33px;
-$basket-total-width: 75px;
-$basket-total-height: 53px;
-$basket-image: '../images/sprite.png';
-$basket: (0px, 0px, 0px, 0px, 30px, 33px, 75px, 53px, '../images/sprite.png', 'basket', );
-$quote-icon-name: 'quote-icon';
-$quote-icon-x: 34px;
-$quote-icon-y: 0px;
-$quote-icon-offset-x: -34px;
-$quote-icon-offset-y: 0px;
-$quote-icon-width: 23px;
-$quote-icon-height: 18px;
-$quote-icon-total-width: 75px;
-$quote-icon-total-height: 53px;
-$quote-icon-image: '../images/sprite.png';
-$quote-icon: (34px, 0px, -34px, 0px, 23px, 18px, 75px, 53px, '../images/sprite.png', 'quote-icon', );
-$recall-question-name: 'recall-question';
-$recall-question-x: 0px;
-$recall-question-y: 37px;
-$recall-question-offset-x: 0px;
-$recall-question-offset-y: -37px;
-$recall-question-width: 17px;
-$recall-question-height: 16px;
-$recall-question-total-width: 75px;
-$recall-question-total-height: 53px;
-$recall-question-image: '../images/sprite.png';
-$recall-question: (0px, 37px, 0px, -37px, 17px, 16px, 75px, 53px, '../images/sprite.png', 'recall-question', );
-$recall-right-name: 'recall-right';
-$recall-right-x: 61px;
-$recall-right-y: 0px;
-$recall-right-offset-x: -61px;
-$recall-right-offset-y: 0px;
-$recall-right-width: 14px;
-$recall-right-height: 25px;
-$recall-right-total-width: 75px;
-$recall-right-total-height: 53px;
-$recall-right-image: '../images/sprite.png';
-$recall-right: (61px, 0px, -61px, 0px, 14px, 25px, 75px, 53px, '../images/sprite.png', 'recall-right', );
+// SCSS variables are information about icon's compiled state, stored under its original file name
+//
+// .icon-home {
+//   width: $icon-home-width;
+// }
+//
+// The large array-like variables contain all information about a single icon
+// $icon-home: x y offset_x offset_y width height total_width total_height image_path;
+//
+// At the bottom of this section, we provide information about the spritesheet itself
+// $spritesheet: width height image $spritesheet-sprites;
+$bracket-name: 'bracket';
+$bracket-x: 0px;
+$bracket-y: 0px;
+$bracket-offset-x: 0px;
+$bracket-offset-y: 0px;
+$bracket-width: 22px;
+$bracket-height: 80px;
+$bracket-total-width: 114px;
+$bracket-total-height: 98px;
+$bracket-image: '../images/sprite.png';
+$bracket: (0px, 0px, 0px, 0px, 22px, 80px, 114px, 98px, '../images/sprite.png', 'bracket', );
+$btn-submit-name: 'btn-submit';
+$btn-submit-x: 94px;
+$btn-submit-y: 50px;
+$btn-submit-offset-x: -94px;
+$btn-submit-offset-y: -50px;
+$btn-submit-width: 8px;
+$btn-submit-height: 16px;
+$btn-submit-total-width: 114px;
+$btn-submit-total-height: 98px;
+$btn-submit-image: '../images/sprite.png';
+$btn-submit: (94px, 50px, -94px, -50px, 8px, 16px, 114px, 98px, '../images/sprite.png', 'btn-submit', );
+$facebook-hover-name: 'facebook-hover';
+$facebook-hover-x: 94px;
+$facebook-hover-y: 0px;
+$facebook-hover-offset-x: -94px;
+$facebook-hover-offset-y: 0px;
+$facebook-hover-width: 11px;
+$facebook-hover-height: 21px;
+$facebook-hover-total-width: 114px;
+$facebook-hover-total-height: 98px;
+$facebook-hover-image: '../images/sprite.png';
+$facebook-hover: (94px, 0px, -94px, 0px, 11px, 21px, 114px, 98px, '../images/sprite.png', 'facebook-hover', );
+$facebook-name: 'facebook';
+$facebook-x: 94px;
+$facebook-y: 25px;
+$facebook-offset-x: -94px;
+$facebook-offset-y: -25px;
+$facebook-width: 11px;
+$facebook-height: 21px;
+$facebook-total-width: 114px;
+$facebook-total-height: 98px;
+$facebook-image: '../images/sprite.png';
+$facebook: (94px, 25px, -94px, -25px, 11px, 21px, 114px, 98px, '../images/sprite.png', 'facebook', );
+$in-hover-name: 'in-hover';
+$in-hover-x: 44px;
+$in-hover-y: 24px;
+$in-hover-offset-x: -44px;
+$in-hover-offset-y: -24px;
+$in-hover-width: 20px;
+$in-hover-height: 20px;
+$in-hover-total-width: 114px;
+$in-hover-total-height: 98px;
+$in-hover-image: '../images/sprite.png';
+$in-hover: (44px, 24px, -44px, -24px, 20px, 20px, 114px, 98px, '../images/sprite.png', 'in-hover', );
+$in-name: 'in';
+$in-x: 44px;
+$in-y: 0px;
+$in-offset-x: -44px;
+$in-offset-y: 0px;
+$in-width: 20px;
+$in-height: 20px;
+$in-total-width: 114px;
+$in-total-height: 98px;
+$in-image: '../images/sprite.png';
+$in: (44px, 0px, -44px, 0px, 20px, 20px, 114px, 98px, '../images/sprite.png', 'in', );
+$letter-name: 'letter';
+$letter-x: 0px;
+$letter-y: 84px;
+$letter-offset-x: 0px;
+$letter-offset-y: -84px;
+$letter-width: 14px;
+$letter-height: 14px;
+$letter-total-width: 114px;
+$letter-total-height: 98px;
+$letter-image: '../images/sprite.png';
+$letter: (0px, 84px, 0px, -84px, 14px, 14px, 114px, 98px, '../images/sprite.png', 'letter', );
+$next-name: 'next';
+$next-x: 26px;
+$next-y: 0px;
+$next-offset-x: -26px;
+$next-offset-y: 0px;
+$next-width: 14px;
+$next-height: 36px;
+$next-total-width: 114px;
+$next-total-height: 98px;
+$next-image: '../images/sprite.png';
+$next: (26px, 0px, -26px, 0px, 14px, 36px, 114px, 98px, '../images/sprite.png', 'next', );
+$p-hover-name: 'p-hover';
+$p-hover-x: 44px;
+$p-hover-y: 48px;
+$p-hover-offset-x: -44px;
+$p-hover-offset-y: -48px;
+$p-hover-width: 17px;
+$p-hover-height: 21px;
+$p-hover-total-width: 114px;
+$p-hover-total-height: 98px;
+$p-hover-image: '../images/sprite.png';
+$p-hover: (44px, 48px, -44px, -48px, 17px, 21px, 114px, 98px, '../images/sprite.png', 'p-hover', );
+$p-name: 'p';
+$p-x: 68px;
+$p-y: 44px;
+$p-offset-x: -68px;
+$p-offset-y: -44px;
+$p-width: 17px;
+$p-height: 21px;
+$p-total-width: 114px;
+$p-total-height: 98px;
+$p-image: '../images/sprite.png';
+$p: (68px, 44px, -68px, -44px, 17px, 21px, 114px, 98px, '../images/sprite.png', 'p', );
+$phone-name: 'phone';
+$phone-x: 109px;
+$phone-y: 0px;
+$phone-offset-x: -109px;
+$phone-offset-y: 0px;
+$phone-width: 5px;
+$phone-height: 16px;
+$phone-total-width: 114px;
+$phone-total-height: 98px;
+$phone-image: '../images/sprite.png';
+$phone: (109px, 0px, -109px, 0px, 5px, 16px, 114px, 98px, '../images/sprite.png', 'phone', );
+$prev-name: 'prev';
+$prev-x: 26px;
+$prev-y: 40px;
+$prev-offset-x: -26px;
+$prev-offset-y: -40px;
+$prev-width: 14px;
+$prev-height: 36px;
+$prev-total-width: 114px;
+$prev-total-height: 98px;
+$prev-image: '../images/sprite.png';
+$prev: (26px, 40px, -26px, -40px, 14px, 36px, 114px, 98px, '../images/sprite.png', 'prev', );
+$twitter-hover-name: 'twitter-hover';
+$twitter-hover-x: 68px;
+$twitter-hover-y: 22px;
+$twitter-hover-offset-x: -68px;
+$twitter-hover-offset-y: -22px;
+$twitter-hover-width: 22px;
+$twitter-hover-height: 18px;
+$twitter-hover-total-width: 114px;
+$twitter-hover-total-height: 98px;
+$twitter-hover-image: '../images/sprite.png';
+$twitter-hover: (68px, 22px, -68px, -22px, 22px, 18px, 114px, 98px, '../images/sprite.png', 'twitter-hover', );
 $twitter-name: 'twitter';
-$twitter-x: 21px;
-$twitter-y: 37px;
-$twitter-offset-x: -21px;
-$twitter-offset-y: -37px;
-$twitter-width: 18px;
-$twitter-height: 15px;
-$twitter-total-width: 75px;
-$twitter-total-height: 53px;
+$twitter-x: 68px;
+$twitter-y: 0px;
+$twitter-offset-x: -68px;
+$twitter-offset-y: 0px;
+$twitter-width: 22px;
+$twitter-height: 18px;
+$twitter-total-width: 114px;
+$twitter-total-height: 98px;
 $twitter-image: '../images/sprite.png';
-$twitter: (21px, 37px, -21px, -37px, 18px, 15px, 75px, 53px, '../images/sprite.png', 'twitter', );
-$spritesheet-width: 75px;
-$spritesheet-height: 53px;
+$twitter: (68px, 0px, -68px, 0px, 22px, 18px, 114px, 98px, '../images/sprite.png', 'twitter', );
+$spritesheet-width: 114px;
+$spritesheet-height: 98px;
 $spritesheet-image: '../images/sprite.png';
-$spritesheet-sprites: ($arrow-down, $basket, $quote-icon, $recall-question, $recall-right, $twitter, );
-$spritesheet: (75px, 53px, '../images/sprite.png', $spritesheet-sprites, );
+$spritesheet-sprites: ($bracket, $btn-submit, $facebook-hover, $facebook, $in-hover, $in, $letter, $next, $p-hover, $p, $phone, $prev, $twitter-hover, $twitter, );
+$spritesheet: (114px, 98px, '../images/sprite.png', $spritesheet-sprites, );
 
-/*
-The provided mixins are intended to be used with the array-like variables
-
-.icon-home {
-  @include sprite-width($icon-home);
-}
-
-.icon-email {
-  @include sprite($icon-email);
-}
-
-Example usage in HTML:
-
-`display: block` sprite:
-<div class="icon-home"></div>
-
-To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
-
-// CSS
-.icon {
-  display: inline-block;
-}
-
-// HTML
-<i class="icon icon-home"></i>
-*/
+// The provided mixins are intended to be used with the array-like variables
+//
+// .icon-home {
+//   @include sprite-width($icon-home);
+// }
+//
+// .icon-email {
+//   @include sprite($icon-email);
+// }
+//
+// Example usage in HTML:
+//
+// `display: block` sprite:
+// <div class="icon-home"></div>
+//
+// To change `display` (e.g. `display: inline-block;`), we suggest using a common CSS class:
+//
+// // CSS
+// .icon {
+//   display: inline-block;
+// }
+//
+// // HTML
+// <i class="icon icon-home"></i>
 @mixin sprite-width($sprite) {
   width: nth($sprite, 5);
 }
@@ -135,12 +219,10 @@ To change `display` (e.g. `display: inline-block;`), we suggest using a common C
   @include sprite-height($sprite);
 }
 
-/*
-The `sprites` mixin generates identical output to the CSS template
-  but can be overridden inside of SCSS
-
-@include sprites($spritesheet-sprites);
-*/
+// The `sprites` mixin generates identical output to the CSS template
+//   but can be overridden inside of SCSS
+//
+// @include sprites($spritesheet-sprites);
 @mixin sprites($sprites) {
   @each $sprite in $sprites {
     $sprite-name: nth($sprite, 10);
